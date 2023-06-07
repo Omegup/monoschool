@@ -1,0 +1,13 @@
+{
+  "name": "@omegup-school/user-usecases",
+  "version": "1.0.0",
+  "dependencies": {
+    "@omegup-school/user-dtos": "workspace:*",
+    "@omegup-school/user-entity": "workspace:*",
+    "@omegup-school/user-gateway": "workspace:*"
+  },
+  "devDependencies": {
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}

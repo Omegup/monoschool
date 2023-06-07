@@ -1,0 +1,11 @@
+{
+  "name": "@omegup-school/user-presenter",
+  "version": "1.0.0",
+  "dependencies": {
+    "@omegup-school/user-entity": "workspace:*"
+  },
+  "devDependencies": {
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}

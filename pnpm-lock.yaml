@@ -1,0 +1,219 @@
+lockfileVersion: '6.0'
+
+importers:
+
+  adapters/user:
+    dependencies:
+      '@omegup-school/user-dtos':
+        specifier: workspace:*
+        version: link:../../dtos/user
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+      '@omegup-school/user-gateway':
+        specifier: workspace:*
+        version: link:../../gateways/user
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  components/pages:
+    dependencies:
+      '@omegup-school/user-adapter':
+        specifier: workspace:*
+        version: link:../../adapters/user
+      '@omegup-school/user-controller':
+        specifier: workspace:*
+        version: link:../../controllers/user
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+      '@omegup-school/user-presenter':
+        specifier: workspace:*
+        version: link:../../presenters/user
+      '@omegup-school/user-usecases':
+        specifier: workspace:*
+        version: link:../../use-cases/user
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-hook-form:
+        specifier: ^7.44.3
+        version: 7.44.3(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  controllers/common:
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  controllers/user:
+    dependencies:
+      '@omegup-school/auth-service':
+        specifier: workspace:*
+        version: link:../../services/auth
+      '@omegup-school/user-dtos':
+        specifier: workspace:*
+        version: link:../../dtos/user
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+      '@omegup-school/user-gateway':
+        specifier: workspace:*
+        version: link:../../gateways/user
+      '@omegup-school/user-presenter':
+        specifier: workspace:*
+        version: link:../../presenters/user
+      '@omegup-school/user-usecases':
+        specifier: workspace:*
+        version: link:../../use-cases/user
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  dtos/user: {}
+
+  entities/user: {}
+
+  gateways/user:
+    dependencies:
+      '@omegup-school/user-dtos':
+        specifier: workspace:*
+        version: link:../../dtos/user
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+
+  presenters/user:
+    dependencies:
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  services/auth:
+    dependencies:
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  services/navigation:
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  use-cases/user:
+    dependencies:
+      '@omegup-school/user-dtos':
+        specifier: workspace:*
+        version: link:../../dtos/user
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+      '@omegup-school/user-gateway':
+        specifier: workspace:*
+        version: link:../../gateways/user
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+packages:
+
+  /@types/prop-types@15.7.5:
+    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: true
+
+  /@types/react@18.2.8:
+    resolution: {integrity: sha512-lTyWUNrd8ntVkqycEEplasWy2OxNlShj3zqS0LuB1ENUGis5HodmhM7DtCoUGbxj3VW/WsGA0DUhpG6XrM7gPA==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.3
+      csstype: 3.1.2
+    dev: true
+
+  /@types/scheduler@0.16.3:
+    resolution: {integrity: sha512-5cJ8CB4yAx7BH1oMvdU0Jh9lrEXyPkar6F9G/ERswkCuvP4KQZfZkSjcMbAICCpQTN4OuZn8tz0HiKv9TGZgrQ==}
+    dev: true
+
+  /csstype@3.1.2:
+    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
+    dev: true
+
+  /js-tokens@4.0.0:
+    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
+    dev: false
+
+  /loose-envify@1.4.0:
+    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
+    dependencies:
+      js-tokens: 4.0.0
+    dev: false
+
+  /react-hook-form@7.44.3(react@18.2.0):
+    resolution: {integrity: sha512-/tHId6p2ViAka1wECMw8FEPn/oz/w226zehHrJyQ1oIzCBNMIJCaj6ZkQcv+MjDxYh9MWR7RQic7Qqwe4a5nkw==}
+    engines: {node: '>=12.22.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react@18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: false
+
+  /tslib@2.5.3:
+    resolution: {integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==}
+    dev: true
+
+  /typescript@5.1.3:
+    resolution: {integrity: sha512-XH627E9vkeqhlZFQuL+UsyAXEnibT0kWR2FWONlr4sTjvxyJYnyefgrkyECLzM5NenmKzRAy2rR/OlYLA1HkZw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    dev: true
