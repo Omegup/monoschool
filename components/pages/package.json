@@ -1,5 +1,5 @@
 {
-  "name": "@omegup-school/user-presenter",
+  "name": "@omegup-school/user-page",
   "version": "1.0.0",
   "dependencies": {
     "@omegup-school/user-entity": "workspace:*",
