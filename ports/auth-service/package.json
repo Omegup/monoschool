@@ -1,8 +1,8 @@
 {
-  "name": "@omegup-school/nav-service",
+  "name": "@omegup-school/auth-service-port",
   "version": "1.0.0",
   "dependencies": {
-    "@omegup-school/nav-service-port": "workspace:*"
+    "@omegup-school/user-entity": "workspace:*"
   },
   "devDependencies": {
     "tslib": "^2.5.3",

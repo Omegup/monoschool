@@ -1,7 +1,8 @@
 {
-  "name": "@omegup-school/user-presenter",
+  "name": "@omegup-school/user-controller-port",
   "version": "1.0.0",
   "dependencies": {
+    "@omegup-school/user-dtos": "workspace:*",
     "@omegup-school/user-entity": "workspace:*",
     "@omegup-school/user-presenter-port": "workspace:*"
   },

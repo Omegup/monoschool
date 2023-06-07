@@ -2,13 +2,14 @@ import { UserAPIAdapter } from '@omegup-school/user-adapter';
 import { SignInPresenter } from '@omegup-school/user-presenter/SignInPresenter';
 import { UserController } from '@omegup-school/user-controller/UserController';
 import { SignInUser } from '@omegup-school/user-usecases/signInUser';
+import { AuthService } from '@omegup-school/auth-service';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 // Initialize the controller
 const userAPIAdapter = new UserAPIAdapter();
 const signInUser = new SignInUser(userAPIAdapter);
-const userController = new UserController(signInUser);
+const userController = new UserController(signInUser, new AuthService());
 
 type SignInFormData = {
   email: string;

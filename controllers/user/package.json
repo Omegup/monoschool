@@ -2,10 +2,9 @@
   "name": "@omegup-school/user-controller",
   "version": "1.0.0",
   "dependencies": {
-    "@omegup-school/auth-service": "workspace:*",
+    "@omegup-school/auth-service-port": "workspace:*",
+    "@omegup-school/user-controller-port": "workspace:*",
     "@omegup-school/user-dtos": "workspace:*",
-    "@omegup-school/user-entity": "workspace:*",
-    "@omegup-school/user-gateway": "workspace:*",
     "@omegup-school/user-presenter": "workspace:*",
     "@omegup-school/user-usecases": "workspace:*"
   },

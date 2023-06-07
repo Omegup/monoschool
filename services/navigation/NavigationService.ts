@@ -1,11 +1,8 @@
-interface History {
-  push(path: string): void;
-}
-
-export class NavigationService {
-  constructor(private history: History) {}
+import { Navigation, INavigationService } from '@omegup-school/nav-service-port';
+export class NavigationService implements INavigationService {
+  constructor(private navigation: Navigation) {}
 
   navigateTo(path: string) {
-    this.history.push(path);
+    this.navigation.navigate(path);
   }
 }

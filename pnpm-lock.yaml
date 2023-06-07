@@ -66,6 +66,9 @@ importers:
 
   components/pages:
     dependencies:
+      '@omegup-school/auth-service':
+        specifier: workspace:*
+        version: link:../../services/auth
       '@omegup-school/user-adapter':
         specifier: workspace:*
         version: link:../../adapters/user
@@ -100,18 +103,15 @@ importers:
 
   controllers/user:
     dependencies:
-      '@omegup-school/auth-service':
+      '@omegup-school/auth-service-port':
         specifier: workspace:*
-        version: link:../../services/auth
+        version: link:../../ports/auth-service
+      '@omegup-school/user-controller-port':
+        specifier: workspace:*
+        version: link:../../ports/user-controller
       '@omegup-school/user-dtos':
         specifier: workspace:*
         version: link:../../dtos/user
-      '@omegup-school/user-entity':
-        specifier: workspace:*
-        version: link:../../entities/user
-      '@omegup-school/user-gateway':
-        specifier: workspace:*
-        version: link:../../gateways/user
       '@omegup-school/user-presenter':
         specifier: workspace:*
         version: link:../../presenters/user
@@ -139,7 +139,116 @@ importers:
         specifier: workspace:*
         version: link:../../entities/user
 
-  presenters/user:
+  infrastucture/context:
+    dependencies:
+      '@omegup-school/facade':
+        specifier: workspace:*
+        version: link:../facade
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  infrastucture/facade:
+    dependencies:
+      '@omegup-school/auth-service-port':
+        specifier: workspace:*
+        version: link:../../ports/auth-service
+      '@omegup-school/nav-service-port':
+        specifier: workspace:*
+        version: link:../../ports/nav-service
+      '@omegup-school/user-controller-port':
+        specifier: workspace:*
+        version: link:../../ports/user-controller
+      '@omegup-school/user-gateway':
+        specifier: workspace:*
+        version: link:../../gateways/user
+      '@omegup-school/user-presenter-port':
+        specifier: workspace:*
+        version: link:../../ports/user-presenter
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  infrastucture/hooks:
+    dependencies:
+      '@omegup-school/context':
+        specifier: workspace:*
+        version: link:../context
+      '@omegup-school/facade':
+        specifier: workspace:*
+        version: link:../facade
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  infrastucture/provider:
+    dependencies:
+      '@omegup-school/auth-service':
+        specifier: workspace:*
+        version: link:../../services/auth
+      '@omegup-school/context':
+        specifier: workspace:*
+        version: link:../context
+      '@omegup-school/facade':
+        specifier: workspace:*
+        version: link:../facade
+      '@omegup-school/nav-service':
+        specifier: workspace:*
+        version: link:../../services/navigation
+      '@omegup-school/user-adapter':
+        specifier: workspace:*
+        version: link:../../adapters/user
+      '@omegup-school/user-controller':
+        specifier: workspace:*
+        version: link:../../controllers/user
+      '@omegup-school/user-presenter':
+        specifier: workspace:*
+        version: link:../../presenters/user
+      '@omegup-school/user-usecases':
+        specifier: workspace:*
+        version: link:../../use-cases/user
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-router:
+        specifier: ^6.12.0
+        version: 6.12.0(react@18.2.0)
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  ports/auth-service:
     dependencies:
       '@omegup-school/user-entity':
         specifier: workspace:*
@@ -152,8 +261,67 @@ importers:
         specifier: ^5.1.3
         version: 5.1.3
 
+  ports/nav-service:
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  ports/user-controller:
+    dependencies:
+      '@omegup-school/user-dtos':
+        specifier: workspace:*
+        version: link:../../dtos/user
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+      '@omegup-school/user-presenter-port':
+        specifier: workspace:*
+        version: link:../user-presenter
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  ports/user-presenter:
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  presenters/user:
+    dependencies:
+      '@omegup-school/user-entity':
+        specifier: workspace:*
+        version: link:../../entities/user
+      '@omegup-school/user-presenter-port':
+        specifier: workspace:*
+        version: link:../../ports/user-presenter
+    devDependencies:
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
   services/auth:
     dependencies:
+      '@omegup-school/auth-service-port':
+        specifier: workspace:*
+        version: link:../../ports/auth-service
+      '@omegup-school/nav-service-port':
+        specifier: workspace:*
+        version: link:../../ports/nav-service
       '@omegup-school/user-entity':
         specifier: workspace:*
         version: link:../../entities/user
@@ -166,6 +334,10 @@ importers:
         version: 5.1.3
 
   services/navigation:
+    dependencies:
+      '@omegup-school/nav-service-port':
+        specifier: workspace:*
+        version: link:../../ports/nav-service
     devDependencies:
       tslib:
         specifier: ^2.5.3
@@ -470,6 +642,11 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@remix-run/router@1.6.3:
+    resolution: {integrity: sha512-EXJysQ7J3veRECd0kZFQwYYd5sJMcq2O/m60zu1W2l3oVQ9xtub8jTOtYRE0+M2iomyG/W3Ps7+vp2kna0C27Q==}
+    engines: {node: '>=14'}
+    dev: false
 
   /@swc/core-darwin-arm64@1.3.62:
     resolution: {integrity: sha512-MmGilibITz68LEje6vJlKzc2gUUSgzvB3wGLSjEORikTNeM7P8jXVxE4A8fgZqDeudJUm9HVWrxCV+pHDSwXhA==}
@@ -1430,6 +1607,16 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18
     dependencies:
+      react: 18.2.0
+    dev: false
+
+  /react-router@6.12.0(react@18.2.0):
+    resolution: {integrity: sha512-/tCGtLq9umxRvbYeIx3j94CmpQfue0E3qnetVm9luKhu58cR4t+3O4ZrQXBdXfJrBATOAj+wF/1ihJJQI8AoTw==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.6.3
       react: 18.2.0
     dev: false
 

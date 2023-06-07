@@ -1,0 +1,8 @@
+{
+  "name": "@omegup-school/user-presenter-port",
+  "version": "1.0.0",
+  "devDependencies": {
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}
