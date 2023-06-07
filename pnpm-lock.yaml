@@ -23,6 +23,12 @@ importers:
 
   app/browser:
     dependencies:
+      '@omegup-school/external':
+        specifier: workspace:*
+        version: link:../../infrastucture/external
+      '@omegup-school/provider':
+        specifier: workspace:*
+        version: link:../../infrastucture/provider
       '@omegup-school/user-page':
         specifier: workspace:*
         version: link:../../components/pages
@@ -32,6 +38,12 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      react-router:
+        specifier: ^6.12.0
+        version: 6.12.0(react@18.2.0)
+      react-router-dom:
+        specifier: ^6.12.0
+        version: 6.12.0(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@types/react':
         specifier: ^18.0.37
@@ -66,24 +78,9 @@ importers:
 
   components/pages:
     dependencies:
-      '@omegup-school/auth-service':
+      '@omegup-school/hooks':
         specifier: workspace:*
-        version: link:../../services/auth
-      '@omegup-school/user-adapter':
-        specifier: workspace:*
-        version: link:../../adapters/user
-      '@omegup-school/user-controller':
-        specifier: workspace:*
-        version: link:../../controllers/user
-      '@omegup-school/user-entity':
-        specifier: workspace:*
-        version: link:../../entities/user
-      '@omegup-school/user-presenter':
-        specifier: workspace:*
-        version: link:../../presenters/user
-      '@omegup-school/user-usecases':
-        specifier: workspace:*
-        version: link:../../use-cases/user
+        version: link:../../infrastucture/hooks
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -158,6 +155,25 @@ importers:
         specifier: ^5.1.3
         version: 5.1.3
 
+  infrastucture/external:
+    dependencies:
+      '@omegup-school/nav-service-port':
+        specifier: workspace:*
+        version: link:../../ports/nav-service
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+    devDependencies:
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
   infrastucture/facade:
     dependencies:
       '@omegup-school/auth-service-port':
@@ -213,12 +229,18 @@ importers:
       '@omegup-school/context':
         specifier: workspace:*
         version: link:../context
+      '@omegup-school/external':
+        specifier: workspace:*
+        version: link:../external
       '@omegup-school/facade':
         specifier: workspace:*
         version: link:../facade
       '@omegup-school/nav-service':
         specifier: workspace:*
         version: link:../../services/navigation
+      '@omegup-school/nav-service-port':
+        specifier: workspace:*
+        version: link:../../ports/nav-service
       '@omegup-school/user-adapter':
         specifier: workspace:*
         version: link:../../adapters/user
@@ -1608,6 +1630,19 @@ packages:
       react: ^16.8.0 || ^17 || ^18
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /react-router-dom@6.12.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-UzLwZ3ZVaDr6YV0HdjwxuwtDKgwpJx9o1ea9fU0HV4tTvzdB8WPHzlLFMo5orchpIS84e8G4Erlhu7Rl84XDFQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      '@remix-run/router': 1.6.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router: 6.12.0(react@18.2.0)
     dev: false
 
   /react-router@6.12.0(react@18.2.0):

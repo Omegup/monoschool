@@ -2,12 +2,7 @@
   "name": "@omegup-school/user-page",
   "version": "1.0.0",
   "dependencies": {
-    "@omegup-school/user-entity": "workspace:*",
-    "@omegup-school/user-adapter": "workspace:*",
-    "@omegup-school/user-usecases": "workspace:*",
-    "@omegup-school/user-presenter": "workspace:*",
-    "@omegup-school/auth-service": "workspace:*",
-    "@omegup-school/user-controller": "workspace:*",
+    "@omegup-school/hooks": "workspace:*",
     "react": "^18.2.0",
     "react-hook-form": "^7.44.3"
   },

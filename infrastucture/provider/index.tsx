@@ -1,18 +1,23 @@
 import { AuthService } from '@omegup-school/auth-service';
+import { FacadeContext } from '@omegup-school/context';
 import { Facade } from '@omegup-school/facade';
 import { NavigationService } from '@omegup-school/nav-service';
+import { UserAPIAdapter } from '@omegup-school/user-adapter';
 import { UserController } from '@omegup-school/user-controller/UserController';
 import { SignInPresenter } from '@omegup-school/user-presenter/SignInPresenter';
 import { SignInUser } from '@omegup-school/user-usecases/signInUser';
-import { UserAPIAdapter } from '@omegup-school/user-adapter';
 import { memo } from 'react';
-import { useNavigate } from 'react-router';
-import { FacadeContext } from '../context';
+import { External } from './External';
 
-const FacadeProvider = ({ children }: { children: React.ReactNode }) => {
-  const navigate = useNavigate();
-
-  const navService = new NavigationService({ navigate });
+const FacadeProvider = ({
+  children,
+  useExternal,
+}: {
+  children: React.ReactNode;
+  useExternal: () => External;
+}) => {
+  const external = useExternal();
+  const navService = new NavigationService(external.navigation);
   const authService = new AuthService(navService);
   const userGateway = new UserAPIAdapter();
   const signInUser = new SignInUser(userGateway);

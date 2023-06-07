@@ -10,9 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@omegup-school/user-page": "workspace:*",
+    "@omegup-school/provider": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "@omegup-school/user-page": "workspace:*"
+    "react-router": "^6.12.0",
+    "react-router-dom": "^6.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
