@@ -1,8 +1,9 @@
 {
-  "name": "@omegup-school/user-page",
+  "name": "@omegup-school/ui-pages",
   "version": "1.0.0",
   "dependencies": {
     "@omegup-school/hooks": "workspace:*",
+    "@omegup-school/ui-molecules": "workspace:*",
     "react": "^18.2.0",
     "react-hook-form": "^7.44.3"
   },

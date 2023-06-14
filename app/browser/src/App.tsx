@@ -1,4 +1,4 @@
-import SignInView from '@omegup-school/user-page/SignInView';
+import SignInView from '@omegup-school/ui-pages/SignInView';
 import { useNavigate, Routes, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import FacadeProvider from '@omegup-school/provider';
@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <FacadeProvider useExternal={useExternal}>
         <Routes>
-          <Route path="" element={<SignInView></SignInView>}></Route>
+          <Route path="" element={<SignInView />}></Route>
           <Route path="/dashboard" element={<div>dashboard</div>}></Route>
         </Routes>
       </FacadeProvider>

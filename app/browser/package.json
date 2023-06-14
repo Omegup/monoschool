@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@omegup-school/user-page": "workspace:*",
+    "@omegup-school/ui-pages": "workspace:*",
     "@omegup-school/provider": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

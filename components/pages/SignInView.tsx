@@ -1,4 +1,5 @@
 import { useFacade } from '@omegup-school/hooks';
+import { SignIn } from '@omegup-school/ui-molecules/SignIn';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
@@ -13,6 +14,7 @@ function SignInView() {
     register,
     handleSubmit,
     formState: { errors },
+    control,
   } = useForm<SignInFormData>();
 
   const { signInPresenter, userController } = useFacade();
@@ -24,25 +26,28 @@ function SignInView() {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input
-        type="email"
-        {...register('email', { required: true })}
-        placeholder="Email"
-      />
-      {errors.email && <p>This field is required</p>}
+    <>
+      <SignIn />
+      <form style={{ display: 'none' }} onSubmit={handleSubmit(onSubmit)}>
+        <input
+          type="email"
+          {...register('email', { required: true })}
+          placeholder="Email"
+        />
+        {errors.email && <p>This field is required</p>}
 
-      <input
-        type="password"
-        {...register('password', { required: true })}
-        placeholder="Password"
-      />
-      {errors.password && <p>This field is required</p>}
+        <input
+          type="password"
+          {...register('password', { required: true })}
+          placeholder="Password"
+        />
+        {errors.password && <p>This field is required</p>}
 
-      {error && <p>An error occured</p>}
+        {error && <p>An error occured</p>}
 
-      <button type="submit">Sign In</button>
-    </form>
+        <button type="submit">Sign In</button>
+      </form>
+    </>
   );
 }
 

@@ -10,7 +10,6 @@
     "@omegup-school/user-controller": "workspace:*",
     "@omegup-school/user-presenter": "workspace:*",
     "@omegup-school/user-usecases": "workspace:*",
-    "@omegup-school/external": "workspace:*",
     "@omegup-school/user-adapter": "workspace:*",
     "react": "^18.2.0",
     "react-router": "^6.12.0"
