@@ -18,7 +18,8 @@
     "strictBindCallApply": true,
     "strictFunctionTypes": true,
     "strictNullChecks": true,
-    "strictPropertyInitialization": true
+    "strictPropertyInitialization": true,
+    "noErrorTruncation": true
   },
   "exclude": ["node_modules", "tmp"]
 }

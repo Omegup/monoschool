@@ -1,3 +1,13 @@
 export const widths = {
-  mid: '490px',
+  icon: {
+    svg: '24',
+  },
+  panel: {
+    form: '490px',
+  },
+  checkbox: {
+    small: '20px',
+    medium: '24px',
+    large: '28px',
+  },
 };

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "devDependencies": {
     "@types/omegup-school": "workspace:*",
-    "@types/react": "^18.2.8",
     "tslib": "^2.5.3",
     "typescript": "^5.1.3"
   }

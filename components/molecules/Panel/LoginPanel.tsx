@@ -18,9 +18,9 @@ export const LoginPanel = ({
   children: readonly [React.ReactNode, React.ReactNode];
 }) => {
   const [left, right] = children;
-  const { container } = useStyles();
+  const classes = useStyles();
   return (
-    <div className={container}>
+    <div className={classes.container}>
       <div>{left}</div>
       <div>{right}</div>
     </div>

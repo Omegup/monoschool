@@ -1,25 +1,30 @@
 import { createUseStyles } from 'react-jss';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
-import { paddings } from '@omegup-school/ui-atoms/sizes/spacing';
+import { spacing } from '@omegup-school/ui-atoms/sizes/spacing';
 
 const useStyles = createUseStyles({
   container: {
-    maxInlineSize: widths.mid,
-    padding: paddings.s6,
+    maxInlineSize: widths.panel.form,
+    display: 'flex',
+    flexDirection: 'column',
+    gap: spacing.s8,
+    padding: spacing.s9,
     margin: 'auto',
-    width: '100%'
+    width: '100%',
   },
 });
 
 export const FormPanel = ({
   children,
+  onSubmit,
 }: {
+  onSubmit?: React.FormEventHandler<HTMLFormElement>;
   children: React.ReactNode;
 }) => {
-  const { container } = useStyles();
+  const classes = useStyles();
   return (
-    <div className={container}>
+    <form className={classes.container} onSubmit={onSubmit}>
       {children}
-    </div>
+    </form>
   );
 };
