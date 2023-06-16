@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "sb": "pnpm -r storybook"
+  }
+}
