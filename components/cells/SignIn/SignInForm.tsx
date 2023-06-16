@@ -1,19 +1,22 @@
 import { Logo } from '@omegup-school/ui-assets';
-import { Button } from '../Button';
-import { Link } from '../Link';
-import { FormPanel } from '../Panel/FormPanel';
-import { LoginPanel } from '../Panel/LoginPanel';
-import { SpaceBetween } from '../Panel/SpaceBetween';
-import { Select } from '../Select';
-import { OutlinedInput } from './Input';
-import { SignInBanner } from './SignInBanner';
-import { SignInHeader } from './SignInHeader';
+import {
+  Button,
+  Link,
+  FormPanel,
+  LoginPanel,
+  SpaceBetween,
+  Select,
+  SignInBanner,
+  OutlinedInput,
+  SignInHeader,
+} from '@omegup-school/ui-molecules';
 
 type SignInProps = {
   onSubmit?: React.FormEventHandler<HTMLFormElement>;
 };
 
-export function SignIn({ onSubmit }: SignInProps) {
+export function SignInForm({ onSubmit }: SignInProps) {
+  
   return (
     <LoginPanel>
       <SignInBanner />

@@ -39,14 +39,14 @@ const useStyles = createUseStyles({
   },
 });
 
-const OutlinedInput = ({
+export const OutlinedInput = ({
   label,
   placeholder,
-  type
+  type,
 }: {
   placeholder?: string;
   label: string;
-  type?: 'password',
+  type?: 'password';
 }) => {
   const classes = useStyles();
   return (
@@ -55,10 +55,12 @@ const OutlinedInput = ({
         <label className={classes.label}>{label}</label>
       </div>{' '}
       <div className={classes.cc}>
-        <input type={type} placeholder={placeholder} className={classes.input} />
+        <input
+          type={type}
+          placeholder={placeholder}
+          className={classes.input}
+        />
       </div>
     </div>
   );
 };
-
-export default OutlinedInput;

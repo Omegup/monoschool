@@ -30,11 +30,80 @@ const useStyles = createUseStyles({
   disabled: {},
   enabled: {},
   input: {
-    display: 'none',
+    clip: 'rect(0 0 0 0)',
+    position: 'absolute',
   },
   label: {
     display: 'flex',
     borderRadius: borders.r5,
+    '& > $input:checked + $container': {
+      backgroundColor: colors.blue[500],
+      color: colors.light[500],
+      '& $square path': {
+        fill: colors.light[500],
+      },
+      '& $tick': {
+        color: colors.blue[500],
+        opacity: 1,
+      },
+    },
+    '&:focus': {
+      outline: 'none'
+    },
+    '&:focus-within:not(:focus) > $input': {
+      '& + $container': {
+        outlineWidth: borders.b5,
+        outlineColor: 'currentcolor',
+        outlineStyle: 'solid',
+      },
+      '&:not(:checked) + $container': {
+        color: colors.blue[500],
+      },
+    },
+    '&:hover > $input:checked + $container': {
+      backgroundColor: colors.blue[600],
+      '& $tick': {
+        color: colors.blue[600],
+        opacity: 0.6,
+      },
+    },
+    '&:hover > $input:not(:checked) + $container': {
+      color: colors.blue[500],
+      background: colors.light[500],
+      '& $tick': {
+        opacity: 0.4,
+      },
+    },
+
+    '&:active': {
+      '&:hover > $input:checked + $container': {
+        '& $tick': {
+          opacity: 0,
+        },
+      },
+      '&:hover > $input:not(:checked) + $container': {
+        background: colors.background.default,
+        '& $tick': {
+          opacity: 1,
+        },
+      },
+      '& > $input:checked + $container': {
+        backgroundColor: colors.blue[500],
+        '& $tick': {
+          color: colors.blue[500],
+          opacity: 1,
+        },
+      },
+      '& > $input:not(:checked) + $container': {
+        color: colors.blue[500],
+        outlineWidth: borders.b5,
+        outlineColor: 'currentcolor',
+        outlineStyle: 'solid',
+        '& $tick': {
+          opacity: 0,
+        },
+      },
+    },
   },
   checkbox: {
     ...checkboxSizes,
@@ -55,54 +124,6 @@ const useStyles = createUseStyles({
     '$medium > &': {
       padding: spacing.s4,
       borderRadius: borders.r5,
-    },
-    '$label:hover > &': {
-      color: colors.blue[500],
-      background: colors.light[500],
-      '& $tick': {
-        opacity: 1,
-      },
-    },
-    '$label:active:hover > &': {
-      background: colors.background.default,
-    },
-    '$label:active > &': {
-      color: colors.blue[500],
-      outlineWidth: borders.b5,
-      outlineColor: 'currentcolor',
-      outlineStyle: 'solid',
-      '& $tick': {
-        opacity: 0,
-      },
-    },
-    '$input:checked + &': {
-      backgroundColor: colors.blue[500],
-      color: colors.light[500],
-      '& $square path': {
-        fill: colors.light[500],
-      },
-      '& $tick': {
-        color: colors.blue[500],
-        opacity: 1,
-      },
-    },
-    '$input:checked:hover + &': {
-      backgroundColor: colors.blue[600],
-      '& $tick': {
-        color: colors.blue[600],
-      },
-    },
-    '$label:active:hover > $input:checked + &': {
-      '& $tick': {
-        opacity: 0,
-      },
-    },
-    '$label:active > $input:checked + &': {
-      backgroundColor: colors.blue[500],
-      '& $tick': {
-        color: colors.blue[500],
-        opacity: 1,
-      },
     },
   },
   labelText: {

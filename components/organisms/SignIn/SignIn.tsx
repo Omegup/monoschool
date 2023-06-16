@@ -1,23 +1,42 @@
 import { Logo } from '@omegup-school/ui-assets';
-import { Button } from '../Button';
-import { Link } from '../Link';
-import { FormPanel } from '../Panel/FormPanel';
-import { LoginPanel } from '../Panel/LoginPanel';
-import { SpaceBetween } from '../Panel/SpaceBetween';
-import { Select } from '../Select';
-import { OutlinedInput } from './Input';
-import { SignInBanner } from './SignInBanner';
-import { SignInHeader } from './SignInHeader';
+import {
+  Button,
+  Link,
+  FormPanel,
+  LoginPanel,
+  SpaceBetween,
+  Select,
+  SignInBanner,
+  OutlinedInput,
+  SignInHeader,
+} from '@omegup-school/ui-cells';
 
-type SignInProps = {
-  onSubmit?: React.FormEventHandler<HTMLFormElement>;
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+
+export type SignInFormData = {
+  email: string;
+  password: string;
+};
+
+export type SignInProps = {
+  onSubmit: (data: SignInFormData) => void;
 };
 
 export function SignIn({ onSubmit }: SignInProps) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    control,
+  } = useForm<SignInFormData>();
+
+  const [error, setError] = useState<Error>();
+
   return (
     <LoginPanel>
       <SignInBanner />
-      <FormPanel onSubmit={onSubmit}>
+      <FormPanel onSubmit={handleSubmit(onSubmit)}>
         <Logo />
         <SignInHeader />
         <OutlinedInput

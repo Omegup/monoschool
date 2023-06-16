@@ -10,7 +10,9 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Link = ({ text }: { text: string }) => {
+export type LinkProps = { text: string };
+
+export const Link = ({ text }: LinkProps) => {
   const classes = useStyles();
   return <a className={classes.link}>{text}</a>;
 };
