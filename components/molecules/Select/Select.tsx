@@ -4,9 +4,10 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
+import { forwardRef } from 'react';
 
 type Sizes = readonly [
-  `$${SelectProps['size']}>$container>&`,
+  `$${ControlledSelectProps['size']}>$container>&`,
   { width: string; height: string }
 ];
 const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
@@ -48,7 +49,7 @@ const useStyles = createUseStyles({
       },
     },
     '&:focus': {
-      outline: 'none'
+      outline: 'none',
     },
     '&:focus-within:not(:focus) > $input': {
       '& + $container': {
@@ -132,33 +133,48 @@ const useStyles = createUseStyles({
   square: {},
 });
 
-export type SelectProps = {
+export interface SelectProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   label: string;
-};
+}
 
-export const Select = ({ size, style, disabled, label }: SelectProps) => {
-  const classes = useStyles(),
-    disabledClass = classes[disabled ? 'disabled' : 'enabled'];
-  return (
-    <label
-      tabIndex={-1}
-      className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
-    >
-      <input type="checkbox" className={classes.input} />
-      <div className={classes.container}>
-        <span className={classes.checkbox}>
-          <span className={classes.square}>
-            <Square width="100%" />
+export interface ControlledSelectProps extends SelectProps {
+  value: boolean;
+  onChange: (value: boolean) => void;
+  onBlur: () => void;
+}
+
+export const Select = forwardRef(
+  (props: ControlledSelectProps, ref: React.Ref<HTMLInputElement>) => {
+    const { size, style, disabled, label, onChange, value, onBlur } = props;
+    const classes = useStyles(),
+      disabledClass = classes[disabled ? 'disabled' : 'enabled'];
+    return (
+      <label
+        tabIndex={-1}
+        className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
+      >
+        <input
+          type="checkbox"
+          className={classes.input}
+          onChange={(e) => onChange(e.target.checked)}
+          {...{ ref, onBlur }}
+          checked={value}
+        />
+        <div className={classes.container}>
+          <span className={classes.checkbox}>
+            <span className={classes.square}>
+              <Square width="100%" />
+            </span>
+            <span className={classes.tick}>
+              <Tick width="100%" />
+            </span>
           </span>
-          <span className={classes.tick}>
-            <Tick width="100%" />
-          </span>
-        </span>
-        <span className={classes.labelText}>{label}</span>
-      </div>
-    </label>
-  );
-};
+          <span className={classes.labelText}>{label}</span>
+        </div>
+      </label>
+    );
+  }
+);

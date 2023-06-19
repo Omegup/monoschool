@@ -115,6 +115,9 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      react-hook-form:
+        specifier: ^7.44.3
+        version: 7.44.3(react@18.2.0)
     devDependencies:
       '@types/omegup-school':
         specifier: workspace:*
