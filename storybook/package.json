@@ -1,0 +1,29 @@
+{
+  "name": "@omegup-school/storybook",
+  "version": "1.0.0",
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@omegup-school/ui-molecules": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.44.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.0.21",
+    "@storybook/addon-interactions": "7.0.21",
+    "@storybook/addon-links": "7.0.21",
+    "@storybook/blocks": "7.0.21",
+    "@storybook/react": "7.0.21",
+    "@storybook/react-vite": "7.0.21",
+    "@storybook/testing-library": "0.0.14-next.2",
+    "@types/react": "^18.0.37",
+    "@types/react-dom": "^18.0.11",
+    "prop-types": "15.8.1",
+    "storybook": "7.0.21",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}
