@@ -9,8 +9,6 @@ export const useColumnStyles = createUseStyles({
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    border: borders.b2,
-
   },
   startAdornment: {
     paddingLeft: spacing.s5
