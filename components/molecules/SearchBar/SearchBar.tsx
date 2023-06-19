@@ -1,4 +1,4 @@
-import { Arrow, SearchStatus } from '@omegup-school/ui-assets';
+import { Arrow, Close, SearchStatus } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './SearchBar.styles';
 import { FilterProps } from './Filter.types';
 
@@ -8,13 +8,13 @@ export const SearchBar = ({ size, style, label, showIcon }: FilterProps) => {
   return (
     <div className={`${classes[style]} ${classes[size]}`}>
       <div className={classes.container}>
-        <span> <SearchStatus/></span>
+        <span className={classes.SearchStatus}> <SearchStatus width="100%"/></span>
         <input
-          id="search"
-          type="search"
-          placeholder="label"
+        className={classes.input}
+          type='text'
+          placeholder={label}
         />
-        <button type="submit">Go</button>
+          <span className={classes.Close}> <Close width="100%"/></span>
       </div>
     </div>
   );

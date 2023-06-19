@@ -5,7 +5,6 @@ import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { FilterProps } from './Filter.types';
 
-
 type Sizes = readonly [
   `$${FilterProps['size']}>$container>&`,
   { width: string; height: string }
@@ -30,36 +29,37 @@ export const useFilterStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  button: {
-    borderRadius: borders.r5,
-    border: 'none',
-    outline: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: colors.grey[400],
-    backgroundColor:"white",
-    cursor: 'pointer',
-    '& $arrow': {
-      ...searchBarSizes,
-    },
-    '&:active, &:focus, &:hover': {
-      backgroundColor: colors.light[300],
-      color: colors.blue[500],
-      '& $arrow': {
-        fill : colors.blue[500],
-      }
-    },
-    '&:active:hover, &:focus:hover': {
-      backgroundColor: colors.light[300],
-      color: colors.blue[500],
-    },
+  input: {
+  border:colors.background.overlay,
+  outline: colors.background.overlay,
+  borderRadius: "10px",
+  width:"100%",
+  padding: "9px 4px 9px 40px",
   },
-  label:{
-   
-  },
+  
+  label: {},
   container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding:spacing.s2
     
+  },
+  SearchStatus: {
+    ...searchBarSizes,
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    left: "20px",
+
+  },
+  Close: {
+    ...searchBarSizes,
+    position: "absolute",
+    top: "50%",
+    transform: "translateY(-50%)",
+    right: "20px",
   },
   labelText: {
     ...styles.paragraph_small_regular,
