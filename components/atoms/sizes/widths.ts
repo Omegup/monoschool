@@ -10,4 +10,9 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  filter: {
+    small: '20px',
+    medium: '24px',
+    large: '28px',
+  },
 };

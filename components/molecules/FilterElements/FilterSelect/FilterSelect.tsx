@@ -1,8 +1,15 @@
 import { Square, Tick } from '@omegup-school/ui-assets';
-import { useSelectStyles } from './Select.styles';
-import { SelectProps } from './Select.types';
+import { useSelectStyles } from './FilterSelect.styles';
+import { SelectProps } from './FilterSelect.types';
 
-export const Select = ({ size, style, disabled, label }: SelectProps) => {
+export const FilterSelect = ({
+  size,
+  style,
+  disabled,
+  label,
+  showImage,
+  imageURL,
+}: SelectProps) => {
   const classes = useSelectStyles(),
     disabledClass = classes[disabled ? 'disabled' : 'enabled'];
   return (
@@ -20,6 +27,16 @@ export const Select = ({ size, style, disabled, label }: SelectProps) => {
             <Tick width="100%" />
           </span>
         </span>
+        {showImage && 
+              
+              <svg className={classes.image}>
+                <image
+                  href={imageURL}
+                  width={"100%"}
+                  height={"100%"}
+                />
+              </svg>
+           }
         <span className={classes.labelText}>{label}</span>
       </div>
     </label>
