@@ -12,6 +12,7 @@
     "react-hook-form": "^7.44.3"
   },
   "devDependencies": {
+    "@storybook/addon-controls": "7.0.21",
     "@storybook/addon-essentials": "7.0.21",
     "@storybook/addon-interactions": "7.0.21",
     "@storybook/addon-links": "7.0.21",
