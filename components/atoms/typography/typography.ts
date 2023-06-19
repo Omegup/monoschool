@@ -31,6 +31,10 @@ export const typography = makeTypo({
       },
     },
     xSmall: {
+      regular: {
+        fontWeight: '400',
+        fontSize: 12,
+      },
       semiBold: {
         fontWeight: '600',
         fontSize: 12,

@@ -1,34 +1,60 @@
+import { colors } from "@omegup-school/ui-atoms/colors";
+import { typography } from "@omegup-school/ui-atoms/typography";
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
-  'top-search-container': {
+  topSearchContainer: {
     display: 'flex',
   },
-  'tab_search': {
+  selected : {
+    borderBottom: `1px solid ${colors.blue[500]}`,
+
+    '& $tabText': {
+      color: colors.blue[500],
+    },
+
+    '& $tabNumber': {
+      color: colors.blue[500],
+    },
+  },
+
+  tabSearch: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: '100px',
-    height: '100px',
-    backgroundColor: '#F5F5F5',
-    borderRadius: '10px',
-    marginRight: '20px',
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    justifyContent: 'space-around',
+    width: '100%',
+    height: '100%',
 
     '&:hover': {
       cursor: 'pointer',
-      backgroundColor: '#E0E0E0',
+      borderBottom: `1px solid ${colors.dark.default}`,
+
+      '& $tabText': {
+        color: colors.dark.default,
+      },
+
+      '& $tabNumber': {
+      color: colors.dark.default,
+      },
     }
   },
-  'tab_text': {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    color: '#000000',
+
+  tabText: {
+    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    color: `${colors.grey[500]}`,
     marginBottom: '10px',
   },
-  'tab_number': {
-    fontSize: '20px',
-    fontWeight: 'bold',
-    color: '#000000',
+
+  tabNumber: {
+    alignItems: 'center',
+    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    color: `${colors.grey[500]}`,
+    backgroundColor: `${colors.grey[100]}`,
+    padding: '5px 15px',
+    borderRadius: '40%',
   }
+
 });
