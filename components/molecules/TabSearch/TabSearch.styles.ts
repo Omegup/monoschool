@@ -6,7 +6,8 @@ export const useStyles = createUseStyles({
   topSearchContainer: {
     display: 'flex',
   },
-  selected : {
+
+  selected: {
     borderBottom: `1px solid ${colors.blue[500]}`,
 
     '& $tabText': {
@@ -16,6 +17,19 @@ export const useStyles = createUseStyles({
     '& $tabNumber': {
       color: colors.blue[500],
     },
+    
+    '&:hover': {
+      cursor: 'pointer',
+      borderBottom: `1px solid ${colors.dark.default}`,
+
+      '& $tabText': {
+        color: colors.dark.default,
+      },
+
+      '& $tabNumber': {
+        color: colors.dark.default,
+      },
+    }
   },
 
   tabSearch: {
@@ -25,6 +39,7 @@ export const useStyles = createUseStyles({
     justifyContent: 'space-around',
     width: '100%',
     height: '100%',
+    cursor: 'pointer',
 
     '&:hover': {
       cursor: 'pointer',
@@ -35,7 +50,7 @@ export const useStyles = createUseStyles({
       },
 
       '& $tabNumber': {
-      color: colors.dark.default,
+        color: colors.dark.default,
       },
     }
   },
@@ -53,7 +68,7 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     backgroundColor: `${colors.grey[100]}`,
-    padding: '5px 15px',
+    padding: '5px 10px',
     borderRadius: '40%',
   }
 
