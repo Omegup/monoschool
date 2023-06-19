@@ -2,6 +2,8 @@ lockfileVersion: '6.0'
 
 importers:
 
+  .: {}
+
   adapters/user:
     dependencies:
       '@omegup-school/user-dtos':
