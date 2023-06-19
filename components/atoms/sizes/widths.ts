@@ -10,4 +10,7 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  avatar: {
+    small: '20px',
+  },
 };

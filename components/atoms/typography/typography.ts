@@ -35,6 +35,10 @@ export const typography = makeTypo({
         fontWeight: '600',
         fontSize: 12,
       },
+      regular: {
+        fontWeight: '400',
+        fontSize: 12,
+      },
     },
   },
   heading: {
