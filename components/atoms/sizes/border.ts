@@ -6,4 +6,4 @@ export const borders = {
   b4: 2,
   b5: 2.5,
   b6: 3,
-};
+} as const;

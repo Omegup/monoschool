@@ -8,13 +8,16 @@ const useExternal = (): External => {
   const navigate = useNavigate();
   return { navigation: { navigate } };
 };
+
 function App() {
   return (
     <BrowserRouter>
       <FacadeProvider useExternal={useExternal}>
         <Routes>
           <Route path="" element={<SignInView />}></Route>
-          <Route path="/dashboard" element={<div>dashboard</div>}></Route>
+          <Route path="/dashboard" element={<>
+            hallo
+          </>}></Route>
         </Routes>
       </FacadeProvider>
     </BrowserRouter>

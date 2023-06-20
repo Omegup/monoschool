@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Select } from '@omegup-school/ui-molecules';
 
 const meta = {
-  title: 'Atom/Select',
+  title: 'Molecules/Select',
   component: Select,
   tags: ['autodocs'],
   argTypes: {
