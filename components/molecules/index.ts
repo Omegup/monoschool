@@ -6,3 +6,4 @@ export * from './SignIn';
 export * from './TabSearch';
 export * from './Tag';
 export * from './Switch';
+export * from './Chips';
