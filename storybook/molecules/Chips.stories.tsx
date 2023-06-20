@@ -14,5 +14,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    person: [
+      {
+        label: 'Ala Bouziri',
+      },
+      {
+        label: 'Toukbari',
+      }
+    ],
+    onCancel: () => { console.log('clicked') }
   },
 };

@@ -7,7 +7,7 @@ const meta = {
   component: Tag,
   tags: ['autodocs'],
   argTypes: {
-    type: { control: 'tag', options: ['success', 'warning', 'error', 'active', 'info', 'inactive'] },
+    type: { control: 'select', options: ['success', 'warning', 'error', 'active', 'info', 'inactive'] },
   },
 } satisfies Meta<typeof Tag>;
 

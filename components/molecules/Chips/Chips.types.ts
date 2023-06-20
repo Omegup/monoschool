@@ -1,3 +1,4 @@
 export interface ChipsProp {
-  label: string;
+  person: { label: string, avatar?: string }[];
+  onCancel: () => void;
 }
