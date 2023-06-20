@@ -32,34 +32,20 @@ export const useFilterStyles = createUseStyles({
   input: {
   border:colors.background.overlay,
   outline: colors.background.overlay,
-  borderRadius: "10px",
   width:"100%",
-  padding: "9px 4px 9px 40px",
   },
   
   label: {},
   container: {
     display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
-    alignItems: "center",
-    padding:spacing.s2
-    
+    borderRadius: "10px",
   },
   SearchStatus: {
     ...searchBarSizes,
-    position: "absolute",
-    top: "50%",
-    transform: "translateY(-50%)",
-    left: "20px",
-
   },
   Close: {
     ...searchBarSizes,
-    position: "absolute",
-    top: "50%",
-    transform: "translateY(-50%)",
-    right: "20px",
   },
   labelText: {
     ...styles.paragraph_small_regular,
