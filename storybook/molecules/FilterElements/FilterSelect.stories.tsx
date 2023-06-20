@@ -26,7 +26,7 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     showImage  : false,
-    imageURL:"https://cdn11.bigcommerce.com/s-1mxugrbmxo/images/stencil/500x659/products/677/977/W3-2__14184.1599839414.png?c=1",
+    imageURL:"https://www.w3schools.com/howto/img_avatar.png",
   },
 };
 

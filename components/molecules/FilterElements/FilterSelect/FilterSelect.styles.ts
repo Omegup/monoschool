@@ -128,6 +128,7 @@ export const useSelectStyles = createUseStyles({
   },
   image:{
     ...checkboxSizes,
+    borderRadius: "50%",
     display: 'block',
     position: 'relative',
     '&>*': {
