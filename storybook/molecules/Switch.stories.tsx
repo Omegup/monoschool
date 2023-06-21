@@ -14,5 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    checked: false,
+    onChange: () => {},
   },
 };

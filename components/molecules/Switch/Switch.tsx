@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import { useStyles } from './Switch.styles'
+import { SwitchProps } from './switch.types';
 
-export const Switch = () => {
+export const Switch = ({checked , onChange} : SwitchProps) => {
   const classes = useStyles();
-  const [isToggled, setIsToggled] = useState<boolean>(false);
-  const onToggle = () => setIsToggled(!isToggled);
 
   return (
-    <label className={classes.switchContainer}>
-      <input type="checkbox" className={classes.switchInput} checked={isToggled} onChange={onToggle} />
-      <span className={classes.switchSlider} />
-    </label>
+    <label className={classes.toggleSwitch}>
+    <input type="checkbox" checked={checked} onChange={() => onChange(checked)} />
+    <span
+      className={`${classes.switch} ${checked ? classes.switchCheckedBg : ''}`}
+    >
+      <span
+        className={`${classes.switchBefore} ${checked ? classes.switchChecked : ''}`}
+      />
+    </span>
+  </label>
   )
 }
