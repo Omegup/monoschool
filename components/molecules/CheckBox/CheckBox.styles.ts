@@ -2,17 +2,51 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders, spacing, widths } from '@omegup-school/ui-atoms/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
+import {
+  CheckboxCommonVariantStyles,
+  CheckboxEvent,
+  VariantStyle,
+} from './CheckBox.types';
+import { DEFAULT_CHECKBOX_EVENTS_SELECTORS } from './CheckBox.constants';
+
+const commonVariantStylesBuilder = (
+  variant: 'solid' | 'border' | 'scale',
+  events: {
+    [Event in CheckboxEvent]: object;
+  }
+): Partial<CheckboxCommonVariantStyles> => ({
+    // focused & hovered
+    '& > $input:focus + $container': {
+      outline: `${borders.b5}px solid ${colors.blue[900]}`,
+    },
+    '& > $input:not(:checked) + $container:hover': {
+      backgroundColor: colors.grey[400],
+      border: `${borders.b3}px solid ${colors.grey[400]}`,
+      outline: `${borders.b5}px solid ${colors.grey[400]}`,
+      outlineOffset: -1,
+    },
+    // enabled
+    '& > $input:checked + $container': {
+      border: `${borders.b3}px solid ${colors.blue[500]}`,
+      color: colors.background.default,
+      backgroundColor: colors.blue[500],
+    },
+    '& > $input:checked + $container:hover': {
+      borderColor: colors.blue[700],
+      backgroundColor: colors.blue[700],
+    },
+});
 
 export const useCheckBoxStyles = createUseStyles({
   label: {
     display: 'flex',
     flexDirection: 'row',
-    alignItems : 'center',
+    alignItems: 'center',
     gap: spacing.s4,
   },
-  checkBoxText : {
-    ...styles.paragraph_medium_regular ,
-  } ,
+  checkBoxText: {
+    ...styles.paragraph_medium_regular,
+  },
   input: {
     clip: 'rect(0 0 0 0)',
     position: 'absolute',

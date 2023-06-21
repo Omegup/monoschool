@@ -1,5 +1,5 @@
 import { Tick } from "@omegup-school/ui-assets"
-import { checkboxProps } from "./CheckBox.types"
+import { CheckboxProps } from "./CheckBox.types"
 import { useCheckBoxStyles } from "./CheckBox.styles"
 import { DEFAULT_CHECKBOX_SIZE, DEFAULT_CHECKBOX_VARIANT } from "./CheckBox.constants"
 
@@ -9,7 +9,7 @@ export const CheckBox = ({
   size = DEFAULT_CHECKBOX_SIZE,
   label ,
   disabled,
-}: checkboxProps) => {
+}: CheckboxProps , ) => {
   const classes = useCheckBoxStyles()
 
   return (
