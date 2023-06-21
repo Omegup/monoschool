@@ -27,7 +27,7 @@ export const Chips = ({person,onCancel} : ChipsProp) => {
               {
                 index + 1 < length 
                 ?   <span className={classes.label} key={index}>/</span>
-                :    <span className={classes.cancelIcon} onClick={() => onCancel()}>X</span>
+                :   <span className={classes.cancelIcon} onClick={() => onCancel()}>X</span>
               }
             </>
           )
