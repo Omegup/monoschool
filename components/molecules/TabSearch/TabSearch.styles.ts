@@ -16,18 +16,20 @@ export const useStyles = createUseStyles({
 
     '& $tabNumber': {
       color: colors.blue[500],
+      backgroundColor: `${colors.light[300]}`,
     },
-    
-    '&:hover': {
-      cursor: 'pointer',
-      borderBottom: `1px solid ${colors.dark.default}`,
+
+    '&&:hover': {
+      cursor: 'default',
+      borderBottom: `1px solid ${colors.blue[500]}`,
 
       '& $tabText': {
-        color: colors.dark.default,
+        color: colors.blue[500],
       },
 
       '& $tabNumber': {
-        color: colors.dark.default,
+        color: colors.blue[500],
+        backgroundColor: `${colors.light[300]}`,
       },
     }
   },
@@ -36,10 +38,11 @@ export const useStyles = createUseStyles({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'baseline',
-    justifyContent: 'space-around',
-    width: '100%',
+    justifyContent: 'center',
+    width: 'fit-content',
     height: '100%',
     cursor: 'pointer',
+    paddingInline: '5px',
 
     '&:hover': {
       cursor: 'pointer',
@@ -51,6 +54,7 @@ export const useStyles = createUseStyles({
 
       '& $tabNumber': {
         color: colors.dark.default,
+
       },
     }
   },
@@ -60,6 +64,7 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     marginBottom: '10px',
+    paddingInlineEnd: '5px',
   },
 
   tabNumber: {
@@ -69,7 +74,7 @@ export const useStyles = createUseStyles({
     color: `${colors.grey[500]}`,
     backgroundColor: `${colors.grey[100]}`,
     padding: '5px 10px',
-    borderRadius: '40%',
+    borderRadius: '11px',
   }
 
 });

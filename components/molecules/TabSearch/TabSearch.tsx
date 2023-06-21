@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
-import { createUseStyles } from 'react-jss';
+import { useState } from 'react';
 import { useStyles } from './TabSearch.styles';
+import { TabSearchProps } from './TabSearch.types';
 
-export const TabSearch = ({data} : { data : { tabText: string, tabNumber: number }[]}) => {
-  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+export const TabSearch = ({ selectedIndex, setSelectedIndex, tabProps }: TabSearchProps) => {
+
   const classes = useStyles();
 
   return (
     <div className={classes.topSearchContainer}>
       {
-        data.map((tabSearchData, index) => (
+        tabProps.map((tabSearchData, index) => (
           <div className={`${classes.tabSearch} ${index === selectedIndex ? classes.selected : ''}`}
             key={index} onClick={() => setSelectedIndex(index)}>
-            <p className={classes.tabText}>{tabSearchData.tabText}</p>
-            <p className={classes.tabNumber}>{tabSearchData.tabNumber}</p>
+            <span className={classes.tabText}>{tabSearchData.label}</span>
+            <span className={classes.tabNumber}>{tabSearchData.badge}</span>
           </div>
         ))
       }

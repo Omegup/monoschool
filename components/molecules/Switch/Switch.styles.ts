@@ -2,7 +2,7 @@ import { colors } from "@omegup-school/ui-atoms/colors";
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
-  switchContainer : {
+  switchContainer: {
     position: 'relative',
     display: 'inline-block',
     width: '60px',
@@ -21,8 +21,6 @@ export const useStyles = createUseStyles({
     },
 
     '&:checked': {
-      WebkitTransform: "translateX(26px)",
-      msTransform: "translateX(26px)",
       transform: "translateX(26px)"
     }
   },
@@ -36,7 +34,7 @@ export const useStyles = createUseStyles({
     backgroundColor: colors.light[500],
     transition: '.4s',
     borderRadius: '34px',
-    
+
     '&:before': {
       position: 'absolute',
       content: '""',

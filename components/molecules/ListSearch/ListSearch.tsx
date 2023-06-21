@@ -7,8 +7,8 @@ export const ListSearch = (props: ListSearchProps) => {
 
   return (
     <div className={classes.containerSearch}>
-      <div className={classes.search}>
         <div className={classes.iconSearch}></div>
+      <div className={classes.search}>
         <p className={classes.nameSearch} > {props.name} </p>
         <p className={classes.descriptionSearch} > {props.description} </p>
       </div>

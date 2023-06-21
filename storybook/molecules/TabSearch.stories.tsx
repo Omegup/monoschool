@@ -7,22 +7,24 @@ const meta = {
   component: TabSearch,
   tags: ['autodocs'],
   argTypes: {
-    data: { control: 'tabSearch' },
   },
 } satisfies Meta<typeof TabSearch>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-
-
 export const Primary: Story = {
   args: {
-    data : [
-      { tabText: 'Tous', tabNumber: 20 },
-      { tabText: 'Apprenant', tabNumber: 12 },
-      { tabText: 'Parents', tabNumber: 3 },
-      { tabText: 'Professeur', tabNumber: 1 },
-    ],
+    selectedIndex: 0,
+    setSelectedIndex(index: number) {
+      console.log(index);
+    },
+    tabProps: [
+      { label: 'Tous', badge: 20 },
+      { label: 'Apprenant', badge: 12 },
+      { label: 'Parents', badge: 3 },
+      { label: 'Professeur', badge: 1 }
+    ]
+
   },
 };
