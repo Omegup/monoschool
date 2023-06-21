@@ -1,14 +1,18 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders, spacing, widths } from '@omegup-school/ui-atoms/sizes';
 import { createUseStyles } from 'react-jss';
+import { styles } from '../common/styles';
 
 export const useCheckBoxStyles = createUseStyles({
   label: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems : 'center',
     gap: spacing.s4,
-    
   },
+  checkBoxText : {
+    ...styles.paragraph_medium_regular ,
+  } ,
   input: {
     clip: 'rect(0 0 0 0)',
     position: 'absolute',

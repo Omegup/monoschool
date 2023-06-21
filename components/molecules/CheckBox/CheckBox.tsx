@@ -1,12 +1,13 @@
 import { Tick } from "@omegup-school/ui-assets"
 import { checkboxProps } from "./CheckBox.types"
 import { useCheckBoxStyles } from "./CheckBox.styles"
-import { useRef, useEffect, useLayoutEffect } from "react"
+import { DEFAULT_CHECKBOX_SIZE, DEFAULT_CHECKBOX_VARIANT } from "./CheckBox.constants"
 
 export const CheckBox = ({
-  variant,
-  size,
-  label,
+  text ,
+  variant = DEFAULT_CHECKBOX_VARIANT,
+  size = DEFAULT_CHECKBOX_SIZE,
+  label ,
   disabled,
 }: checkboxProps) => {
   const classes = useCheckBoxStyles()
@@ -14,12 +15,13 @@ export const CheckBox = ({
   return (
     <label
       tabIndex={-1}
-      className={[classes.large, classes.scale, classes.label].join(' ')}
+      className={[classes.label, `${classes[size]}`, `${classes[variant]}`].join(' ')}
     >
       <input type="checkbox" className={classes.input} disabled={disabled} />
       <span className={classes.container} >
         <Tick />
       </span>
+      <p className={classes.checkBoxText}>{text??"checkBox"}</p>
     </label>
   )
 }

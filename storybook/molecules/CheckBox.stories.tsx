@@ -8,8 +8,6 @@ const meta = {
   component: CheckBox,
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'variant', options: ['solid', 'border', 'scale'] },
-    size: { control: 'size', options: ['large', 'medium', 'small'] },
 
   },
 } satisfies Meta<typeof CheckBox>;
@@ -17,11 +15,27 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Solidjs: Story = {
+export const Solid: Story = {
   args: {
     label: 'CheckBox',
     size: 'medium',
     variant: 'solid',
+    disabled: false,
+  },
+};
+export const Border: Story = {
+  args: {
+    label: 'CheckBox',
+    size: 'medium',
+    variant: 'border',
+    disabled: false,
+  },
+};
+export const Scale: Story = {
+  args: {
+    label: 'CheckBox',
+    size: 'medium',
+    variant: 'scale',
     disabled: false,
   },
 };
