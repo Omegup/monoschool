@@ -17,16 +17,16 @@ export const Chips = ({person,onCancel} : ChipsProp) => {
 
   return (
     <div className={classes.chipContainer}>
-      <p className={classes.parent}>Parents</p>
+      <span className={classes.parent}>Parents</span>
       <div className={classes.labelContainer}>
         {person.map(({ label }, index, { length }) => {
           return (
             <>
               <div className={classes.avatar}></div>
-              <p key={index} className={classes.label}>{label}</p>
+              <span key={index} className={classes.label}>{label}</span>
               {
                 index + 1 < length 
-                ?   <p className={classes.label} key={index}>/</p>
+                ?   <span className={classes.label} key={index}>/</span>
                 :    <span className={classes.cancelIcon} onClick={() => onCancel()}>X</span>
               }
             </>

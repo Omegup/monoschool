@@ -10,13 +10,15 @@ export const useStyles = createUseStyles({
     justifyContent: 'center',
     width: 'fit-content',
     backgroundColor: colors.blue[500],
-    borderRadius: '10px',
-    border: '2px solid' + colors.blue[500],
-    cursor: 'pointer',
+    borderRadius: '5px',
+    border: '1px solid' + colors.blue[500],
+    cursor: 'default',
+
   },
+
   avatar : {
-    width: '20px',
-    height: '20px',
+    width: '18px',
+    height: '18px',
     backgroundColor: colors.pink[200],
     color: colors.pink[200],
     display: 'flex',
@@ -24,41 +26,44 @@ export const useStyles = createUseStyles({
     justifyContent: 'center',
     borderRadius: '50%',
   },
+
   cancelIcon : {
-    width: '20px',
-    height: '20px',
+    width: '18px',
+    height: '18px',
     // backgroundColor: colors.pink[400],
     // color: colors.pink[400],
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: '50%',
-    cursor: 'pointer',
-
+    marginLeft: '10px',
+    cursor: 'default',
     '&:hover': {
       backgroundColor: colors.blue[500],
       color: colors.blue[500],
     }
-
   },
+
   parent: {
     backgroundColor: colors.blue[500],
-    padding: '0 5px',
+    padding: '5px',
     height: '100%',
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: colors.light[100],
   },
+
   labelContainer: {
-    padding: '0 5px',
+    padding: '5px',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
     backgroundColor: colors.light[100],
-    borderRadius:' 0 10px 10px 0'
+    borderRadius:' 0 5px 5px 0'
   },
+
   label: {
-    padding: '0 5px',
+    padding: '5px',
     backgroundColor: colors.light[100],
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
