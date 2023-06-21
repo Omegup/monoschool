@@ -1,19 +1,16 @@
 import { ArrowRight } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './Filter.styles';
 import { FilterProps } from './Filter.types';
+import { FilterButton } from '../FilterButton/FilterButton';
 
-export const FilterButton = ({ size, style, label,showIcon }: FilterProps) => {
+export const Filter = ({ size, style, }: FilterProps) => {
   const classes = useFilterStyles();
   return (
-    <div 
-    className={`${classes[style]} ${classes[size]}`}
-     >
-      <div className={classes.container}>
-      <button className={classes.button}  >
-        <label className={classes.labelText} >{label}</label> 
-        {showIcon &&<span className={classes.arrow}> <ArrowRight width="100%"/></span>}  
-      </button>
-    </div>
+    <div className={`${classes[style]} ${classes.container} ${classes[size]}`}>
+     <FilterButton style={style} size={size} showIcon={true} label={'Apprenant'}/>
+     <FilterButton style={style} size={size} showIcon={true} label={'Classe'}/>
+     <FilterButton style={style} size={size} showIcon={false} label={"Facture aujourd'hui"}/>
+     <FilterButton style={style} size={size}showIcon={false} label={'Facture ce mois ci'}/>
     </div>
   );
 };

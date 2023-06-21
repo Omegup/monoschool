@@ -5,11 +5,9 @@ import { FilterProps } from './Filter.types';
 export const FilterButton = ({ size, style, label,showIcon }: FilterProps) => {
   const classes = useFilterStyles();
   return (
-    
-     
       <button className={`${classes.button} ${classes[style]} ${classes[size]}`}  >
         <label className={classes.labelText} >{label}</label> 
-        {showIcon &&<span className={classes.arrow}> <ArrowRight bold={true} /></span>}  
+        <span className={classes.arrow}>{showIcon && <ArrowRight bold={true} />}  </span>
       </button>
    
   

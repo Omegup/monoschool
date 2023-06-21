@@ -32,6 +32,7 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   button: {
+    margin:spacing.s5,
     height:"36px",
     borderRadius: borders.r5,
     border: 'none',
@@ -66,7 +67,7 @@ export const useFilterStyles = createUseStyles({
   },
   labelText: {
     ...styles.paragraph_small_regular,
-    minWidth:"100px",
+    minWidth:"110px",
     minHeight:"18px",
     margin:spacing.s4,
     padding:[spacing.s4,spacing.s4,spacing.s5,0],
