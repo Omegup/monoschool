@@ -5,7 +5,7 @@ import { FilterSelect } from '@omegup-school/ui-molecules';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'Atom/FilterSelect',
+  title: 'molecule/FilterSelect',
   component: FilterSelect,
   tags: ['autodocs'],
   argTypes: {

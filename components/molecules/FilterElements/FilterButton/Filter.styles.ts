@@ -7,18 +7,19 @@ import { FilterProps } from './Filter.types';
 
 
 type Sizes = readonly [
-  `$${FilterProps['size']}>$container>&`,
+  `$${FilterProps['size']}>$button>&`,
   { width: string; height: string }
 ];
 const buttonSizes = Object.fromEntries<'', Record<'', Sizes>>(
   Object.entries(widths.filter).map(([k, v]) => [
-    `$${k}>$container>&`,
+    `$${k}>$button>&`,
     {
       width: v,
       height: v,
     },
   ])
 );
+
 
 export const useFilterStyles = createUseStyles({
   solid: {},
@@ -31,18 +32,17 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   button: {
+    height:"36px",
     borderRadius: borders.r5,
     border: 'none',
     outline: 'none',
+    padding:0,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
     color: colors.grey[400],
-    backgroundColor:"white",
+    backgroundColor:colors.background.default,
+    gap:spacing.s4,
     cursor: 'pointer',
-    '& $arrow': {
-      ...buttonSizes,
-    },
     '&:active, &:focus, &:hover': {
       backgroundColor: colors.light[300],
       color: colors.blue[500],
@@ -56,14 +56,24 @@ export const useFilterStyles = createUseStyles({
     },
   },
   arrow:{
-    ...buttonSizes,
     fill : colors.grey[400],
+    margin:spacing.s4,
+    padding:spacing.s2,
+    width:widths.icon.svg,
+    height:widths.icon.svg,
   },
   container: {
-    
   },
   labelText: {
     ...styles.paragraph_small_regular,
+    minWidth:"100px",
+    minHeight:"18px",
+    margin:spacing.s4,
+    padding:[spacing.s4,spacing.s4,spacing.s5,0],
+    textAlign:"left"
+    
+   
   },
   square: {},
 });
+

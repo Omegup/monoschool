@@ -5,7 +5,7 @@ import { FilterButton } from '@omegup-school/ui-molecules';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'Atom/FilterButton',
+  title: 'molecule/FilterButton',
   component: FilterButton,
   tags: ['autodocs'],
   argTypes: {
@@ -25,7 +25,7 @@ export const Primary: Story = {
     label: 'Text cell',
     size: 'medium',
     style: 'solid',
-    showIcon: false,
+    showIcon: true,
   },
 };
 

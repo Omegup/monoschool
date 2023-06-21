@@ -1,19 +1,17 @@
-import { Arrow } from '@omegup-school/ui-assets';
+import { ArrowRight } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './Filter.styles';
 import { FilterProps } from './Filter.types';
 
 export const FilterButton = ({ size, style, label,showIcon }: FilterProps) => {
   const classes = useFilterStyles();
   return (
-    <div 
-    className={`${classes[style]} ${classes[size]}`}
-     >
-      <div className={classes.container}>
-      <button className={classes.button}  >
+    
+     
+      <button className={`${classes.button} ${classes[style]} ${classes[size]}`}  >
         <label className={classes.labelText} >{label}</label> 
-        {showIcon &&<span className={classes.arrow}> <Arrow width="100%"/></span>}  
+        {showIcon &&<span className={classes.arrow}> <ArrowRight bold={true} /></span>}  
       </button>
-    </div>
-    </div>
+   
+  
   );
 };

@@ -1,0 +1,14 @@
+import { rotation, widths } from '@omegup-school/ui-atoms/sizes';
+import { ArrowDownSecond } from './ArrowDownSecond';
+
+export const ArrowLeftSecond = ({
+  width = widths.icon.svg,
+  height = width,
+  color = 'currentColor',
+  bold,
+}: IconProps) => {
+  return (
+    <ArrowDownSecond width={width}
+    height={height} bold={bold} color={color} rotation={rotation.left} />
+  );
+};
