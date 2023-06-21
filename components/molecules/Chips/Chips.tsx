@@ -20,18 +20,22 @@ export const Chips = () => {
 
   return (
     <div className={classes.chipContainer}>
-      <p className={classes.parent}>Parent</p>
-
-      {labels.map(({ label }, index, { length }) => {
-        return (
-          <div className={classes.labelContainer}>
-            <p key={index} className={classes.label}>{label}</p>
-            {index + 1 < length ?
-              <p className={classes.label} key={index}>/</p>
-              : null}
-          </div>
-        )
-      })}
+      <span className={classes.parent}>Parents</span>
+      <div className={classes.labelContainer}>
+        {person.map(({ label }, index, { length }) => {
+          return (
+            <>
+              <div className={classes.avatar}></div>
+              <span key={index} className={classes.label}>{label}</span>
+              {
+                index + 1 < length 
+                ?   <span className={classes.label} key={index}>/</span>
+                :    <span className={classes.cancelIcon} onClick={() => onCancel()}>X</span>
+              }
+            </>
+          )
+        })}
+      </div>
 
     </div>
   )
