@@ -1,6 +1,8 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { typography } from "@omegup-school/ui-atoms/typography";
-import { createUseStyles } from "react-jss";
+
+import { colors } from '@omegup-school/ui-configs/colors';
+import { shadowXSmall } from '@omegup-school/ui-configs/effects/shadow';
+import { typography } from '@omegup-school/ui-configs/typography/typography.cnst';
+import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
   chipContainer : {
@@ -8,16 +10,15 @@ export const useStyles = createUseStyles({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: '0.5rem',
     width: 'fit-content',
     backgroundColor: colors.blue[500],
-    borderRadius: '5px',
     border: '1px solid' + colors.blue[500],
+    borderRadius: '5px',
     cursor: 'default',
-
+    boxShadow: shadowXSmall
   },
 
-  avatar : {
+  avatar: {
     width: '18px',
     height: '18px',
     backgroundColor: colors.pink[200],
@@ -28,11 +29,9 @@ export const useStyles = createUseStyles({
     borderRadius: '50%',
   },
 
-  cancelIcon : {
+  cancelIcon: {
     width: '18px',
     height: '18px',
-    // backgroundColor: colors.pink[400],
-    // color: colors.pink[400],
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -42,6 +41,12 @@ export const useStyles = createUseStyles({
     '&:hover': {
       backgroundColor: colors.blue[500],
       color: colors.blue[500],
+      '&>svg>path': {
+        stroke: colors.light[500]
+      }
+    },
+    '&>svg>path': {
+      stroke: colors.dark.default,
     }
   },
 
@@ -49,30 +54,17 @@ export const useStyles = createUseStyles({
     backgroundColor: colors.blue[500],
     padding: '5px',
     height: '100%',
-    fontSize : typography.paragraph.xSmall.regular.fontSize,
-    fontWeight : typography.paragraph.xSmall.regular.fontWeight,
-    color : colors.light[100],
+    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    color: colors.light[100],
+    borderRadius: '5px'
   },
-<<<<<<< HEAD
   labelContainer : {
-=======
-
-  labelContainer: {
-    padding: '5px',
->>>>>>> 3b264d0 (fix chips syling)
+    padding: '0 5px',
     display: 'flex',
     flexDirection: 'row',
-<<<<<<< HEAD
-    backgroundColor: colors.blue[100],
-  },
-  label : {
-    padding: '0 5px',
-    backgroundColor: colors.blue[100],
-    fontSize : typography.paragraph.xSmall.regular.fontSize,
-    fontWeight : typography.paragraph.xSmall.regular.fontWeight,
-=======
     backgroundColor: colors.light[100],
-    borderRadius:' 0 5px 5px 0'
+    borderRadius: ' 0 5px 5px 0'
   },
 
   label: {
@@ -80,7 +72,14 @@ export const useStyles = createUseStyles({
     backgroundColor: colors.light[100],
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
->>>>>>> 3b264d0 (fix chips syling)
   },
 
-})
+  labelSeparator: {
+    padding: '5px 7px 5px 5px',
+    backgroundColor: colors.light[100],
+    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+  },
+  
+
+});
