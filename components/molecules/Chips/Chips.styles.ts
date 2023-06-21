@@ -1,4 +1,5 @@
 import { colors } from "@omegup-school/ui-atoms/colors";
+import { shadowXSmall } from "@omegup-school/ui-atoms/effects/shadow";
 import { typography } from "@omegup-school/ui-atoms/typography";
 import { createUseStyles } from "react-jss";
 
@@ -10,13 +11,13 @@ export const useStyles = createUseStyles({
     justifyContent: 'center',
     width: 'fit-content',
     backgroundColor: colors.blue[500],
-    borderRadius: '5px',
     border: '1px solid' + colors.blue[500],
+    borderRadius: '5px',
     cursor: 'default',
-
+    boxShadow: shadowXSmall
   },
 
-  avatar : {
+  avatar: {
     width: '18px',
     height: '18px',
     backgroundColor: colors.pink[200],
@@ -27,11 +28,9 @@ export const useStyles = createUseStyles({
     borderRadius: '50%',
   },
 
-  cancelIcon : {
+  cancelIcon: {
     width: '18px',
     height: '18px',
-    // backgroundColor: colors.pink[400],
-    // color: colors.pink[400],
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -41,6 +40,12 @@ export const useStyles = createUseStyles({
     '&:hover': {
       backgroundColor: colors.blue[500],
       color: colors.blue[500],
+      '&>svg>path': {
+        stroke: colors.light[500]
+      }
+    },
+    '&>svg>path': {
+      stroke: colors.dark.default,
     }
   },
 
@@ -51,15 +56,16 @@ export const useStyles = createUseStyles({
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: colors.light[100],
+    borderRadius: '5px'
   },
 
   labelContainer: {
-    padding: '5px',
+    padding: '0 5px',
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
     backgroundColor: colors.light[100],
-    borderRadius:' 0 5px 5px 0'
+    borderRadius: ' 0 5px 5px 0'
   },
 
   label: {
@@ -68,5 +74,13 @@ export const useStyles = createUseStyles({
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
   },
+
+  labelSeparator: {
+    padding: '5px 7px 5px 5px',
+    backgroundColor: colors.light[100],
+    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+  },
+  
 
 })
