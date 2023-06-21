@@ -3,138 +3,107 @@ import { borders, spacing, widths } from '@omegup-school/ui-atoms/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import {
+  CHECKBOX_THEMES,
+  DEFAULT_CHECKBOX_EVENTS_SELECTORS,
+} from './CheckBox.constants';
+import {
   CheckboxCommonVariantStyles,
-  CheckboxEvent,
-  VariantStyle,
+  CheckboxVariantTheme,
 } from './CheckBox.types';
-import { DEFAULT_CHECKBOX_EVENTS_SELECTORS } from './CheckBox.constants';
 
 const commonVariantStylesBuilder = (
-  variant: 'solid' | 'border' | 'scale',
-  events: {
-    [Event in CheckboxEvent]: object;
-  }
-): Partial<CheckboxCommonVariantStyles> => ({
-    // focused & hovered
-    '& > $input:focus + $container': {
-      outline: `${borders.b5}px solid ${colors.blue[900]}`,
-    },
-    '& > $input:not(:checked) + $container:hover': {
-      backgroundColor: colors.grey[400],
-      border: `${borders.b3}px solid ${colors.grey[400]}`,
-      outline: `${borders.b5}px solid ${colors.grey[400]}`,
-      outlineOffset: -1,
-    },
-    // enabled
-    '& > $input:checked + $container': {
-      border: `${borders.b3}px solid ${colors.blue[500]}`,
-      color: colors.background.default,
-      backgroundColor: colors.blue[500],
-    },
-    '& > $input:checked + $container:hover': {
-      borderColor: colors.blue[700],
-      backgroundColor: colors.blue[700],
-    },
-});
-
-export const useCheckBoxStyles = createUseStyles({
-  label: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: spacing.s4,
-  },
-  checkBoxText: {
-    ...styles.paragraph_medium_regular,
-  },
-  input: {
-    clip: 'rect(0 0 0 0)',
-    position: 'absolute',
-    '&:disabled + $container': {
-      opacity: 0.4,
-    },
-  },
-  container: {
-    display: 'grid',
-    placeItems: 'center',
-    borderRadius: borders.r5,
-    border: `${borders.b3}px solid ${colors.grey[500]}`,
-    color: 'transparent',
-    backgroundColor: 'transparent',
-  },
-  solid: {
-    // focused & hovered
-    '& > $input:focus + $container': {
-      outline: `${borders.b5}px solid ${colors.blue[900]}`,
-    },
-    '& > $input:not(:checked) + $container:hover': {
-      backgroundColor: colors.grey[400],
-      border: `${borders.b3}px solid ${colors.grey[400]}`,
-      outline: `${borders.b5}px solid ${colors.grey[400]}`,
-      outlineOffset: -1,
-    },
-    // enabled
-    '& > $input:checked + $container': {
-      border: `${borders.b3}px solid ${colors.blue[500]}`,
-      color: colors.background.default,
-      backgroundColor: colors.blue[500],
-    },
-    '& > $input:checked + $container:hover': {
-      borderColor: colors.blue[700],
-      backgroundColor: colors.blue[700],
-    },
-  },
-  border: {
-    // focused & hovered
-    '& > $input:focus + $container': {
-      outline: `${borders.b5}px solid ${colors.danger[600]}`,
-    },
-    '& > $input:not(:checked) + $container:hover': {
-      color: colors.blue[500],
-      backgroundColor: colors.light[400],
-      border: `${borders.b3}px solid ${colors.blue[500]}`,
-      outline: `${borders.b5}px solid ${colors.light[400]}`,
-      outlineOffset: -1,
-    },
-    // enabled
-    '& > $input:checked + $container': {
-      color: colors.blue[500],
-      border: `${borders.b3}px solid ${colors.blue[500]}`,
-    },
-    '& > $input:checked + $container:hover': {
-      backgroundColor: colors.light[400],
-      outline: `${borders.b5}px solid ${colors.light[400]}`,
-      outlineOffset: -1,
-    },
-  },
-  scale: {
+  eventsTheme: Partial<CheckboxVariantTheme>,
+  containerStateSelector: string
+) =>
+  ({
     // focused
-    '& > $input:focus + $container': {
-      outline: `${borders.b5}px solid ${colors.danger[600]}`,
+    [DEFAULT_CHECKBOX_EVENTS_SELECTORS.focused]: {
+      outline: `${borders.b5}px solid ${eventsTheme?.focused?.outlineColor}`,
+    },
+    // hovered
+    [`.${containerStateSelector}:hover & > $input:not(:checked) + $container`]: {
+      color: eventsTheme?.hovered?.color,
+      backgroundColor: eventsTheme?.hovered?.backgroundColor,
+      border: `${borders.b3}px solid ${eventsTheme?.hovered?.borderColor}`,
+      outline: `${borders.b5}px solid ${eventsTheme?.hovered?.outlineColor}`,
+      outlineOffset: eventsTheme?.hovered?.outlineOffset,
     },
     // enabled
-    '& > $input:checked + $container': {
-      border: `${borders.b3}px solid ${colors.blue[500]}`,
-      color: colors.background.default,
-      backgroundColor: colors.blue[500],
+    [DEFAULT_CHECKBOX_EVENTS_SELECTORS.enabled]: {
+      border: `${borders.b3}px solid ${eventsTheme?.enabled?.borderColor}`,
+      color: eventsTheme?.enabled?.color,
+      backgroundColor: eventsTheme?.enabled?.backgroundColor,
     },
-  },
-  large: {
-    '& $container': {
-      width: widths.checkbox.large,
-      height: widths.checkbox.large,
+    // hoveredOnEnable
+    [DEFAULT_CHECKBOX_EVENTS_SELECTORS.hoveredOnEnable]: {
+      borderColor: eventsTheme?.hoveredOnEnable?.borderColor,
+      backgroundColor: eventsTheme?.hoveredOnEnable?.backgroundColor,
+      outlineColor: eventsTheme?.hoveredOnEnable?.outlineColor,
+      outlineOffset: eventsTheme?.hoveredOnEnable?.outlineOffset,
     },
-  },
-  medium: {
-    '& $container': {
-      width: widths.checkbox.medium,
-      height: widths.checkbox.medium,
+  } as CheckboxCommonVariantStyles);
+
+export const useCheckBoxStyles = createUseStyles(
+  ({ containerStateSelector }: { containerStateSelector: string }) => ({
+    label: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      gap: spacing.s4,
     },
-  },
-  small: {
-    '& $container': {
-      width: widths.checkbox.small,
-      height: widths.checkbox.small,
+    checkBoxText: {
+      ...styles.paragraph_medium_regular,
     },
-  },
-});
+    input: {
+      clip: 'rect(0 0 0 0)',
+      position: 'absolute',
+      '&:disabled + $container': {
+        opacity: 0.4,
+      },
+    },
+    container: {
+      display: 'grid',
+      placeItems: 'center',
+      borderRadius: borders.r5,
+      border: `${borders.b3}px solid ${colors.grey[500]}`,
+      color: 'transparent',
+      backgroundColor: 'transparent',
+    },
+    solid: {
+      ...commonVariantStylesBuilder(
+        CHECKBOX_THEMES.solid,
+        containerStateSelector
+      ),
+    },
+    border: {
+      ...commonVariantStylesBuilder(
+        CHECKBOX_THEMES.border,
+        containerStateSelector
+      ),
+    },
+    scale: {
+      ...commonVariantStylesBuilder(
+        CHECKBOX_THEMES.scale,
+        containerStateSelector
+      ),
+    },
+    large: {
+      '& $container': {
+        width: widths.checkbox.large,
+        height: widths.checkbox.large,
+      },
+    },
+    medium: {
+      '& $container': {
+        width: widths.checkbox.medium,
+        height: widths.checkbox.medium,
+      },
+    },
+    small: {
+      '& $container': {
+        width: widths.checkbox.small,
+        height: widths.checkbox.small,
+      },
+    },
+  })
+);

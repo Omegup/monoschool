@@ -1,3 +1,4 @@
+import { ContainerStateContext } from '../contexts/pointer';
 import { useTableLineStyles } from './TabLine.styles';
 import { TableLineProps } from './TabLine.types';
 export const TableLine = ({ row, isSelected , isFullWidth }: TableLineProps) => {
@@ -7,7 +8,9 @@ export const TableLine = ({ row, isSelected , isFullWidth }: TableLineProps) => 
   isFullWidth && appliedClasses.push(classes.tableLineFullWidth);
   return (
     <div className={appliedClasses.join(' ')}>
+      <ContainerStateContext.Provider value={classes.tableLine}>
       {row.map((column, index) => column)}
+      </ContainerStateContext.Provider>
     </div>
   )
 }

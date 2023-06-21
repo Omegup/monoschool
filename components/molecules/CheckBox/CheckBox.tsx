@@ -2,15 +2,18 @@ import { Tick } from "@omegup-school/ui-assets"
 import { CheckboxProps } from "./CheckBox.types"
 import { useCheckBoxStyles } from "./CheckBox.styles"
 import { DEFAULT_CHECKBOX_SIZE, DEFAULT_CHECKBOX_VARIANT } from "./CheckBox.constants"
+import { useContainerStateSelector } from "../contexts/pointer"
 
 export const CheckBox = ({
-  text ,
+  text,
   variant = DEFAULT_CHECKBOX_VARIANT,
   size = DEFAULT_CHECKBOX_SIZE,
-  label ,
+  label,
   disabled,
-}: CheckboxProps , ) => {
-  const classes = useCheckBoxStyles()
+}: CheckboxProps,) => {
+  const containerStateSelector = useContainerStateSelector()
+
+  const classes = useCheckBoxStyles({ theme: { containerStateSelector } })
 
   return (
     <label
@@ -21,7 +24,7 @@ export const CheckBox = ({
       <span className={classes.container} >
         <Tick />
       </span>
-      <p className={classes.checkBoxText}>{text??"checkBox"}</p>
+      <p className={classes.checkBoxText}>{text ?? "checkBox"}</p>
     </label>
   )
 }
