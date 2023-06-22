@@ -51,7 +51,7 @@ export const useSearchBarStyles = createUseStyles({
    display:'flex'
   },
   Close: {
-    margin:[spacing.s4,0,spacing.s4,spacing.s4]
+    display:'flex'
   },
   labelText: {
     ...styles.paragraph_small_regular,

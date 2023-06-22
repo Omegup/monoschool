@@ -25,7 +25,7 @@ export const Primary: Story = {
     label: 'Text cell',
     size: 'medium',
     style: 'solid',
-    showIcon: false,
+    displayClose: true,
   },
 };
 
