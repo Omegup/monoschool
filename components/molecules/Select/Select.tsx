@@ -2,11 +2,14 @@ import { Square, Tick } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './Select.styles';
 import { ControlledSelectProps } from './Select.types';
 import { forwardRef } from 'react';
-
+import { forward } from '../common/forward';
 
 export const Select = forwardRef(
-  (props: ControlledSelectProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, label, onChange, value, onBlur } = props;
+  (
+    props: ControlledSelectProps,
+    ref: React.ForwardedRef<{ focus: () => void }>
+  ) => {
+    const { size, style, disabled, label, onChange, value = false, onBlur } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
     return (
@@ -18,7 +21,8 @@ export const Select = forwardRef(
           type="checkbox"
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
-          {...{ ref, onBlur }}
+          onBlur={() => onBlur()}
+          ref={forward(ref)}
           checked={value}
         />
         <div className={classes.container}>

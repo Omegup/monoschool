@@ -1,66 +1,31 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { spacing, borders } from '@omegup-school/ui-atoms/sizes';
-import React from 'react';
-import { createUseStyles } from 'react-jss';
-import { styles } from '../common/styles';
+import { forwardRef } from 'react';
+import { useOutlinedInputStyles } from './Input.styles';
+import { ControlledOutlinedInputProps } from './Input.types';
+import { forward } from '../common/forward';
 
-const useStyles = createUseStyles({
-  root: {
-    border: [borders.b2, 'solid', colors.grey[300]],
-    borderRadius: borders.r5,
-  },
-  cc: {
-    paddingInline: spacing.s8,
-    paddingBlock: spacing.s6,
-  },
-  lb: {
-    display: 'flex',
-    alignItems: 'center',
-    paddingInline: spacing.s8,
-  },
-  label: {
-    ...styles.paragraph_xSmall_semiBold,
-    color: colors.grey[400],
-    position: 'absolute',
-    backgroundColor: colors.background.default,
-    paddingInline: spacing.s2,
-    borderStartStartRadius: borders.r5,
-    borderStartEndRadius: borders.r5,
-  },
-  input: {
-    ...styles.paragraph_medium_semiBold,
-    '&::placeholder': {
-      color: colors.grey[400],
-    },
-    color: colors.dark.default,
-    border: 'none',
-    outline: 'none',
-    width: '100%',
-  },
-});
-
-export const OutlinedInput = ({
-  label,
-  placeholder,
-  type,
-}: {
-  placeholder?: string;
-  label: string;
-  type?: 'password';
-}) => {
-  const classes = useStyles();
-  return (
-    <div className={classes.root}>
-      <div className={classes.lb}>
-        <label className={classes.label}>{label}</label>
-      </div>{' '}
-      <div className={classes.cc}>
-        <input
-          type={type}
-          placeholder={placeholder}
-          className={classes.input}
-        />
+export const OutlinedInput = forwardRef(
+  (
+    props: ControlledOutlinedInputProps,
+    ref: React.ForwardedRef<{ focus: () => void }>
+  ) => {
+    const { label, placeholder, type, onBlur, onChange, value, disabled } =
+      props;
+    const classes = useOutlinedInputStyles();
+    return (
+      <div className={classes.root}>
+        <div className={classes.lb}>
+          <span className={classes.label}>{label}</span>
+        </div>{' '}
+        <div className={classes.cc}>
+          <input
+            onBlur={() => onBlur()}
+            onChange={(e) => onChange(e.target.value)}
+            {...{ placeholder, type, value, disabled }}
+            ref={forward(ref)}
+            className={classes.input}
+          />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);

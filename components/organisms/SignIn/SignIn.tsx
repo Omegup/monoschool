@@ -11,7 +11,7 @@ import {
   SignInHeader,
 } from '@omegup-school/ui-cells';
 
-import { useForm } from 'react-hook-form';
+import { UseFormSetError, useForm } from 'react-hook-form';
 
 export type SignInFormData = {
   email: string;
@@ -20,26 +20,47 @@ export type SignInFormData = {
 };
 
 export type SignInProps = {
-  onSubmit: (data: SignInFormData) => void;
+  onSubmit: (
+    data: SignInFormData,
+    setError: UseFormSetError<SignInFormData>
+  ) => void;
 };
 
 export function SignIn({ onSubmit }: SignInProps) {
-  const { handleSubmit, control } = useForm<SignInFormData>();
-
+  const { handleSubmit, control, setError } = useForm<SignInFormData>({
+    defaultValues: () =>
+      new Promise((res) =>
+        setTimeout(
+          () =>
+            res({
+              email: '',
+              password: '',
+              remember: false,
+            }),
+          1000
+        )
+      ),
+  });
   return (
     <LoginPanel>
       <SignInBanner />
-      <FormPanel onSubmit={handleSubmit(onSubmit)}>
+      <FormPanel onSubmit={handleSubmit((data) => onSubmit(data, setError))}>
         <Logo />
         <SignInHeader />
         <OutlinedInput
+          control={control}
           placeholder="Tapez votre addresse e-mail ici"
           label="E-mail"
+          name="email"
+          _
         />
         <OutlinedInput
+          control={control}
           placeholder="Tapez votre mot de passe ici"
           label="Mot de passe"
           type="password"
+          name="password"
+          _
         />
         <SpaceBetween>
           <Select
@@ -47,8 +68,8 @@ export function SignIn({ onSubmit }: SignInProps) {
             label="Se souvenir de moi"
             size="medium"
             style="solid"
+            name="remember"
             control={control}
-            name={'remember'}
           />
           <Link text="Mot de passe oublié ?" />
         </SpaceBetween>

@@ -255,6 +255,10 @@ importers:
       '@omegup-school/user-entity':
         specifier: workspace:*
         version: link:../../entities/user
+    devDependencies:
+      '@types/omegup-school':
+        specifier: workspace:*
+        version: link:../../lib/type-helpers
 
   infrastucture/context:
     dependencies:
@@ -378,6 +382,9 @@ importers:
         specifier: workspace:*
         version: link:../../entities/user
     devDependencies:
+      '@types/omegup-school':
+        specifier: workspace:*
+        version: link:../../lib/type-helpers
       tslib:
         specifier: ^2.5.3
         version: 2.5.3
@@ -406,6 +413,9 @@ importers:
         specifier: workspace:*
         version: link:../user-presenter
     devDependencies:
+      '@types/omegup-school':
+        specifier: workspace:*
+        version: link:../../lib/type-helpers
       tslib:
         specifier: ^2.5.3
         version: 2.5.3
@@ -540,6 +550,9 @@ importers:
         specifier: workspace:*
         version: link:../../gateways/user
     devDependencies:
+      '@types/omegup-school':
+        specifier: workspace:*
+        version: link:../../lib/type-helpers
       tslib:
         specifier: ^2.5.3
         version: 2.5.3

@@ -1,21 +1,21 @@
 import { useFacade } from '@omegup-school/hooks';
-import { SignIn } from '@omegup-school/ui-organisms/SignIn';
-import { useState } from 'react';
+import { SignIn, SignInFormData } from '@omegup-school/ui-organisms/SignIn';
+import { ErrorOption } from 'react-hook-form';
 
-// Initialize the controller
-type SignInFormData = {
-  email: string;
-  password: string;
-};
 
 function SignInView() {
   const { signInPresenter, userController } = useFacade();
 
-  const [error, setError] = useState<Error>();
-
-  const onSubmit = async (data: SignInFormData) => {
-    await userController.signIn(data, signInPresenter(setError));
-  };
+  const onSubmit = (
+    data: SignInFormData,
+    handleError: (
+      name: keyof SignInFormData | 'root',
+      error: ErrorOption,
+      options?: {
+        shouldFocus: boolean;
+      }
+    ) => void
+  ) => userController.signIn(data, signInPresenter(handleError));
 
   return <SignIn onSubmit={onSubmit} />;
 }

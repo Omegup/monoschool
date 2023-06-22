@@ -4,5 +4,8 @@
   "dependencies": {
     "@omegup-school/user-entity": "workspace:*",
     "@omegup-school/user-dtos": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/omegup-school": "workspace:*"
   }
 }
