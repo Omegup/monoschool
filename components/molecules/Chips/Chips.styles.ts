@@ -1,23 +1,10 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
-import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
-import { ChipsProps } from './Chips.types';
 
-type Sizes = readonly [
-  `$${ChipsProps['size']}>$container>&`,
-  { width: string; height: string }
-];
-const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.checkbox).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
+
+
 
 export const useSelectStyles = createUseStyles({
   solid: {},
@@ -30,16 +17,32 @@ export const useSelectStyles = createUseStyles({
   disabled: {},
   enabled: {},
   label: {
+    '&$large > $container': {
+      padding: spacing.s5,
+      gap: spacing.s4,
+      borderRadius: borders.r5,
+      border: [borders.b3,"solid"],
+      },
+      '&$medium > $container': {
+        padding: spacing.s4,
+        gap: spacing.s3,
+        borderRadius: borders.r5,
+        border: [borders.b2,"solid"],
+        },
+        '&$small > $container': {
+          padding: spacing.s3,
+          gap: spacing.s2,
+          borderRadius: borders.r5,
+          border: [borders.b1,"solid"],
+          }
   },
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    color: colors.dark.default,
-    gap: spacing.s8,
-    '$medium > &': {
-      padding: spacing.s4,
-      borderRadius: borders.r5,
-    },
+    display: "inline-flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color:colors.blue[500],
+    borderColor:colors.blue[500],
+    
   },
   labelText: {
     ...styles.paragraph_small_regular,

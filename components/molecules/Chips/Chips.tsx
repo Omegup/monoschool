@@ -1,6 +1,7 @@
-import { Close, Square, Tick } from '@omegup-school/ui-assets';
+import { Close, Essential, Square, Tick } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './Chips.styles';
 import { ChipsProps } from './Chips.types';
+import { widths } from '@omegup-school/ui-atoms/sizes';
 
 export const Chips = ({ size, style, disabled, label }: ChipsProps) => {
   const classes = useSelectStyles(),
@@ -11,11 +12,9 @@ export const Chips = ({ size, style, disabled, label }: ChipsProps) => {
       className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
     >
       <div className={classes.container}>
-          <span className={classes.square}>
-            <Close width="100%" />
-          </span>
- 
+            <Essential width={widths.icon[size]} />
         <span className={classes.labelText}>{label}</span>
+        <Close width={widths.icon[size]} />
       </div>
     </label>
   );

@@ -7,3 +7,4 @@ export * from './GridFive';
 export * from './GridNine';
 export * from './GridSix';
 export * from './ArrowRight';
+export * from './Essential';
