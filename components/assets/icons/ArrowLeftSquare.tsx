@@ -1,5 +1,6 @@
 import { rotation, widths } from '@omegup-school/ui-atoms/sizes';
 import { ArrowDownSquare } from './ArrowDownSquare';
+import { IconProps } from './Icons.types';
 
 export const ArrowLeftSquare = ({
   width = widths.icon.svg,

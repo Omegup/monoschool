@@ -32,8 +32,9 @@ export const useSearchBarStyles = createUseStyles({
   input: {
   border:colors.background.overlay,
   outline: colors.background.overlay,
+  padding:"0",
+  margin:"0"
   },
-  
   label: {},
   container: {
     display: "flex",
@@ -47,8 +48,7 @@ export const useSearchBarStyles = createUseStyles({
     boxShadow: [0, borders.b2, borders.b4, 0, colors.grey[400]],
   },
   SearchStatus: {
-    width:"16px",
-    height:"16px",
+   display:'flex'
   },
   Close: {
     margin:[spacing.s4,0,spacing.s4,spacing.s4]

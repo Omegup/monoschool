@@ -86,7 +86,8 @@ import {
 
 export const Icons = ({ bold ,color}: IconProps) => (
   <div style={{ display: 'flex', gap: '1em', flexWrap: 'wrap' }}>
-    <Add bold={bold} color={color} />
+    <Add bold={bold} color={color}  width={"24"}
+      height={"24"} />
     <Logo  color={color}/>
     <Square color={color}/>
     <Tick color={color}/>
@@ -125,7 +126,7 @@ export const Icons = ({ bold ,color}: IconProps) => (
     <ArrowLeftFirst bold={bold} color={color} />
     <ArrowUpFirst bold={bold} color={color} />
     <ArrowRightFirst bold={bold} color={color} />
-    <ArrowDownSecond bold={bold} color={color} />
+    <ArrowDownSecond bold={bold} color={color} />sdf
     <ArrowLeftSecond bold={bold} color={color} />
     <ArrowUpSecond bold={bold} color={color} />
     <ArrowRightSecond bold={bold} color={color} />
@@ -138,7 +139,7 @@ export const Icons = ({ bold ,color}: IconProps) => (
     <ArrowLeftDivided bold={bold} color={color} />
     <ArrowRightDivided bold={bold} color={color} />
     <ArrowSquare bold={bold} color={color} />
-    <ArrowDownSquare bold={bold} color={color} />
+    <ArrowDownSquare bold={bold} color={color} />hjk
     <ArrowUpSquare bold={bold} color={color} />
     <ArrowLeftSquare bold={bold} color={color} />
     <ArrowRightSquare bold={bold} color={color} />
