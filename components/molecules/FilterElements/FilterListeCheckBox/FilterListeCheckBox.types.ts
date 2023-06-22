@@ -1,5 +1,5 @@
 export type FilterProps = {
-  style: 'solid' | 'border' | 'flat' | 'text';
+  label: string;
   size: 'large' | 'medium' | 'small';
   showImage:boolean;
 };

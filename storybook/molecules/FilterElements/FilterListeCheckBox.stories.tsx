@@ -9,7 +9,7 @@ const meta = {
   component: FilterListeCheckBox,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'select', options: ['solid', 'border', 'text', 'flat'] },
+
     size: { control: 'select', options: ['large', 'medium', 'small'] },
   },
    
@@ -22,9 +22,8 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-
+    label: "Rechercher",
     size: 'medium',
-    style: 'solid',
     showImage:true
 
   },

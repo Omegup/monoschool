@@ -4,18 +4,18 @@ import { SearchBarProps } from './SearchBar.types';
 import { colors } from '@omegup-school/ui-atoms/colors';
 import { widths } from '@omegup-school/ui-atoms/sizes';
 
-export const SearchBar = ({ size, style, label,displayClose }: SearchBarProps) => {
+export const SearchBar = ({ size,label,displayClose }: SearchBarProps) => {
   const classes = useSearchBarStyles();
  console.log(widths.icon[size])
   return (
-    <div className={`${classes[style]} ${classes[size]}`}>
+    <div className={`${classes[size]}`}>
       <div className={classes.container}>
        
          <SearchStatus color={colors.grey[400]} width={widths.icon[size]}/>
         <input
         className={classes.input}
           type='text'
-          placeholder="Rechercher"
+          placeholder={label}
           
         />
        
