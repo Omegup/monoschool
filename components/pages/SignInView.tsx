@@ -1,6 +1,5 @@
 import { useFacade } from '@omegup-school/hooks';
 import { SignIn } from '@omegup-school/ui-organisms/SignIn';
-import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 // Initialize the controller
