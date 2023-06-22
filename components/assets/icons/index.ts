@@ -2,3 +2,10 @@ export * from './Logo';
 export * from './Square';
 export * from './Tick';
 export * from './Vector';
+export * from './ArrowDownSquare'
+export * from './ArrowLeftSquare'
+export * from './ArrowRightSquare'
+export * from './ArrowUpSquare'
+export * from './GridFive'
+export * from './GridNine'
+export * from './GridSix'

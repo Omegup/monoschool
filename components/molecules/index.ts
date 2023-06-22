@@ -8,3 +8,4 @@ export * from './Tag';
 export * from './Switch';
 export * from './Chips';
 export * from './ListSearch';
+export * from './Tabs';
