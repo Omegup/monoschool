@@ -31,7 +31,15 @@ export const useFilterListeCheckBoxStyles = createUseStyles({
   disabled: {},
   enabled: {},
   container: {
-   
+    display: "inline-flex",
+    padding: spacing.s5,
+    flexDirection: "column",
+    alignItems: "flex-start",
 
+    borderRadius: spacing.s5,
+border: [borders.b2, "solid" ,colors.background.overlay],
+background: colors.background.default,
+
+boxShadow: [[0, borders.b2 ,borders.b6,0 ,colors.background.overlay], [0,borders.b2 ,borders.b4, borders.b2 ,colors.background.overlay]],
   },
 });

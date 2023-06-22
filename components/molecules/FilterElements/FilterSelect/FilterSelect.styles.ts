@@ -37,7 +37,7 @@ export const useSelectStyles = createUseStyles({
     display: 'flex',
     borderRadius: borders.r5,
     '& > $input:checked + $container': {
-      backgroundColor: colors.blue[500],
+
       color: colors.light[500],
       '& $square path': {
         fill: colors.light[500],
@@ -50,18 +50,8 @@ export const useSelectStyles = createUseStyles({
     '&:focus': {
       outline: 'none'
     },
-    '&:focus-within:not(:focus) > $input': {
-      '& + $container': {
-        outlineWidth: borders.b5,
-        outlineColor: 'currentcolor',
-        outlineStyle: 'solid',
-      },
-      '&:not(:checked) + $container': {
-        color: colors.blue[500],
-      },
-    },
+
     '&:hover > $input:checked + $container': {
-      backgroundColor: colors.blue[600],
       '& $tick': {
         color: colors.blue[600],
         opacity: 0.6,
@@ -69,12 +59,10 @@ export const useSelectStyles = createUseStyles({
     },
     '&:hover > $input:not(:checked) + $container': {
       color: colors.blue[500],
-      background: colors.light[500],
       '& $tick': {
         opacity: 0.4,
       },
     },
-
     '&:active': {
       '&:hover > $input:checked + $container': {
         '& $tick': {
@@ -82,23 +70,11 @@ export const useSelectStyles = createUseStyles({
         },
       },
       '&:hover > $input:not(:checked) + $container': {
-        background: colors.background.default,
         '& $tick': {
-          opacity: 1,
-        },
-      },
-      '& > $input:checked + $container': {
-        backgroundColor: colors.blue[500],
-        '& $tick': {
-          color: colors.blue[500],
           opacity: 1,
         },
       },
       '& > $input:not(:checked) + $container': {
-        color: colors.blue[500],
-        outlineWidth: borders.b5,
-        outlineColor: 'currentcolor',
-        outlineStyle: 'solid',
         '& $tick': {
           opacity: 0,
         },
@@ -119,24 +95,26 @@ export const useSelectStyles = createUseStyles({
   container: {
     display: 'flex',
     alignItems: 'center',
-    color: colors.dark.default,
+    color: colors.grey[400],
     gap: spacing.s8,
     '$medium > &': {
       padding: spacing.s4,
       borderRadius: borders.r5,
     },
+    
   },
   image:{
-    ...checkboxSizes,
     borderRadius: "50%",
     display: 'block',
     position: 'relative',
-    '&>*': {
-      position: 'absolute',
-    },
+    width:widths.image.small,
+    height:widths.image.small,
+ 
   },
   labelText: {
     ...styles.paragraph_small_regular,
   },
-  square: {},
+  square: {
+    color: colors.grey[300],
+  },
 });

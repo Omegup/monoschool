@@ -32,30 +32,30 @@ export const useSearchBarStyles = createUseStyles({
   input: {
   border:colors.background.overlay,
   outline: colors.background.overlay,
-  width:"100%",
-  padding:[spacing.s4,0]
   },
   
   label: {},
   container: {
     display: "flex",
-    justifyContent: "center",
-    border:["solid",borders.b2],
-    borderColor:colors.background.overlay,
-    borderRadius: "10px",
-    gap:spacing.s5,
-    
+    padding: spacing.s4,
+    alignItems: "center",
+    gap:spacing.s4,
+    alignSelf: "stretch",
+    borderRadius: borders.r5,
+    border: [borders.b2,"solid",colors.background.overlay],
+    background: colors.background.default,
+    boxShadow: [0, borders.b2, borders.b4, 0, colors.grey[400]],
   },
   SearchStatus: {
-    ...searchBarSizes,
-    margin:[spacing.s4,0,spacing.s4,spacing.s4]
+    width:"16px",
+    height:"16px",
   },
   Close: {
-    ...searchBarSizes,
     margin:[spacing.s4,0,spacing.s4,spacing.s4]
   },
   labelText: {
     ...styles.paragraph_small_regular,
+    fontcolor:colors.grey[400],
   },
-  square: {},
+  
 });

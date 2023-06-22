@@ -1,7 +1,6 @@
 export const widths = {
   icon: {
     svg: '24',
-    logo:'80'
   },
   avatar: {
     svg: '106',
@@ -19,4 +18,10 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  image: {
+    small: '20px',
+    medium: '24px',
+    large: '28px',
+  },
+  
 };
