@@ -9,6 +9,12 @@ import { SignInUser } from '@omegup-school/user-usecases/signInUser';
 import { memo } from 'react';
 import { External } from './External';
 
+type ErrorEvent = readonly [
+  name: string,
+  error: { message: string },
+  ...etc: unknown[]
+];
+
 const FacadeProvider = ({
   children,
   useExternal,
@@ -22,10 +28,28 @@ const FacadeProvider = ({
   const userGateway = new UserAPIAdapter();
   const signInUser = new SignInUser(userGateway);
   const userController = new UserController(signInUser, authService);
+  const wrapErrorHandler =
+    <TErrorEvent extends ErrorEvent>(
+      handleError: (...error: TErrorEvent) => void
+    ) =>
+    (...error: TErrorEvent) => {
+      if (error[0] === 'root') {
+        alert(error[1].message);
+      }
+      handleError(...error);
+    };
+  const wrapPresenter =
+    <TErrorEvent extends ErrorEvent, TPresenter>(
+      Constructor: new (
+        handleError: (...error: TErrorEvent) => void
+      ) => TPresenter
+    ) =>
+    (handleError: (...error: TErrorEvent) => void) =>
+      new Constructor(wrapErrorHandler(handleError));
   const value: Facade = {
     authService,
     navService,
-    signInPresenter: (handleError) => new SignInPresenter(handleError),
+    signInPresenter: wrapPresenter(SignInPresenter),
     userController,
     userGateway,
   };

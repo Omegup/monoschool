@@ -5,6 +5,7 @@
     "@omegup-school/user-entity": "workspace:*"
   },
   "devDependencies": {
+    "@types/omegup-school": "workspace:*",
     "tslib": "^2.5.3",
     "typescript": "^5.1.3"
   }
