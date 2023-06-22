@@ -10,16 +10,17 @@ export const SearchBar = ({ size, style, label,displayClose }: SearchBarProps) =
   return (
     <div className={`${classes[style]} ${classes[size]}`}>
       <div className={classes.container}>
-        <span className={classes.SearchStatus}>
-         <SearchStatus color={colors.grey[400]} width={widths.icon[size]}/></span>
+       
+         <SearchStatus color={colors.grey[400]} width={widths.icon[size]}/>
         <input
         className={classes.input}
           type='text'
           placeholder="Rechercher"
+          
         />
        
-        <span className={classes.Close}> { displayClose &&
-         <Close color={colors.grey[400]} width={widths.icon[size]}/>}</span>
+         { displayClose && 
+         <Close color={colors.grey[400]} width={widths.icon[size]}/>}
          
       </div>
     </div>
