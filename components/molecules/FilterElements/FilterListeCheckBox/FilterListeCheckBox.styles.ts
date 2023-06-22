@@ -4,6 +4,7 @@ import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
 import { FilterProps } from './FilterListeCheckBox.types';
+import { shadowMedium } from '@omegup-school/ui-atoms/effects/shadow';
 
 
 type Sizes = readonly [
@@ -40,6 +41,6 @@ export const useFilterListeCheckBoxStyles = createUseStyles({
 border: [borders.b2, "solid" ,colors.background.overlay],
 background: colors.background.default,
 
-boxShadow: [[0, borders.b2 ,borders.b6,0 ,colors.background.overlay], [0,borders.b2 ,borders.b4, borders.b2 ,colors.background.overlay]],
+boxShadow:shadowMedium,
   },
 });

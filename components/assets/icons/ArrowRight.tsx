@@ -10,8 +10,8 @@ export const ArrowRight = ({
   return bold ? (
     
     <svg
-      width="9"
-      height="14"
+      width={width}
+      height={height}
       viewBox="0 0 9 14"
       fill={color}
       xmlns="http://www.w3.org/2000/svg"

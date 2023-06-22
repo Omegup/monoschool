@@ -32,14 +32,14 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   button: {
-    margin:spacing.s5,
-    height:"36px",
+    margin:0,
+    width:"100%",
     borderRadius: borders.r5,
     border: 'none',
     outline: 'none',
-    padding:0,
     display: 'flex',
-    alignItems: 'center',
+    padding:spacing.s4,
+    alignItems: 'flex-start',
     color: colors.grey[400],
     backgroundColor:colors.background.default,
     gap:spacing.s4,
@@ -57,23 +57,12 @@ export const useFilterStyles = createUseStyles({
     },
   },
   arrow:{
-    fill : colors.grey[400],
-    margin:spacing.s4,
-    padding:spacing.s2,
-    width:widths.icon.svg,
-    height:widths.icon.svg,
   },
   container: {
   },
   labelText: {
-    ...styles.paragraph_small_regular,
-    minWidth:"110px",
-    minHeight:"18px",
-    margin:spacing.s4,
-    padding:[spacing.s4,spacing.s4,spacing.s5,0],
-    textAlign:"left"
-    
-   
+    textAlign:"left",
+    width:"100%"
   },
   square: {},
 });

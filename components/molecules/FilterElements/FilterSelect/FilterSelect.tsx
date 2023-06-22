@@ -4,7 +4,6 @@ import { SelectProps } from './FilterSelect.types';
 
 export const FilterSelect = ({
   size,
-  style,
   disabled,
   label,
   showImage,
@@ -15,7 +14,7 @@ export const FilterSelect = ({
   return (
     <label
       tabIndex={-1}
-      className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
+      className={`${classes.label} ${classes[size]} ${disabledClass}`}
     >
       <input type="checkbox" className={classes.input} />
       <div className={classes.container}>

@@ -4,7 +4,7 @@ import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
 import { FilterProps } from './Filter.types';
-
+import { shadowMedium, shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
 type Sizes = readonly [
   `$${FilterProps['size']}>$container>&`,
@@ -30,6 +30,17 @@ export const useFilterStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  container: {
-  },
+  container: {display: "inline-flex",
+    padding: spacing.s5,
+    flexDirection: "column",
+    alignItems: "flex-start",
+    gap: spacing.s3,
+    borderRadius: borders.r5,
+    border: [borders.b2, "solid", colors.background.overlay],
+    background: colors.background.default,
+    boxShadow: shadowXSmall,
+  }
+    
+    
+    
 });

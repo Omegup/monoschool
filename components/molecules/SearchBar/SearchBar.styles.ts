@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { SearchBarProps } from './SearchBar.types';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
+import { shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
 type Sizes = readonly [
   `$${SearchBarProps['size']}>$container>&`,
@@ -45,7 +46,7 @@ export const useSearchBarStyles = createUseStyles({
     borderRadius: borders.r5,
     border: [borders.b2,"solid",colors.background.overlay],
     background: colors.background.default,
-    boxShadow: [0, borders.b2, borders.b4, 0, colors.grey[400]],
+    boxShadow: shadowXSmall,
   },
   SearchStatus: {
   
