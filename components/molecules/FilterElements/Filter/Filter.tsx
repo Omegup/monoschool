@@ -1,4 +1,4 @@
-import { ArrowRight } from '@omegup-school/ui-assets';
+
 import { useFilterStyles } from './Filter.styles';
 import { FilterProps } from './Filter.types';
 import { FilterButton } from '../FilterButton/FilterButton';
