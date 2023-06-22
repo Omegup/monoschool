@@ -51,12 +51,10 @@ export type CheckboxVariantTheme = {
   };
 };
 
-export type CheckboxProps = {
-  text?: string;
+export type NakedCheckboxProps = {
   variant?: CheckboxVariant;
   size?: CheckboxSize;
-  label?: string;
-  enabled?: boolean;
-  disabled?: boolean;
-  focused?: boolean;
+  checked: boolean;
+  disabled: boolean;
+  onChange: (event: React.ChangeEvent<HTMLInputElement> ) => void;
 };

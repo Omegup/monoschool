@@ -1,5 +1,5 @@
 export * from './Button';
-export * from './CheckBox';
+export * from './LabeledCheckBox';
 export * from './Column';
 export * from './Link';
 export * from './Panel';
