@@ -19,6 +19,7 @@ export const typography = makeTypo({
         fontSize: 14,
         fontWeight: '400',
       },
+
     },
     medium: {
       semiBold: {
@@ -36,6 +37,12 @@ export const typography = makeTypo({
         fontSize: 12,
       },
     },
+    overline: {
+      small: {
+        fontWeight: '500',
+        fontSize: 12,
+      }
+    }
   },
   heading: {
     h3: {
