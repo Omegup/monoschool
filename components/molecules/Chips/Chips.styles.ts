@@ -48,9 +48,7 @@ export const useSelectStyles = createUseStyles({
     },
   },
   disabled: {
-    '&$disabled> $container': {
       opacity: '0.4000000059604645',
-    },
   },
   enabled: {
     '&:focus-within:not(:focus) > $input': {
@@ -66,7 +64,6 @@ export const useSelectStyles = createUseStyles({
     },
       
     '& > $input:not(:checked) + $container': {
-      borderColor: colors.background.outline,
       '&:hover': {
        backgroundColor: colors.background.secondary, 
       },
@@ -75,8 +72,6 @@ export const useSelectStyles = createUseStyles({
       },
     },
     '& > $input:checked + $container': {
-      color: colors.blue[500],
-      borderColor: colors.blue[500],
       '&:hover ': {
         backgroundColor: colors.light[200],
       },
@@ -84,12 +79,9 @@ export const useSelectStyles = createUseStyles({
         backgroundColor: colors.light[400],
       },
     },
+    
     '&$flat ': {
-      '& > $input + $container': {
-        borderColor:"transparent !important",
-      },
       '& > $input:not(:checked) + $container': {
-        backgroundColor: colors.background.secondary,
         '&:hover': {
          backgroundColor:colors.background.overlay, 
         },
@@ -98,8 +90,6 @@ export const useSelectStyles = createUseStyles({
         },
       },
       '& > $input:checked + $container': {
-        color: colors.blue[500],
-        backgroundColor: colors.light[100],
         '&:hover ': {
           backgroundColor: colors.light[200],
         },
@@ -119,6 +109,26 @@ export const useSelectStyles = createUseStyles({
     '&:focus': {
       outline: 'none',
     }, 
+    '& > $input:not(:checked) + $container': {
+      borderColor: colors.background.outline,
+    },
+    '& > $input:checked + $container': {
+      color: colors.blue[500],
+      borderColor: colors.blue[500],
+    },
+    '&$flat ': {
+      '& > $input + $container': {
+        borderColor:"transparent !important",
+      },
+    '& > $input:not(:checked) + $container': {
+      backgroundColor: colors.background.secondary,
+     
+    },
+    '& > $input:checked + $container': {
+      color: colors.blue[500],
+      backgroundColor: colors.light[100],
+   
+    },}
   },
   container: {
     display: 'flex',
