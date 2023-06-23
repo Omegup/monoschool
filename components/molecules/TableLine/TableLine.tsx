@@ -4,10 +4,10 @@ import { joinClassNames } from '../common/utils';
 import { ContainerStateContext } from '../contexts/pointer';
 import { useTableLineStyles } from './TabLine.styles';
 import { TableLineProps } from './TabLine.types';
-export const TableLine = ({ row, isSelected,  setIsSelected , isFullWidth }: TableLineProps) => {
+export const TableLine = ({ row, isSelected, setIsSelected, isFullWidth, disabled = false }: TableLineProps) => {
 
   const classes = useTableLineStyles();
-
+  const toggle = () => setIsSelected(!isSelected);
   return (
     <div className={
       joinClassNames(
@@ -15,11 +15,13 @@ export const TableLine = ({ row, isSelected,  setIsSelected , isFullWidth }: Tab
         isSelected && classes.tableLineSelected,
         isFullWidth && classes.tableLineFullWidth,
       )
-    } >
+    } onClick={toggle} >
       <ContainerStateContext.Provider value={classes.tableLine}>
         <Column text='' Adornment={
-          { start: <NakedCheckBox checked={isSelected} disabled={false} onChange={(event)=>setIsSelected(event.target.value)} /> }
-        } />,
+          {
+            start: <NakedCheckBox variant={'tableLine'} checked={isSelected} onChange={toggle}  {...{ disabled }} />
+          }
+        } />
         {row.map((column, index) => column)}
       </ContainerStateContext.Provider>
     </div>

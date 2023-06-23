@@ -21,7 +21,7 @@ export const Solid: Story = {
     size: 'medium',
     variant: 'solid',
     disabled: false,
-    enabled: true,
+    checked: true,
   },
 };
 export const Border: Story = {
@@ -29,9 +29,8 @@ export const Border: Story = {
     label: 'LabeledCheckBox',
     size: 'medium',
     variant: 'border',
-    enabled: true,
+    checked: true,
     disabled: false,
-
   },
 };
 export const Scale: Story = {
@@ -39,7 +38,16 @@ export const Scale: Story = {
     label: 'LabeledCheckBox',
     size: 'medium',
     variant: 'scale',
-    enabled: true,
+    checked: true,
+    disabled: false,
+  },
+};
+export const Tabline: Story = {
+  args: {
+    label: 'LabeledCheckBox',
+    size: 'medium',
+    variant: 'tableLine',
+    checked: true,
     disabled: false,
   },
 };

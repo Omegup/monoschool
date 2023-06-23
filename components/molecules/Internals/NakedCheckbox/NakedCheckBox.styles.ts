@@ -17,7 +17,7 @@ const commonVariantStylesBuilder = (
 ) =>
   ({
     // focused
-    [DEFAULT_CHECKBOX_EVENTS_SELECTORS.focused]: {
+    [`.${containerStateSelector}:active & > $input + $container`]: {
       outline: `${borders.b5}px solid ${eventsTheme?.focused?.outlineColor}`,
     },
     // hovered
@@ -35,7 +35,7 @@ const commonVariantStylesBuilder = (
       backgroundColor: eventsTheme?.enabled?.backgroundColor,
     },
     // hoveredOnEnable
-    [DEFAULT_CHECKBOX_EVENTS_SELECTORS.hoveredOnEnable]: {
+    [`.${containerStateSelector}:hover & > $input:checked + $container`]: {
       borderColor: eventsTheme?.hoveredOnEnable?.borderColor,
       backgroundColor: eventsTheme?.hoveredOnEnable?.backgroundColor,
       outlineColor: eventsTheme?.hoveredOnEnable?.outlineColor,
@@ -86,6 +86,16 @@ export const useCheckBoxStyles = createUseStyles(
         CHECKBOX_THEMES.scale,
         containerStateSelector
       ),
+    },
+    tableLine: {
+      ...commonVariantStylesBuilder(
+        CHECKBOX_THEMES.tableLine,
+        containerStateSelector
+      ),
+      // focus on Checked 
+      [`.${containerStateSelector}:active & > $input:checked + $container`]:{
+        outline: `${borders.b5}px solid ${colors.light[500]}`,
+      }
     },
     large: {
       '& $container': {

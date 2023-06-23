@@ -5,4 +5,5 @@ export type TableLineProps = {
   isSelected: boolean;
   setIsSelected: (isSelected: boolean) => void;
   isFullWidth: boolean;
+  disabled?: boolean;
 };

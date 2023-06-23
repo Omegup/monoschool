@@ -1,6 +1,6 @@
 import { DEFAULT_CHECKBOX_EVENTS_SELECTORS } from './NakedCheckBox.constants';
 
-export type CheckboxVariant = 'solid' | 'border' | 'scale';
+export type CheckboxVariant = 'solid' | 'border' | 'scale' | 'tableLine';
 export type CheckboxSize = 'large' | 'medium' | 'small';
 export type CheckboxEvent =
   | 'focused'
@@ -56,5 +56,5 @@ export type NakedCheckboxProps = {
   size?: CheckboxSize;
   checked: boolean;
   disabled: boolean;
-  onChange: (event: React.ChangeEvent<HTMLInputElement> ) => void;
+  onChange: (value: boolean) => void;
 };

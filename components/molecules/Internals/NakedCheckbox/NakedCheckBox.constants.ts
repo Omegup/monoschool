@@ -1,24 +1,31 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
-import { CheckboxVariant, CheckboxSize, CheckboxEvent, CheckboxVariantTheme } from './NakedCheckBox.types';
+import {
+  CheckboxVariant,
+  CheckboxSize,
+  CheckboxEvent,
+  CheckboxVariantTheme,
+} from './NakedCheckBox.types';
 
-export const DEFAULT_CHECKBOX_VARIANT: CheckboxVariant = 'border' as const;
+export const DEFAULT_CHECKBOX_VARIANT: CheckboxVariant = 'solid' as const;
 export const DEFAULT_CHECKBOX_SIZE: CheckboxSize = 'medium' as const;
-export const DEFAULT_CHECKBOX_EVENTS_SELECTORS =  {
-  focused: '& > $input:focus + $container',
+export const DEFAULT_CHECKBOX_EVENTS_SELECTORS = {
+  focused: `${'' as string}:focus & > $input:focus + $container`,
   hovered: `${'' as string}:hover & > $input:not(:checked) + $container`,
   enabled: '& > $input:checked + $container',
-  hoveredOnEnable: '& > $input:checked + $container:hover',
+  hoveredOnEnable: `${'' as string}:hover & > $input:checked + $container:hover`,
 } as const;
 
-export const CHECKBOX_THEMES : {[Variant in CheckboxVariant ] : Partial<CheckboxVariantTheme>}  = {
+export const CHECKBOX_THEMES: {
+  [Variant in CheckboxVariant]: Partial<CheckboxVariantTheme>;
+} = {
   solid: {
     focused: {
       outlineColor: colors.blue[900],
     },
     hovered: {
-      backgroundColor: colors.blue[400],
-      borderColor: colors.blue[400],
-      outlineColor: colors.blue[400],
+      backgroundColor: colors.grey[400],
+      borderColor: colors.grey[400],
+      outlineColor: colors.grey[400],
       outlineOffset: -1,
     },
     enabled: {
@@ -62,4 +69,25 @@ export const CHECKBOX_THEMES : {[Variant in CheckboxVariant ] : Partial<Checkbox
       backgroundColor: colors.blue[500],
     },
   },
-}
+  tableLine: {
+    focused: {
+      outlineColor: colors.blue[400],
+    },
+    hovered: {
+      color: colors.grey[200],
+      backgroundColor: 'transparent',
+      borderColor: colors.grey[400],
+      outlineColor: 'transparent',
+      outlineOffset: -1,
+    },
+    enabled: {
+      borderColor: colors.blue[500],
+      color: colors.background.default,
+      backgroundColor: colors.blue[500],
+    },
+    hoveredOnEnable: {
+      borderColor: colors.blue[700],
+      backgroundColor: colors.blue[700],
+    },
+  },
+};
