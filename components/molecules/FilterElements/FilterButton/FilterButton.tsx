@@ -6,9 +6,11 @@ import { widths } from '@omegup-school/ui-atoms/sizes';
 export const FilterButton = ({ size, style, label,showIcon }: FilterProps) => {
   const classes = useFilterStyles();
   return (
-      <button className={`${classes.button} ${classes[style]} ${classes[size]}`}  >
+    <div className={`${classes.container}  ${classes[style]} ${classes[size]}`}>
+      <button className={`${classes.button}`}  >
         <label className={classes.labelText} >{label}</label> 
-        <span className={classes.arrow}>{showIcon && <ArrowRight bold={true} width={widths.icon[size]} />}  </span>
+        <span className={classes.arrow}>{showIcon && <ArrowRight bold={true} width={"100%"} />}  </span>
       </button>
+      </div>
   );
 };

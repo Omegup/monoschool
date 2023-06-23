@@ -30,10 +30,9 @@ export const useFilterStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  container: {display: "inline-flex",
+  container: {
     padding: spacing.s5,
     flexDirection: "column",
-    alignItems: "flex-start",
     gap: spacing.s3,
     borderRadius: borders.r5,
     border: [borders.b2, "solid", colors.background.overlay],

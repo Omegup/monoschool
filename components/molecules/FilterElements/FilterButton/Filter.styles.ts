@@ -10,8 +10,8 @@ type Sizes = readonly [
   `$${FilterProps['size']}>$button>&`,
   { width: string; height: string }
 ];
-const buttonSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.filter).map(([k, v]) => [
+const buttonFilterSizes = Object.fromEntries<'', Record<'', Sizes>>(
+  Object.entries(widths.buttonFilter).map(([k, v]) => [
     `$${k}>$button>&`,
     {
       width: v,
@@ -57,6 +57,7 @@ export const useFilterStyles = createUseStyles({
     },
   },
   arrow:{
+    ...buttonFilterSizes,
   },
   container: {
   },

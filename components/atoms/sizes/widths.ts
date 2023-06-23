@@ -1,9 +1,6 @@
 export const widths = {
   icon: {
     svg: '24',
-    small: '16',
-    medium: '20',
-    large: '28',
   },
   avatar: {
     svg: '106',
@@ -26,5 +23,20 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  chips:{
+    small: '16px',
+    medium: '20px',
+    large: '28px',
+  },
+  searchBar:{
+    small: '16px',
+    medium: '20px',
+    large: '28px',
+  },
+  buttonFilter:{
+    small: '16px',
+    medium: '20px',
+    large: '28px',
+  }
   
 };

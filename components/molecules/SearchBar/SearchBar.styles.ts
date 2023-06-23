@@ -11,7 +11,7 @@ type Sizes = readonly [
   { width: string; height: string }
 ];
 const searchBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.filter).map(([k, v]) => [
+  Object.entries(widths.searchBar).map(([k, v]) => [
     `$${k}>$container>&`,
     {
       width: v,
@@ -49,10 +49,10 @@ export const useSearchBarStyles = createUseStyles({
     boxShadow: shadowXSmall,
   },
   SearchStatus: {
-  
+    ...searchBarSizes
   },
   Close: {
-    marginLeft:"0px"
+    ...searchBarSizes,
   },
   labelText: {
     ...styles.paragraph_small_regular,

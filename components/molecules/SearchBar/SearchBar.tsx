@@ -6,22 +6,23 @@ import { widths } from '@omegup-school/ui-atoms/sizes';
 
 export const SearchBar = ({ size,label,displayClose }: SearchBarProps) => {
   const classes = useSearchBarStyles();
- console.log(widths.icon[size])
+
   return (
     <div className={`${classes[size]}`}>
       <div className={classes.container}>
-       
-         <SearchStatus color={colors.grey[400]} width={widths.icon[size]}/>
+      <span className={classes.SearchStatus}>
+         <SearchStatus color={colors.grey[400]} width={"100%"}/>
+         </span>
         <input
         className={classes.input}
           type='text'
           placeholder={label}
           
         />
-       
+        <span className={classes.Close}>
          { displayClose && 
-         <Close color={colors.grey[400]} width={widths.icon[size]}/>}
-         
+         <Close color={colors.grey[400]} width={"100%"}/>}
+         </span>
       </div>
     </div>
   );

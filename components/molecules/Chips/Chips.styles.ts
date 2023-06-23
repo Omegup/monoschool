@@ -1,10 +1,23 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
+import { borders, spacing, widths } from '@omegup-school/ui-atoms/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
+import { ChipsProps } from './Chips.types';
 
-
-
+type Sizes = readonly [
+  `$${ChipsProps['size']}>$container>&`,
+  { width: string; height: string }
+];
+const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
+  Object.entries(widths.chips).map(([k, v]) => [
+    `$${k}>$container>&`,
+    {
+      width: v,
+      height: v,
+    },
+  ])
+);
+console.log(styles)
 
 export const useSelectStyles = createUseStyles({
   solid: {},
@@ -43,6 +56,12 @@ export const useSelectStyles = createUseStyles({
     color:colors.blue[500],
     borderColor:colors.blue[500],
     
+  },Essential:{
+  ...chipsSizes,
+  },
+  Close:{
+  ...chipsSizes,
+
   },
   labelText: {
     ...styles.paragraph_small_regular,
