@@ -7,12 +7,12 @@ import { FilterProps } from './Filter.types';
 
 
 type Sizes = readonly [
-  `$${FilterProps['size']}>$button>&`,
+  `$${FilterProps['size']}>$container>&`,
   { width: string; height: string }
 ];
 const buttonFilterSizes = Object.fromEntries<'', Record<'', Sizes>>(
   Object.entries(widths.buttonFilter).map(([k, v]) => [
-    `$${k}>$button>&`,
+    `$${k}>$container>&`,
     {
       width: v,
       height: v,
@@ -31,15 +31,12 @@ export const useFilterStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  button: {
+  label: {
     margin:0,
-    width:"100%",
     borderRadius: borders.r5,
     border: 'none',
     outline: 'none',
-    display: 'flex',
     padding:spacing.s4,
-    alignItems: 'flex-start',
     color: colors.grey[400],
     backgroundColor:colors.background.default,
     gap:spacing.s4,
@@ -56,10 +53,16 @@ export const useFilterStyles = createUseStyles({
       color: colors.blue[500],
     },
   },
+  input:{clip: 'rect(0 0 0 0)',
+  position: 'absolute',},
   arrow:{
     ...buttonFilterSizes,
+    
   },
   container: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: spacing.s8,
   },
   labelText: {
     textAlign:"left",

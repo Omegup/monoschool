@@ -1,8 +1,7 @@
 import { Close, SearchStatus } from '@omegup-school/ui-assets';
 import { useSearchBarStyles } from './SearchBar.styles';
-import { ControlledSearchBarProps, SearchBarProps } from './SearchBar.types';
+import { ControlledSearchBarProps } from './SearchBar.types';
 import { colors } from '@omegup-school/ui-atoms/colors';
-import { widths } from '@omegup-school/ui-atoms/sizes';
 import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
@@ -11,7 +10,7 @@ export const SearchBar = forwardRef(
   const classes = useSearchBarStyles();
 
   return (
-    <div className={`${classes[size]}`}>
+    <div className={`${classes[size]} ${classes[style]}`}>
       <div className={classes.container}>
       <span className={classes.SearchStatus}>
          <SearchStatus color={colors.grey[400]} width={"100%"}/>
@@ -20,10 +19,12 @@ export const SearchBar = forwardRef(
         className={classes.input}
           type='text'
           placeholder={label}
-          
+          onChange={(e) => onChange(e.target.value)}
+          {...{ ref, onBlur }}
+          value={value}
         />
         <span className={classes.Close}>
-         { displayClose && 
+         { displayClose&& 
          <Close color={colors.grey[400]} width={"100%"}/>}
          </span>
       </div>

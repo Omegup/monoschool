@@ -26,7 +26,8 @@ export const Primary: Story = {
     label: "Label",
     style:"border",
     size: 'medium',
-    disabled: true,
+    disabled: false,
+    value:false,
   },
 };
 

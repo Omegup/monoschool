@@ -8,4 +8,5 @@ export interface ControlledChipsProps extends ChipsProps {
   value: boolean;
   onChange: (value: boolean) => void;
   onBlur: () => void;
+  onClick:()=>void;
 }
