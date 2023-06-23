@@ -1,5 +1,6 @@
 export interface HeaderCellTableProps {
   label : string ;
+  sortType : 'asc' | 'desc' | null;
+  onSort : (sort : 'asc' | 'desc' | null) => any;
   isSortable ?: boolean;
-  onSort ?: (sort : 'asc' | 'desc' | 'none') => void;
 }
