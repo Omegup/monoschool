@@ -1,10 +1,13 @@
 import { Close, SearchStatus } from '@omegup-school/ui-assets';
 import { useSearchBarStyles } from './SearchBar.styles';
-import { SearchBarProps } from './SearchBar.types';
+import { ControlledSearchBarProps, SearchBarProps } from './SearchBar.types';
 import { colors } from '@omegup-school/ui-atoms/colors';
 import { widths } from '@omegup-school/ui-atoms/sizes';
+import { forwardRef } from 'react';
 
-export const SearchBar = ({ size,label,displayClose }: SearchBarProps) => {
+export const SearchBar = forwardRef(
+  (props: ControlledSearchBarProps, ref: React.Ref<HTMLInputElement>) => {
+    const { size, style, label,displayClose, onChange, value, onBlur } = props;
   const classes = useSearchBarStyles();
 
   return (
@@ -26,4 +29,4 @@ export const SearchBar = ({ size,label,displayClose }: SearchBarProps) => {
       </div>
     </div>
   );
-};
+})

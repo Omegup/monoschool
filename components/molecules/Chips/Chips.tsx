@@ -1,8 +1,11 @@
-import { Close, Essential, Square, Tick } from '@omegup-school/ui-assets';
+import { Close, Essential } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './Chips.styles';
-import { ChipsProps } from './Chips.types';
+import {ControlledChipsProps } from './Chips.types';
+import { forwardRef } from 'react';
 
-export const Chips = ({ size, style, disabled, label }: ChipsProps) => {
+export const Chips = forwardRef(
+  (props: ControlledChipsProps, ref: React.Ref<HTMLInputElement>) => {
+    const { size, style, disabled, label, onChange, value, onBlur } = props;
   const classes = useSelectStyles(),
     disabledClass = classes[disabled ? 'disabled' : 'enabled'];
   return (
@@ -21,4 +24,4 @@ export const Chips = ({ size, style, disabled, label }: ChipsProps) => {
       </div>
     </label>
   );
-};
+});

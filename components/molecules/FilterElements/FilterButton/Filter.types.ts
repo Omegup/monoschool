@@ -4,3 +4,8 @@ export type FilterProps = {
   showIcon: boolean;
   label: string;
 };
+export interface ControlledFilterProps extends FilterProps {
+  value: boolean;
+  onChange: (value: boolean) => void;
+  onBlur: () => void;
+}

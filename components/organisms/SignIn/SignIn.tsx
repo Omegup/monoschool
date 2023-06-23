@@ -11,12 +11,12 @@ import {
   SignInHeader,
 } from '@omegup-school/ui-cells';
 
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export type SignInFormData = {
   email: string;
   password: string;
+  remember: boolean;
 };
 
 export type SignInProps = {
@@ -24,14 +24,7 @@ export type SignInProps = {
 };
 
 export function SignIn({ onSubmit }: SignInProps) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    control,
-  } = useForm<SignInFormData>();
-
-  const [error, setError] = useState<Error>();
+  const { handleSubmit, control } = useForm<SignInFormData>();
 
   return (
     <LoginPanel>
@@ -49,7 +42,14 @@ export function SignIn({ onSubmit }: SignInProps) {
           type="password"
         />
         <SpaceBetween>
-          <Select label="Se souvenir de moi" size="medium" style="solid" />
+          <Select
+            _
+            label="Se souvenir de moi"
+            size="medium"
+            style="solid"
+            control={control}
+            name={'remember'}
+          />
           <Link text="Mot de passe oublié ?" />
         </SpaceBetween>
         <Button label="Connexion" />

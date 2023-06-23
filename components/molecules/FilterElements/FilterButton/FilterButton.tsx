@@ -1,9 +1,12 @@
 import { ArrowRight } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './Filter.styles';
-import { FilterProps } from './Filter.types';
+import { ControlledFilterProps, FilterProps } from './Filter.types';
 import { widths } from '@omegup-school/ui-atoms/sizes';
+import { forwardRef } from 'react';
 
-export const FilterButton = ({ size, style, label,showIcon }: FilterProps) => {
+export const FilterButton =  forwardRef(
+  (props: ControlledFilterProps, ref: React.Ref<HTMLInputElement>) => {
+    const { size, style, label,showIcon, onChange, value, onBlur } = props;
   const classes = useFilterStyles();
   return (
     <div className={`${classes.container}  ${classes[style]} ${classes[size]}`}>
@@ -13,4 +16,4 @@ export const FilterButton = ({ size, style, label,showIcon }: FilterProps) => {
       </button>
       </div>
   );
-};
+})

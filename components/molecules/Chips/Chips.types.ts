@@ -4,3 +4,8 @@ export type ChipsProps = {
   disabled?: boolean;
   label: string;
 };
+export interface ControlledChipsProps extends ChipsProps {
+  value: boolean;
+  onChange: (value: boolean) => void;
+  onBlur: () => void;
+}

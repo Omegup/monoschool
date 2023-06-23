@@ -1,14 +1,11 @@
 import { Square, Tick } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './FilterSelect.styles';
-import { SelectProps } from './FilterSelect.types';
+import { ControlledSelectProps } from './FilterSelect.types';
+import { forwardRef } from 'react';
 
-export const FilterSelect = ({
-  size,
-  disabled,
-  label,
-  showImage,
-  imageURL,
-}: SelectProps) => {
+export const FilterSelect =  forwardRef(
+  (props: ControlledSelectProps, ref: React.Ref<HTMLInputElement>) => {
+    const { size, style, label,disabled,imageURL,showImage, onChange, value, onBlur } = props;
   const classes = useSelectStyles(),
     disabledClass = classes[disabled ? 'disabled' : 'enabled'];
   return (
@@ -40,4 +37,4 @@ export const FilterSelect = ({
       </div>
     </label>
   );
-};
+})
