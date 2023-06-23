@@ -48,7 +48,7 @@ export const useSelectStyles = createUseStyles({
     },
   },
   disabled: {
-      opacity: '0.4000000059604645',
+      opacity: '0.4',
   },
   enabled: {
     '&:focus-within:not(:focus) > $input': {
@@ -58,9 +58,6 @@ export const useSelectStyles = createUseStyles({
         outlineStyle: 'solid',
       },
      
-      '&:not(:checked) + $container': {
-        outlineColor: colors.blue[600],
-      },
     },
       
     '& > $input:not(:checked) + $container': {
@@ -109,6 +106,8 @@ export const useSelectStyles = createUseStyles({
     '&:focus': {
       outline: 'none',
     }, 
+
+
     '& > $input:not(:checked) + $container': {
       borderColor: colors.background.outline,
     },
@@ -118,7 +117,7 @@ export const useSelectStyles = createUseStyles({
     },
     '&$flat ': {
       '& > $input + $container': {
-        borderColor:"transparent !important",
+        borderColor:"transparent",
       },
     '& > $input:not(:checked) + $container': {
       backgroundColor: colors.background.secondary,
