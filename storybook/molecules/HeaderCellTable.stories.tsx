@@ -6,6 +6,8 @@ const meta = {
   component: HeaderCellTable,
   tags: ['autodocs'],
   argTypes: {
+    sortType: { control: 'select', options: ['asc', 'desc', null] },
+    
   },
 } satisfies Meta<typeof HeaderCellTable>;
 
@@ -16,6 +18,7 @@ export const Primary: Story = {
   args: {
     label: 'Name',
     isSortable: true,
+    sortType: 'asc',
     onSort: (sort) => {
       console.log(sort);
     },

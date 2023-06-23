@@ -7,7 +7,18 @@ export const useStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'row',
-    cursor: 'default'
+    cursor: 'pointer',
+    '&:hover': {
+      '& $iconContainerTop': {
+        transform: 'translate(-50%, -65%)',
+        opacity: 1,
+
+      },
+      '& $iconContainerDown': {
+        transform: 'translate(-50%, -45%)',
+        opacity: 1,
+      },
+    }
   },
   cellLabel: {
     fontSize: typography.paragraph.overline.small.fontSize,
@@ -16,10 +27,37 @@ export const useStyles = createUseStyles({
     color: colors.headline[500],
     marginRight: 13,
   },
-  cellSort: {},
+  dispalyIcons: {
+    '$cellSortIcon>&': {
+      opacity: 1,
+    },
+    '& $iconContainerTop': {
+      transform: 'translate(-50%, -65%)',
+      opacity: 1,
+
+    },
+    '& $iconContainerDown': {
+      transform: 'translate(-50%, -45%)',
+      opacity: 1,
+    },
+  },
   cellSortIcon: {
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
+    position: 'relative',
+  },
+  iconContainerTop: {
+    position: 'absolute',
+    transition: 'transform 0.3s ease',
+    opacity: 0,
+    transform: 'translate(-50%, -75%)',
+    pointerEvents: 'auto',
+    transformOrigin: 'center',
+  },
+  iconContainerDown: {
+    position: 'absolute',
+    transition: 'transform 0.3s ease',
+    opacity: 0,
+    transform: 'translate(-50%, -35%)',
+    pointerEvents: 'auto',
+    transformOrigin: 'center',
   },
 });

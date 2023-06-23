@@ -4,25 +4,35 @@ import { useStyles } from './HeaderCellTable.styles';
 import { ArrowDownSecond, ArrowUpSecond } from '@omegup-school/ui-assets';
 import { colors } from '@omegup-school/ui-atoms/colors';
 
-export const HeaderCellTable = ({ label, isSortable: isSortable = false }: HeaderCellTableProps) => {
+export const HeaderCellTable = ({ label, isSortable: isSortable = false, sortType, onSort }: HeaderCellTableProps) => {
+  const sortMap = {
+    null: 'asc',
+    asc: 'desc',
+    desc: null,
+  } as const;
   const classes = useStyles();
+  
   return (
-    <div className={classes.cellContainer}>
+    <div className={classes.cellContainer} onClick={() => onSort(sortMap[`${sortType}`])}>
       <div className={classes.cellLabel}>{label}</div>
-      <div className={classes.cellSort}>
+      {isSortable && (
         <div className={classes.cellSortIcon}>
-          {isSortable && (
-            <>
-              <>
-                <ArrowUpSecond width='8.75' height='8.75' color={colors.blue[500]}/>
-              </>
-              <>
-                <ArrowDownSecond width='8.75' height='8.75' color={colors.blue[500]}/>
-              </>
-            </>
-          )}
+          <div className={`${classes.iconContainerTop}  ${sortType && classes.dispalyIcons}`}>
+            <ArrowUpSecond
+              width='8.75'
+              height='8.75'
+              color={sortType === 'asc' ? colors.blue[500] : colors.light[600]}
+            />
+          </div>
+          <div className={`${classes.iconContainerDown} ${sortType && classes.dispalyIcons}`}>
+            <ArrowDownSecond
+              width='8.75'
+              height='8.75'
+              color={sortType === 'desc' ? colors.blue[500] : colors.light[600]}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
