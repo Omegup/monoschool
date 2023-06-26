@@ -6,7 +6,7 @@ export interface SubMenuProps {
   disabled?: boolean;
   opened?:boolean;
   parentName: string;
-  children:any[]
+  children:ChildMenuProps[]
 }
 
 export interface ControlledSubMenuProps extends SubMenuProps {
