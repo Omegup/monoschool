@@ -1,12 +1,12 @@
 import { Square, Tick } from '@omegup-school/ui-assets';
-import { useSelectStyles } from './FilterSelect.styles';
-import { ControlledSelectProps } from './FilterSelect.types';
+import { useFilterCheckBoxStyles } from './FilterCheckBox.styles';
+import { ControlledFilterCheckBoxProps } from './FilterFilterCheckBox.types';
 import { forwardRef } from 'react';
 
-export const FilterSelect =  forwardRef(
-  (props: ControlledSelectProps, ref: React.Ref<HTMLInputElement>) => {
+export const FilterCheckBox =  forwardRef(
+  (props: ControlledFilterCheckBoxProps, ref: React.Ref<HTMLInputElement>) => {
     const { size, label,disabled,imageURL,showImage, onChange, value, onBlur } = props;
-  const classes = useSelectStyles(),
+  const classes = useFilterCheckBoxStyles(),
     disabledClass = classes[disabled ? 'disabled' : 'enabled'];
   return (
     <label

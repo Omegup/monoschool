@@ -11,7 +11,6 @@ const meta = {
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
     style: { control: 'select', options: ['border' , 'flat'] } 
-   
   },
    
 

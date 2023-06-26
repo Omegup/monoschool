@@ -3,11 +3,11 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
-import { FilterProps } from './Filter.types';
+import { FilterMenuProps } from './FilterMenu.types';
 import { shadowMedium, shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
 type Sizes = readonly [
-  `$${FilterProps['size']}>$container>&`,
+  `$${FilterMenuProps['size']}>$container>&`,
   { width: string; height: string }
 ];
 const buttonSizes = Object.fromEntries<'', Record<'', Sizes>>(
@@ -39,8 +39,13 @@ export const useFilterStyles = createUseStyles({
     border: [borders.b2, "solid", colors.background.overlay],
     background: colors.background.default,
     boxShadow: shadowXSmall,
-  }
-    
+  },
+  
+  line: {
+    margin:"5px",
+    border: [borders.b1,"solid"],
+    borderColor:colors.background.overlay
+  },
     
     
 });

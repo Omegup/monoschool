@@ -3,23 +3,16 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
-import { FilterProps } from './FilterListeCheckBox.types';
+
 import { shadowMedium } from '@omegup-school/ui-atoms/effects/shadow';
+import { SubFilterMenuProps } from './SubFilterMenu.types';
 
 
 type Sizes = readonly [
-  `$${FilterProps['size']}>$container>&`,
+  `$${SubFilterMenuProps['size']}>$container>&`,
   { width: string; height: string }
 ];
-const buttonSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.filter).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
+
 
 export const useFilterListeCheckBoxStyles = createUseStyles({
   solid: {},

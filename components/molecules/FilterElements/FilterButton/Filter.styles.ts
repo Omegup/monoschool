@@ -3,11 +3,10 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
-import { FilterProps } from './Filter.types';
-
+import { FilterButtonProps } from './Filter.types';
 
 type Sizes = readonly [
-  `$${FilterProps['size']}>$container>&`,
+  `$${FilterButtonProps['size']}>$container>&`,
   { width: string; height: string }
 ];
 const buttonFilterSizes = Object.fromEntries<'', Record<'', Sizes>>(
@@ -20,7 +19,6 @@ const buttonFilterSizes = Object.fromEntries<'', Record<'', Sizes>>(
   ])
 );
 
-
 export const useFilterStyles = createUseStyles({
   solid: {},
   border: {},
@@ -32,44 +30,47 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   label: {
-    width:"fit-content",
-    margin:0,
+    margin: 0,
     borderRadius: borders.r5,
     border: 'none',
     outline: 'none',
-    padding:spacing.s4,
+    padding: spacing.s4,
     color: colors.grey[400],
-    backgroundColor:colors.background.default,
-    gap:spacing.s4,
+    backgroundColor: colors.background.default,
+    gap: spacing.s4,
     cursor: 'pointer',
     '&:active, &:focus, &:hover': {
       backgroundColor: colors.light[300],
       color: colors.blue[500],
       '& $arrow': {
-        fill : colors.blue[500],
-      }
+        fill: colors.blue[500],
+      },
     },
     '&:active:hover, &:focus:hover': {
       backgroundColor: colors.light[300],
       color: colors.blue[500],
     },
   },
-  input:{clip: 'rect(0 0 0 0)',
-  position: 'absolute',},
-  arrow:{
+  input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
+  arrow: {
     ...buttonFilterSizes,
-    
   },
   container: {
     display: 'flex',
     alignItems: 'center',
     gap: spacing.s4,
-    padding: "8px",
+    padding: '8px',
+    justifyContent: 'space-between',
+  },
+  line: {
+    margin:["5px","none"],
+    width: 144,
+    height: 0,
+    border: '0.50px #EBEBEB solid',
   },
   labelText: {
-    textAlign:"left",
-    width:"100%"
+    textAlign: 'left',
+    width: '100%',
   },
   square: {},
 });
-

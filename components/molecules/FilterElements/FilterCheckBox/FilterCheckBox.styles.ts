@@ -3,10 +3,11 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
-import { SelectProps } from './FilterSelect.types';
+import { FilterCheckBoxProps } from './FilterFilterCheckBox.types';
+
 
 type Sizes = readonly [
-  `$${SelectProps['size']}>$container>&`,
+  `$${FilterCheckBoxProps['size']}>$container>&`,
   { width: string; height: string }
 ];
 const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
@@ -19,7 +20,7 @@ const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
   ])
 );
 
-export const useSelectStyles = createUseStyles({
+export const useFilterCheckBoxStyles = createUseStyles({
   solid: {},
   border: {},
   flat: {},

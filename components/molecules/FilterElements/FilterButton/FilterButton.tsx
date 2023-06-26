@@ -1,16 +1,14 @@
 import { ArrowRight } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './Filter.styles';
-import { ControlledFilterProps, FilterProps } from './Filter.types';
+import { ControlledFilterButtonProps, FilterButtonProps } from './Filter.types';
 import { forwardRef } from 'react';
 
 export const FilterButton = forwardRef(
-  (props: ControlledFilterProps, ref: React.Ref<HTMLInputElement>) => {
+  (props: ControlledFilterButtonProps, ref: React.Ref<HTMLInputElement>) => {
     const { size, style, label, showIcon, onChange, value, onBlur } = props;
     const classes = useFilterStyles();
     return (
-      <div
-        className={`${classes.label}  ${classes[style]} ${classes[size]}`}
-      >
+      <div className={`${classes.label}  ${classes[style]} ${classes[size]}`}>
         <input
           type="button"
           className={classes.input}
@@ -20,10 +18,14 @@ export const FilterButton = forwardRef(
         />
         <div className={classes.container}>
           <text className={classes.labelText}>{label}</text>
-          
-            {showIcon &&<span className={classes.arrow}> <ArrowRight bold={true} width={'100%'} /></span>}{' '}
-          
-          </div>
+          {showIcon && (
+            <span className={classes.arrow}>
+              {' '}
+              <ArrowRight bold={true} width={'100%'} />
+            </span>
+          )}{' '}
+        </div>
+       
       </div>
     );
   }
