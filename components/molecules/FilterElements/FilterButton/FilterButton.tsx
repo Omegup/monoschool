@@ -8,7 +8,9 @@ export const FilterButton = forwardRef(
     const { size, style, label, showIcon, onChange, value, onBlur } = props;
     const classes = useFilterStyles();
     return (
-      <div className={`${classes.label}  ${classes[style]} ${classes[size]}`}>
+      <div >
+        <div className={`${classes.label}  ${classes[style]} ${classes[size]}`}>
+      
         <input
           type="button"
           className={classes.input}
@@ -21,11 +23,11 @@ export const FilterButton = forwardRef(
           {showIcon && (
             <span className={classes.arrow}>
               {' '}
-              <ArrowRight bold={true} width={'100%'} />
+              <ArrowRight bold={true} width={"100%"} />
             </span>
           )}{' '}
         </div>
-       
+         </div>
       </div>
     );
   }

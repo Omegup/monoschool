@@ -1,4 +1,4 @@
-import { ControlledFilterCheckBoxProps } from "../FilterCheckBox/FilterFilterCheckBox.types";
+import { ControlledFilterCheckBoxProps } from "../FilterCheckBox/FilterCheckBox.types";
 
 export type SubFilterMenuProps = {
   label: string;

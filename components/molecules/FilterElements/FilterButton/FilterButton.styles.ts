@@ -29,11 +29,9 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   label: {
-    margin: 0,
     borderRadius: borders.r5,
     border: 'none',
     outline: 'none',
-    padding: spacing.s4,
     color: colors.grey[400],
     backgroundColor: colors.background.default,
     gap: spacing.s4,
@@ -53,6 +51,8 @@ export const useFilterStyles = createUseStyles({
   input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
   arrow: {
     ...buttonFilterSizes,
+    display: 'flex',
+    alignItems: 'center',
   },
   container: {
     display: 'flex',
@@ -70,6 +70,7 @@ export const useFilterStyles = createUseStyles({
   labelText: {
     textAlign: 'left',
     width: '100%',
+    
   },
   square: {},
 });

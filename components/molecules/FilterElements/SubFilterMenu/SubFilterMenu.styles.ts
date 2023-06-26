@@ -25,7 +25,6 @@ export const useFilterListeCheckBoxStyles = createUseStyles({
     padding: spacing.s5,
     flexDirection: 'column',
     alignItems: 'flex-start',
-
     borderRadius: spacing.s5,
     border: [borders.b2, 'solid', colors.background.overlay],
     background: colors.background.default,

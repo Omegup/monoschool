@@ -3,7 +3,7 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
-import { FilterCheckBoxProps } from './FilterFilterCheckBox.types';
+import { FilterCheckBoxProps } from './FilterCheckBox.types';
 
 
 type Sizes = readonly [

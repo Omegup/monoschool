@@ -1,6 +1,6 @@
 import { Square, Tick } from '@omegup-school/ui-assets';
 import { useFilterCheckBoxStyles } from './FilterCheckBox.styles';
-import { ControlledFilterCheckBoxProps } from './FilterFilterCheckBox.types';
+import { ControlledFilterCheckBoxProps } from './FilterCheckBox.types';
 import { forwardRef } from 'react';
 
 export const FilterCheckBox =  forwardRef(
