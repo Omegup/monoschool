@@ -24,9 +24,9 @@ export const widths = {
     large: '28px',
   },
   chips:{
-    small: '16px',
-    medium: '20px',
-    large: '28px',
+    small: '12px',
+    medium: '16px',
+    large: '20px',
   },
   searchBar:{
     small: '16px',

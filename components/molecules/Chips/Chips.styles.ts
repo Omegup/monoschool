@@ -55,6 +55,10 @@ export const useSelectStyles = createUseStyles({
         fontSize: "12px",
         
       },
+      '&:last-child': {
+        fontSize: "12px",
+      },
+      
     },
   },
   disabled: {
