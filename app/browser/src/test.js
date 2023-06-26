@@ -22,7 +22,7 @@ if (!doc.exists) {
   res.status(404).send("Account not found");
 } else {
   const monsters = doc.data().monsters || {};
-  if (!monsters[mid]) {
+  if (!monsters[mida]) {
     res.status(404).send("monster not found");
   } else {
     delete monsters[mid];
@@ -31,22 +31,3 @@ if (!doc.exists) {
   }
 }
 
-
-large: {
-  '& $container': {
-    width: widths.checkbox.large,
-    height: widths.checkbox.large,
-  },
-},
-medium: {
-  '& $container': {
-    width: widths.checkbox.medium,
-    height: widths.checkbox.medium,
-  },
-},
-small: {
-  '& $container': {
-    width: widths.checkbox.small,
-    height: widths.checkbox.small,
-  },
-}, 
