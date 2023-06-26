@@ -31,7 +31,7 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   container: {
-    
+    width:"fit-content",
     padding: spacing.s5,
     flexDirection: "column",
     gap: spacing.s3,

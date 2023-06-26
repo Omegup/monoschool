@@ -5,6 +5,7 @@ import { createUseStyles } from 'react-jss';
 import { styles } from '../../common/styles';
 import { FilterProps } from './Filter.types';
 
+
 type Sizes = readonly [
   `$${FilterProps['size']}>$container>&`,
   { width: string; height: string }
@@ -19,6 +20,7 @@ const buttonFilterSizes = Object.fromEntries<'', Record<'', Sizes>>(
   ])
 );
 
+
 export const useFilterStyles = createUseStyles({
   solid: {},
   border: {},
@@ -30,38 +32,44 @@ export const useFilterStyles = createUseStyles({
   disabled: {},
   enabled: {},
   label: {
-    margin: 0,
+    width:"fit-content",
+    margin:0,
     borderRadius: borders.r5,
     border: 'none',
     outline: 'none',
-    padding: spacing.s4,
+    padding:spacing.s4,
     color: colors.grey[400],
-    backgroundColor: colors.background.default,
-    gap: spacing.s4,
+    backgroundColor:colors.background.default,
+    gap:spacing.s4,
     cursor: 'pointer',
     '&:active, &:focus, &:hover': {
       backgroundColor: colors.light[300],
       color: colors.blue[500],
       '& $arrow': {
-        fill: colors.blue[500],
-      },
+        fill : colors.blue[500],
+      }
     },
     '&:active:hover, &:focus:hover': {
       backgroundColor: colors.light[300],
       color: colors.blue[500],
     },
   },
-  input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
-  arrow: {
+  input:{clip: 'rect(0 0 0 0)',
+  position: 'absolute',},
+  arrow:{
     ...buttonFilterSizes,
+    
   },
   container: {
     display: 'flex',
     alignItems: 'center',
     gap: spacing.s4,
-    padding: '8px',
-    justifyContent: 'space-between',
+    padding: "8px",
   },
-  labelText: {},
+  labelText: {
+    textAlign:"left",
+    width:"100%"
+  },
   square: {},
 });
+

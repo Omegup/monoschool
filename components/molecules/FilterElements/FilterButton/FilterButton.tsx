@@ -20,9 +20,9 @@ export const FilterButton = forwardRef(
         />
         <div className={classes.container}>
           <text className={classes.labelText}>{label}</text>
-          <span className={classes.arrow}>
-            {showIcon && <ArrowRight bold={true} width={'100%'} />}{' '}
-          </span>
+          
+            {showIcon &&<span className={classes.arrow}> <ArrowRight bold={true} width={'100%'} /></span>}{' '}
+          
           </div>
       </div>
     );
