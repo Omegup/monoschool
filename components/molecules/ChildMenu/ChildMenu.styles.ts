@@ -30,12 +30,13 @@ export const useSelectStyles = createUseStyles({
     "fontSize": "16px",
     "fontFamily": "Poppins"
   }, 
-  container: {
-    "display": "inline-flex",
+  container:{
+    "display": "flex",
     "padding": "10px",
-    "flexDirection": "column",
-    "alignItems": "flex-start"
-  },
+    "alignItems": "center",
+    "gap": "15px",
+    "alignSelf": "stretch"
+  }
 
   
  

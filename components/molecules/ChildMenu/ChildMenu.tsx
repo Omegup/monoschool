@@ -10,9 +10,13 @@ export const ChildMenu = forwardRef(
     const { size, style, disabled, Icon, label, onChange, value, onBlur } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
-     return (
-      <div>
-         <label
+    return (
+      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${disabledClass}`} >
+        <div    className={`${classes.Icon} ${classes[style]} ${classes[size]} ${disabledClass}`}>
+       
+        </div>
+     
+        <label
           tabIndex={-1}
           className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
         >{label}

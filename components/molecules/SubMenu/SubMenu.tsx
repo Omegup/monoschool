@@ -12,8 +12,8 @@ export const SubMenu = forwardRef(
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
 
     const tab = [
-      { Icon: <Tick width='36' height='36' />, label: "First Element", slected: false, style: "solid", size: "medium" },
-      { Icon: <Square width='36' height='36' />, label: "Second Element", slected: false, style: "solid", size: "medium" },
+      { Icon: <Tick color='red' width='36' height='36' />, label: "First Element", slected: false, style: "solid", size: "medium" },
+      { Icon: <Square  width='36' height='36' />, label: "Second Element", slected: false, style: "solid", size: "medium" },
       { Icon: <Square width='36' height='36' />, label: "Second Element", slected: false, style: "solid", size: "medium" }];
     return (
       <div>
