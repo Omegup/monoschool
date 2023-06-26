@@ -29,6 +29,9 @@ export const useSelectStyles = createUseStyles({
       gap: 7,
       borderRadius: '14px',
       border: [borders.b3, 'solid'],
+      '& > $labelText': {
+        fontSize: "16px",
+      },
     },
   },
   medium: {
@@ -37,6 +40,9 @@ export const useSelectStyles = createUseStyles({
       gap: spacing.s3,
       borderRadius: 11.2,
       border: [borders.b2, 'solid'],
+      '& > $labelText': {
+        fontSize: "14px",
+      },
     },
   },
   small: {
@@ -45,6 +51,10 @@ export const useSelectStyles = createUseStyles({
       gap: 5,
       borderRadius: 8.4,
       border: [borders.b1, 'solid'],
+      '& > $labelText': {
+        fontSize: "12px",
+        
+      },
     },
   },
   disabled: {
@@ -133,12 +143,14 @@ export const useSelectStyles = createUseStyles({
   },
   Essential: {
     ...chipsSizes,
+  
   },
   Close: {
     ...chipsSizes,
   },
   labelText: {
-    ...styles.paragraph_small_regular,
+    
+   
   },
   square: {},
 });

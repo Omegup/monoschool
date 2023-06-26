@@ -26,9 +26,9 @@ export const Chips = forwardRef(
         <Essential width={"100%"} />
         </span>
         <span className={classes.labelText}>{label}</span>
+     
         <span className={classes.Close}
-            onClick={onClick}
-
+            onClick={()=>console.log("button")}
         >
           <Close width={"100%"}
           />
