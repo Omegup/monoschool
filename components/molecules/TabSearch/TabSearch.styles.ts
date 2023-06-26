@@ -73,7 +73,7 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     backgroundColor: `${colors.grey[100]}`,
-    padding: '5px 10px',
+    padding: '0px 8px',
     borderRadius: '11px',
   }
 

@@ -1,4 +1,5 @@
 import { colors } from "@omegup-school/ui-atoms/colors";
+import { typography } from "@omegup-school/ui-atoms/typography";
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
@@ -8,6 +9,19 @@ export const useStyles = createUseStyles({
     width: '50px',
     height: '25px',
   },
+  label: {
+    display: 'inline-block',
+    marginLeft: '10px',
+    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    color: colors.grey[500],
+    cursor: 'default',
+
+    '&:hover': {
+      color: colors.blue[600],
+    }
+  },
+
   switch: {
     position: 'absolute',
     cursor: 'pointer',
@@ -33,6 +47,9 @@ export const useStyles = createUseStyles({
   switchChecked: {
     transform: 'translateX(25px)',
     backgroundColor: colors.light[500],
+  },
+  labelChecked: {
+    color: colors.blue[500],
   },
   switchCheckedBg: {
     backgroundColor: colors.blue[500],
