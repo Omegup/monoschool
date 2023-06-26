@@ -106,8 +106,6 @@ export const useSelectStyles = createUseStyles({
     '&:focus': {
       outline: 'none',
     }, 
-
-
     '& > $input:not(:checked) + $container': {
       borderColor: colors.background.outline,
     },
