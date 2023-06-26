@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 export const FilterSelect =  forwardRef(
   (props: ControlledSelectProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, label,disabled,imageURL,showImage, onChange, value, onBlur } = props;
+    const { size, label,disabled,imageURL,showImage, onChange, value, onBlur } = props;
   const classes = useSelectStyles(),
     disabledClass = classes[disabled ? 'disabled' : 'enabled'];
   return (

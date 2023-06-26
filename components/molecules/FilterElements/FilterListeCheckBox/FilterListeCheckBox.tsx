@@ -11,11 +11,11 @@ export const FilterListeCheckBox = ({ size,showImage,label }: FilterProps) => {
   return (
 
     <div className={`${classes.container} ${classes[size]}`}>
-      <SearchBar size={size} displayClose={true} label={label}/>
-     <FilterSelect  size={size} label={'Bacem achour'} showImage={showImage} imageURL={Ellipse47}/>
-     <FilterSelect  size={size} label={'Sana Binhamed'} showImage={showImage} imageURL={Ellipse46}/>
-     <FilterSelect  size={size} label={'Atef Chrigui'} showImage={showImage} imageURL={Ellipse48}/>
-     <FilterSelect  size={size} label={'Jihen brahim'} showImage={showImage} imageURL={Ellipse49}/>
+      <SearchBar size={size} displayClose={true} label={label} value={''} onChange={()=>{}} onBlur={()=>{}} style={'solid'}/>
+     <FilterSelect  size={size} label={'Bacem achour'} showImage={showImage} value={false} onChange={() => { } } onBlur={() => { } } imageURL={Ellipse47}/>
+     <FilterSelect  size={size} label={'Sana Binhamed'} showImage={showImage} value={false} onChange={()=>{}} onBlur={()=>{}} imageURL={Ellipse46}/>
+     <FilterSelect  size={size} label={'Atef Chrigui'} showImage={showImage} value={false} onChange={()=>{}} onBlur={()=>{}} imageURL={Ellipse48}/>
+     <FilterSelect  size={size} label={'Jihen brahim'} showImage={showImage} value={false} onChange={()=>{}} onBlur={()=>{}} imageURL={Ellipse49}/>
     </div>
     
   );
