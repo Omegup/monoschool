@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: 'Tooltip',
+    label: 'lorem ipsum dolor',
     size: 'medium',
     style: 'solid',
     disabled: false,
