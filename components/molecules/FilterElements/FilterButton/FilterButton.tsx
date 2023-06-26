@@ -1,6 +1,6 @@
 import { ArrowRight } from '@omegup-school/ui-assets';
-import { useFilterStyles } from './Filter.styles';
-import { ControlledFilterButtonProps, FilterButtonProps } from './Filter.types';
+import { useFilterStyles } from './FilterButton.styles';
+import { ControlledFilterButtonProps } from './FilterButton.types';
 import { forwardRef } from 'react';
 
 export const FilterButton = forwardRef(
