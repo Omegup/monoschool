@@ -19,7 +19,7 @@ export const FilterButton = forwardRef(
           checked={value}
         />
         <div className={classes.container}>
-          <label className={classes.labelText}>{label}</label>
+          <text className={classes.labelText}>{label}</text>
           <span className={classes.arrow}>
             {showIcon && <ArrowRight bold={true} width={'100%'} />}{' '}
           </span>

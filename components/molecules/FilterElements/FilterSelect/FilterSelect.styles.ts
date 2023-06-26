@@ -96,7 +96,7 @@ export const useSelectStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     color: colors.grey[400],
-    gap: spacing.s8,
+    gap: spacing.s4,
     '$medium > &': {
       padding: spacing.s4,
       borderRadius: borders.r5,

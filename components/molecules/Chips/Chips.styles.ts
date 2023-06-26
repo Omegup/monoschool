@@ -147,10 +147,13 @@ export const useSelectStyles = createUseStyles({
   },
   Essential: {
     ...chipsSizes,
-  
+    display: 'flex',
+    alignItems: 'center',
   },
   Close: {
     ...chipsSizes,
+    display: 'flex',
+    alignItems: 'center',
   },
   labelText: {
     
