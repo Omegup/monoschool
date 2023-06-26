@@ -1,7 +1,6 @@
 import { ArrowRight } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './Filter.styles';
 import { ControlledFilterProps, FilterProps } from './Filter.types';
-import { widths } from '@omegup-school/ui-atoms/sizes';
 import { forwardRef } from 'react';
 
 export const FilterButton = forwardRef(
