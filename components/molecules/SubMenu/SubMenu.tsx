@@ -2,26 +2,33 @@ import { Square, Tick } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './SubMenu.styles';
 import { ControlledSubMenuProps } from './SubMenu.types';
 import { forwardRef } from 'react';
+import { ChildMenu } from '../ChildMenu';
 
 
 export const SubMenu = forwardRef(
   (props: ControlledSubMenuProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, children, parentName, opened, onChange, value, onBlur } = props;
+    const { size, style, disabled, parentName,children, opened, onChange, value, onBlur } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
+      
+      const tab = [{ icon: "tt", label: "First Element", slected: false,style:"solid",size:"medium" },
+      { icon: "bb", label: "Second Element", slected: false,style:"solid",size:"medium" }];
     return (
       <div>
+        
         <label
           tabIndex={-1}
-          className={`${classes.parentName} ${classes[style]} ${classes[size]} ${disabledClass}`}
-        />
-        <ul>
-          {/* {children.map(ch =>
-            <li>ch.label</li>)} */}
-            <li>children[0].label</li>
-            <li>children[1].label</li>
+          className={`${classes.parentName} ${classes[style]} ${classes[size]} ${disabledClass}`}>
+             {parentName}</label>
+        <ul> {tab.map((ch) =>
+        <li  key={ch.label} >
+          <ChildMenu value={false} onChange={()=>{}} onBlur={()=>{}} style={'solid'} size={'large'} icon={ch.icon} label={ch.label}/>
+          </li>
+          )
+    }
+
         </ul>
       </div>
- );
+    );
   }
 );

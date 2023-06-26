@@ -1,10 +1,12 @@
+import { ChildMenuProps, ControlledChildMenuProps } from "../ChildMenu/ChildMenu.types";
+
 export interface SubMenuProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   opened?:boolean;
   parentName: string;
-  children:{icon:string,label:string ,  slected?:boolean}[]
+  children:any[]
 }
 
 export interface ControlledSubMenuProps extends SubMenuProps {

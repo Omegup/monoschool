@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {SubMenu  } from '@omegup-school/ui-molecules';
+import { SubMenu } from '@omegup-school/ui-molecules';
+
+
 
 const meta = {
   title: 'Atom/SubMenu',
@@ -21,9 +23,10 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     disabled: false,
-    children:[{icon:"tt",label:"First Element",slected:false},{icon:"bb",label:"Second Element",slected:false}],
-    opened:true,
-    value:true
+    children: [/*/{ icon: "tt", label: "First Element", slected: false,style:"solid",size:"medium", control: { type: 'object' } },
+     { icon: "bb", label: "Second Element", slected: false,style:"solid",size:"medium",control: { type: 'object' }  }/*/],
+    opened: true,
+    value: true
 
 
   },
