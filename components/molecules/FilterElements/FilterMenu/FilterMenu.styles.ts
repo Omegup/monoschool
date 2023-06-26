@@ -2,9 +2,9 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
-import { styles } from '../../common/styles';
+
 import { FilterMenuProps } from './FilterMenu.types';
-import { shadowMedium, shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
+import {shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
 type Sizes = readonly [
   `$${FilterMenuProps['size']}>$container>&`,
