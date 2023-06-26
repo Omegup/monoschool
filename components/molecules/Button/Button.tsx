@@ -45,5 +45,6 @@ export const Button = ({ label }: ButtonProps) => {
     <button className={classes.button}>
       <span className={classes.label}>{label}</span>
     </button>
+
   );
 };
