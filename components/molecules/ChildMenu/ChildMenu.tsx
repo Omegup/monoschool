@@ -7,22 +7,16 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 
 export const ChildMenu = forwardRef(
   (props: ControlledChildMenuProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, icon, label, onChange, value, onBlur } = props;
+    const { size, style, disabled, Icon, label, onChange, value, onBlur } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
-    console.log('fswvg')
-    return (
+     return (
       <div>
-       <Square color='red' height='32' width='25' />
-       <span>
-          <i></i>
-        </span>
-        <label
+         <label
           tabIndex={-1}
           className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
-        > {label}
+        >{label}
         </label>
-
       </div>
     );
   }

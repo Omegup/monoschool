@@ -11,25 +11,27 @@ export const SubMenu = forwardRef(
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
 
-    const tab = [{ icon: "tt", label: "First Element", slected: false, style: "solid", size: "medium" },
-    { icon: "bb", label: "Second Element", slected: false, style: "solid", size: "medium" },
-    { icon: "cc", label: "Third Element", slected: false, style: "solid", size: "medium" }];
+    const tab = [
+      { Icon: <Tick width='36' height='36' />, label: "First Element", slected: false, style: "solid", size: "medium" },
+      { Icon: <Square width='36' height='36' />, label: "Second Element", slected: false, style: "solid", size: "medium" },
+      { Icon: <Square width='36' height='36' />, label: "Second Element", slected: false, style: "solid", size: "medium" }];
     return (
       <div>
         <label
           tabIndex={-1}
           className={`${classes.parentName} ${classes[style]} ${classes[size]} ${disabledClass}`}>
           {parentName}</label>
-          <br></br>
-        <ul   >
+        <br></br>
+     
           {tab.map((ch) =>
-          <li  key={ch.label}>
-            <a href="#"><ChildMenu value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} />
-         </a> </li>
-        )
-        }
+         
+              <a href="#">
+                <ChildMenu value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} Icon={ch.Icon} label={ch.label} />
+              </a>
+          )
+          }
 
-        </ul>
+       
       </div>
     );
   }

@@ -21,7 +21,7 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  icon: {
+  Icon: {
     "width": "24px",
     "height": "24px"
   },

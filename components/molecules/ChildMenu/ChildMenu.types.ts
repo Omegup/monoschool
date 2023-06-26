@@ -2,7 +2,7 @@ export interface ChildMenuProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
-  icon?: string,
+  Icon?: ({ bold }: { bold: boolean }) => JSX.Element ,
   label: string,
   selected?: boolean
 }
@@ -12,3 +12,4 @@ export interface ControlledChildMenuProps extends ChildMenuProps {
   onChange: (value: boolean) => void;
   onBlur: () => void;
 }
+ 
