@@ -21,7 +21,24 @@ const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
 export const useSelectStyles = createUseStyles({
   solid: {},
   border: {},
-  flat: { },
+  flat: {
+    '& > $input:not(:checked) + $container': {
+      '&:hover': {
+        backgroundColor: colors.background.overlay,
+      },
+      '&:active': {
+        backgroundColor: colors.background.outline,
+      },
+    },
+    '& > $input:checked + $container': {
+      '&:hover ': {
+        backgroundColor: colors.light[200],
+      },
+      '&:active ': {
+        backgroundColor: colors.light[500],
+      },
+    },
+  },
   text: {},
   large: {
     '& > $container': {
@@ -30,7 +47,7 @@ export const useSelectStyles = createUseStyles({
       borderRadius: '14px',
       border: [borders.b3, 'solid'],
       '& > $labelText': {
-        fontSize: "16px",
+        fontSize: '16px',
       },
     },
   },
@@ -41,7 +58,7 @@ export const useSelectStyles = createUseStyles({
       borderRadius: 11.2,
       border: [borders.b2, 'solid'],
       '& > $labelText': {
-        fontSize: "14px",
+        fontSize: '14px',
       },
     },
   },
@@ -52,17 +69,15 @@ export const useSelectStyles = createUseStyles({
       borderRadius: 8.4,
       border: [borders.b1, 'solid'],
       '& > $labelText': {
-        fontSize: "12px",
-        
+        fontSize: '12px',
       },
       '&:last-child': {
-        fontSize: "12px",
+        fontSize: '12px',
       },
-      
     },
   },
   disabled: {
-      opacity: '0.4',
+    opacity: '0.4',
   },
   enabled: {
     '&:focus-within:not(:focus) > $input': {
@@ -71,12 +86,11 @@ export const useSelectStyles = createUseStyles({
         outlineColor: colors.blue[600],
         outlineStyle: 'solid',
       },
-     
     },
-      
+
     '& > $input:not(:checked) + $container': {
       '&:hover': {
-       backgroundColor: colors.background.secondary, 
+        backgroundColor: colors.background.secondary,
       },
       '&:active': {
         backgroundColor: colors.background.overlay,
@@ -90,26 +104,6 @@ export const useSelectStyles = createUseStyles({
         backgroundColor: colors.light[400],
       },
     },
-    
-    '&$flat ': {
-      '& > $input:not(:checked) + $container': {
-        '&:hover': {
-         backgroundColor:colors.background.overlay, 
-        },
-        '&:active': {
-          backgroundColor: colors.background.outline,
-        },
-      },
-      '& > $input:checked + $container': {
-        '&:hover ': {
-          backgroundColor: colors.light[200],
-        },
-        '&:active ': {
-          backgroundColor: colors.light[500],
-        },
-      },
-    },
-   
   },
   input: {
     clip: 'rect(0 0 0 0)',
@@ -119,7 +113,7 @@ export const useSelectStyles = createUseStyles({
     display: 'inline-flex',
     '&:focus': {
       outline: 'none',
-    }, 
+    },
     '& > $input:not(:checked) + $container': {
       borderColor: colors.background.outline,
     },
@@ -129,17 +123,16 @@ export const useSelectStyles = createUseStyles({
     },
     '&$flat ': {
       '& > $input + $container': {
-        borderColor:"transparent",
+        borderColor: 'transparent',
       },
-    '& > $input:not(:checked) + $container': {
-      backgroundColor: colors.background.secondary,
-     
+      '& > $input:not(:checked) + $container': {
+        backgroundColor: colors.background.secondary,
+      },
+      '& > $input:checked + $container': {
+        color: colors.blue[500],
+        backgroundColor: colors.light[100],
+      },
     },
-    '& > $input:checked + $container': {
-      color: colors.blue[500],
-      backgroundColor: colors.light[100],
-   
-    },}
   },
   container: {
     display: 'flex',
@@ -155,9 +148,6 @@ export const useSelectStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
   },
-  labelText: {
-    
-   
-  },
+  labelText: {},
   square: {},
 });
