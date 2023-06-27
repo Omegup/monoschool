@@ -1,11 +1,32 @@
-import { SubSideBarProps } from "../SubSideBar";
+import { ControlledHeaderSideBarProps } from "../HeaderSideBar";
+
+export interface ChildMenuProps {
+  style: 'solid' | 'border' | 'flat' | 'text';
+  size: 'large' | 'medium' | 'small';
+  disabled?: boolean;
+  icon?: JSX.Element ,
+  label: string,
+  selected?: boolean,
+  id:number,
+  isCollopsed?:boolean
+}
+export interface SubMenuProps {
+  style: 'solid' | 'border' | 'flat' | 'text';
+  size: 'large' | 'medium' | 'small';
+  disabled?: boolean;
+  isOpened?:boolean;
+  parentName: string;
+  parentId:number;
+  children:ChildMenuProps[]
+}
 
 export interface SideBarProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
-  closed:boolean,
-  title: string;
-  list:SubSideBarProps[]
+  children:JSX.Element[],
+  header:ControlledHeaderSideBarProps,
+  isOpened:boolean,
+  
 }
 
 export interface ControlledSideBarProps extends SideBarProps {

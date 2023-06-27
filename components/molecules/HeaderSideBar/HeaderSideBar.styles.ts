@@ -3,14 +3,13 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
-import { SideBarProps } from './SideBar.types';
-
+import { HeaderSideBarProps } from './HeaderSideBar.types';
 
 type Sizes = readonly [
-  `$${SideBarProps['size']}>$container>&`,
+  `$${HeaderSideBarProps['size']}>$container>&`,
   { width: string; height: string }
 ];
-const SideBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
+const HeaderSideBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
   Object.entries(widths.checkbox).map(([k, v]) => [
     `$${k}>$container>&`,
     {
@@ -34,15 +33,22 @@ export const useSelectStyles = createUseStyles({
   label: {},
   tick: {},
   container: {
-    display: 'inline-flex',
-    padding: spacing.s5,
+    display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'flex-start',
     gap: spacing.s3,
-    borderRadius: borders.r5,
-    background:colors.background.default,
-    boxShadow: ' 0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+    color:colors.grey[500],
   },
-  labelText: {},
+  logo: {
+    display: 'flex',
+    padding: ['0px ',borders.b4],
+    alignItems: 'center',
+    gap: spacing.s8,
+    alignSelf: 'stretch',
+  },
+  labelText: {
+    ...styles.paragraph_medium_semiBold
+  
+  },
   square: {},
 });

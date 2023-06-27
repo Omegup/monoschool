@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SideBar } from '@omegup-school/ui-molecules';
-import { Calendar } from '@omegup-school/ui-assets';
+import { SideBar, HeaderSideBar } from '@omegup-school/ui-molecules';
+import { Logo } from '@omegup-school/ui-assets';
 const meta = {
   title: 'molecule/SideBar',
   component: SideBar,
@@ -17,16 +17,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    title: 'Select',
     size: 'medium',
     style: 'solid',
-    closed: false,
-    list:[{label:"Calandrier",Icon:Calendar, size: 'medium',style: 'solid'}],
+    children: [],
+    header: {
+      onChange: () => {},
+      onBlur: () => {},
+      style: 'text',
+      size: 'medium',
+      title: 'Omega School',
+      Logo: <Logo/>,
+      Search: <Logo/>,
+    },
     value: false,
-    onChange: () =>{},
+    onChange: () => {},
     onBlur: () => {},
-
+    isOpened: true,
   },
 };
-
-
