@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SearchBar } from '@omegup-school/ui-molecules';
-
+import { SearchStatus } from '@omegup-school/ui-assets';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -24,6 +24,7 @@ export const Primary: Story = {
     label: "Rechercher",
     size: 'medium',
     displayClose: true,
+    Icon:SearchStatus,
   },
 };
 

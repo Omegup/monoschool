@@ -3,7 +3,7 @@ export type SearchBarProps = {
   style:'solid' | 'border' | 'flat' | 'text';
   displayClose: boolean;
   label: string;
-
+  Icon:JSX.Element,
 };
 export interface ControlledSearchBarProps extends SearchBarProps {
   value: string;
