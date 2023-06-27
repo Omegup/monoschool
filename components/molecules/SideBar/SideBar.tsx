@@ -8,7 +8,7 @@ import { HeaderSideBar } from '../HeaderSideBar';
 
 export const SideBar = forwardRef(
   (props: ControlledSideBarProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style,children,header,isOpened, onChange, value, onBlur } = props;
+    const { size, style,children,header,isOpened, onChange,button, value, onBlur } = props;
     const classes = useSelectStyles();
       
     return (
@@ -16,9 +16,10 @@ export const SideBar = forwardRef(
         tabIndex={-1}
         className={`${classes.label} ${classes[style]} ${classes[size]} `}
       >
-        <ButtonSideBar  onChange={() => { } } onBlur={() => { } } isOpened={isOpened} size={size}/>
+     
        <div className={classes.container}>
-       <HeaderSideBar isOpened={true} onChange={header.onChange} onBlur={header.onBlur} style={'text'} size={'small'} title={'Omega School'} Logo={header.Logo} Search={header.Search} />
+       <div className={classes.sideBarButton} > <ButtonSideBar  onChange={button.onChange} onBlur={button.onBlur} isOpened={isOpened} size={size}/></div>
+       <HeaderSideBar isOpened={isOpened} onChange={header.onChange} onBlur={header.onBlur} style={style} size={size} title={header.title} Logo={header.Logo} Search={header.Search} />
        </div>
       </label>
     );

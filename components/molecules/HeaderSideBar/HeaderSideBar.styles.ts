@@ -45,6 +45,8 @@ export const useSelectStyles = createUseStyles({
     alignItems: 'center',
     gap: spacing.s8,
     alignSelf: 'stretch',
+  },icon:{
+    width:widths.logo.svg
   },
   labelText: {
     ...styles.paragraph_medium_semiBold

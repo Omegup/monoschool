@@ -1,3 +1,4 @@
+import { ControlledButtonSideBarProps } from "../ButtonSideBar";
 import { ControlledHeaderSideBarProps } from "../HeaderSideBar";
 
 export interface ChildMenuProps {
@@ -26,6 +27,7 @@ export interface SideBarProps {
   children:JSX.Element[],
   header:ControlledHeaderSideBarProps,
   isOpened:boolean,
+  button:ControlledButtonSideBarProps,
   
 }
 

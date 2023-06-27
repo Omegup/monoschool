@@ -15,4 +15,7 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  logo:{
+    svg: '40px',
+  },
 };

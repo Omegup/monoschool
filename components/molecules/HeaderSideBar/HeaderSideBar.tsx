@@ -16,7 +16,7 @@ export const HeaderSideBar = forwardRef(
       >
        <div className={classes.container}>
         <div className={classes.logo}>
-         {Logo} 
+        <span className={classes.icon} > {Logo} </span>
          {isOpened &&<span className={classes.labelText} >{title}</span>}
          </div>
          {Search}

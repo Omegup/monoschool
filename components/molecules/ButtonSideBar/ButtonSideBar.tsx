@@ -18,15 +18,14 @@ const SideBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
     },
   ])
 );
-console.log(SideBarSizes)
+
 const useStyles = createUseStyles({
   large: {},
   medium: {},
   small: {},
   button: {
-    width:'fit-content',
+    width: 'fit-content',
     display: 'flex',
-    padding: '5px',
     justifyContent: 'center',
     alignItems: 'center',
     gap: spacing.s5,
@@ -36,10 +35,7 @@ const useStyles = createUseStyles({
     boxShadow:
       '0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)',
   },
-  arrow:{...SideBarSizes
-  ,display: 'flex',
-  alignItems: 'center',
-},
+  arrow: { ...SideBarSizes, display: 'flex', alignItems: 'center' },
   label: {},
 });
 
@@ -47,7 +43,7 @@ export type ButtonSideBarProps = {
   size: 'large' | 'medium' | 'small';
 };
 export interface ControlledButtonSideBarProps extends ButtonSideBarProps {
-  isOpened: boolean;
+  isOpened?: boolean;
   onChange: (isOpened: boolean) => void;
   onBlur: () => void;
 }
@@ -58,7 +54,7 @@ export const ButtonSideBar = ({
   size,
 }: ControlledButtonSideBarProps) => {
   const classes = useStyles();
-  console.log(size);
+  console.log(size)
   return (
     <div
       className={`${classes.button} ${classes[size]} `}
@@ -66,7 +62,16 @@ export const ButtonSideBar = ({
         onChange(!isOpened);
       }}
     >
-      {isOpened ? <span  className={classes.arrow} > <ArrowCircleLeft /> </span>: <span className={classes.arrow} ><ArrowCircleRight /></span>}
+      {isOpened ? (
+        <span className={classes.arrow}>
+          {' '}
+          <ArrowCircleLeft />{' '}
+        </span>
+      ) : (
+        <span className={classes.arrow}>
+          <ArrowCircleRight />
+        </span>
+      )}
     </div>
   );
 };

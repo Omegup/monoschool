@@ -32,8 +32,14 @@ export const useSelectStyles = createUseStyles({
   enabled: {},
   input: {},
   label: {},
-  tick: {},
+  sideBarButton: {
+    position:"absolute",
+    right: -15,
+    top:20,
+
+  },
   container: {
+    width:"fit-content",
     display: 'inline-flex',
     padding: spacing.s5,
     flexDirection: 'column',
@@ -42,6 +48,7 @@ export const useSelectStyles = createUseStyles({
     borderRadius: borders.r5,
     background:colors.background.default,
     boxShadow: ' 0px 0px 4px 0px rgba(0, 0, 0, 0.25)',
+    position:"relative"
   },
   labelText: {},
   square: {},
