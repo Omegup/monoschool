@@ -10,4 +10,9 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  searchBar:{
+    small: '16px',
+    medium: '20px',
+    large: '28px',
+  },
 };

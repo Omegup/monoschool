@@ -27,7 +27,7 @@ export const Primary: Story = {
     displayClose: true,
     Icon:SearchStatus,
     value: "",
-    onChange: () => {},
+    onChange: (value) => {console.log(value)},
     onBlur: () => {},
   },
 };
