@@ -18,25 +18,18 @@
         "react"
     ],
     "rules": {
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
+       
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",
             "always"
         ],
-        "max-params": [
+        "max-params" : [
             "error",
             3
-        ],
+        ]
     }
 }

@@ -5,3 +5,4 @@ function foo (bar, baz, qux, qxx) {
 let foo = (bar, baz, qux, qxx) => {
   doSomething();
 };
+
