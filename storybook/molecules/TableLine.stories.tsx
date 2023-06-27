@@ -8,7 +8,6 @@ const TableLineDemo = ({
   isFullWidth,
 }: {
   row: JSX.Element[],
-
   isFullWidth: boolean,
 }) => {
   const [isSelected, setIsSelected] = useState(false);
@@ -36,10 +35,10 @@ type Story = StoryObj<typeof meta>;
 
 
 const row = [
-  <Column text="Text Cell" />,
-  <Column text="Text Cell" />,
-  <Column text="Text Cell" />,
-  <Column text="Text Cell" />,
+  <Column Column={<p>Text Cell</p>} />,
+  <Column Column={<p>Text Cell</p>} />,
+  <Column Column={<p>Text Cell</p>} />,
+  <Column Column={<p>Text Cell</p>} />,
 ]
 
 

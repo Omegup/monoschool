@@ -1,17 +1,23 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { borders } from "@omegup-school/ui-atoms/sizes";
-import { createUseStyles } from "react-jss";
+import { colors } from '@omegup-school/ui-atoms/colors';
+import { borders } from '@omegup-school/ui-atoms/sizes';
+import { createUseStyles } from 'react-jss';
+
+const commonBorder = `1px solid ${colors.background.overlay}`;
 
 export const useTableLineStyles = createUseStyles({
   tableLine: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    border: borders.b2,
-    backgroundColor: colors.background.overlay,
-      '&:hover': {
-        backgroundColor: colors.light[100],
-      },
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderRadius: borders.b2,
+    backgroundColor: 'transparent',
+    borderRight: commonBorder,
+    borderBottom: commonBorder,
+    borderLeft: commonBorder,
+    padding: 0,
+    '&:hover': {
+      backgroundColor: colors.light[100],
+    },
   },
   tableLineSelected: {
     backgroundColor: colors.light[300],
@@ -20,6 +26,6 @@ export const useTableLineStyles = createUseStyles({
     },
   },
   tableLineFullWidth: {
-    width: "100%",
+    width: '100%',
   },
 });

@@ -17,11 +17,7 @@ export const TableLine = ({ row, isSelected, setIsSelected, isFullWidth, disable
       )
     } onClick={toggle} >
       <ContainerStateContext.Provider value={classes.tableLine}>
-        <Column text='' Adornment={
-          {
-            start: <NakedCheckBox variant={'tableLine'} checked={isSelected} onChange={toggle}  {...{ disabled }} />
-          }
-        } />
+        <Column Column={<NakedCheckBox variant={'cell'} checked={isSelected} onChange={toggle}  {...{ disabled }} />} />
         {row.map((column, index) => column)}
       </ContainerStateContext.Provider>
     </div>

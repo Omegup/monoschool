@@ -7,9 +7,10 @@ import { LabeledCheckBoxProps } from "./LabeledCheckBox.types";
 export const LabeledCheckBox = ({
   label,
   disabled,
-  enabled,
+  checked,
   size,
   variant,
+  onChange,
 }: LabeledCheckBoxProps) => {
 
   const classes = useLabeledCheckBoxStyles();
@@ -17,10 +18,10 @@ export const LabeledCheckBox = ({
   return (
     <div className={joinClassNames(
       classes.labeledCheckBox,
-      enabled && classes.enabled,
+      checked && classes.enabled,
     )}>
       <ContainerStateContext.Provider value={classes.labeledCheckBox}>
-        <NakedCheckBox  {...{ disabled, enabled, size, variant }} />
+        <NakedCheckBox  {...{ disabled, checked, size, variant , onChange }} />
         <label className={classes.label}>{label}</label>
       </ContainerStateContext.Provider>
     </div>

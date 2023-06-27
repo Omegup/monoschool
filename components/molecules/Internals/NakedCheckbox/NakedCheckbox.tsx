@@ -12,7 +12,7 @@ export const NakedCheckBox = ({
   checked,
   onChange,
 }: NakedCheckboxProps,) => {
-  
+
   const containerStateSelector = useContainerStateSelector()
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     onChange(event.target.checked)
@@ -26,14 +26,14 @@ export const NakedCheckBox = ({
       className={
         joinClassNames(
           classes.label,
-          classes[size],
-          classes[variant],
+          classes[size as keyof typeof classes],
+          classes[variant as keyof typeof classes],
         )
       }
     >
-      <input  onChange={changeHandler} type="checkbox" className={classes.input} {...{ checked, disabled  }} />
+      <input onChange={changeHandler} type="checkbox" className={classes.input} {...{ checked, disabled }} />
       <span className={classes.container} >
-        <Tick />
+        <Tick width="100%" />
       </span>
     </label>
   )

@@ -3,7 +3,6 @@ import { useSelectStyles } from './Select.styles';
 import { ControlledSelectProps } from './Select.types';
 import { forwardRef } from 'react';
 
-
 export const Select = forwardRef(
   (props: ControlledSelectProps, ref: React.Ref<HTMLInputElement>) => {
     const { size, style, disabled, label, onChange, value, onBlur } = props;

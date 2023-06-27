@@ -1,4 +1,6 @@
+import React from 'react';
 import { Column } from './Column';
+
 
 export type ColumnAdornment = {
   start: React.ReactNode;
@@ -6,9 +8,7 @@ export type ColumnAdornment = {
 };
 
 export type ColumnProps = {
-  Adornment?: Partial<ColumnAdornment>;
-  currencyFormat?: (amount: string) => string;
-  text: string;
+  Column?: React.ReactNode;
 };
 
 export type Column = ReturnType<typeof Column>;

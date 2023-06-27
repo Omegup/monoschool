@@ -1,4 +1,6 @@
 export const borders = {
+  r3: 5,
+  r4: 6,
   r5: 10,
   b1: 0.5,
   b2: 1,

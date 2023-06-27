@@ -5,22 +5,17 @@ import { styles } from "../common/styles";
 
 export const useColumnStyles = createUseStyles({
   columnContainer: {
-    paddingBlock : spacing.s5,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  startAdornment: {
-    paddingLeft: spacing.s5
-  },
-  endAdornment: {
-    paddingRight: spacing.s5
-  },
-  cellContainer: {
-    paddingInline: spacing.s5
+    padding: spacing.s5,
+    display: "grid",
+    placeItems: "center",
+    whiteSpace: 'nowrap',
+    ...styles.paragraph_xSmall_regular,
+    '& > *': {
+      padding: '0px',
+      margin: '0px',
+    },
   },
   cellText: {
     color: colors.dark,
-    ...styles.paragraph_xSmall_regular,
   },
 });
