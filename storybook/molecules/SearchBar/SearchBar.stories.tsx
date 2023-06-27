@@ -22,9 +22,13 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     label: "Rechercher",
+    style:"text",
     size: 'medium',
     displayClose: true,
     Icon:SearchStatus,
+    value: "",
+    onChange: () => {},
+    onBlur: () => {},
   },
 };
 

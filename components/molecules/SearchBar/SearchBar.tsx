@@ -13,9 +13,8 @@ export const SearchBar = forwardRef(
     <div className={`${classes[size]} ${classes[style]}`}>
       <div className={classes.container}>
       <span className={classes.SearchStatus}>
-      {Icon}
-         {//< color={colors.grey[400]} width={"100%"}/>
-  }
+     <Icon color={colors.grey[400]} width={"100%"}/>
+  
          </span>
         <input
         className={classes.input}
