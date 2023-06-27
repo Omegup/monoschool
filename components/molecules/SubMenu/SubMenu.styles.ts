@@ -29,17 +29,32 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  children: {
+  items: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     alignSelf: "stretch",
     padding: spacing.s5,
-    gap: spacing.s7
+    gap: spacing.s7,
+        '&:hover': {
+          borderRadius:borders.r5,
+        backgroundColor:colors.light[500]   ,
+        cursor:"pointer",
+       },
+       '&selection':{
+        borderRadius:borders.r5,
+        backgroundColor:colors.blue[500]  ,
+        cursor:"pointer",
+       },
+       '&:active': {
+        '&:hover > $items': {
+
+          borderRadius:borders.r5,
+          backgroundColor:colors.blue[500]  ,
+        }}
   },
   container: {
     display: "flex",
-
     flexDirection: "column",
     alignItems: 'flex-start',
     alignSelf: 'stretch',

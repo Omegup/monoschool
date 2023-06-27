@@ -1,4 +1,5 @@
 export * from './Logo';
 export * from './Square';
 export * from './Tick';
-export * from './wifiSquare'
+export * from './UserTick';
+export * from './WifiSquare'

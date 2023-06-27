@@ -9,7 +9,7 @@ type Sizes = readonly [
   `$${ChildMenuProps['size']}>$container>&`,
   { width: string; height: string }
 ];
- 
+
 
 export const useSelectStyles = createUseStyles({
   solid: {},
@@ -22,33 +22,37 @@ export const useSelectStyles = createUseStyles({
   disabled: {},
   enabled: {},
   icon: {
-    "width": "24px",
-    "height": "24px",
-    display:"flex"
+    width: "24px",
+    height: "24px",
+    '&:hover': {
+      borderRadius:borders.r5,
+    backgroundColor:colors.light[500]   ,
+    cursor:"pointer",
+   },
   },
   label: {
-    "color":colors.grey[500],
-    "fontSize": "16px",
-    "fontFamily": "Poppins",
-    "&:hover ":{
- 
-      colors:colors.blue[500]
-      
-    },
-  }, 
-  container:{
-    "display": "flex",
-    "padding":  spacing.s5,
-    "alignItems": "center",
-    "gap": spacing.s7,
-    "alignSelf": "stretch"
+    color: colors.grey[500],
+    fontSize: "16px",
+    '&:hover': {
+      borderRadius:borders.r5,
+    backgroundColor:colors.light[500]   ,
+    color:colors.danger,
+    cursor:"pointer",
+   },
+  },
+  container: {
+    display: "flex",
+    padding: spacing.s5,
+    alignItems: "center",
+    alignSelf: "stretch",
+    gap: "15px",
+    color:colors.danger,
+    '&:hover': {
+      borderRadius:borders.r5,
+    backgroundColor:colors.light[500]   ,
+    cursor:"pointer",
+   },
   }
 
-   
- 
-  
- 
-  
- 
-
-});
+}
+);

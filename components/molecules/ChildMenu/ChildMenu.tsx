@@ -11,15 +11,18 @@ export const ChildMenu = forwardRef(
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
     return (
-      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${disabledClass}`} >
-        <div    >
+      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${disabledClass}`}  >
+        <div   className={classes.icon} >
        {icon}
         </div>
-         <label
+       
+          <label className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
           tabIndex={-1}
-          className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
+       
         >{label}
         </label>
+      
+         
       </div>
     );
   }
