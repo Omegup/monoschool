@@ -2,9 +2,11 @@ export interface ChildMenuProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
-  Icon?: JSX.Element ,
+  icon?: JSX.Element ,
   label: string,
-  selected?: boolean
+  selected?: boolean,
+  id:number,
+  isCollopsed?:boolean
 }
 
 export interface ControlledChildMenuProps extends ChildMenuProps {

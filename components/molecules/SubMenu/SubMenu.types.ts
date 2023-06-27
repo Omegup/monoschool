@@ -4,8 +4,9 @@ export interface SubMenuProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
-  opened?:boolean;
+  isOpened?:boolean;
   parentName: string;
+  parentId:number;
   children:ChildMenuProps[]
 }
 

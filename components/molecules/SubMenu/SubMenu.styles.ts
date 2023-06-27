@@ -46,7 +46,7 @@ export const useSelectStyles = createUseStyles({
     "alignItems": "flex-start"
   }
   , parentName: {
-    "color": "var(--grey-300, #B9CAD7)",
+    "color": colors.grey[300],
     "fontSize": "12px",
     "fontFamily": "Poppins",
     "fontWeight": "700",
