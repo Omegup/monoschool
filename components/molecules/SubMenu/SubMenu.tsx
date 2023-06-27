@@ -1,4 +1,4 @@
-import { Square, Tick } from '@omegup-school/ui-assets';
+import { Square, Tick, WifiSquare } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './SubMenu.styles';
 import { ControlledSubMenuProps } from './SubMenu.types';
 import { forwardRef } from 'react';
@@ -13,7 +13,7 @@ export const SubMenu = forwardRef(
 
     const tab = [
       { icon: <Tick color='red' width='36' height='36' />, label: "Présence des elèves", slected: false, style: "solid", size: "medium" ,id:1},
-      { icon: <Square  width='36' height='36' />, label: "Rapports des élèves", slected: false, style: "solid", size: "medium",id:2 },
+      { icon: <WifiSquare  width='36' height='36' />, label: "Rapports des élèves", slected: false, style: "solid", size: "medium",id:2 },
       { icon: <Square width='36' height='36' />, label: "Présence des enseigants", slected: false, style: "solid", size: "medium" ,id:3}];
     return (
       <div>
@@ -24,14 +24,10 @@ export const SubMenu = forwardRef(
         <br></br>
      
           {tab.map((ch) =>
-               <a href="#">
-                <ChildMenu value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id}/>
-              </a>
-          )
+            <ChildMenu value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id}/>
+                    )
           }
-
-       
-      </div>
+             </div>
     );
   }
 );

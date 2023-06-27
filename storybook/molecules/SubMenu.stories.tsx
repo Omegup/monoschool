@@ -20,12 +20,13 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     parentName: 'SubMenu',
+    parentId:0,
     size: 'medium',
     style: 'solid',
     disabled: false,
     children: [/*/{ icon: "tt", label: "First Element", slected: false,style:"solid",size:"medium", control: { type: 'object' } },
      { icon: "bb", label: "Second Element", slected: false,style:"solid",size:"medium",control: { type: 'object' }  }/*/],
-    opened: true,
+    isOpened: true,
     value: true
 
 

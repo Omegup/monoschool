@@ -21,23 +21,33 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  Icon: {
+  icon: {
     "width": "24px",
-    "height": "24px"
+    "height": "24px",
+    display:"flex"
   },
   label: {
     "color":colors.grey[500],
     "fontSize": "16px",
-    "fontFamily": "Poppins"
+    "fontFamily": "Poppins",
+    "&:hover ":{
+ 
+      colors:colors.blue[500]
+      
+    },
   }, 
   container:{
     "display": "flex",
-    "padding": "10px",
+    "padding":  spacing.s5,
     "alignItems": "center",
-    "gap": "15px",
+    "gap": spacing.s7,
     "alignSelf": "stretch"
   }
 
+   
+ 
+  
+ 
   
  
 

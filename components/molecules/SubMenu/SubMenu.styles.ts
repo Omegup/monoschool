@@ -29,29 +29,31 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  input: {
-    clip: 'rect(0 0 0 0)',
-    position: 'absolute',
-  },
+
   children: {
-    "display": "flex",
-    "flexDirection": "column",
-    "alignItems": "flex-start",
-    "gap": "5px"
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    alignSelf:"stretch",
+    gap: "15px",
+    padding:spacing.s5
   },
   container: {
-    "display": "inline-flex",
-    "padding": "10px",
-    "flexDirection": "column",
-    "alignItems": "flex-start"
+    display: "inline-flex",
+    padding: spacing.s5,
+    flexDirection: "column",
+     alignItems: 'center',
+    gap:spacing.s7,
+    borderRadius:borders.r5,
+    color:colors.grey[500],
   }
   , parentName: {
-    "color": colors.grey[300],
-    "fontSize": "12px",
-    "fontFamily": "Poppins",
-    "fontWeight": "700",
-    "letterSpacing": "0.12px",
-    "textTransform": "uppercase"
+    color: colors.grey[300],
+    fontSize: "12px",
+    fontFamily: "Poppins",
+    fontWeight: "700",
+    letterSpacing: "0.12px",
+    textTransform: "uppercase"
   }
 
 });
