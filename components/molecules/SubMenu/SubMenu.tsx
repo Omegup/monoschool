@@ -16,16 +16,17 @@ export const SubMenu = forwardRef(
       { icon: <WifiSquare  width='36' height='36' />, label: "Rapports des élèves", slected: false, style: "solid", size: "medium",id:2 },
       { icon: <Square width='36' height='36' />, label: "Présence des enseigants", slected: false, style: "solid", size: "medium" ,id:3}];
     return (
-      <div>
+      <div className={classes.container}>
         <label
           tabIndex={-1}
           className={`${classes.parentName} ${classes[style]} ${classes[size]} ${disabledClass}`}>
           {parentName}</label>
-        <br></br>
-     
+           
           {tab.map((ch) =>
-            <ChildMenu value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id}/>
-                    )
+         <div className={classes.children}>
+          <ChildMenu    value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id}/>
+           </div>  
+            )
           }
              </div>
     );

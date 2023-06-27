@@ -29,24 +29,21 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-
   children: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    alignSelf:"stretch",
-    gap: "15px",
-    padding:spacing.s5
+    alignSelf: "stretch",
+    padding: spacing.s5,
+    gap: spacing.s7
   },
   container: {
-    display: "inline-flex",
-    padding: spacing.s5,
+    display: "flex",
+
     flexDirection: "column",
-     alignItems: 'center',
-    gap:spacing.s7,
-    borderRadius:borders.r5,
-    color:colors.grey[500],
-  }
+    alignItems: 'flex-start',
+    alignSelf: 'stretch',
+ }
   , parentName: {
     color: colors.grey[300],
     fontSize: "12px",
@@ -55,5 +52,4 @@ export const useSelectStyles = createUseStyles({
     letterSpacing: "0.12px",
     textTransform: "uppercase"
   }
-
 });
