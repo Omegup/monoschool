@@ -34,7 +34,7 @@
         ],
         "max-params" : [
             "error",
-            3
+            2
         ]
     }
 }
