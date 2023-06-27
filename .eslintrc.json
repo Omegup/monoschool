@@ -20,7 +20,8 @@
     "settings": {
         "react": {
           "version": "detect"
-        },
+        }
+    },
     "rules": {
        
         "quotes": [
