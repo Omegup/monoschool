@@ -4,11 +4,10 @@ export interface SubMenuProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
-  isOpened?:boolean;
+  isOpened?: boolean;
   parentName: string;
-  parentId:number;
-  
-  items:ChildMenuProps[]
+  parentId: number;
+  items: ChildMenuProps[]
 }
 
 export interface ControlledSubMenuProps extends SubMenuProps {
