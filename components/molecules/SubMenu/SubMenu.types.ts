@@ -7,6 +7,7 @@ export interface SubMenuProps {
   isOpened?:boolean;
   parentName: string;
   parentId:number;
+  
   items:ChildMenuProps[]
 }
 

@@ -11,7 +11,8 @@ export const ChildMenu = forwardRef(
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
     return (
-      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${disabledClass}`}  >
+      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${disabledClass}`} 
+    >
         <div   className={classes.icon} >
        {icon}
         </div>
