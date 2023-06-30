@@ -24,7 +24,7 @@ export const Primary: Story = {
     parentId:0,
     size: 'medium',
     style: 'solid',
-    disabled: false,
+    disabled: false, 
     items: [
       { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
       { icon: <WifiSquare  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2,isCollopsed:true },
