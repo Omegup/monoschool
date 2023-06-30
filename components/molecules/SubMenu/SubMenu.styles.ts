@@ -29,6 +29,11 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
+  selected:{
+    borderRadius: borders.r5,
+    backgroundColor: colors.blue[500],
+  },
+  notSelected:{},
   items: {
     display: "flex",
     flexDirection: "column",
@@ -41,11 +46,7 @@ export const useSelectStyles = createUseStyles({
       backgroundColor: colors.light[500],
       cursor: "pointer",
     },
-    '&selection': {
-      borderRadius: borders.r5,
-      backgroundColor: colors.blue[500],
-      cursor: "pointer",
-    },
+  
     '&:active': {
       '&:hover > $items': {
         borderRadius: borders.r5,

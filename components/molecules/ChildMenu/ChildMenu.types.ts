@@ -4,7 +4,7 @@ export interface ChildMenuProps {
   disabled?: boolean;
   icon?: JSX.Element ,
   label: string,
-  selected?: boolean,
+  selected: boolean,
   id:number,
   isCollopsed?:boolean
 }

@@ -7,21 +7,21 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 
 export const ChildMenu = forwardRef(
   (props: ControlledChildMenuProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, icon,isCollopsed,id ,label, onChange, value, onBlur } = props;
+    const { size, style, disabled, icon, isCollopsed, id, label, onChange, value, onBlur, selected } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
+    const selectedClass = classes[selected ? 'selected' : 'notSelected'];
     return (
-      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${disabledClass}`} 
-    >
-        <div   className={classes.icon} >
-       {icon}
+      <div className={`${classes.container} ${classes[style]} ${classes[size]} ${selectedClass}`}
+      >
+        <div className={classes.icon} >
+          {icon}
         </div>
-          <label className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
+        {!isCollopsed && <label className={`${classes.label} `}
           tabIndex={-1}
-               >{label}
-        </label>
-      
-         
+        >{label}
+        </label>}
+
       </div>
     );
   }

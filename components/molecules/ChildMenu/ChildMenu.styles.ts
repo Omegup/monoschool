@@ -21,38 +21,42 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
+  selected :{ },
+  notSelected:{},
   icon: {
     width: "24px",
     height: "24px",
     '&:hover': {
-      borderRadius:borders.r5,
-    backgroundColor:colors.light[500]   ,
-    cursor:"pointer",
+     cursor:"pointer",
    },
   },
   label: {
-    color: colors.grey[500],
     fontSize: "16px",
     '&:hover': {
-      borderRadius:borders.r5,
-    backgroundColor:colors.light[500]   ,
-    color:colors.danger,
-    cursor:"pointer",
-   },
+      cursor:"pointer",
+    },
   },
+  
   container: {
     display: "flex",
     padding: spacing.s5,
     alignItems: "center",
     alignSelf: "stretch",
     gap: "15px",
-    color:colors.danger,
+    '&$selected': {
+      color: colors.grey[100]
+    },
+    '&$notSelected': {
+    
+      color: colors.grey[500],
+    },
     '&:hover': {
-      borderRadius:borders.r5,
-    backgroundColor:colors.light[500]   ,
-    cursor:"pointer",
-   },
-  }
-
+      color: colors.blue[500],
+      cursor:"pointer",
+     },
+  
+  },
+ 
 }
+
 );
