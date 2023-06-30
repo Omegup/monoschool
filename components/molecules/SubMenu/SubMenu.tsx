@@ -23,8 +23,8 @@ export const SubMenu = forwardRef(
           {parentName}</label>
            
           {items.map((ch,index) =>
-         <div className={classes.items} key={index}>
-          <ChildMenu    value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id}/>
+         <div className={classes.items} key={index} >
+          <ChildMenu value={false} onChange={() => { }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id}/>
            </div>  
             )
           }

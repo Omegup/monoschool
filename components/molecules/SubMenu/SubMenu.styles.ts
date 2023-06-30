@@ -36,35 +36,39 @@ export const useSelectStyles = createUseStyles({
     alignSelf: "stretch",
     padding: spacing.s5,
     gap: spacing.s7,
-        '&:hover': {
-          borderRadius:borders.r5,
-        backgroundColor:colors.light[500]   ,
-        cursor:"pointer",
-       },
-       '&selection':{
-        borderRadius:borders.r5,
-        backgroundColor:colors.blue[500]  ,
-        cursor:"pointer",
-       },
-       '&:active': {
-        '&:hover > $items': {
-
-          borderRadius:borders.r5,
-          backgroundColor:colors.blue[500]  ,
-        }}
+    '&:hover': {
+      borderRadius: borders.r5,
+      backgroundColor: colors.light[500],
+      cursor: "pointer",
+    },
+    '&selection': {
+      borderRadius: borders.r5,
+      backgroundColor: colors.blue[500],
+      cursor: "pointer",
+    },
+    '&:active': {
+      '&:hover > $items': {
+        borderRadius: borders.r5,
+        backgroundColor: colors.blue[500],
+      }
+    }
   },
   container: {
     display: "flex",
     flexDirection: "column",
     alignItems: 'flex-start',
     alignSelf: 'stretch',
- }
+  }
   , parentName: {
     color: colors.grey[300],
     fontSize: "12px",
-    fontFamily: "Poppins",
+
     fontWeight: "700",
     letterSpacing: "0.12px",
-    textTransform: "uppercase"
+    textTransform: "uppercase",
+    display: "flex",
+    padding: "0px 20px",
+    alignItems: "flex-start",
+    gap: "10px"
   }
 });

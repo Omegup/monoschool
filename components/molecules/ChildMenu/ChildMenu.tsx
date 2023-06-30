@@ -15,11 +15,9 @@ export const ChildMenu = forwardRef(
         <div   className={classes.icon} >
        {icon}
         </div>
-       
           <label className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
           tabIndex={-1}
-       
-        >{label}
+               >{label}
         </label>
       
          
