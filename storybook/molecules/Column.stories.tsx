@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Column } from '@omegup-school/ui-molecules';
-
+import { Column, CurrencyColumn, LabeledCheckBox, TextColumn } from '@omegup-school/ui-molecules';
+import { useState } from 'react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -9,23 +9,42 @@ const meta = {
   component: Column,
   tags: ['autodocs'],
   argTypes: {
-   text: { control: 'text' },
   },
 } satisfies Meta<typeof Column>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+
+
+
+const CheckboxDemo = () => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  return (
+    <LabeledCheckBox 
+      checked={isSelected}
+      onChange={() => setIsSelected(!isSelected)}
+      disabled={false}
+      label=''
+      variant='cell'
+    />
+  );
+}; 
+
+export const TextCell: Story = {
   args: {
-    text: 'Column',
-    Adornment: {
-      start: <img/>,
-      end: <img/>,
-    },
-    currencyFormat(amount) {
-      return amount+'$';
-    },
+    children: <TextColumn text='Text Cell' />
+  },
+};
+export const CurrencyCell: Story = {
+  args: {
+    children: <CurrencyColumn amount={3345436456546}  />
+  },
+};
+export const CheckboxCell: Story = {
+  args: {
+    children:  <CheckboxDemo/>,
   },
 };
 

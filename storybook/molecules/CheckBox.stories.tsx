@@ -1,16 +1,36 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { LabeledCheckBox } from '@omegup-school/ui-molecules';
+import { useState } from 'react';
+import { LabeledCheckBoxProps } from '@omegup-school/ui-molecules/LabeledCheckBox/LabeledCheckBox.types';
+
+const CheckboxDemo = ({
+  label,
+  size,
+  variant,
+  disabled,
+  checked,
+}: LabeledCheckBoxProps) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  return (
+    <LabeledCheckBox
+      checked={isSelected}
+      onChange={() => setIsSelected(!isSelected)}
+      {...{ label, size, variant, disabled, }}
+    />
+  );
+};
 
 
 const meta = {
   title: 'Molecules/CheckBox',
-  component: LabeledCheckBox,
+  component: CheckboxDemo,
   tags: ['autodocs'],
   argTypes: {
 
   },
-} satisfies Meta<typeof LabeledCheckBox>;
+} satisfies Meta<typeof CheckboxDemo>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -42,11 +62,11 @@ export const Scale: Story = {
     disabled: false,
   },
 };
-export const Tabline: Story = {
+export const Cell: Story = {
   args: {
     label: 'LabeledCheckBox',
     size: 'medium',
-    variant: 'tableLine',
+    variant: 'cell',
     checked: true,
     disabled: false,
   },
