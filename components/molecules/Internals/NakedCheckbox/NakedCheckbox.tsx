@@ -26,8 +26,8 @@ export const NakedCheckBox = ({
       className={
         joinClassNames(
           classes.label,
-          classes[size as keyof typeof classes],
-          classes[variant as keyof typeof classes],
+          classes[size],
+          classes[variant],
         )
       }
     >

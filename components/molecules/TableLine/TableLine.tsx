@@ -1,10 +1,10 @@
-import { Column } from '../Column';
+import { CheckBoxColumn, Column } from '../Column';
 import { NakedCheckBox } from '../Internals';
 import { joinClassNames } from '../common/utils';
 import { ContainerStateContext } from '../contexts/pointer';
-import { useTableLineStyles } from './TabLine.styles';
-import { TableLineProps } from './TabLine.types';
-export const TableLine = ({ row, isSelected, setIsSelected, isFullWidth, disabled = false }: TableLineProps) => {
+import { useTableLineStyles } from './TableLine.styles';
+import { TableLineProps } from './TableLine.types';
+export const TableLine = <T,>({ row, isSelected, setIsSelected, isFullWidth, disabled = false, isSelectable = true }: TableLineProps<T>) => {
 
   const classes = useTableLineStyles();
   const toggle = () => setIsSelected(!isSelected);
@@ -17,8 +17,16 @@ export const TableLine = ({ row, isSelected, setIsSelected, isFullWidth, disable
       )
     } onClick={toggle} >
       <ContainerStateContext.Provider value={classes.tableLine}>
-        <Column Column={<NakedCheckBox variant={'cell'} checked={isSelected} onChange={toggle}  {...{ disabled }} />} />
-        {row.map((column, index) => column)}
+        {isSelectable && <Column>
+          <CheckBoxColumn
+            checked={isSelected}
+            onChange={toggle}  
+            {...{ disabled }} />
+        </Column>}
+        {Object.keys(row).map(key => <Column>
+          {row[key as keyof T]}
+        </Column>)
+        }
       </ContainerStateContext.Provider>
     </div>
   )

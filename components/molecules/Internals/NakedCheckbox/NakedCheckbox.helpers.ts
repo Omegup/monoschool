@@ -51,20 +51,37 @@ export const checkboxVariantStylesBuilder = (
     },
 });
 
-export const checkboxSizesBuilder = (size: CheckboxSize) => [
+type CheckboxSizeJSS = {
+  '& $container': {
+    width: string;
+    height: string;
+  };
+}
+
+export const checkboxSizesBuilder = (
+  size: CheckboxSize
+): Entry<Record<CheckboxSize, CheckboxSizeJSS>> => [
   size,
   {
     '& $container': {
       width: widths.nakedCheckbox[size],
       height: widths.nakedCheckbox[size],
     },
-  } as const,
+  },
 ];
+
+type CheckboxVariantJSS = {
+  '& > $container': {
+    borderColor: string | undefined;
+    backgroundColor: string | undefined;
+    color: string | undefined;
+  };
+};
 
 export const checkboxVariantsBuilder = (
   variant: CheckboxVariant,
   containerStateSelector: string
-) => [
+): Entry<Record<CheckboxVariant, CheckboxVariantJSS>> => [
   variant,
   {
     ...checkboxContainerStylesBuilder(

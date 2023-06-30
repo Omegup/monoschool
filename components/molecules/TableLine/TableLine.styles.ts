@@ -14,6 +14,7 @@ export const useTableLineStyles = createUseStyles({
     borderRight: commonBorder,
     borderBottom: commonBorder,
     borderLeft: commonBorder,
+    maxHeight: 40,
     padding: 0,
     '&:hover': {
       backgroundColor: colors.light[100],

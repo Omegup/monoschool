@@ -1,13 +1,11 @@
 import { useColumnStyles } from './Column.styles';
-import { ColumnProps } from "./Column.types";
 
-export const Column = ({
-  Column,
-}: ColumnProps) => {
+export const Column = ({ children }: { children: React.ReactNode }) => {
   const classes = useColumnStyles();
   return (
     <div className={classes.columnContainer}>
-      {Column}
+      {children}
     </div>
   )
 }
+
