@@ -22,7 +22,7 @@ export const Primary: Story = {
   args: {
     parentName: 'SubMenu',
     parentId:0,
-    size: 'medium',
+    size: 'medium',  
     style: 'solid',
     disabled: false, 
     items: [
