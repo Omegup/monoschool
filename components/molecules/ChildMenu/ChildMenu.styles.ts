@@ -47,7 +47,7 @@ export const useSelectStyles = createUseStyles({
     '&$notSelected': {
       color: colors.blue[500],
     },
- 
+
   },
 
   icon: {
@@ -70,7 +70,7 @@ export const useSelectStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     color: colors.grey[100],
-   
+
     '&$selected': {
       color: colors.blue[500],
       cursor: "pointer",
@@ -86,7 +86,7 @@ export const useSelectStyles = createUseStyles({
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
-   
+
     '&$selected': {
       color: colors.blue[500],
       cursor: "pointer",
