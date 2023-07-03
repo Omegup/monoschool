@@ -15,13 +15,13 @@ export const Chips = forwardRef(
     >
 
       <input 
-      type="checkbox"
+      type="button"
       className={classes.input}
       onChange={(e) => onChange(e.target.checked)}
       {...{ ref, onBlur }}
       checked={value}
       />
-      <div className={classes.container}>
+      <div className={classes.container }>
       <span className={classes.Essential}>
         <Essential width={"100%"} />
         </span>

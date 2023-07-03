@@ -19,7 +19,6 @@ const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
 );
 
 export const useSelectStyles = createUseStyles({
-  solid: {},
   border: {},
   flat: {
     '& > $input:not(:checked) + $container': {
@@ -39,7 +38,6 @@ export const useSelectStyles = createUseStyles({
       },
     },
   },
-  text: {},
   large: {
     '& > $container': {
       padding: spacing.s5,
@@ -55,7 +53,7 @@ export const useSelectStyles = createUseStyles({
     '& > $container': {
       padding: spacing.s4,
       gap: spacing.s3,
-      borderRadius: 11.2,
+      borderRadius: spacing.s6,
       border: [borders.b2, 'solid'],
       '& > $labelText': {
         fontSize: '14px',
@@ -65,13 +63,10 @@ export const useSelectStyles = createUseStyles({
   small: {
     '& > $container': {
       padding: spacing.s3,
-      gap: 5,
+      gap: spacing.s3,
       borderRadius: 8.4,
       border: [borders.b1, 'solid'],
       '& > $labelText': {
-        fontSize: '12px',
-      },
-      '&:last-child': {
         fontSize: '12px',
       },
     },
