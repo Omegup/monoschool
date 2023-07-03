@@ -20,6 +20,7 @@ export const SideBar = forwardRef(
        <div className={classes.container}>
        <div className={classes.sideBarButton} > <ButtonSideBar  onChange={button.onChange} onBlur={button.onBlur} isOpened={isOpened} size={size}/></div>
        <HeaderSideBar isOpened={isOpened} onChange={header.onChange} onBlur={header.onBlur} style={style} size={size} title={header.title} Logo={header.Logo} Search={header.Search} />
+         { children.map(child=>(child)) }    
        </div>
       </label>
     );

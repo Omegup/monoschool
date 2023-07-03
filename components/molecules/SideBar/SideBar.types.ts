@@ -18,7 +18,7 @@ export interface SubMenuProps {
   isOpened?:boolean;
   parentName: string;
   parentId:number;
-  children:ChildMenuProps[]
+  items:ChildMenuProps[]
 }
 
 export interface SideBarProps {
