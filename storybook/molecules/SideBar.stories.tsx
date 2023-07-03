@@ -15,7 +15,7 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-const isCollopsed=true;
+const isCollopsed=false;
 export const Primary: Story = {
   args: {
     size: 'medium',
@@ -26,10 +26,11 @@ export const Primary: Story = {
       size='medium'
       style='solid'
       disabled={false}
+      isCollopsed={true}
       items={[
-        { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium", id: 1 },
-        { icon: <Square width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium", id: 2, isCollopsed: true },
-        { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium", id: 3 }
+        { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium", id: 1  },
+        { icon: <Square width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium", id: 2},
+        { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium", id: 3  }
       ]}
 
       isOpened={false}
