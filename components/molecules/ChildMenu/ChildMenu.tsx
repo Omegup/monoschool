@@ -16,16 +16,16 @@ export const ChildMenu = forwardRef(
     const vieModeClassIcon = classes[viewMode == 'mobile' ? 'mobileIcon' : viewMode == 'tablette' ? 'tabletteIcon' : 'icon']
     return (
       <div className={`${vieModeClassContainer} ${selectedClass}
-      `}
-      >
+      `}>
         <div className={`${vieModeClassIcon} ${selectedClass}`} >
           {icon}
         </div>
-        {!isCollopsed && <div className={`${vieModeClassLabel} ${selectedClass}`}> 
-          <label >
-          {label}
-        </label>
-        </div>
+        {!isCollopsed &&
+          <div className={`${vieModeClassLabel} ${selectedClass}`}>
+            <label >
+              {label}
+            </label>
+          </div>
         }
 
       </div>
