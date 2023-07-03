@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SubMenu } from '@omegup-school/ui-molecules';
-import { Square, Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
+import { Square, Tick, UserTick } from '@omegup-school/ui-assets';
 
 
 
@@ -27,7 +27,7 @@ export const Primary: Story = {
     disabled: false, 
     items: [
       { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
-      { icon: <WifiSquare  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2,isCollopsed:true },
+      { icon: <Square  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2,isCollopsed:true },
       { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium" ,id:3}],
    
     isOpened: true,

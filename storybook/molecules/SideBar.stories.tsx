@@ -27,7 +27,7 @@ export const Primary: Story = {
       size: 'medium',
       title: 'Omega School',
       Logo: <Logo width={"100%"} />,
-      Search: "search bar",
+      Search:<Logo />,
      
     },
     button:{
