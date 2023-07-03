@@ -1,31 +1,23 @@
-import React from 'react'
-import { createUseStyles } from 'react-jss';
+import { useState } from 'react';
 import { useStyles } from './TabSearch.styles';
+import { TabSearchProps } from './TabSearch.types';
 
-const TabSearch = () => {
-  
+export const TabSearch = ({ selectedIndex, setSelectedIndex, tabProps }: TabSearchProps) => {
+
   const classes = useStyles();
 
   return (
-    <div className={classes['top-search-container']}>
-      <div className={classes.tab_search}>
-        <p className={classes.tab_text}>Tous</p>
-        <p className={classes.tab_number}>20</p>
-      </div>
-      <div className={classes.tab_search}>
-        <p className={classes.tab_text}>Apprenant</p>
-        <p className={classes.tab_number}>12</p>
-      </div>
-      <div className={classes.tab_search}>
-        <p className={classes.tab_text}>Parents</p>
-        <p className={classes.tab_number}>3</p>
-      </div>
-      <div className={classes.tab_search}>
-        <p className={classes.tab_text}>Professeur</p>
-        <p className={classes.tab_number}>1</p>
-      </div>
+    <div className={classes.topSearchContainer}>
+      {
+        tabProps.map((tabSearchData, index) => (
+          <div
+            className={`${classes.tabSearch} ${index === selectedIndex ? classes.selected : ''}`}
+            key={index} onClick={() => setSelectedIndex(index)}>
+            <span className={classes.tabText}>{tabSearchData.label}</span>
+            <span className={classes.tabNumber}>{tabSearchData.badge}</span>
+          </div>
+        ))
+      }
     </div>
   )
 }
-
-export default TabSearch
