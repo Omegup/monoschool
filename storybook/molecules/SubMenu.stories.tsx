@@ -32,7 +32,5 @@ export const Primary: Story = {
    
     isOpened: true,
     value: true
-
-
   },
 };

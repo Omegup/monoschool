@@ -52,4 +52,12 @@ export const useSelectStyles = createUseStyles({
   },
   labelText: {},
   square: {},
+  opened:{
+    
+  },
+  closed:{
+    '& $container':{
+      gap:spacing.s9
+    }
+  }
 });

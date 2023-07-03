@@ -13,17 +13,15 @@ export const SideBar = forwardRef(
       children,
       header,
       isOpened,
-      onChange,
       button,
-      value,
-      onBlur,
     } = props;
     const classes = useSelectStyles();
 
+    const openedClass = classes[isOpened ? 'opened' : 'closed'];
     return (
       <label
         tabIndex={-1}
-        className={`${classes.label} ${classes[style]} ${classes[size]} `}
+        className={`${classes.label} ${classes[style]} ${classes[size]}  ${openedClass}`}
       >
         <div className={classes.container}>
           <div className={classes.sideBarButton}>
