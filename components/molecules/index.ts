@@ -6,5 +6,3 @@ export * from './SignIn';
 export * from './SideBar';
 export * from './HeaderSideBar';
 export * from './ButtonSideBar';
-export * from './ChildMenu'
-export * from './SearchBar';
