@@ -21,9 +21,9 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
-    label: "Rechercher",
-    style:"text",
+    placeholder: "Rechercher",
     size: 'medium',
+    inputType:"text",
     displayClose: true,
     Icon:<SearchStatus  width={'100%'}/>,
     closeIcon:<Close  width={'100%'} />,

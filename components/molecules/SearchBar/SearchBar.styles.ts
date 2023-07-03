@@ -21,15 +21,9 @@ const searchBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
 );
 
 export const useSearchBarStyles = createUseStyles({
-  solid: {},
-  border: {},
-  flat: {},
-  text: {},
   large: {},
   medium: {},
   small: {},
-  disabled: {},
-  enabled: {},
   input: {
   border:colors.background.overlay,
   outline: colors.background.overlay,
@@ -37,7 +31,6 @@ export const useSearchBarStyles = createUseStyles({
   margin:"0",
   width:"100%",
   },
-  label: {},
   container: {
     display: "flex",
     padding: spacing.s4,
