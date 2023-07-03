@@ -52,5 +52,13 @@ export const useSelectStyles = createUseStyles({
     ...styles.paragraph_medium_semiBold
   
   },
+  SearchStatus: {
+    ...HeaderSideBarSizes,
+    display: "flex",
+padding: spacing.s5,
+justifyContent: "center",
+alignItems: "center",
+gap: spacing.s5,
+  },
   square: {},
 });

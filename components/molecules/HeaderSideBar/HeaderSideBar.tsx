@@ -6,7 +6,7 @@ import { forwardRef } from 'react';
 
 export const HeaderSideBar = forwardRef(
   (props: ControlledHeaderSideBarProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, title,Logo,Search,isOpened, onChange, onBlur } = props;
+    const { size, style, title,Logo,Search,SearchIcon,isOpened, onChange, onBlur } = props;
     const classes = useSelectStyles();
       console.log(isOpened)
     return (
@@ -17,9 +17,9 @@ export const HeaderSideBar = forwardRef(
        <div className={classes.container}>
         <div className={classes.logo}>
         <span className={classes.icon} > {Logo} </span>
-         {isOpened &&<span className={classes.labelText} >{title}</span>}
+         {isOpened && <span className={classes.labelText} >{title}</span>}
          </div>
-         {Search}
+         {isOpened ?  Search :<span className={classes.SearchStatus}><SearchIcon width={"100%"} /></span>}
        </div>
       </label>
     );
