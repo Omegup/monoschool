@@ -22,7 +22,7 @@ export const SearchBar = forwardRef(
           placeholder={label}
           onChange={(e) => onChange(e.target.value)}
           {...{ ref, onBlur }}
-          value={value}
+         
         />
         <span className={classes.Close}>
          { displayClose&& 
