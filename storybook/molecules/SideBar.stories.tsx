@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SideBar, SearchBar } from '@omegup-school/ui-molecules';
+import { SideBar } from '@omegup-school/ui-molecules';
 import { SearchStatus} from '@omegup-school/ui-assets';
 import { Logo } from '@omegup-school/ui-assets';
 const meta = {
@@ -45,8 +45,8 @@ export const Primary: Story = {
       size: 'medium',
       title: 'Omega School',
       Logo: <Logo width={"100%"} />,
-      Search:<SearchBar value={''} onChange={()=>{} } onBlur={()=>{} } size={'large'} style={'solid'} displayClose={false} label={'Rechercher'} 
-      Icon={SearchStatus}/>,
+      Search:/*/<SearchBar value={''} onChange={()=>{} } onBlur={()=>{} } size={'large'} style={'solid'} displayClose={false} label={'Rechercher'} 
+      Icon={SearchStatus}/>/*/"SearchBar",
       SearchIcon:SearchStatus ,
     },
     button:{
