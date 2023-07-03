@@ -20,6 +20,6 @@ export const Primary: Story = {
     label: 'lorem ipsum dolor',
     size: 'medium',
     style: 'solid',
-    disabled: false,
+    position: 'top'
   },
 };
