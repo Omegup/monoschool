@@ -42,7 +42,7 @@ export const useStyles = createUseStyles({
     width: 'fit-content',
     height: '100%',
     cursor: 'pointer',
-    paddingInline: '5px',
+    paddingRight: '5px',
 
     '&:hover': {
       cursor: 'pointer',
@@ -64,7 +64,7 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     marginBottom: '10px',
-    paddingInlineEnd: '5px',
+    paddingInline: '5px',
   },
 
   tabNumber: {
@@ -73,8 +73,8 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     backgroundColor: `${colors.grey[100]}`,
-    padding: '5px 10px',
-    borderRadius: '11px',
+    padding: '0 8px',
+    borderRadius: '10px',
   }
 
 });
