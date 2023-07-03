@@ -37,28 +37,29 @@ export const useSelectStyles = createUseStyles({
     flexDirection: 'column',
     alignItems: 'flex-start',
     gap: spacing.s3,
-    color:colors.grey[500],
+    color: colors.grey[500],
   },
   logo: {
     display: 'flex',
-    padding: ['0px ',borders.b4],
+    padding: ['0px ', borders.b4],
     alignItems: 'center',
     gap: spacing.s8,
     alignSelf: 'stretch',
-  },icon:{
-    width:widths.logo.svg
+  },
+  icon: {
+    width: widths.logo.svg,
+    height:widths.logo.svg,
   },
   labelText: {
-    ...styles.paragraph_medium_semiBold
-  
+    ...styles.paragraph_medium_semiBold,
   },
   SearchStatus: {
     ...HeaderSideBarSizes,
-    display: "flex",
-padding: spacing.s5,
-justifyContent: "center",
-alignItems: "center",
-gap: spacing.s5,
+    display: 'flex',
+    padding: spacing.s5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: spacing.s5,
   },
   square: {},
 });
