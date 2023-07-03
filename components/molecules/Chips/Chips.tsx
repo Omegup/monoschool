@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 export const Chips = forwardRef(
   (props: ControlledChipsProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, label, onChange, onClick,value, onBlur } = props;
+    const { size, style, disabled, label, onChange, onClick,value } = props;
   const classes = useSelectStyles(),
     disabledClass = classes[disabled ? 'disabled' : 'enabled'];
   return (
@@ -18,7 +18,6 @@ export const Chips = forwardRef(
       type="checkbox"
       className={classes.input}
       onChange={(e) => onChange(e.target.checked)}
-      {...{ ref, onBlur }}
       checked={value}
       />
       <div className={classes.container}>

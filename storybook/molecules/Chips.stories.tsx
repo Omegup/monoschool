@@ -28,7 +28,6 @@ export const Primary: Story = {
     disabled: false,
     value:false,
     onChange: () => {},
-    onBlur: () => {},
     onClick:()=>{},
   },
 };
