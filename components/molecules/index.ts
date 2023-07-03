@@ -8,3 +8,4 @@ export * from './AvatarWithName';
 export * from './DoubleText';
 export * from './IconContainer';
 export * from './TextWithIcon';
+export * from './Card';
