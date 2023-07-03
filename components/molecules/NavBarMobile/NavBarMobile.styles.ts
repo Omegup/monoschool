@@ -39,10 +39,11 @@ export const useNavBarMobileStyles = createUseStyles({
   color: colors.blue[500],
  },
   container: {
-    display: 'flex',
-    alignItems: 'center',
-    color: colors.dark.default,
-    gap: spacing.s8,
+    display: "flex",
+    width: "399px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: '19.5px',
     '$medium > &': {
       padding: spacing.s4,
       borderRadius: borders.r5,

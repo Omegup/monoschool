@@ -12,12 +12,11 @@ export const NavBarMobile = forwardRef(
     return (
       <div>
         {items.map((ch, index) =>
-          <div>
-          <div >
+          <div className={container}>
+            <div >
               {ch.icon}
             </div>
-         <label>{ch.label}</label>
-            
+            <label>{ch.label}</label>
           </div>
         )}
       </div>
