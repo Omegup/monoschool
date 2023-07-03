@@ -5,7 +5,7 @@ export interface SideBarProps {
   size: 'large' | 'medium' | 'small';
   children:JSX.Element[],
   header:ControlledHeaderSideBarProps,
-  isOpened:boolean,
+  isCollopsed:boolean,
   button:ControlledButtonSideBarProps,
   
 }

@@ -69,6 +69,6 @@ export const Primary: Story = {
     value: false,
     onChange: () => {},
     onBlur: () => {},
-    isOpened: true,
+    isCollopsed: true,
   },
 };
