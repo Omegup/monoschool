@@ -472,6 +472,12 @@ importers:
 
   storybook:
     dependencies:
+      '@omegup-school/ui-assets':
+        specifier: workspace:*
+        version: link:../components/assets
+      '@omegup-school/ui-atoms':
+        specifier: workspace:*
+        version: link:../components/atoms
       '@omegup-school/ui-molecules':
         specifier: workspace:*
         version: link:../components/molecules
