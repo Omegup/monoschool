@@ -44,7 +44,7 @@ export const useSearchBarStyles = createUseStyles({
   SearchStatus: {
     ...searchBarSizes
   },
-  Close: {
+  close: {
     ...searchBarSizes,
   },
   labelText: {

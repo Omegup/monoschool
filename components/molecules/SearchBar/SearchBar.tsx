@@ -22,7 +22,7 @@ export const SearchBar = forwardRef(
             {...{ ref, onBlur }}
             value={value}
           />
-          <span className={classes.Close}>
+          <span className={classes.close}>
             {displayClose && closeIcon}
           </span>
         </div>
