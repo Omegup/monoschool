@@ -6,7 +6,7 @@ import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
   (props: ControlledSearchBarProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, Icon, placeholder,inputType,closeIcon, displayClose, onChange, value, onBlur } =
+    const { size, Icon, placeholder,inputType,closeIcon, displayClose, onChange,onClick, value } =
       props;
     const classes = useSearchBarStyles();
 
@@ -19,10 +19,9 @@ export const SearchBar = forwardRef(
             type={inputType}
             placeholder={placeholder}
             onChange={(e) => onChange(e.target.value)}
-            {...{ ref, onBlur }}
             value={value}
           />
-          <span className={classes.close}>
+          <span className={classes.close} onClick={onClick}>
             {displayClose && closeIcon}
           </span>
         </div>

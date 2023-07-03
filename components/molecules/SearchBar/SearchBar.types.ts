@@ -9,5 +9,5 @@ export type SearchBarProps = {
 export interface ControlledSearchBarProps extends SearchBarProps {
   value: string;
   onChange: (value: string) => void;
-  onBlur: () => void;
+  onClick: () => void;
 }

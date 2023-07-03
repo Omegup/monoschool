@@ -29,7 +29,7 @@ export const Primary: Story = {
     closeIcon:<Close  width={'100%'} />,
     value: "",
     onChange: (value) => {console.log(value)},
-    onBlur: () => {},
+    onClick: () => {},
   },
 };
 
