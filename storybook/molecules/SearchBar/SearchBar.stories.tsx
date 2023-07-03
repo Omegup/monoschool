@@ -1,7 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SearchBar } from '@omegup-school/ui-molecules';
+<<<<<<< HEAD
 import { Close, SearchStatus } from '@omegup-school/ui-assets';
+=======
+import { SearchStatus } from '@omegup-school/ui-assets';
+>>>>>>> parent of cde53a1 (fix)
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -25,8 +29,12 @@ export const Primary: Story = {
     style:"text",
     size: 'medium',
     displayClose: true,
+<<<<<<< HEAD
     Icon:<SearchStatus  width={'100%'}/>,
     closeIcon:<Close  width={'100%'} />,
+=======
+    Icon:SearchStatus,
+>>>>>>> parent of cde53a1 (fix)
     value: "",
     onChange: (value) => {console.log(value)},
     onBlur: () => {},
