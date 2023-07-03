@@ -18,4 +18,9 @@ export const widths = {
   logo:{
     svg: '40px',
   },
+  searchBar:{
+    small: '16px',
+    medium: '20px',
+    large: '28px',
+  },
 };
