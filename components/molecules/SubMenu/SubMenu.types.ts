@@ -5,6 +5,7 @@ export interface SubMenuProps {
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   isOpened?: boolean;
+  isCollopsed?:boolean;
   parentName: string;
   parentId: number;
   items: ChildMenuProps[]

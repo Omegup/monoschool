@@ -7,21 +7,21 @@ import { ChildMenu } from '../ChildMenu';
 
 export const SubMenu = forwardRef(
   (props: ControlledSubMenuProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, parentName, items, isOpened, onChange, value, onBlur } = props;
+    const { size, style, disabled, parentName, items, isOpened, onChange, value, onBlur ,isCollopsed} = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
 
 
   return (
       <div className={`${classes.container}  ${classes[style]} ${classes[size]} ${disabledClass}`}>
-        <label
+      {!isCollopsed &&  <label
           tabIndex={-1}
           className={`${classes.parentName}`}>
           {parentName}
-        </label>
+        </label>}
         {items.map((ch, index) =>
           <div className={`${classes.items}  ${classes[ch.selected ? 'selected' : 'notSelected']}`} key={index} >
-            <ChildMenu value={false} onChange={(e) => { ch.selected = true }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id} selected={ch.selected} isCollopsed={ch.isCollopsed}/>
+            <ChildMenu value={false} onChange={(e) => { ch.selected = true }} onBlur={() => { }} style={'solid'} size={'large'} icon={ch.icon} label={ch.label} id={ch.id} selected={ch.selected} isCollopsed={isCollopsed}/>
           </div>
         )
         }
