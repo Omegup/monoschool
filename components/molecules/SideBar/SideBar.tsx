@@ -12,12 +12,12 @@ export const SideBar = forwardRef(
       style,
       children,
       header,
-      isOpened,
+      isCollopsed,
       button,
     } = props;
     const classes = useSelectStyles();
 
-    const openedClass = classes[isOpened ? 'opened' : 'closed'];
+    const openedClass = classes[isCollopsed ? 'opened' : 'closed'];
     return (
       <label
         tabIndex={-1}
@@ -29,12 +29,12 @@ export const SideBar = forwardRef(
             <ButtonSideBar
               onChange={button.onChange}
               onBlur={button.onBlur}
-              isOpened={isOpened}
+              isOpened={isCollopsed}
               size={size}
             />
           </div>
           <HeaderSideBar
-            isOpened={isOpened}
+            isOpened={isCollopsed}
             onChange={header.onChange}
             onBlur={header.onBlur}
             style={style}
