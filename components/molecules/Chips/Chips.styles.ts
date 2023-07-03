@@ -19,9 +19,33 @@ const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
 );
 
 export const useSelectStyles = createUseStyles({
-  border: {},
-  flat: {
+  border: {
     '& > $input:not(:checked) + $container': {
+      borderColor: colors.background.outline,
+      '&:hover': {
+        backgroundColor: colors.background.secondary,
+      },
+      '&:active': {
+        backgroundColor: colors.background.overlay,
+      },
+    },
+    '& > $input:checked + $container': {
+      color: colors.blue[500],
+      borderColor: colors.blue[500],
+      '&:hover ': {
+        backgroundColor: colors.light[200],
+      },
+      '&:active ': {
+        backgroundColor: colors.light[400],
+      },
+    },
+  },
+  flat: {
+    '& > $input + $container': {
+      borderColor: 'transparent',
+    },
+    '& > $input:not(:checked) + $container': {
+      backgroundColor: colors.background.secondary,
       '&:hover': {
         backgroundColor: colors.background.overlay,
       },
@@ -30,6 +54,8 @@ export const useSelectStyles = createUseStyles({
       },
     },
     '& > $input:checked + $container': {
+      color: colors.blue[500],
+      backgroundColor: colors.light[100],
       '&:hover ': {
         backgroundColor: colors.light[200],
       },
@@ -82,23 +108,6 @@ export const useSelectStyles = createUseStyles({
         outlineStyle: 'solid',
       },
     },
-
-    '& > $input:not(:checked) + $container': {
-      '&:hover': {
-        backgroundColor: colors.background.secondary,
-      },
-      '&:active': {
-        backgroundColor: colors.background.overlay,
-      },
-    },
-    '& > $input:checked + $container': {
-      '&:hover ': {
-        backgroundColor: colors.light[200],
-      },
-      '&:active ': {
-        backgroundColor: colors.light[400],
-      },
-    },
   },
   input: {
     clip: 'rect(0 0 0 0)',
@@ -108,25 +117,6 @@ export const useSelectStyles = createUseStyles({
     display: 'inline-flex',
     '&:focus': {
       outline: 'none',
-    },
-    '& > $input:not(:checked) + $container': {
-      borderColor: colors.background.outline,
-    },
-    '& > $input:checked + $container': {
-      color: colors.blue[500],
-      borderColor: colors.blue[500],
-    },
-    '&$flat ': {
-      '& > $input + $container': {
-        borderColor: 'transparent',
-      },
-      '& > $input:not(:checked) + $container': {
-        backgroundColor: colors.background.secondary,
-      },
-      '& > $input:checked + $container': {
-        color: colors.blue[500],
-        backgroundColor: colors.light[100],
-      },
     },
   },
   container: {
