@@ -6,29 +6,27 @@ import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
   (props: ControlledSearchBarProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style,Icon, label,displayClose, onChange, value, onBlur } = props;
-  const classes = useSearchBarStyles();
+    const { size, style, Icon, label,closeIcon, displayClose, onChange, value, onBlur } =
+      props;
+    const classes = useSearchBarStyles();
 
-  return (
-    <div className={`${classes[size]} ${classes[style]}`}>
-      <div className={classes.container}>
-      <span className={classes.SearchStatus}>
-     <Icon color={colors.grey[400]} width={"100%"}/>
-
-         </span>
-        <input
-        className={classes.input}
-          type='text'
-          placeholder={label}
-          onChange={(e) => onChange(e.target.value)}
-          {...{ ref, onBlur }}
-         
-        />
-        <span className={classes.Close}>
-         { displayClose&& 
-         <Close color={colors.grey[400]} width={"100%"}/>}
-         </span>
+    return (
+      <div className={`${classes[size]} ${classes[style]}`}>
+        <div className={classes.container}>
+          <span className={classes.SearchStatus}>{Icon}</span>
+          <input
+            className={classes.input}
+            type="text"
+            placeholder={label}
+            onChange={(e) => onChange(e.target.value)}
+            {...{ ref, onBlur }}
+            value={value}
+          />
+          <span className={classes.Close}>
+            {displayClose && closeIcon}
+          </span>
+        </div>
       </div>
-    </div>
-  );
-})
+    );
+  }
+);

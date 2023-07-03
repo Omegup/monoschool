@@ -1,9 +1,10 @@
 export type SearchBarProps = {
   size: 'large' | 'medium' | 'small';
-  style:'solid' | 'border' | 'flat' | 'text';
+  style: 'solid' | 'border' | 'flat' | 'text';
   displayClose: boolean;
   label: string;
-  Icon:({color, width}:{color:string, width:string})=>JSX.Element,
+  Icon: JSX.Element;
+  closeIcon:JSX.Element
 };
 export interface ControlledSearchBarProps extends SearchBarProps {
   value: string;

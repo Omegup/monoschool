@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SearchBar } from '@omegup-school/ui-molecules';
-import { SearchStatus } from '@omegup-school/ui-assets';
+import { Close, SearchStatus } from '@omegup-school/ui-assets';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -25,7 +25,8 @@ export const Primary: Story = {
     style:"text",
     size: 'medium',
     displayClose: true,
-    Icon:SearchStatus,
+    Icon:<SearchStatus  width={'100%'}/>,
+    closeIcon:<Close  width={'100%'} />,
     value: "",
     onChange: (value) => {console.log(value)},
     onBlur: () => {},
