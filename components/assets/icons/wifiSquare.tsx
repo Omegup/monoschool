@@ -3,10 +3,10 @@ import { widths } from '@omegup-school/ui-atoms/sizes';
 export const WifiSquare = ({
   width = widths.icon.svg,
   height = width,
-  color = 'currentColor',
+  color = 'currentColor', 
 }: {
   width?: string;
-  height?: string;
+  height?: string; 
   color?: string;
 }) => {
   return (<svg
