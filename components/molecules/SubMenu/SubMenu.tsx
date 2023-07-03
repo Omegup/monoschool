@@ -1,4 +1,4 @@
-import { Square, Tick, WifiSquare } from '@omegup-school/ui-assets';
+import { Square, Tick } from '@omegup-school/ui-assets';
 import { useSelectStyles } from './SubMenu.styles';
 import { ControlledSubMenuProps } from './SubMenu.types';
 import { forwardRef } from 'react';
@@ -10,8 +10,6 @@ export const SubMenu = forwardRef(
     const { size, style, disabled, parentName, items, isOpened, onChange, value, onBlur } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
-
-
   return (
       <div className={`${classes.container}  ${classes[style]} ${classes[size]} ${disabledClass}`}>
         <label
