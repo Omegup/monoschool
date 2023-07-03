@@ -29,25 +29,38 @@ export const useNavBarMobileStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  input: {
-    clip: 'rect(0 0 0 0)',
-    position: 'absolute',
+  selected: {
+    borderRadius: borders.r5,
+    backgroundColor: colors.blue[500],
   },
- itemMenu:{
-  display: 'flex',
-  alignItems: 'center',
-  color: colors.blue[500],
- },
+  notSelected: {},
+  itemMenu: {
+    display: "flex",
+    width: "85px",
+    padding: "5px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "5px",
+    flexShrink: 0,
+
+    '&$selected': {
+      backgroundColor: colors.danger[500],
+      cursor: "pointer",
+    },
+  },
   container: {
     display: "flex",
     width: "399px",
     justifyContent: "center",
     alignItems: "center",
     gap: '19.5px',
+    borderRadius: spacing.s5,
+    background: colors.blue[500],
     '$medium > &': {
-      padding: spacing.s4,
       borderRadius: borders.r5,
     },
+
   },
-  
+
 });

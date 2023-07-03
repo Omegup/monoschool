@@ -1,14 +1,11 @@
+import { ChildMenuProps, ControlledChildMenuProps } from "../ChildMenu/ChildMenu.types";
+
 export interface NavBarMobileProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
-  disabled?: boolean;
- 
-  items:  {
-    icon?: JSX.Element ,
-    label: string,
-    selected: boolean,
-    id:number,
-  }[]
+  parentName: string;
+  parentId: number;
+  items: ChildMenuProps[]
 }
 
 export interface ControlledNavBarMobileProps extends NavBarMobileProps {
