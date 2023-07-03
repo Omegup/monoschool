@@ -21,8 +21,35 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  selected :{ },
-  notSelected:{},
+  selected: {},
+  notSelected: {},
+  tablette: {},
+  default: {},
+  mobile: {
+    display: "flex",
+    width: "85px",
+    padding: "5px",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "5px",
+    backgroundColor: colors.blue[500],
+    flexShrink: 0
+    ,
+    '&$selected': {
+      backgroundColor: colors.light[500],
+      cursor: "pointer",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: "10px"
+    },
+    '&$notSelected': {
+      color: colors.blue[500],
+    },
+ 
+  },
+
   icon: {
     width: "24px",
     height: "24px",
@@ -36,7 +63,50 @@ export const useSelectStyles = createUseStyles({
       cursor: "pointer",
     },
   },
-  
+
+  mobileIcon: {
+    width: "24px",
+    height: "24px",
+    justifyContent: "center",
+    alignItems: "center",
+    color: colors.grey[100],
+   
+    '&$selected': {
+      color: colors.blue[500],
+      cursor: "pointer",
+
+    },
+  },
+  mobileLabel: {
+    justifyContent: "center",
+    alignItems: "center",
+    color: colors.grey[100],
+    textAlign: "center",
+    fontSize: spacing.s6,
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "normal",
+   
+    '&$selected': {
+      color: colors.blue[500],
+      cursor: "pointer",
+    },
+  },
+  tabletteIcon: {
+    width: "24px",
+    height: "24px",
+    '&$selected': {
+      color: colors.blue[500],
+      cursor: "pointer",
+    },
+  },
+  tabletteLabel: {
+    fontSize: "16px",
+    '&$selected': {
+      color: colors.blue[500],
+      cursor: "pointer",
+    },
+  },
   container: {
     display: "inline-flex",
     padding: spacing.s5,
