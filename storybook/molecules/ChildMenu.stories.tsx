@@ -26,5 +26,6 @@ export const Primary: Story = {
     value: true,
     size: 'large',
     style: 'border',
+    viewMode: 'mobile'
   },
 };
