@@ -9,7 +9,8 @@ export const useStyles = createUseStyles({
     width: '50px',
     height: '25px',
     boxShadow: shadowMedium,
-    borderRadius: '13px'
+    borderRadius: '15px',
+    border: '1px solid ' + colors.light[500],
   },
   switch: {
     position: 'absolute',
