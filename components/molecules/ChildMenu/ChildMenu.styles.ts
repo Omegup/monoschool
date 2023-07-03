@@ -27,13 +27,13 @@ export const useSelectStyles = createUseStyles({
     width: "24px",
     height: "24px",
     '&:hover': {
-     cursor:"pointer",
-   },
+      cursor: "pointer",
+    },
   },
   label: {
     fontSize: "16px",
     '&:hover': {
-      cursor:"pointer",
+      cursor: "pointer",
     },
   },
   
@@ -47,16 +47,17 @@ export const useSelectStyles = createUseStyles({
       color: colors.grey[100]
     },
     '&$notSelected': {
-    
+
       color: colors.grey[500],
     },
     '&:hover': {
       color: colors.blue[500],
-      cursor:"pointer",
-     },
-  
+      cursor: "pointer",
+    },
+
+
   },
- 
+
 }
 
 );

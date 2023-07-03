@@ -25,9 +25,10 @@ export const Primary: Story = {
     size: 'medium',  
     style: 'solid',
     disabled: false, 
+    isCollopsed:false,
     items: [
-      { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
-      { icon: <WifiSquare  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2,isCollopsed:true },
+      { icon: <Tick color='red' width='24' height='24'/>, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
+      { icon: <WifiSquare  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2, },
       { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium" ,id:3}],
    
     isOpened: true,
