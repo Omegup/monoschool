@@ -28,7 +28,7 @@ export const Primary: Story = {
     Icon:<SearchStatus  width={'100%'}/>,
     closeIcon:<Close  width={'100%'} />,
     value: "",
-    onChange: (value) => {console.log(value)},
+    onChange: () => {console.log()},
     onBlur: () => {},
   },
 };

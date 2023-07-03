@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SideBar, SearchBar } from '@omegup-school/ui-molecules';
-import { Close, SearchStatus } from '@omegup-school/ui-assets';
+import { SideBar, SearchBar, SubMenu } from '@omegup-school/ui-molecules';
+import { Close, SearchStatus, Square, Tick, UserTick } from '@omegup-school/ui-assets';
 import { Logo } from '@omegup-school/ui-assets';
 const meta = {
   title: 'molecule/SideBar',
@@ -15,13 +15,13 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-
+const isCollopsed=true;
 export const Primary: Story = {
   args: {
     size: 'medium',
     style: 'solid',
     children: [
-      /*/"<SubMenu parentName='SubMenu'
+     <SubMenu parentName='SubMenu'
       parentId={0}
       size='medium'
       style='solid'
@@ -37,7 +37,7 @@ export const Primary: Story = {
       onChange={()=>{} } onBlur={()=>{} }/>
 
 
-    /*/
+
     ],
     header: {
       onChange: () => {},
