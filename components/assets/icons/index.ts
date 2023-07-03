@@ -4,3 +4,5 @@ export * from './Tick';
 export * from './Calendar';
 export * from './ArrowCircleRight';
 export * from './ArrowCircleLeft';
+export * from './UserTick';
+export * from './WifiSquare';
