@@ -3,6 +3,7 @@ export * from './Link';
 export * from './Panel';
 export * from './Select';
 export * from './SignIn';
+export * from './NavBar';
 export * from './TabSearch';
 export * from './Tag';
 export * from './Switch';
