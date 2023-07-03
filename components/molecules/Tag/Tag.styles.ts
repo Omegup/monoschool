@@ -29,5 +29,4 @@ export const useStyles = createUseStyles({
     display: 'flex',
     alignItems: 'baseline',
   }),
-
 });
