@@ -10,8 +10,6 @@ export const SubMenu = forwardRef(
     const { size, style, disabled, parentName, items, isOpened, onChange, value, onBlur } = props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
-
-
   return (
       <div className={`${classes.container}  ${classes[style]} ${classes[size]} ${disabledClass}`}>
         <label
