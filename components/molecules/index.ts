@@ -3,3 +3,8 @@ export * from './Link';
 export * from './Panel';
 export * from './Select';
 export * from './SignIn';
+export * from './Text';
+export * from './AvatarWithName';
+export * from './DoubleText';
+export * from './IconContainer';
+export * from './TextWithIcon';
