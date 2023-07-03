@@ -1,4 +1,5 @@
 import { colors } from "@omegup-school/ui-atoms/colors";
+import { shadowMedium } from "@omegup-school/ui-atoms/effects/shadow";
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
@@ -7,6 +8,9 @@ export const useStyles = createUseStyles({
     display: 'inline-block',
     width: '50px',
     height: '25px',
+    boxShadow: shadowMedium,
+    borderRadius: '15px',
+    border: '1px solid ' + colors.light[500],
   },
   switch: {
     position: 'absolute',
@@ -22,16 +26,16 @@ export const useStyles = createUseStyles({
   switchBefore: {
     position: 'absolute',
     content: '""',
-    left: '2px',
-    top: '2px',
-    width: '21px',
-    height: '21px',
+    top: '3px',
+    left: '5px',
+    width: '19px',
+    height: '19px',
     backgroundColor: colors.blue[500],
     borderRadius: '50%',
     transition: 'transform 0.3s ease',
   },
   switchChecked: {
-    transform: 'translateX(25px)',
+    transform: 'translateX(21px)',
     backgroundColor: colors.light[500],
   },
   switchCheckedBg: {
