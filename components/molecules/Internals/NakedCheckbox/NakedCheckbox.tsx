@@ -11,6 +11,8 @@ export const NakedCheckBox = ({
   disabled,
   checked,
   onChange,
+  ref,
+  onBlur,
 }: NakedCheckboxProps,) => {
 
   const containerStateSelector = useContainerStateSelector()
@@ -31,7 +33,7 @@ export const NakedCheckBox = ({
         )
       }
     >
-      <input onChange={changeHandler} type="checkbox" className={classes.input} {...{ checked, disabled }} />
+      <input onChange={changeHandler} type="checkbox" className={classes.input} {...{ checked, disabled, ref, onBlur }} />
       <span className={classes.container} >
         <Tick width="100%" />
       </span>

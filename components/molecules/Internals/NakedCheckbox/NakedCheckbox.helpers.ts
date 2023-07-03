@@ -14,6 +14,7 @@ import {
 export const checkboxContainerStylesBuilder = (
   styles?: CheckboxStyleVariables
 ) => ({
+  borderColor: styles?.outlineColor,
   '& > $container': {
     borderColor: styles?.borderColor,
     backgroundColor: styles?.backgroundColor,
@@ -27,7 +28,6 @@ export const checkboxVariantStylesBuilder = (
 ): CheckboxCommonVariantStyles => ({
   // hovered
   [DEFAULT_CHECKBOX_EVENTS_SELECTORS.hovered(containerStateSelector)]: {
-    borderColor: eventsTheme?.hovered?.outlineColor,
     ...checkboxContainerStylesBuilder(eventsTheme?.hovered),
   },
   // checked
@@ -38,16 +38,15 @@ export const checkboxVariantStylesBuilder = (
   [DEFAULT_CHECKBOX_EVENTS_SELECTORS.hoveredOnChecked(containerStateSelector)]:
     {
       ...checkboxContainerStylesBuilder(eventsTheme?.hoveredOnChecked),
-      borderColor: eventsTheme?.hoveredOnChecked?.outlineColor,
     },
-  // focused
-  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.focused(containerStateSelector)]: {
-    borderColor: eventsTheme?.focused?.outlineColor,
+  // activated
+  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.activated(containerStateSelector)]: {
+    ...checkboxContainerStylesBuilder(eventsTheme?.activated),
   },
-  // focusedOnChecked
-  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.focusedOnChecked(containerStateSelector)]:
+  // activatedOnChecked
+  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.activatedOnChecked(containerStateSelector)]:
     {
-      borderColor: eventsTheme?.focusedOnChecked?.outlineColor,
+      ...checkboxContainerStylesBuilder(eventsTheme?.activatedOnChecked),
     },
 });
 

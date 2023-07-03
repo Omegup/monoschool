@@ -6,21 +6,30 @@ import {
 } from './NakedCheckBox.types';
 
 export const CHECKBOX_SIZES = ['small', 'medium', 'large'] as const;
-export const CHECKBOX_VARIANTS = ['solid', 'border', 'scale', 'cell'] as const;
+export const CHECKBOX_VARIANTS = [
+  'solid',
+  'border',
+  'scale',
+  'cell',
+  'select',
+] as const;
 
 export const DEFAULT_CHECKBOX_VARIANT: CheckboxVariant = 'solid' as const;
 export const DEFAULT_CHECKBOX_SIZE: CheckboxSize = 'medium' as const;
 
 export const DEFAULT_CHECKBOX_EVENTS_SELECTORS = {
-  focused: (container: string) => `.${container}:active &$label:has(> $input:not(:checked))` as const,
+  activated: (container: string) =>
+    `.${container}:active &$label:has(> $input:not(:checked))` as const,
   hovered: (container: string) =>
     `.${container}:hover:not(:active) &$label:has(> $input:not(:checked))` as const,
   checked: (container: string) =>
     `.${container} &$label:has(> $input:checked)` as const,
   hoveredOnChecked: (container: string) =>
     `.${container}:hover:not(:active) &$label:has(> $input:checked)` as const,
-  focusedOnChecked: (container: string) =>
+  activatedOnChecked: (container: string) =>
     `.${container}:active &$label:has(> $input:checked)` as const,
+  focused: (container: string) =>
+    `.${container}:focus &$label:has(> $input:not(:checked))` as const,
 } as const;
 
 export const COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES = {
@@ -32,7 +41,7 @@ export const COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES = {
 export const CHECKBOX_THEMES: CheckboxTheme = {
   solid: {
     initialContainerStyles: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-    focused: {
+    activated: {
       outlineColor: colors.blue[400],
     },
     hovered: {
@@ -52,7 +61,7 @@ export const CHECKBOX_THEMES: CheckboxTheme = {
   },
   border: {
     initialContainerStyles: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-    focused: {
+    activated: {
       outlineColor: colors.danger[600],
     },
     hovered: {
@@ -72,7 +81,7 @@ export const CHECKBOX_THEMES: CheckboxTheme = {
   },
   scale: {
     initialContainerStyles: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-    focused: {
+    activated: {
       outlineColor: colors.danger[600],
     },
     checked: {
@@ -86,7 +95,7 @@ export const CHECKBOX_THEMES: CheckboxTheme = {
       ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
       borderColor: colors.grey[300],
     },
-    focused: {
+    activated: {
       outlineColor: colors.blue[400],
     },
     hovered: {
@@ -104,8 +113,30 @@ export const CHECKBOX_THEMES: CheckboxTheme = {
       borderColor: colors.blue[700],
       backgroundColor: colors.blue[700],
     },
-    focusedOnChecked: {
+    activatedOnChecked: {
       outlineColor: colors.light[500],
+    },
+  },
+  select: {
+    initialContainerStyles: {
+      ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+      borderColor: colors.dark.default,
+    },
+    activated: {
+      borderColor: colors.blue[500],
+    },
+    hovered: {
+      color: colors.lightblue[500],
+      backgroundColor: colors.light[400],
+      borderColor: colors.blue[500],
+    },
+    checked: {
+      color: colors.blue[500],
+      backgroundColor: colors.light[400],
+      borderColor: colors.light[400],
+    },
+    hoveredOnChecked: {
+      backgroundColor: colors.light[400],
     },
   },
 };

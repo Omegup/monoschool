@@ -45,4 +45,6 @@ export type NakedCheckboxProps = {
   checked: boolean;
   disabled: boolean;
   onChange: (value: boolean) => void;
+  ref?: React.Ref<HTMLInputElement>
+  onBlur?: () => void;
 };
