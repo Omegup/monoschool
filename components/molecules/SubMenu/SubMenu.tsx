@@ -1,4 +1,4 @@
-import { Square, Tick, WifiSquare } from '@omegup-school/ui-assets';
+ 
 import { useSelectStyles } from './SubMenu.styles';
 import { ControlledSubMenuProps } from './SubMenu.types';
 import { forwardRef } from 'react';

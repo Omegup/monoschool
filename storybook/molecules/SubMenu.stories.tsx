@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SubMenu } from '@omegup-school/ui-molecules';
-import { Square, Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
+import {  Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
 
 
 
