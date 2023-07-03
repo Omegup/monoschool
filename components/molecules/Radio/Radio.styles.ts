@@ -72,12 +72,35 @@ export const useRadioStyles = createUseStyles({
   },
   disabled: {
     opacity: 0.5,
+    '& $radio': {
+      '&:hover': {
+        '&:after': {
+          border: 'none',
+        },
+      },
+      '&:after': {
+        border: 'none',
+      },
+    },
   },
   radioContainer: {
     display: 'flex',
     alignItems: 'center',
   },
   radio: {
+  },
+  radioLabel: {
+  },
+
+
+  borderRadio: {
+    // accentColor: colors.blue[500],
+    // '&:hover': {
+    //   accentColor: colors.blue[600],
+    // }
+
+  },
+  scaledRadio: {
     '&:checked': {
       '&:after': {
         content: '""',
@@ -96,7 +119,6 @@ export const useRadioStyles = createUseStyles({
         },
       }
     },
-
     '&:hover': {
       '&:after': {
         content: '""',
@@ -108,11 +130,12 @@ export const useRadioStyles = createUseStyles({
         display: 'inline-block',
         visibility: 'visible',
       }
-    }
-  },
-  radioLabel: {
-  },
-  scaledRadio: {
+    },
+    '&$disabled': {
+      '&:after': {
+        border: 'none',
+      },
+    },
     // '&:checked': {
     //   background: 'none',
     //   borderColor: '#2C84D8',
@@ -133,37 +156,6 @@ export const useRadioStyles = createUseStyles({
     //   content: '""',
     //   borderRadius: '50%',
     //   backgroundColor: '#2C84D8',
-    // },
-  },
-
-  borderRadio: {
-    // '&:checked': {
-    //   backgroundColor: '#3DA9FC',
-    //   borderColor: '#3DA9FC',
-    // },
-    // '&:not(:checked)': {
-    //   backgroundColor: 'transparent',
-    //   borderColor: '#91A1AF',
-    // },
-    // '&:hover:not(:checked)': {
-    //   backgroundColor: '#2C84D8',
-    //   borderColor: '#2C84D8',
-    // },
-    // '&:focus:not(:checked)': {
-    //   backgroundColor: '#2C84D8',
-    //   borderColor: '#2C84D8',
-    // },
-    // '&:checked::before': {
-    //   content: '""',
-    //   display: 'block',
-    //   position: 'absolute',
-    //   top: '50%',
-    //   left: '50%',
-    //   transform: 'translate(-50%, -50%)',
-    //   width: 16,
-    //   height: 16,
-    //   borderRadius: '50%',
-    //   backgroundColor: '#3DA9FC',
     // },
   },
 });
