@@ -40,7 +40,8 @@ export const useSelectStyles = createUseStyles({
     alignItems: "center",
     alignSelf: "stretch",
     padding: spacing.s5,
-    gap: spacing.s7,
+    gap: spacing.s8,
+    margin:spacing.s1,
     '&:hover': {
       borderRadius: borders.r5,
       backgroundColor: colors.light[500],

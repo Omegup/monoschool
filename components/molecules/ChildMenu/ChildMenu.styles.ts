@@ -38,7 +38,7 @@ export const useSelectStyles = createUseStyles({
   },
   
   container: {
-    display: "flex",
+    display: "inline-flex",
     padding: spacing.s5,
     alignItems: "center",
     alignSelf: "stretch",
