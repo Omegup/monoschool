@@ -26,7 +26,7 @@ export const Primary: Story = {
     style: 'solid',
     disabled: false, 
     items: [
-      { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
+      { icon: <Tick color='red' width='24' height='24'/>, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
       { icon: <WifiSquare  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2,isCollopsed:true },
       { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium" ,id:3}],
    
