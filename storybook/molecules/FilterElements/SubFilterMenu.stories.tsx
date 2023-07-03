@@ -25,7 +25,7 @@ export const Primary: Story = {
     label: "Rechercher",
     size: 'medium',
     showImage:true,
-  
+    SearchBar:"searchBar",
     child:[{ size:"medium" ,
       label:"Bacem achour",
       showImage:true,

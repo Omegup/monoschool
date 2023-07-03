@@ -4,30 +4,8 @@ import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { FilterButtonProps } from './FilterButton.types';
 
-type Sizes = readonly [
-  `$${FilterButtonProps['size']}>$container>&`,
-  { width: string; height: string }
-];
-const buttonFilterSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.buttonFilter).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
 
 export const useFilterStyles = createUseStyles({
-  solid: {},
-  border: {},
-  flat: {},
-  text: {},
-  large: {},
-  medium: {},
-  small: {},
-  disabled: {},
-  enabled: {},
   label: {
     borderRadius: borders.r5,
     border: 'none',
@@ -50,9 +28,10 @@ export const useFilterStyles = createUseStyles({
   },
   input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
   arrow: {
-    ...buttonFilterSizes,
     display: 'flex',
     alignItems: 'center',
+     width:widths.buttonFilter.default,
+     height:widths.buttonFilter.default,
   },
   container: {
     display: 'flex',
@@ -60,12 +39,6 @@ export const useFilterStyles = createUseStyles({
     gap: spacing.s4,
     padding: '8px',
     justifyContent: 'space-between',
-  },
-  line: {
-    margin:["5px","none"],
-    width: 144,
-    height: 0,
-    border: '0.50px #EBEBEB solid',
   },
   labelText: {
     textAlign: 'left',

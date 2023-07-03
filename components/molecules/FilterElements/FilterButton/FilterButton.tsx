@@ -9,7 +9,7 @@ export const FilterButton = forwardRef(
     const classes = useFilterStyles();
     return (
       <div >
-        <div className={`${classes.label}  ${classes[style]} ${classes[size]}`}>
+        <div className={`${classes.label} `}>
       
         <input
           type="button"

@@ -5,4 +5,5 @@ export type SubFilterMenuProps = {
   size: 'large' | 'medium' | 'small';
   showImage:boolean;
   child:ControlledFilterCheckBoxProps[]
+  SearchBar:JSX.Element
 };
