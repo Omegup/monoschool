@@ -1,6 +1,6 @@
 export type TooltipProps = {
-  style: 'solid' | 'border' | 'flat' | 'text';
+  style: 'solid' | 'border' | 'underline' | 'elevation' | 'flat';
   size: 'large' | 'medium' | 'small';
-  disabled?: boolean;
+  position: 'top' | 'bottom' | 'right' | 'left';
   label: string;
 };
