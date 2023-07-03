@@ -6,6 +6,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@omegup-school/ui-assets": "workspace:*",
     "@omegup-school/ui-molecules": "workspace:*",
     "@omegup-school/ui-assets": "workspace:*",
     "react": "^18.2.0",
