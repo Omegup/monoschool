@@ -7,8 +7,6 @@ const meta = {
   component: Tooltip,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'tooltip', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'tooltip', options: ['large', 'medium', 'small'] },
   },
 } satisfies Meta<typeof Tooltip>;
 
