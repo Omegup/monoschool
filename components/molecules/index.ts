@@ -10,3 +10,4 @@ export * from './Chips';
 export * from './ListSearch';
 export * from './Tabs';
 export * from './HeaderCellTable';
+export * from './Radio';
