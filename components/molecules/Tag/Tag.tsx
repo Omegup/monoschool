@@ -19,7 +19,7 @@ export const Tag = ({ type }: { type: TagType }) => {
   return (
     <div className={styles.tagTextContainer}>
       <div className={styles.tagIcon}></div>
-      <p className={styles.tagText}>{type}</p>
+      <p className={styles.tagText}>{type.charAt(0).toUpperCase() + type.slice(1)}</p>
     </div>
   )
 }
