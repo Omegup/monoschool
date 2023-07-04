@@ -152,25 +152,6 @@ export const CHECKBOX_THEMES: CheckboxTheme = {
     },
   },
   select: {
-    initialContainerStyles: {
-      ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-      borderColor: colors.dark.default,
-    },
-    activated: {
-      borderColor: colors.blue[500],
-    },
-    hovered: {
-      color: colors.lightblue[500],
-      backgroundColor: colors.light[400],
-      borderColor: colors.blue[500],
-    },
-    checked: {
-      color: colors.blue[500],
-      backgroundColor: colors.light[400],
-      borderColor: colors.light[400],
-    },
-    hoveredOnChecked: {
-      backgroundColor: colors.light[400],
-    },
+    //to be continued ...
   },
 };
