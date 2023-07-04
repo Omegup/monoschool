@@ -54,27 +54,22 @@ export const useStyles = createUseStyles({
   },
   large: {
     '& $label': {
-      fontSize: 16,
-      fontWeight: '400',
+      ...styles.paragraph_medium_regular
     }
   },
   medium: {
     '& $label': {
-      fontSize: 14,
-      fontWeight: '400',
+      ...styles.paragraph_small_regular
     }
   },
   small: {
     '& $label': {
-      fontSize: 12,
-      fontWeight: '400',
+      ...styles.paragraph_xSmall_semiBold
     }
   },
   disabled: {},
   enabled: {},
   container: {
-    zIndex: 100,
-
   },
   flex: {
     width: 'fit-content',
@@ -88,28 +83,28 @@ export const useStyles = createUseStyles({
   top: {
     flexDirection: 'column',
     '& > $triangle': {
-      borderWidth: '5px 5px 0',
+      borderWidth: [borders.b10, borders.b10, 0],
       borderColor: [colors.blue[500], 'transparent'],
     },
   },
   right: {
     flexDirection: 'row-reverse',
     '& > $triangle': {
-      borderWidth: '5px 5px 5px 0',
+      borderWidth: [borders.b10, borders.b10, borders.b10, 0],
       borderColor: ['transparent', colors.blue[500], 'transparent', 'transparent'],
     }
   },
   bottom: {
     flexDirection: 'column-reverse',
     '& > $triangle': {
-      borderWidth: '0 5px 5px',
+      borderWidth: [0, borders.b10, borders.b10],
       borderColor: [colors.blue[500], 'transparent'],
     }
   },
   left: {
     flexDirection: 'row',
     '& > $triangle': {
-      borderWidth: '5px 0 5px 5px',
+      borderWidth:  [borders.b10, 0, borders.b10, borders.b10],
       borderColor: ['transparent', 'transparent', 'transparent', colors.blue[500]],
     }
   },
