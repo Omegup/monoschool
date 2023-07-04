@@ -1,6 +1,10 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
 
-export const Logo = ({ fill = colors.blue[500], width = 80, height = 80 }: { fill?: string, width?: number | string, height?: number | string }) => (
+export const Logo = ({ fill = colors.blue[500], width = 80, height = 80 }: {
+  fill?: string,
+  width?: number | string,
+  height?: number | string,
+}) => (
   <svg
     {...{ width, height }}
     viewBox="0 0 80 80"

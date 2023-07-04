@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Logo } from '@omegup-school/ui-assets/icons'
-import { IconContainer, TextWithIcon } from '@omegup-school/ui-molecules';
+
+import { IconWithDoubleText } from '@omegup-school/ui-molecules';
+import { Logo } from '@omegup-school/ui-assets';
+
 const ICONS = {
   icon1: <Logo height={24} width={24} />,
   icon2: <Logo height={24} width={24} fill='green' />,
@@ -8,25 +10,26 @@ const ICONS = {
   icon4: <Logo height={24} width={24} fill='red' />,
 }
 const meta = {
-  title: 'Atom/TextWithIcon',
-  component: TextWithIcon,
+  title: 'Atom/IconWithDoubleText',
+  component: IconWithDoubleText,
   tags: ['autodocs'],
   argTypes: {
     icon: { control: 'select', options: Object.keys(ICONS), },
-
   },
-} satisfies Meta<typeof TextWithIcon>;
+} satisfies Meta<typeof IconWithDoubleText>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  render: ({ icon = 'icon1', text, }) => <TextWithIcon
+  render: ({ icon = 'icon1', text, subText, }) => <IconWithDoubleText
     icon={ICONS[icon as keyof typeof ICONS]}
+    subText={subText}
     text={text}
   />,
   args: {
+    icon: 'icon1',
     text: 'Text Description',
-    icon: 'icon1'
+    subText: 'Subtext Description'
   },
 };

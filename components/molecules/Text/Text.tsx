@@ -11,9 +11,9 @@ export const Text = forwardRef((
   const { textStyle } = useTextStyles({ weight, size })
 
   return (
-    <label ref={ref} className={textStyle}>
+    <span ref={ref} className={textStyle}>
       {value}
-    </label>
+    </span>
   )
 
 })

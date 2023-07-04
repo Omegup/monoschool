@@ -15,8 +15,7 @@ export const DoubleText = forwardRef((
       ref={ref}
       direction="column"
       paddingInline={10}
-      justifyContent="start"
-      gap={10}
+      alignItems="start"
       children={[
         <Text size="XSmall" weight={400} value={text} />,
         <Text size="small" weight={500} value={subText} />
