@@ -25,7 +25,7 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     items: [
-      { icon: <Home  width='24' height='24' />, label: "Acceuil", selected: true, style: "solid", size: "medium", id: 1 },
+      { icon: <Home  width='24' height='24' />, label: "Acceuil", selected: false, style: "solid", size: "medium", id: 1 },
       { icon: <Message width='24' height='24' />, label: "Messagerie", selected: false, style: "solid", size: "medium", id: 2, },
       { icon: <Notification width='24' height='24' />, label: "Notifications", selected: false, style: "solid", size: "medium", id: 3 }],
  
