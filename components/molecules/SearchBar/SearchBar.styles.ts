@@ -29,15 +29,22 @@ export const useSearchBarStyles = createUseStyles({
     '&:hover':{
       '& $container ': {
         backgroundColor:colors.light[500],
-        padding: spacing.s4,
-        gap: spacing.s8,
-        borderRadius: borders.r5,
         border: [borders.b2, 'solid', colors.blue[500]],
+        '& $input': {
+          backgroundColor: colors.light[500],
+          '&::placeholder': {
+            color: colors.blue[500],
+          }
+        },
         '& $firstIcon , $secondIcon': {
           color: colors.blue[500],
         },
       },
     },
+    
+
+
+
   },
   filterSearch: {
     '& $container ': {
