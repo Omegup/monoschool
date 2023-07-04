@@ -2,7 +2,7 @@ export type SearchBarProps = {
   size: 'large' | 'medium' | 'small';
   displayClose: boolean;
   placeholder: string;
-  Icon: JSX.Element;
+  icon: JSX.Element;
   closeIcon:JSX.Element;
   inputType:string;
 };
