@@ -41,9 +41,6 @@ export const useStyles = createUseStyles({
 
   },
   elevation: {
-    '& $label': {
-      boxShadow: `0 5px 5px 0 ${colors.blue[100]}, 0 5px 15px 0 ${colors.blue[200]}`
-    },
   },
   flat: {
     '& $label': {
