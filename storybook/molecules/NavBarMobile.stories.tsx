@@ -1,9 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { NavBarMobile } from '@omegup-school/ui-molecules';
-import { Home, Message, Notification } from '@omegup-school/ui-assets';
+import { Home, Logo, Message, Notification } from '@omegup-school/ui-assets';
 
-
+const ICONS = {
+  icon1: <Home  />,
+  icon2: <Message   />,
+  icon3: <Notification   />,
+  icon4: <Logo  fill='red' />,
+}
 
 const meta = {
   title: 'Atom/NavBarMobile',
