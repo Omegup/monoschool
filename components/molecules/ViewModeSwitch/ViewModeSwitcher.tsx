@@ -6,33 +6,29 @@ import { forwardRef } from 'react';
 
 export const ViewModeSwitcher = forwardRef(
   (props: ControlledViewModeSwitcherProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, disabled, label, onChange, value, onBlur } = props;
-    const classes = useViewModeSwitcherStyles(),
-      disabledClass = classes[disabled ? 'disabled' : 'enabled'];
+    const { size, style, onChange, elements, onBlur,name } = props;
+    const classes = useViewModeSwitcherStyles()
+     
     return (
-      <label
-        tabIndex={-1}
-        className={`${classes.label} ${classes[style]} ${classes[size]} ${disabledClass}`}
-      >
-        <input
-          type="checkbox"
+    <div>
+ {elements.map((el, index) =>
+ <div className={`${classes.items}  ${classes[ch.selected ? 'selected' : 'notSelected']}`} key={index} >
+  <input
+          type="radio"
+          name={name}
+          id={el.id}
+          checked={el.value}
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
           {...{ ref, onBlur }}
-          checked={value}
+        
         />
-        <div className={classes.container}>
-          <span className={classes.checkbox}>
-            <span className={classes.square}>
-              <Square width="100%" />
-            </span>
-            <span className={classes.tick}>
-              <Tick width="100%" />
-            </span>
-          </span>
-          <span className={classes.labelText}>{label}</span>
         </div>
-      </label>
+)
+      }
+    </div>
+      
+   
     );
   }
 );
