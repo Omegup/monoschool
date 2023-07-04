@@ -11,6 +11,7 @@ const meta = {
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
     inputType: { control: 'select', options: ['text', 'number', 'email'] },
+    Icon:{ control: 'select', options: [<SearchStatus  width={'100%'}/>, <Close  width={'100%'} />, <SearchStatus  width={'100%'}/>] },
   },
    
 
