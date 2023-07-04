@@ -17,7 +17,7 @@ export const Primary: Story = {
   args: {
     label: 'lorem ipsum dolor',
     size: 'medium',
-    style: 'solid',
+    variant: 'solid',
     position: 'top'
   },
 };

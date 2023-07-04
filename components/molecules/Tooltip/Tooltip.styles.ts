@@ -15,7 +15,7 @@ export const useStyles = createUseStyles({
   underline: {
     '& $label': {
       color: colors.blue[500],
-      border: '1px solid transparent',
+      border: ['solid', 1, 'transparent'],
       display: 'inline-block',
     },
     '& $top $label': {
@@ -39,8 +39,6 @@ export const useStyles = createUseStyles({
         `linear-gradient(90deg, white 95%, ${colors.blue[500]} ) border-box`],
     },
 
-  },
-  elevation: {
   },
   flat: {
     '& $label': {
