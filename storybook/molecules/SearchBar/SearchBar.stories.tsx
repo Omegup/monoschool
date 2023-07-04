@@ -18,7 +18,7 @@ const meta = {
   component: SearchBar,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'select', options: ['navBar', 'sideBar', 'filterSearch'] },
+    variant: { control: 'select', options: ['navBar', 'sideBar', 'filterSearch'] },
     inputType: { control: 'select', options: ['text', 'number', 'email'] },
     firstIcon: {
       control: 'select',
@@ -45,7 +45,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     placeholder: "Rechercher",
-    style:"filterSearch",
+    variant:"filterSearch",
     inputType:"text",
     displayClose: true,
     firstIcon:<SearchStatus  width={'100%'}/>,

@@ -28,6 +28,7 @@ export const useSearchBarStyles = createUseStyles({
         border: [borders.b2, 'solid', colors.blue[500]],
         '& $input': {
           backgroundColor: colors.light[200],
+          color: colors.blue[500],
           '&::placeholder': {
             color: colors.blue[500],
           },
@@ -42,6 +43,7 @@ export const useSearchBarStyles = createUseStyles({
         backgroundColor: colors.light[500],
         border: [borders.b2, 'solid', colors.blue[500]],
         '& $input': {
+          color: colors.blue[500],
           backgroundColor: colors.light[500],
           '&::placeholder': {
             color: colors.blue[500],
