@@ -12,7 +12,7 @@ export const FilterMenu = ({ size, style,child }: FilterMenuProps) => {
        {child.map((item,index)=>(
         <>
         {index!=0 ?<div className={classes.line}></div> :<></>}
-        <FilterButton style={item.style} size={item.size} showIcon={item.showIcon} label={item.label} value={item.value} onChange={item.onChange} onBlur={item.onBlur}/>
+        <FilterButton  showIcon={item.showIcon} label={item.label} value={item.value} onChange={item.onChange} onBlur={item.onBlur} icon={item.icon}/>
        </>
        ))}
      

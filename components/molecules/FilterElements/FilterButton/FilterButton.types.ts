@@ -1,8 +1,7 @@
 export type FilterButtonProps = {
-  style: 'solid' | 'border' | 'flat' | 'text';
-  size: 'large' | 'medium' | 'small';
   showIcon: boolean;
   label: string;
+  icon:JSX.Element;
 };
 export interface ControlledFilterButtonProps extends FilterButtonProps {
   value: boolean;

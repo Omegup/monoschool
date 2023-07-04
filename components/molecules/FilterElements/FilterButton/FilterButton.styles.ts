@@ -28,13 +28,16 @@ export const useFilterStyles = createUseStyles({
     },
   },
   input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
-  arrow: {
+  iconContainer: {
     width:widths.buttonFilter.default,
     height:widths.buttonFilter.default,
     display: 'flex',
     alignItems: 'center',
     justifyContent:'center',
     
+  },icon:{
+    width:widths.buttonFilter.icon,
+    height:widths.buttonFilter.icon,
   },
   container: {
     display: 'flex',

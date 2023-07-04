@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { FilterMenu } from '@omegup-school/ui-molecules';
+import { ArrowRight } from '@omegup-school/ui-assets';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -20,18 +21,14 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     child: [
-      {
-        style: 'solid',
-        size: 'medium',
+      {icon:<ArrowRight bold={true} width={"100%"} />,
         showIcon: true,
         label: 'Apprenant',
         value: false,
         onChange: () => {},
         onBlur: () => {},
       },
-      {
-        style: 'solid',
-        size: 'medium',
+      {icon:<ArrowRight bold={true} width={"100%"} />,
         showIcon: true,
         label: 'Classe',
         value: false,
@@ -39,8 +36,7 @@ export const Primary: Story = {
         onBlur: () => {},
       },
       {
-        style: 'solid',
-        size: 'medium',
+        icon:<ArrowRight bold={true} width={"100%"} />,
         showIcon: false,
         label: "Facturé aujoud'hui",
         value: false,
@@ -48,8 +44,7 @@ export const Primary: Story = {
         onBlur: () => {},
       },
       {
-        style: 'solid',
-        size: 'medium',
+        icon:<ArrowRight bold={true} width={"100%"} />,
         showIcon: false,
         label: "Facturé ce mois ci",
         value: false,
