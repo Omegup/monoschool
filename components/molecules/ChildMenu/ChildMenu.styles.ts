@@ -58,7 +58,13 @@ export const useSelectStyles = createUseStyles({
     },
   },
   label: {
-    fontSize: "16px",
+    fontSize: spacing.s8,
+    justifyContent: "center",
+    alignItems: "center",
+    textAlign: "center",
+     fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "normal",
     '&:hover': {
       cursor: "pointer",
     },
@@ -82,7 +88,7 @@ export const useSelectStyles = createUseStyles({
     alignItems: "center",
     color: colors.grey[100],
     textAlign: "center",
-    fontSize: spacing.s8,
+    fontSize: spacing.s6,
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
