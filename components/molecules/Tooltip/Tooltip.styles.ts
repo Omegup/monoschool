@@ -52,9 +52,24 @@ export const useStyles = createUseStyles({
       backgroundColor: colors.blue[100],
     },
   },
-  large: {},
-  medium: {},
-  small: {},
+  large: {
+    '& $label': {
+      fontSize: 16,
+      fontWeight: '400',
+    }
+  },
+  medium: {
+    '& $label': {
+      fontSize: 14,
+      fontWeight: '400',
+    }
+  },
+  small: {
+    '& $label': {
+      fontSize: 12,
+      fontWeight: '400',
+    }
+  },
   disabled: {},
   enabled: {},
   container: {
