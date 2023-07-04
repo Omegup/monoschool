@@ -64,7 +64,7 @@ export const useStyles = createUseStyles({
   },
   small: {
     '& $label': {
-      ...styles.paragraph_xSmall_semiBold
+      ...styles.paragraph_xSmall_regular
     }
   },
   disabled: {},
