@@ -1,7 +1,7 @@
+import { TwoItemsRow } from "@omegup-school/ui-layouts";
 import { forwardRef } from "react";
+import { SmallText } from "../SmallText";
 import { ControlledAvatarWithNameProps } from "./AvatarWithName.types";
-import { Text } from "../Text";
-import { Container } from "../Container";
 
 export const AvatarWithName = forwardRef((
   props: ControlledAvatarWithNameProps,
@@ -11,16 +11,10 @@ export const AvatarWithName = forwardRef((
   const { text, avatar } = props
 
   return (
-    <Container
+    <TwoItemsRow
       ref={ref}
-      direction="row"
-      paddingInline={10}
-      justifyContent="start"
-      gap={10}
-      children={[
-        avatar,
-        < Text size="small" weight={500} value={text} />
-      ]}
+      item1={avatar}
+      item2={< SmallText text={text} />}
     />
   )
 })

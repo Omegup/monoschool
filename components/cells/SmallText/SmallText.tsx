@@ -1,15 +1,15 @@
 import { forwardRef } from "react";
 import { ControlledSmallTextProps } from "./SmallText.types";
-import { Text } from "../Text";
+import { Text } from "@omegup-school/ui-molecules/Text";
 
 export const SmallText = forwardRef((
   props: ControlledSmallTextProps,
-  ref: React.Ref<HTMLDivElement>
+  ref: React.Ref<HTMLSpanElement>
 ) => {
 
   const { text, onClick } = props
 
   return (
-    <Text size="small" weight={500} value={text}{...{ onClick }} />
+    <Text size="small" ref={ref} weight={500} value={text}{...{ onClick }} />
   )
 })

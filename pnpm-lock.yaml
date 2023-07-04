@@ -111,6 +111,9 @@ importers:
       '@omegup-school/ui-assets':
         specifier: workspace:*
         version: link:../assets
+      '@omegup-school/ui-layouts':
+        specifier: workspace:*
+        version: link:../layouts
       '@omegup-school/ui-molecules':
         specifier: workspace:*
         version: link:../molecules
@@ -120,6 +123,40 @@ importers:
       react-hook-form:
         specifier: ^7.44.3
         version: 7.44.3(react@18.2.0)
+    devDependencies:
+      '@types/omegup-school':
+        specifier: workspace:*
+        version: link:../../lib/type-helpers
+      '@types/react':
+        specifier: ^18.2.8
+        version: 18.2.8
+      tslib:
+        specifier: ^2.5.3
+        version: 2.5.3
+      typescript:
+        specifier: ^5.1.3
+        version: 5.1.3
+
+  components/layouts:
+    dependencies:
+      '@omegup-school/ui-assets':
+        specifier: workspace:*
+        version: link:../assets
+      '@omegup-school/ui-atoms':
+        specifier: workspace:*
+        version: link:../atoms
+      '@omegup-school/ui-molecules':
+        specifier: workspace:*
+        version: link:../molecules
+      jss:
+        specifier: ^10.10.0
+        version: 10.10.0
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-jss:
+        specifier: ^10.10.0
+        version: 10.10.0(react@18.2.0)
     devDependencies:
       '@types/omegup-school':
         specifier: workspace:*
@@ -475,6 +512,9 @@ importers:
       '@omegup-school/ui-assets':
         specifier: workspace:*
         version: link:../components/assets
+      '@omegup-school/ui-cells':
+        specifier: workspace:*
+        version: link:../components/cells
       '@omegup-school/ui-molecules':
         specifier: workspace:*
         version: link:../components/molecules

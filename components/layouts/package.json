@@ -1,12 +1,13 @@
 {
-  "name": "@omegup-school/ui-cells",
+  "name": "@omegup-school/ui-layouts",
   "version": "1.0.0",
   "dependencies": {
     "@omegup-school/ui-assets": "workspace:*",
+    "@omegup-school/ui-atoms": "workspace:*",
     "@omegup-school/ui-molecules": "workspace:*",
-    "@omegup-school/ui-layouts": "workspace:*",
+    "jss": "^10.10.0",
     "react": "^18.2.0",
-    "react-hook-form": "^7.44.3"
+    "react-jss": "^10.10.0"
   },
   "devDependencies": {
     "@types/omegup-school": "workspace:*",

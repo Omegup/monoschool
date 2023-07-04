@@ -4,7 +4,7 @@ import { useTextStyles } from "./Text.styles";
 
 export const Text = forwardRef((
   props: ControlledTextProps,
-  ref?: React.Ref<HTMLLabelElement>
+  ref?: React.Ref<HTMLSpanElement>
 ) => {
 
   const { value, weight, size } = props
