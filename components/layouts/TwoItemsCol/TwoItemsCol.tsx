@@ -14,7 +14,6 @@ export const TwoItemsCol = forwardRef((
       ref={ref}
       direction="column"
       alignItems="start"
-      gap={10}
       children={[
         item1,
         item2
