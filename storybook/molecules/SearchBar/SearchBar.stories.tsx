@@ -11,8 +11,22 @@ const meta = {
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
     inputType: { control: 'select', options: ['text', 'number', 'email'] },
-    Icon:{ control: 'select', options: [<SearchStatus  width={'100%'}/>, <Close  width={'100%'} />, <SearchStatus  width={'100%'}/>] },
-  },
+    Icon: {
+      control: 'select',
+      options: [
+        { name: 'SearchStatus', value: <SearchStatus width={'100%'} /> },
+        { name: 'Close', value: <Close width={'100%'} /> },
+        { name: 'SearchStatus', value: <SearchStatus width={'100%'} /> }
+      ]
+    },
+    closeIcon: {
+      control: 'select',
+      options: [
+        { name: 'SearchStatus', value: <SearchStatus width={'100%'} /> },
+        { name: 'Close', value: <Close width={'100%'} /> },
+        { name: 'SearchStatus', value: <SearchStatus width={'100%'} /> }
+      ]
+    } },
    
 
 } satisfies Meta<typeof SearchBar>;
