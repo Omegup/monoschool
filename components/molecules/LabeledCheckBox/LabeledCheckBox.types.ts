@@ -1,5 +1,5 @@
-import { NakedCheckboxProps } from "../Internals/NakedCheckbox/NakedCheckBox.types";
+import { ControlledNakedCheckboxProps } from '../Internals/NakedCheckbox/NakedCheckBox.types';
 
-export interface LabeledCheckBoxProps extends NakedCheckboxProps {
+export interface LabeledCheckBoxProps extends ControlledNakedCheckboxProps {
   label: string;
-};
+}

@@ -3,7 +3,7 @@ import { joinClassNames } from "../../common/utils"
 import { useContainerStateSelector } from "../../contexts/pointer"
 import { DEFAULT_CHECKBOX_SIZE, DEFAULT_CHECKBOX_VARIANT } from "./NakedCheckBox.constants"
 import { useCheckBoxStyles } from "./NakedCheckBox.styles"
-import { NakedCheckboxProps } from "./NakedCheckBox.types"
+import { ControlledNakedCheckboxProps, NakedCheckboxProps } from "./NakedCheckBox.types"
 
 export const NakedCheckBox = ({
   variant = DEFAULT_CHECKBOX_VARIANT,
@@ -13,7 +13,7 @@ export const NakedCheckBox = ({
   onChange,
   ref,
   onBlur,
-}: NakedCheckboxProps,) => {
+}: ControlledNakedCheckboxProps,) => {
 
   const containerStateSelector = useContainerStateSelector()
   const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {

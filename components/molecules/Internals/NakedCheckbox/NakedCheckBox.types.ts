@@ -39,12 +39,15 @@ export type CheckboxCommonVariantStyles = {
   [Selector in CheckboxSelectors]: JssStyle;
 };
 
-export type NakedCheckboxProps = {
+export interface NakedCheckboxProps {
   variant?: CheckboxVariant;
   size?: CheckboxSize;
+}
+
+export interface ControlledNakedCheckboxProps extends NakedCheckboxProps {
   checked: boolean;
   disabled: boolean;
   onChange: (value: boolean) => void;
-  ref?: React.Ref<HTMLInputElement>
+  ref?: React.Ref<HTMLInputElement>;
   onBlur?: () => void;
-};
+}
