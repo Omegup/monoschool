@@ -4,7 +4,7 @@ import { GridElement, TextAline } from '../../components/assets'
 import { ViewModeSwitcher } from '@omegup-school/ui-molecules';
 const elementsViewModeRight = { id: "1", icon: <GridElement /> }
 
-const elementsViewModeLeft = { id: "1", icon: <TextAline /> }
+const elementsViewModeLeft = { id: "2", icon: <TextAline />}
 const meta = {
   title: 'Atom/ViewModeSwitcher',
   component: ViewModeSwitcher,
@@ -23,7 +23,7 @@ export const Primary: Story = {
     name: 'ViewModeSwitcher',
     size: 'medium',
     style: 'solid',
-    value: true,
+    isChecked: true,
     elementRight: elementsViewModeRight,
     elementLeft: elementsViewModeLeft,
   },

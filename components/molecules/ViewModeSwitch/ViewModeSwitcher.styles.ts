@@ -32,12 +32,36 @@ export const useViewModeSwitcherStyles = createUseStyles({
   checked:{
     borderRadius: borders.r5,
     backgroundColor: colors.blue[500],
+    color:colors.light[300],
+    cursor: "default",
+    display: "flex",
+    padding: "6px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
   },
-  notChecked:{},
-  input: {
-    position: "absolute",
-    opacity: 0,
+  notChecked:{
+    borderRadius: borders.r5,
+    backgroundColor: colors.light[300],
+    color:colors.blue[500],
     cursor: "pointer",
+    display: "flex",
+    padding: "6px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+  },
+  input: {
+   
+   position: "absolute",
+    opacity: 0,
+    '&>*:checked ':{
+      cursor:"default"
+    },
+    '&>*:not(:checked)':{
+      cursor:"pointer"
+    }
+     
   },
   checkmark: {
     position: "absolute",
@@ -49,38 +73,35 @@ export const useViewModeSwitcherStyles = createUseStyles({
   }
   ,
   elementLeft: {
-    display: "flex",
-    padding: "6px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "10px",
     borderRadius: "10px 0px 0px 10px",
-    background: "var(--blue-blue, #3DA9FC)",
-    '&:focus': {
-      outline: 'none'
-    },
-    '&hover':{
-      cursor: "pointer",
-    }
   },
   elementRight: {
+    
+    borderRadius: "0px 10px 10px 0px",
+  },
+  element:{
     display: "flex",
     padding: "6px 7px",
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
-    borderRadius: "0px 10px 10px 0px",
-    background: "var(--light-300, #E7F7FE)",
     '&:focus': {
       outline: 'none'
     },
     '&hover':{
       cursor: "pointer",
     },
-    '& $': {
+    '&active': {
+      color:colors.blue[500],
       opacity: 0,
+    },  
+    '&>*:checked ':{
+      cursor:"default"
     },
-  },
+    '&>*:not(:checked)':{
+      cursor:"pointer"
+    }
+  }
 
 
 });

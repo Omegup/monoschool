@@ -2,7 +2,7 @@ export interface ViewModeSwitcherProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   name: string;
-  value:boolean
+  isChecked?:boolean
   
   elementLeft: {
     id: string,
@@ -12,7 +12,7 @@ export interface ViewModeSwitcherProps {
   elementRight: {
     id: string,
     icon: JSX.Element,
-   
+
   }
 }
 export interface ControlledViewModeSwitcherProps extends ViewModeSwitcherProps {
