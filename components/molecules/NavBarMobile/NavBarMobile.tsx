@@ -7,7 +7,7 @@ import { ChildMenu } from '../ChildMenu';
 
 export const NavBarMobile = forwardRef(
   (props: ControlledNavBarMobileProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, onChange, items, value, onBlur } = props;
+    const { size, style, onChange, items, onBlur } = props;
     const classes = useNavBarMobileStyles();
 
     return (

@@ -9,7 +9,6 @@ export interface NavBarMobileProps {
 }
 
 export interface ControlledNavBarMobileProps extends NavBarMobileProps {
-  value: boolean;
   onChange: (value: boolean) => void;
   onBlur: () => void;
 }

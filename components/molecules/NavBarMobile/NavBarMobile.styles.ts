@@ -43,7 +43,10 @@ export const useNavBarMobileStyles = createUseStyles({
     alignItems: "center",
     gap: "5px",
     flexShrink: 0,
+    '&:hover': {
 
+      cursor: "pointer",
+    },
     '&$selected': {
       backgroundColor: colors.danger[500],
       cursor: "pointer",
