@@ -29,25 +29,25 @@ export const useSelectStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  selected:{
+  selected: {
     borderRadius: borders.r5,
     backgroundColor: colors.blue[500],
   },
-  notSelected:{},
+  notSelected: {},
   items: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     alignSelf: "stretch",
     padding: spacing.s5,
-    gap: spacing.s8, 
-    margin:spacing.s1,
+    gap: spacing.s8,
+    margin: spacing.s1,
     '&:hover': {
       borderRadius: borders.r5,
       backgroundColor: colors.light[500],
       cursor: "pointer",
     },
-  
+
     '&:active': {
       '&:hover > $items': {
         borderRadius: borders.r5,
@@ -63,14 +63,21 @@ export const useSelectStyles = createUseStyles({
   }
   , parentName: {
     color: colors.grey[300],
-    fontSize: "12px",
-
+    fontSize: spacing.s6,
     fontWeight: "700",
     letterSpacing: "0.12px",
     textTransform: "uppercase",
     display: "flex",
-    padding: "0px 20px",
+    padding: "0px 10px",
     alignItems: "flex-start",
-    gap: "10px"
+    gap: "10px",
+    fontStyle: "normal",
+    lineHeight: "normal",
+    
+    
+ 
+
+
+
   }
 });
