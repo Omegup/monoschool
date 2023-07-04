@@ -15,7 +15,7 @@ export const useSearchBarStyles = createUseStyles({
     },
   },
   sideBar: {
-    '& $container ': {
+    '& $container': {
       padding: spacing.s4,
       gap: spacing.s8,
       borderRadius: borders.r5,
@@ -23,8 +23,20 @@ export const useSearchBarStyles = createUseStyles({
       '& $firstIcon , $secondIcon': {
         color: colors.grey[500],
       },
+      '&:has($input:focus)':{
+        backgroundColor:colors.light[200],
+        border: [borders.b2, 'solid', colors.blue[500]],
+        '& $input': {
+          backgroundColor: colors.light[200],
+          '&::placeholder': {
+            color: colors.blue[500],
+          },
+        },
+        '& $firstIcon , $secondIcon': {
+          color: colors.blue[500],
+        },
+      }
     },
-
     '&:hover': {
       '& $container ': {
         backgroundColor: colors.light[500],
@@ -40,15 +52,7 @@ export const useSearchBarStyles = createUseStyles({
         },
       },
     },
-
-    '& $input': {
-      '&:focus': {
-        backgroundColor: 'red',
-        '& $container': {
-          backgroundColor: 'red',
-        },
-      },
-    },
+   
   },
   filterSearch: {
     '& $container ': {

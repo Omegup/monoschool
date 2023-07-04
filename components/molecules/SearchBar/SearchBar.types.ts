@@ -1,5 +1,5 @@
 export type SearchBarProps = {
-  style:'navBar' | 'sideBar' | 'filterSearch';
+  variant:'navBar' | 'sideBar' | 'filterSearch';
   displayClose: boolean;
   placeholder: string;
   firstIcon: JSX.Element;
