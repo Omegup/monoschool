@@ -73,6 +73,10 @@ export const useStyles = createUseStyles({
   disabled: {},
   enabled: {},
   container: {
+    zIndex: 100,
+
+  },
+  flex: {
     width: 'fit-content',
     display: 'flex',
     alignItems: 'center',
