@@ -8,9 +8,7 @@ import { shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 export const useSearchBarStyles = createUseStyles({
   navBar: {
     '& $container ': {
-      padding: spacing.s4,
       gap: spacing.s8,
-      borderRadius: borders.r5,
       border: [borders.b2, 'solid', colors.grey[500]],
       '& $input': {
         color: colors.grey[500],},
@@ -22,9 +20,7 @@ export const useSearchBarStyles = createUseStyles({
   },
   sideBar: {
     '& $container': {
-      padding: spacing.s4,
       gap: spacing.s8,
-      borderRadius: borders.r5,
       border: [borders.b2, 'solid', colors.grey[500]],
       '& $input': {
         color: colors.grey[500],},
@@ -67,12 +63,11 @@ export const useSearchBarStyles = createUseStyles({
   },
   filterSearch: {
     '& $container ': {
-      padding: spacing.s4,
-      gap: spacing.s8,
-      borderRadius: borders.r5,
+      gap: spacing.s2,
+      
       border: [borders.b2, 'solid', colors.background.overlay],
       '& $input': {
-        color: colors.grey[400],},
+        color: colors.grey[300],},
     
       '& $firstIcon , $secondIcon': {
         color: colors.grey[400],
@@ -91,6 +86,8 @@ export const useSearchBarStyles = createUseStyles({
     alignItems: 'center',
     background: colors.background.default,
     boxShadow: shadowXSmall,
+    padding: spacing.s4,
+    borderRadius: borders.r5,
   },
   firstIcon: {
     width: widths.searchBar.default,
