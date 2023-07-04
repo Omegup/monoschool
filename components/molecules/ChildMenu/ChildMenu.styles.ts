@@ -36,14 +36,14 @@ export const useSelectStyles = createUseStyles({
     backgroundColor: colors.blue[500],
     flexShrink: 0
     ,
-    '&$selected': {
-      backgroundColor: colors.light[500],
-      cursor: "pointer",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      borderRadius: "10px"
-    },
+    // '&$selected': {
+    //   backgroundColor: colors.light[500],
+    //   cursor: "pointer",
+    //   display: "flex",
+    //   justifyContent: "center",
+    //   alignItems: "center",
+    //   borderRadius: "10px"
+    // },
     '&$notSelected': {
       color: colors.blue[500],
     },
@@ -71,11 +71,11 @@ export const useSelectStyles = createUseStyles({
     alignItems: "center",
     color: colors.grey[100],
    
-    '&$selected': {
-      color: colors.blue[500],
-      cursor: "pointer",
+    // '&$selected': {
+    //   color: colors.blue[500],
+    //   cursor: "pointer",
 
-    },
+    // },
   },
   mobileLabel: {
     justifyContent: "center",
@@ -87,10 +87,10 @@ export const useSelectStyles = createUseStyles({
     fontWeight: 400,
     lineHeight: "normal",
    
-    '&$selected': {
-      color: colors.blue[500],
-      cursor: "pointer",
-    },
+    // '&$selected': {
+    //   color: colors.blue[500],
+    //   cursor: "pointer",
+    // },
   },
   tabletteIcon: {
     width: "24px",
