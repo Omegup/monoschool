@@ -34,7 +34,22 @@ export const useSearchBarStyles = createUseStyles({
           backgroundColor: colors.light[500],
           '&::placeholder': {
             color: colors.blue[500],
-          }
+          },
+        },
+        '& $firstIcon , $secondIcon': {
+          color: colors.blue[500],
+        },
+      },
+    },
+    '& $input:focus ': {
+      ' $container ': {
+        backgroundColor:colors.light[500],
+        border: [borders.b2, 'solid', colors.blue[500]],
+        '& $input': {
+          backgroundColor: colors.light[500],
+          '&::placeholder': {
+            color: colors.blue[500],
+          },
         },
         '& $firstIcon , $secondIcon': {
           color: colors.blue[500],
