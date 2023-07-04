@@ -2,6 +2,7 @@ import { ArrowRight } from '@omegup-school/ui-assets';
 import { useFilterStyles } from './FilterButton.styles';
 import { ControlledFilterButtonProps } from './FilterButton.types';
 import { forwardRef } from 'react';
+import { widths } from '@omegup-school/ui-atoms/sizes';
 
 export const FilterButton = forwardRef(
   (props: ControlledFilterButtonProps, ref: React.Ref<HTMLInputElement>) => {
@@ -12,7 +13,7 @@ export const FilterButton = forwardRef(
         <div className={`${classes.label} `}>
       
         <input
-          type="button"
+          type="chekbox"
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
           {...{ ref, onBlur }}
@@ -23,7 +24,7 @@ export const FilterButton = forwardRef(
           {showIcon && (
             <span className={classes.arrow}>
               {' '}
-              <ArrowRight bold={true} width={"100%"} />
+              <ArrowRight bold={true} width={widths.buttonFilter.icon} />
             </span>
           )}{' '}
         </div>

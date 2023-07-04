@@ -8,8 +8,6 @@ const meta = {
   component: FilterMenu,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'select', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
   },
 } satisfies Meta<typeof FilterMenu>;
 

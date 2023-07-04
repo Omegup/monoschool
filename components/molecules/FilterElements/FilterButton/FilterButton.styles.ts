@@ -2,7 +2,7 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
-import { FilterButtonProps } from './FilterButton.types';
+
 
 
 export const useFilterStyles = createUseStyles({
@@ -21,17 +21,16 @@ export const useFilterStyles = createUseStyles({
         fill: colors.blue[500],
       },
     },
-    '&:active:hover, &:focus:hover': {
-      backgroundColor: colors.light[300],
-      color: colors.blue[500],
-    },
+  
   },
   input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
   arrow: {
+    width:widths.buttonFilter.default,
+    height:widths.buttonFilter.default,
     display: 'flex',
     alignItems: 'center',
-     width:widths.buttonFilter.default,
-     height:widths.buttonFilter.default,
+    justifyContent:'center',
+    
   },
   container: {
     display: 'flex',

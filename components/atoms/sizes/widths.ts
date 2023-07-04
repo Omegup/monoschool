@@ -35,6 +35,7 @@ export const widths = {
   },
   buttonFilter:{
     default: '20px',
+    icon:'15px',
   }
   
 };
