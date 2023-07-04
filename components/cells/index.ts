@@ -5,3 +5,7 @@ export * from './Select';
 export * from './SignIn';
 export * from './SmallText';
 export * from './XSmallText';
+export * from './AvatarWithName';
+export * from './DoubleText';
+export * from './TextWithIcon';
+export * from './IconWithDoubleText';
