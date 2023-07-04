@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { ControlledDoubleTextProps } from "./DoubleText.types";
-import { useDoubleTextStyles } from "./DoubleText.styles";
 import { Text } from "../Text";
+import { Container } from "../Container";
 
 export const DoubleText = forwardRef((
   props: ControlledDoubleTextProps,
@@ -9,13 +9,18 @@ export const DoubleText = forwardRef((
 ) => {
 
   const { text, subText } = props
-  const classes = useDoubleTextStyles()
 
   return (
-    <div className={classes.container} ref={ref}>
-      <Text size="XSmall" weight={400} value={text} />
-      <Text size="small" weight={500} value={subText} />
-    </div>
+    <Container
+      ref={ref}
+      direction="row"
+      paddingInline={10}
+      justifyContent="start"
+      gap={10}
+      children={[
+        <Text size="XSmall" weight={400} value={text} />,
+        <Text size="small" weight={500} value={subText} />
+      ]}
+    />
   )
-
 })

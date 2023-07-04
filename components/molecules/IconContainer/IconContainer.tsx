@@ -7,8 +7,8 @@ export const IconContainer = forwardRef((
   ref?: React.Ref<HTMLDivElement>
 ) => {
 
-  const { icon, padding } = props
-  const { textStyle } = useIconContainerStyles({ padding })
+  const { icon, padding, height, width } = props
+  const { textStyle } = useIconContainerStyles({ padding, height, width })
 
   return (
     <div ref={ref} className={textStyle}>
