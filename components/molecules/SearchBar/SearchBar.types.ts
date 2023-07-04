@@ -1,9 +1,9 @@
 export type SearchBarProps = {
-  size: 'large' | 'medium' | 'small';
+  style:'navBar' | 'sideBar' | 'filterSearch';
   displayClose: boolean;
   placeholder: string;
-  icon: JSX.Element;
-  closeIcon:JSX.Element;
+  firstIcon: JSX.Element;
+  secondIcon:JSX.Element;
   inputType:string;
 };
 export interface ControlledSearchBarProps extends SearchBarProps {

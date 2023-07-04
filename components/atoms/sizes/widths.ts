@@ -11,8 +11,6 @@ export const widths = {
     large: '28px',
   },
   searchBar:{
-    small: '16px',
-    medium: '20px',
-    large: '28px',
+    default: "24px",
   },
 };

@@ -18,16 +18,16 @@ const meta = {
   component: SearchBar,
   tags: ['autodocs'],
   argTypes: {
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
+    style: { control: 'select', options: ['navBar', 'sideBar', 'filterSearch'] },
     inputType: { control: 'select', options: ['text', 'number', 'email'] },
-    icon: {
+    firstIcon: {
       control: 'select',
       options: [
         { name: 'SearchStatus' },
         { name: 'Close'},
       ]
     },
-    closeIcon: {
+    secondIcon: {
       control: 'select',
       options: [
         { name: 'SearchStatus' },
@@ -45,11 +45,11 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     placeholder: "Rechercher",
-    size: 'medium',
+    style:"filterSearch",
     inputType:"text",
     displayClose: true,
-    icon:<SearchStatus  width={'100%'}/>,
-    closeIcon:<Close  width={'100%'} />,
+    firstIcon:<SearchStatus  width={'100%'}/>,
+    secondIcon:<Close  width={'100%'} />,
     value: "",
     onChange: (value) => {console.log(value)},
     onClick: () => {},
