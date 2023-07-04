@@ -13,7 +13,7 @@ export const DoubleText = forwardRef((
   return (
     <Container
       ref={ref}
-      direction="row"
+      direction="column"
       paddingInline={10}
       justifyContent="start"
       gap={10}

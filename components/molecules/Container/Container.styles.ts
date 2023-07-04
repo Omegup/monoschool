@@ -10,6 +10,5 @@ export const useContainerStyles = createUseStyles({
     gap: ({ gap }: Partial<ContainerProps>) => gap || 0,
     alignItems: ({ alignItems }: Partial<ContainerProps>) => alignItems || "center",
     justifyContent: ({ justifyContent }: Partial<ContainerProps>) => justifyContent || "center",
-
   }
 })

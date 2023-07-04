@@ -4,7 +4,7 @@ export interface ContainerProps {
   paddingInline?: number,
   paddingBlock?: number,
   gap?: number,
-  direction?: 'column' | 'row' | 'reverse-row' | 'reverse-column',
+  direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
   alignItems?: 'center' | 'start' | 'end'
   justifyContent?: 'center' | 'start' | 'end'
 }
