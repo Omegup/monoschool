@@ -1,5 +1,5 @@
 export type TooltipProps = {
-  style: 'solid' | 'border' | 'underline' | 'elevation' | 'flat';
+  variant: 'solid' | 'border' | 'underline' | 'flat';
   size: 'large' | 'medium' | 'small';
   position: 'top' | 'bottom' | 'right' | 'left';
   label: string;
