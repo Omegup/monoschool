@@ -13,7 +13,7 @@ export const FilterButton = forwardRef(
         <div className={`${classes.label} `}>
       
         <input
-          type="chekbox"
+          type="checkbox"
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
           {...{ ref, onBlur }}

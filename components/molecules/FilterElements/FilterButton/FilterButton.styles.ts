@@ -21,7 +21,11 @@ export const useFilterStyles = createUseStyles({
         fill: colors.blue[500],
       },
     },
-  
+    
+    '& > $input:checked': {
+     backgroundColor:"red",
+     
+    },
   },
   input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
   arrow: {
