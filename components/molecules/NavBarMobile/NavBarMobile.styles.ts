@@ -48,7 +48,7 @@ export const useNavBarMobileStyles = createUseStyles({
       cursor: "pointer",
     },
     '&$selected': {
-      backgroundColor: colors.danger[500],
+      backgroundColor: colors.blue[500],
       cursor: "pointer",
     },
   },

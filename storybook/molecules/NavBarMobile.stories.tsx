@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { NavBarMobile } from '@omegup-school/ui-molecules';
-import { Square, Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
+import { Home, Message, Notification } from '@omegup-school/ui-assets';
 
 
 
@@ -25,10 +25,10 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     items: [
-      { icon: <Tick color='red' width='24' height='24' />, label: "Présence des elèves", selected: true, style: "solid", size: "medium", id: 1 },
-      { icon: <WifiSquare width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium", id: 2, },
-      { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium", id: 3 }],
-    value: true
+      { icon: <Home  width='24' height='24' />, label: "Acceuil", selected: true, style: "solid", size: "medium", id: 1 },
+      { icon: <Message width='24' height='24' />, label: "Messagerie", selected: false, style: "solid", size: "medium", id: 2, },
+      { icon: <Notification width='24' height='24' />, label: "Notifications", selected: false, style: "solid", size: "medium", id: 3 }],
+ 
 
 
   },
