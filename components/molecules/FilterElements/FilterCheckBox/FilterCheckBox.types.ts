@@ -5,6 +5,7 @@ export type FilterCheckBoxProps = {
   label: string;
   showImage: boolean;
   imageURL:string;
+  checkbox:JSX.Element
 };
 export interface ControlledFilterCheckBoxProps extends FilterCheckBoxProps {
   value: boolean;

@@ -37,62 +37,20 @@ export const useFilterCheckBoxStyles = createUseStyles({
   label: {
     display: 'flex',
     borderRadius: borders.r5,
-    '& > $input:checked + $container': {
-
-      color: colors.light[500],
-      '& $square path': {
-        fill: colors.light[500],
-      },
-      '& $tick': {
-        color: colors.blue[500],
-        opacity: 1,
-      },
-    },
+    
     '&:focus': {
       outline: 'none'
     },
-
-    '&:hover > $input:checked + $container': {
-      '& $tick': {
-        color: colors.blue[600],
-        opacity: 0.6,
-      },
-    },
+   
     '&:hover > $input:not(:checked) + $container': {
       color: colors.blue[500],
-      '& $tick': {
-        opacity: 0.4,
-      },
     },
-    '&:active': {
-      '&:hover > $input:checked + $container': {
-        '& $tick': {
-          opacity: 0,
-        },
-      },
-      '&:hover > $input:not(:checked) + $container': {
-        '& $tick': {
-          opacity: 1,
-        },
-      },
-      '& > $input:not(:checked) + $container': {
-        '& $tick': {
-          opacity: 0,
-        },
-      },
-    },
+   
   },
   checkbox: {
-    ...checkboxSizes,
-    display: 'block',
-    position: 'relative',
-    '&>*': {
-      position: 'absolute',
-    },
+ 
   },
-  tick: {
-    opacity: 0,
-  },
+ 
   container: {
     display: 'flex',
     alignItems: 'center',

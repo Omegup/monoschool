@@ -24,6 +24,7 @@ export const Primary: Story = {
     style: 'solid',
     showImage: false,
     imageURL: 'https://www.w3schools.com/howto/img_avatar.png',
+    checkbox:<>box</>,
     value: false,
     onChange: () => {},
     onBlur: () => {},
