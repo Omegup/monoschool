@@ -10,6 +10,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
+    inputType: { control: 'select', options: ['text', 'number', 'email'] },
   },
    
 
