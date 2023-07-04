@@ -5,8 +5,6 @@ import { styles } from '../common/styles';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
-
-
 export const useSearchBarStyles = createUseStyles({
   navBar: {
     '& $container ': {
@@ -27,9 +25,9 @@ export const useSearchBarStyles = createUseStyles({
       },
     },
 
-    '&:hover':{
+    '&:hover': {
       '& $container ': {
-        backgroundColor:colors.light[500],
+        backgroundColor: colors.light[500],
         border: [borders.b2, 'solid', colors.blue[500]],
         '& $input': {
           backgroundColor: colors.light[500],
@@ -42,17 +40,15 @@ export const useSearchBarStyles = createUseStyles({
         },
       },
     },
-     
-    '& $input:focus': {
-      backgroundColor:"red",
-      '& + $container':{
-        backgroundColor:"red",
-      }
+
+    '& $input': {
+      '&:focus': {
+        backgroundColor: 'red',
+        '& $container': {
+          backgroundColor: 'red',
+        },
+      },
     },
-  
-    
-
-
   },
   filterSearch: {
     '& $container ': {
@@ -76,12 +72,12 @@ export const useSearchBarStyles = createUseStyles({
     boxShadow: shadowXSmall,
   },
   firstIcon: {
-    width:widths.searchBar.default,
-    height:widths.searchBar.default,
+    width: widths.searchBar.default,
+    height: widths.searchBar.default,
   },
   secondIcon: {
-    width:widths.searchBar.default,
-    height:widths.searchBar.default,
+    width: widths.searchBar.default,
+    height: widths.searchBar.default,
   },
   labelText: {
     ...styles.paragraph_small_regular,
