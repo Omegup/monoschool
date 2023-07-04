@@ -1,11 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import  { GridElement,TextAline } from '../../components/assets'
+import { GridElement, TextAline } from '../../components/assets'
 
 import { ViewModeSwitcher } from '@omegup-school/ui-molecules';
-const elementsViewMode=[{id:"1",icon:<GridElement/>,value:true},{id:"1",icon:<TextAline/>,value:false}]
+const elementsViewModeRight = { id: "1", icon: <GridElement /> }
+
+const elementsViewModeLeft = { id: "1", icon: <TextAline /> }
 const meta = {
   title: 'Atom/ViewModeSwitcher',
-  
   component: ViewModeSwitcher,
   tags: ['autodocs'],
   argTypes: {
@@ -19,10 +20,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-   
     name: 'ViewModeSwitcher',
     size: 'medium',
     style: 'solid',
-    elements:elementsViewMode
-   },
+    value: true,
+    elementRight: elementsViewModeRight,
+    elementLeft: elementsViewModeLeft,
+  },
 };

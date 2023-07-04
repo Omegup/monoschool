@@ -29,50 +29,58 @@ export const useViewModeSwitcherStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
+  checked:{
+    borderRadius: borders.r5,
+    backgroundColor: colors.blue[500],
+  },
+  notChecked:{},
   input: {
     position: "absolute",
     opacity: 0,
     cursor: "pointer",
   },
- 
   checkmark: {
     position: "absolute",
-    top: 0,
-    left: 0,
-    height: "25px",
-    width: "25px",
-    backgroundColor: "#eee",
-    borderRadius: "50%",
+
   },
-  
-  container:  {
-    padding:5,
-    display: "inline-flex",
-    alignItems: "flex-start",
-    borderRadius:"10px ",
-    background: "var(--background-background, #F55FFE)",
-    boxShadow:
-      "0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)"
+  container: {
+    display: "flex",
+    justifyContent: "right",
   }
   ,
-  elementLeft:{
+  elementLeft: {
     display: "flex",
     padding: "6px",
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
-    // borderRadius: "10px 0px 0px 10px",
-    background: "var(--blue-blue, #3DA9FC)"
+    borderRadius: "10px 0px 0px 10px",
+    background: "var(--blue-blue, #3DA9FC)",
+    '&:focus': {
+      outline: 'none'
+    },
+    '&hover':{
+      cursor: "pointer",
+    }
   },
-  elementRight:{
+  elementRight: {
     display: "flex",
-    padding: "6px",
+    padding: "6px 7px",
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
-    // borderRadius: "10px 0px 0px 10px",
-    background: "var(--blue-blue, #3DA9FC)"
+    borderRadius: "0px 10px 10px 0px",
+    background: "var(--light-300, #E7F7FE)",
+    '&:focus': {
+      outline: 'none'
+    },
+    '&hover':{
+      cursor: "pointer",
+    },
+    '& $': {
+      opacity: 0,
+    },
   },
- 
+
 
 });
