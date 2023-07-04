@@ -5,7 +5,7 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
-  (props: ControlledSearchBarProps, ref: React.Ref<HTMLInputElement>) => {
+  (props: ControlledSearchBarProps) => {
     const { size, Icon, placeholder,inputType,closeIcon, displayClose, onChange,onClick, value } =
       props;
     const classes = useSearchBarStyles();
