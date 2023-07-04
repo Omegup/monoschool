@@ -3,6 +3,8 @@ export type ChipsProps = {
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   label: string;
+  icon:JSX.Element;
+  iconClose:JSX.Element;
 };
 export interface ControlledChipsProps extends ChipsProps {
   value: boolean;

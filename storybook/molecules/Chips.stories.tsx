@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Chips } from '@omegup-school/ui-molecules';
-
+import { Close, Essential } from '@omegup-school/ui-assets';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
@@ -29,6 +29,8 @@ export const Primary: Story = {
     value:false,
     onChange: () => {},
     onClick:()=>{},
+    icon: <Essential width={"100%"} />,
+    iconClose: <Close width={"100%"} />
   },
 };
 
