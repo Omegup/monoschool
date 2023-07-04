@@ -12,7 +12,6 @@ export const Tag = ({ type }: { type: TagType }) => {
     const map = { success: 'success', warning: 'warning', error: 'danger', active: 'secondary', inactive: 'grey' } as const;
     const palette = colors [map[type]];
     return { primary: palette[600], backgroundColor: palette[100] }
-
   }
 
   const styles = useStyles({ color: getColor(type) });
