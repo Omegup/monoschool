@@ -26,6 +26,7 @@ export const useSearchBarStyles = createUseStyles({
         color: colors.grey[500],
       },
     },
+
     '&:hover':{
       '& $container ': {
         backgroundColor:colors.light[500],
@@ -41,21 +42,15 @@ export const useSearchBarStyles = createUseStyles({
         },
       },
     },
-    '& > $input:focus + $container': {
-        backgroundColor:colors.light[200],
-        '& $input': {
-          backgroundColor: colors.light[500],
-          '&::placeholder': {
-            color: colors.blue[500],
-          },
-        },
-        '& $firstIcon , $secondIcon': {
-          color: colors.blue[500],
-        },
-      },
+     
+    '& $input:focus': {
+      backgroundColor:"red",
+      '& + $container':{
+        backgroundColor:"red",
+      }
+    },
+  
     
-    
-
 
 
   },
