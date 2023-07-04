@@ -29,8 +29,8 @@ export const Primary: Story = {
     value:false,
     onChange: () => {},
     onClick:()=>{},
-    icon: <Essential width={"100%"} />,
-    iconClose: <Close width={"100%"} />
+    firstIcon: <Essential width={"100%"} />,
+    secondIcon: <Close width={"100%"} />
   },
 };
 

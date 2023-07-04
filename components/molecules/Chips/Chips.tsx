@@ -9,8 +9,8 @@ export const Chips = forwardRef(
       style,
       disabled,
       label,
-      icon,
-      iconClose,
+      firstIcon,
+      secondIcon,
       onChange,
       onClick,
       value,
@@ -29,11 +29,11 @@ export const Chips = forwardRef(
           checked={value}
         />
         <div className={classes.container}>
-          <span className={classes.Essential}>{icon}</span>
+          <span className={classes.Essential}>{firstIcon}</span>
           <span className={classes.labelText}>{label}</span>
 
           <span className={classes.Close} onClick={() => onClick}>
-            {iconClose}
+            {secondIcon}
           </span>
         </div>
       </label>
