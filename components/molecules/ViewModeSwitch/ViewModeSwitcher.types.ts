@@ -6,7 +6,17 @@ export interface ViewModeSwitcherProps {
     id: string,
     icon: JSX.Element,
     value:boolean
-  }[]
+  }
+  elementLeft: {
+    id: string,
+    icon: JSX.Element,
+    value:boolean
+  }
+  elementRight: {
+    id: string,
+    icon: JSX.Element,
+    value:boolean
+  }
 }
 export interface ControlledViewModeSwitcherProps extends ViewModeSwitcherProps {
  

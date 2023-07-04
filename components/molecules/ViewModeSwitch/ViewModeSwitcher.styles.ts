@@ -30,103 +30,32 @@ export const useViewModeSwitcherStyles = createUseStyles({
   disabled: {},
   enabled: {},
   input: {
-   
-  },
-  label: {
-    display: 'flex',
-    borderRadius: borders.r5,
-    '& > $input:checked + $container': {
-      backgroundColor: colors.blue[500],
-      color: colors.light[500],
-      '& $square path': {
-        fill: colors.light[500],
-      },
-      '& $tick': {
-        color: colors.blue[500],
-        opacity: 1,
-      },
-    },
-    '&:focus': {
-      outline: 'none'
-    },
-    '&:focus-within:not(:focus) > $input': {
-      '& + $container': {
-        outlineWidth: borders.b5,
-        outlineColor: 'currentcolor',
-        outlineStyle: 'solid',
-      },
-      '&:not(:checked) + $container': {
-        color: colors.blue[500],
-      },
-    },
-    '&:hover > $input:checked + $container': {
-      backgroundColor: colors.blue[600],
-      '& $tick': {
-        color: colors.blue[600],
-        opacity: 0.6,
-      },
-    },
-    '&:hover > $input:not(:checked) + $container': {
-      color: colors.blue[500],
-      background: colors.light[500],
-      '& $tick': {
-        opacity: 0.4,
-      },
-    },
-
-    '&:active': {
-      '&:hover > $input:checked + $container': {
-        '& $tick': {
-          opacity: 0,
-        },
-      },
-      '&:hover > $input:not(:checked) + $container': {
-        background: colors.background.default,
-        '& $tick': {
-          opacity: 1,
-        },
-      },
-      '& > $input:checked + $container': {
-        backgroundColor: colors.blue[500],
-        '& $tick': {
-          color: colors.blue[500],
-          opacity: 1,
-        },
-      },
-      '& > $input:not(:checked) + $container': {
-        color: colors.blue[500],
-        outlineWidth: borders.b5,
-        outlineColor: 'currentcolor',
-        outlineStyle: 'solid',
-        '& $tick': {
-          opacity: 0,
-        },
-      },
-    },
-  },
-  checkbox: {
-    ...checkboxSizes,
-    display: 'block',
-    position: 'relative',
-    '&>*': {
-      position: 'absolute',
-    },
-  },
-  tick: {
+    position: "absolute",
     opacity: 0,
+    cursor: "pointer",
   },
-
+ 
+  checkmark: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    height: "25px",
+    width: "25px",
+    backgroundColor: "#eee",
+    borderRadius: "50%",
+  },
+  
   container:  {
+    padding:5,
     display: "inline-flex",
     alignItems: "flex-start",
-    borderRadius:"10px 0px 0px 10px",
-    background: "var(--background-background, #FFFFFE)",
+    borderRadius:"10px ",
+    background: "var(--background-background, #F55FFE)",
     boxShadow:
       "0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)"
   }
   ,
-  element:{
-
+  elementLeft:{
     display: "flex",
     padding: "6px",
     justifyContent: "center",
@@ -135,9 +64,15 @@ export const useViewModeSwitcherStyles = createUseStyles({
     // borderRadius: "10px 0px 0px 10px",
     background: "var(--blue-blue, #3DA9FC)"
   },
-
-  labelText: {
-    ...styles.paragraph_small_regular,
+  elementRight:{
+    display: "flex",
+    padding: "6px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    // borderRadius: "10px 0px 0px 10px",
+    background: "var(--blue-blue, #3DA9FC)"
   },
-  square: {},
+ 
+
 });
