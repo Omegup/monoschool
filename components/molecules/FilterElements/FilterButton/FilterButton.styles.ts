@@ -22,7 +22,7 @@ export const useFilterStyles = createUseStyles({
       },
     },
     
-    '& > $input:checked': {
+    '& > $input:checked + $container': {
      backgroundColor:"red",
      
     },
