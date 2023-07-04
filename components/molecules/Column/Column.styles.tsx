@@ -18,4 +18,7 @@ export const useColumnStyles = createUseStyles({
   cellText: {
     color: colors.dark,
   },
+  cellTextBold: {
+    ...styles.paragraph_xSmall_medium,
+  },
 });

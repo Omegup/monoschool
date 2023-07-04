@@ -13,24 +13,22 @@ const meta = {
 } satisfies Meta<typeof Column>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-
-
+type Story = StoryObj<typeof meta>
 
 const CheckboxDemo = () => {
+  
   const [isSelected, setIsSelected] = useState(false);
 
   return (
-    <LabeledCheckBox 
-      checked={isSelected}
-      onChange={() => setIsSelected(!isSelected)}
-      disabled={false}
-      label=''
-      variant='cell'
-    />
+      <LabeledCheckBox
+        checked={isSelected}
+        onChange={() => setIsSelected(!isSelected)}
+        disabled={false}
+        label=''
+        variant='cell'
+      />
   );
-}; 
+};
 
 export const TextCell: Story = {
   args: {
@@ -39,12 +37,17 @@ export const TextCell: Story = {
 };
 export const CurrencyCell: Story = {
   args: {
-    children: <CurrencyColumn amount={3345436456546}  />
+    children: <CurrencyColumn amount={3345436456546} />
+  },
+};
+export const CurrencyCellTotal: Story = {
+  args: {
+    children: <CurrencyColumn amount={3345436456546} isTotalAmount={true} />
   },
 };
 export const CheckboxCell: Story = {
   args: {
-    children:  <CheckboxDemo/>,
+    children: <CheckboxDemo />,
   },
 };
 

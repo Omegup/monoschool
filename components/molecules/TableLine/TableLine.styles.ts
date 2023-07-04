@@ -2,7 +2,7 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders } from '@omegup-school/ui-atoms/sizes';
 import { createUseStyles } from 'react-jss';
 
-const commonBorder = `1px solid ${colors.background.overlay}`;
+export const commonBorder = `1px solid ${colors.background.overlay}`;
 
 export const useTableLineStyles = createUseStyles({
   tableLine: {
