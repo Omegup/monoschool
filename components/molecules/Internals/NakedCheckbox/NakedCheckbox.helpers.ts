@@ -26,22 +26,30 @@ export const checkboxVariantStylesBuilder = (
   eventsTheme: Partial<CheckboxVariantTheme>,
   containerStateSelector: string
 ): CheckboxCommonVariantStyles => ({
+  // focused
+  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.focused(containerStateSelector)]: {
+    ...checkboxContainerStylesBuilder(eventsTheme?.focused),
+  },
   // hovered
   [DEFAULT_CHECKBOX_EVENTS_SELECTORS.hovered(containerStateSelector)]: {
     ...checkboxContainerStylesBuilder(eventsTheme?.hovered),
+  },
+  // activated
+  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.activated(containerStateSelector)]: {
+    ...checkboxContainerStylesBuilder(eventsTheme?.activated),
   },
   // checked
   [DEFAULT_CHECKBOX_EVENTS_SELECTORS.checked(containerStateSelector)]: {
     ...checkboxContainerStylesBuilder(eventsTheme?.checked),
   },
+  // focusedOnChecked
+  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.focusedOnChecked(containerStateSelector)]: {
+    ...checkboxContainerStylesBuilder(eventsTheme?.focusedOnChecked),
+  },
   // hoveredOnChecked
   [DEFAULT_CHECKBOX_EVENTS_SELECTORS.hoveredOnChecked(containerStateSelector)]:
-    {
-      ...checkboxContainerStylesBuilder(eventsTheme?.hoveredOnChecked),
-    },
-  // activated
-  [DEFAULT_CHECKBOX_EVENTS_SELECTORS.activated(containerStateSelector)]: {
-    ...checkboxContainerStylesBuilder(eventsTheme?.activated),
+  {
+    ...checkboxContainerStylesBuilder(eventsTheme?.hoveredOnChecked),
   },
   // activatedOnChecked
   [DEFAULT_CHECKBOX_EVENTS_SELECTORS.activatedOnChecked(containerStateSelector)]:

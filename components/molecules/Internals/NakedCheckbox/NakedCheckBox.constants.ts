@@ -30,6 +30,8 @@ export const DEFAULT_CHECKBOX_EVENTS_SELECTORS = {
     `.${container}:active &$label:has(> $input:checked)` as const,
   focused: (container: string) =>
     `.${container}:focus &$label:has(> $input:not(:checked))` as const,
+  focusedOnChecked: (container: string) =>
+    `.${container}:focus &$label:has(> $input:checked)` as const,
 } as const;
 
 export const COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES = {
@@ -41,53 +43,85 @@ export const COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES = {
 export const CHECKBOX_THEMES: CheckboxTheme = {
   solid: {
     initialContainerStyles: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-    activated: {
-      outlineColor: colors.blue[400],
+    focused: {
+      outlineColor: colors.blue[900],
     },
     hovered: {
-      backgroundColor: colors.grey[400],
-      borderColor: colors.grey[400],
-      outlineColor: colors.grey[400],
+      backgroundColor: colors.grey[500],
+      borderColor: colors.grey[500],
+      outlineColor: colors.grey[500],
+    },
+    activated: {
+      backgroundColor: colors.grey[500],
+      borderColor: colors.grey[500],
+      outlineColor: colors.grey[500],
     },
     checked: {
       borderColor: colors.blue[500],
       color: colors.background.default,
       backgroundColor: colors.blue[500],
     },
+    focusedOnChecked: {
+      outlineColor: colors.blue[900],
+    },
     hoveredOnChecked: {
+      borderColor: colors.blue[700],
+      backgroundColor: colors.blue[700],
+    },
+    activatedOnChecked: {
       borderColor: colors.blue[700],
       backgroundColor: colors.blue[700],
     },
   },
   border: {
     initialContainerStyles: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-    activated: {
-      outlineColor: colors.danger[600],
+    focused: {
+      outlineColor: colors.pink[500],
     },
     hovered: {
-      color: colors.blue[500],
-      backgroundColor: colors.light[400],
-      borderColor: colors.blue[500],
-      outlineColor: colors.light[400],
+      outlineColor: colors.grey[500],
+      borderColor: colors.grey[300],
+      backgroundColor: colors.grey[300],
+      color: colors.grey[300],
+    },
+    activated: {
+      outlineColor: colors.grey[500],
+      borderColor: colors.grey[300],
+      backgroundColor: colors.grey[300],
+      color: colors.grey[300],
     },
     checked: {
-      color: colors.blue[500],
       borderColor: colors.blue[500],
+      color: colors.blue[500],
+    },
+    focusedOnChecked: {
+      outlineColor: colors.pink[500],
     },
     hoveredOnChecked: {
-      backgroundColor: colors.light[400],
       outlineColor: colors.light[400],
+      borderColor: colors.blue[500],
+      backgroundColor: colors.light[400],
+      color: colors.blue[500],
+    },
+    activatedOnChecked: {
+      outlineColor: colors.light[500],
+      borderColor: colors.blue[500],
+      backgroundColor: colors.light[500],
+      color: colors.blue[500],
     },
   },
   scale: {
     initialContainerStyles: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
-    activated: {
-      outlineColor: colors.danger[600],
+    focused: {
+      outlineColor: colors.pink[400],
     },
     checked: {
       borderColor: colors.blue[500],
       color: colors.background.default,
       backgroundColor: colors.blue[500],
+    },
+    focusedOnChecked: {
+      outlineColor: colors.pink[400],
     },
   },
   cell: {
