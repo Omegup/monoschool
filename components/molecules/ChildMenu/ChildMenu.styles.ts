@@ -82,7 +82,7 @@ export const useSelectStyles = createUseStyles({
     alignItems: "center",
     color: colors.grey[100],
     textAlign: "center",
-    fontSize: spacing.s6,
+    fontSize: spacing.s8,
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",

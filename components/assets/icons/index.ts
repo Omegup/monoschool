@@ -6,3 +6,5 @@ export * from './WifiSquare'
 export * from './Home';
 export * from './Message';
 export * from './Notification';
+export * from './ClipboardTick';
+export * from './Stickynote'
