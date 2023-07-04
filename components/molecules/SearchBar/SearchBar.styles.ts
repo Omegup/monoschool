@@ -41,10 +41,8 @@ export const useSearchBarStyles = createUseStyles({
         },
       },
     },
-    '& $input:focus ': {
-      ' $container ': {
-        backgroundColor:colors.light[500],
-        border: [borders.b2, 'solid', colors.blue[500]],
+    '& > $input:focus + $container': {
+        backgroundColor:colors.light[200],
         '& $input': {
           backgroundColor: colors.light[500],
           '&::placeholder': {
@@ -55,7 +53,7 @@ export const useSearchBarStyles = createUseStyles({
           color: colors.blue[500],
         },
       },
-    },
+    
     
 
 
