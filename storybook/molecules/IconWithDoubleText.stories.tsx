@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import { IconWithDoubleText } from '@omegup-school/ui-molecules';
 import { Logo } from '@omegup-school/ui-assets';
 
