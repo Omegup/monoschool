@@ -14,7 +14,7 @@ export const useFilterStyles = createUseStyles({
     backgroundColor: colors.background.default,
     gap: spacing.s4,
     cursor: 'pointer',
-    '&:active, &:focus, &:hover': {
+    '&:hover': {
       backgroundColor: colors.light[300],
       color: colors.blue[500],
       '& $arrow': {
