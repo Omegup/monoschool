@@ -1,5 +1,4 @@
-import { Square, Tick } from '@omegup-school/ui-assets';
-import { useViewModeSwitcherStyles } from './ViewModeSwitcher.styles';
+ import { useViewModeSwitcherStyles } from './ViewModeSwitcher.styles';
 import { ControlledViewModeSwitcherProps } from './ViewModeSwitcher.types';
 import { forwardRef } from 'react';
 
@@ -10,9 +9,9 @@ export const ViewModeSwitcher = forwardRef(
     const classes = useViewModeSwitcherStyles()
      
     return (
-    <div>
+    <div className={classes.container}>
  {elements.map((el, index) =>
- <div className={`${classes.items}  ${classes[ch.selected ? 'selected' : 'notSelected']}`} key={index} >
+ <div key={index} className={classes.element} >
   <input
           type="radio"
           name={name}
@@ -21,8 +20,8 @@ export const ViewModeSwitcher = forwardRef(
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
           {...{ ref, onBlur }}
-        
-        />
+                />
+        {el.icon}
         </div>
 )
       }

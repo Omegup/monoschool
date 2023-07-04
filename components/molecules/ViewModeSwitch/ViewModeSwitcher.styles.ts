@@ -30,8 +30,7 @@ export const useViewModeSwitcherStyles = createUseStyles({
   disabled: {},
   enabled: {},
   input: {
-    clip: 'rect(0 0 0 0)',
-    position: 'absolute',
+   
   },
   label: {
     display: 'flex',
@@ -116,16 +115,27 @@ export const useViewModeSwitcherStyles = createUseStyles({
   tick: {
     opacity: 0,
   },
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    color: colors.dark.default,
-    gap: spacing.s8,
-    '$medium > &': {
-      padding: spacing.s4,
-      borderRadius: borders.r5,
-    },
+
+  container:  {
+    display: "inline-flex",
+    alignItems: "flex-start",
+    borderRadius:"10px 0px 0px 10px",
+    background: "var(--background-background, #FFFFFE)",
+    boxShadow:
+      "0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)"
+  }
+  ,
+  element:{
+
+    display: "flex",
+    padding: "6px",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "10px",
+    // borderRadius: "10px 0px 0px 10px",
+    background: "var(--blue-blue, #3DA9FC)"
   },
+
   labelText: {
     ...styles.paragraph_small_regular,
   },
