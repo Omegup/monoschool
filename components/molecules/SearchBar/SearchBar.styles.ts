@@ -9,9 +9,9 @@ export const useSearchBarStyles = createUseStyles({
   navBar: {
     '& $container ': {
       padding: spacing.s4,
-      gap: spacing.s4,
+      gap: spacing.s8,
       borderRadius: borders.r5,
-      border: [borders.b2, 'solid', colors.background.overlay],
+      border: [borders.b2, 'solid', colors.grey[500]],
     },
   },
   sideBar: {
@@ -20,6 +20,9 @@ export const useSearchBarStyles = createUseStyles({
       gap: spacing.s8,
       borderRadius: borders.r5,
       border: [borders.b2, 'solid', colors.grey[500]],
+      '& $input': {
+        color: colors.grey[500],},
+    
       '& $firstIcon , $secondIcon': {
         color: colors.grey[500],
       },
