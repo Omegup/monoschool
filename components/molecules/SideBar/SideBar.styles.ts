@@ -10,10 +10,10 @@ export const useSelectStyles = createUseStyles({
   },
   container: {
     width: 'fit-content',
-    display: 'inline-flex',
+    display: 'flex',
     padding: spacing.s5,
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'start',
     gap: spacing.s3,
     borderRadius: borders.r5,
     background: colors.background.default,

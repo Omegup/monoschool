@@ -38,8 +38,7 @@ export const Primary: Story = {
 
     /*/],
     header: {
-      onChange: () => {},
-      onBlur: () => {},
+      onClick: () => {},
       title: 'Omega School',
       Logo: <Logo width={"100%"} />,
       Search:<>"SearchBar"</>,
@@ -48,7 +47,6 @@ export const Primary: Story = {
     button:{
       onChange: () => {},
       onBlur: () => {},
-      size: 'medium',
       firstIcon:<ArrowCircleLeft width='100%'/>,
       secandIcon:<ArrowCircleRight width='100%'/>,
     },
