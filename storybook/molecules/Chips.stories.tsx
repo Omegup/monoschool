@@ -2,7 +2,28 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { Chips } from '@omegup-school/ui-molecules';
 import { Close, Essential } from '@omegup-school/ui-assets';
+import { ControlledChipsProps } from '@omegup-school/ui-molecules/Chips/Chips.types';
 
+const IconOption = ( option:string ) => {
+  switch (option) {
+    case 'SearchStatus':
+      return <Essential width={'100%'} />;
+    case 'Close':
+      return <Close width={'100%'} />;
+    default:
+      return <Close width={'100%'} />;
+  }
+};
+
+type DemoType = ControlledChipsProps & { firstIcon: 'SearchStatus' | 'Close',secondIcon:'SearchStatus' | 'Close'};
+const ChipsDemo = ({
+  firstIcon,secondIcon,
+  ...rest
+}: DemoType) => {
+  return (
+    <Chips {...rest} firstIcon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
+  )
+}
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
   title: 'molecule/Chips',
