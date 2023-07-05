@@ -98,10 +98,14 @@ export const useSelectStyles = createUseStyles({
     },
   },
   disabled: {
-    opacity: '0.4',
-    '&&&& > $container': {
-        backgroundColor: colors.background.default,
-     }
+      '& > $input:not(:checked) + $container': {
+        opacity: '0.4',
+        backgroundColor: colors.background.overlay,
+      },
+      '&&& > $input:checked + $container': {
+        opacity: '0.3',
+        backgroundColor: colors.blue[100],
+      },
   },
   enabled: {
     '&:focus-within:not(:focus) > $input': {
