@@ -2,41 +2,41 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { SearchBar } from '@omegup-school/ui-molecules';
 import { Close, SearchStatus } from '@omegup-school/ui-assets';
+import { ControlledSearchBarProps } from '@omegup-school/ui-molecules/SearchBar/SearchBar.types';
 
-const IconOption = ( option:any ) => {
+const IconOption = ( option:string ) => {
   switch (option) {
     case 'SearchStatus':
       return <SearchStatus width={'100%'} />;
     case 'Close':
       return <Close width={'100%'} />;
     default:
-      return null;
+      return <SearchStatus width={'100%'} />;
   }
 };
+
+type DemoType = ControlledSearchBarProps & { firstIcon: 'SearchStatus' | 'Close',secondIcon:'SearchStatus' | 'Close'};
+const SelectDemo = ({
+  firstIcon,secondIcon,
+  ...rest
+}: DemoType) => {
+  return (
+    <SearchBar {...rest} firstIcon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
+  )
+}
 const meta = {
   title: 'molecule/SearchBar',
-  component: SearchBar,
+  component: SelectDemo,
   tags: ['autodocs'],
   argTypes: {
     variant: { control: 'select', options: ['navBar', 'sideBar', 'filterSearch'] },
     inputType: { control: 'select', options: ['text', 'number', 'email'] },
-    firstIcon: {
-      control: 'select',
-      options: [
-        { name: 'SearchStatus' },
-        { name: 'Close'},
-      ]
-    },
-    secondIcon: {
-      control: 'select',
-      options: [
-        { name: 'SearchStatus' },
-        { name: 'Close'},
-      ]
-    } },
+    firstIcon:{ control: 'select', options: ['SearchStatus' ,'Close'] },
+    secondIcon:{ control: 'select',  options: ['SearchStatus' ,'Close'] },
+    } 
    
     
-} satisfies Meta<typeof SearchBar>;
+} satisfies Meta<typeof SelectDemo>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -48,8 +48,8 @@ export const Primary: Story = {
     variant:"filterSearch",
     inputType:"text",
     displayClose: true,
-    firstIcon:<SearchStatus  width={'100%'}/>,
-    secondIcon:<Close  width={'100%'} />,
+    firstIcon:"SearchStatus",
+    secondIcon:"Close",
     value: "",
     onChange: (value) => {console.log(value)},
     onClick: () => {},

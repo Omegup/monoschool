@@ -67,7 +67,7 @@ export const useSearchBarStyles = createUseStyles({
       
       border: [borders.b2, 'solid', colors.background.overlay],
       '& $input': {
-        color: colors.grey[300],},
+        color: colors.grey[400],},
     
       '& $firstIcon , $secondIcon': {
         color: colors.grey[400],
