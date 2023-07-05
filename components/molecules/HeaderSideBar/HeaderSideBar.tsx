@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 export const HeaderSideBar = forwardRef(
   (props: ControlledHeaderSideBarProps, ref: React.Ref<HTMLDivElement>) => {
-    const { title, Logo, Search, SearchIcon, isOpened } = props;
+    const { title, Logo, Search, SearchIcon,onClick, isOpened } = props;
     const classes = useSelectStyles();
     return (
       <div {...ref} className={classes.container}>
@@ -15,7 +15,7 @@ export const HeaderSideBar = forwardRef(
         {isOpened ? (
           Search
         ) : (
-          <span className={classes.SearchIcon}>{SearchIcon}</span>
+          <span className={classes.SearchIcon} onClick={()=>{onClick}}>{SearchIcon}</span>
         )}
       </div>
     );

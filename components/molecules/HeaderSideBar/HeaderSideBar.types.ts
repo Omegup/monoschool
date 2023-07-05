@@ -8,6 +8,5 @@ export interface HeaderSideBarProps {
 
 export interface ControlledHeaderSideBarProps extends HeaderSideBarProps {
   isOpened?:boolean;
-  onChange: (value: boolean) => void;
-
+  onClick:(value: boolean) => void;
 }
