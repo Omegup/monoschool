@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
-import { ControlledTextWithIconProps } from "./TextWithIcon.types";
+import { TextWithIconProps } from "./TextWithIcon.types";
 import { Container, Text } from "@omegup-school/ui-atoms";
 
 export const TextWithIcon = forwardRef((
-  props: ControlledTextWithIconProps,
+  props: TextWithIconProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
 
