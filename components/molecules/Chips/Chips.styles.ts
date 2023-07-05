@@ -137,12 +137,12 @@ export const useSelectStyles = createUseStyles({
     alignItems: 'center',
     alignContent: 'center',
   },
-  Essential: {
+  firstIcon: {
     ...chipsSizes,
     display: 'flex',
     alignItems: 'center',
   },
-  Close: {
+  secondIcon: {
     ...chipsSizes,
     display: 'flex',
     alignItems: 'center',

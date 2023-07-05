@@ -13,6 +13,7 @@ export const Chips = forwardRef(
       secondIcon,
       onChange,
       onClick,
+      onBlur,
       value,
     } = props;
     const classes = useSelectStyles(),
@@ -26,13 +27,14 @@ export const Chips = forwardRef(
           type="checkbox"
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
+          {...{ ref, onBlur }}
           checked={value}
         />
         <div className={classes.container}>
-          <span className={classes.Essential}>{firstIcon}</span>
+          <span className={classes.firstIcon}>{firstIcon}</span>
           <span className={classes.labelText}>{label}</span>
 
-          <span className={classes.Close} onClick={() => onClick}>
+          <span className={classes.secondIcon}  {...{ ref, onBlur }} onClick={() => onClick}>
             {secondIcon}
           </span>
         </div>
