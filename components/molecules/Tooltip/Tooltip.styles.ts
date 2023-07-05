@@ -8,35 +8,30 @@ export const useStyles = createUseStyles({
   border: {
     '& $label': {
       color: colors.blue[500],
-      border: ['solid', 1, colors.blue[500]],
+      border: ['solid', borders.b2, colors.blue[500]],
       backgroundColor: colors.background.default,
     },
   },
   underline: {
     '& $label': {
       color: colors.blue[500],
-      border: ['solid', 1, 'transparent'],
+      border: ['solid', borders.b2, colors.blue[500]],
       display: 'inline-block',
+      borderWidth: 0,
+      borderRadius: borders.r5,
+      backgroundColor: colors.background.default,
     },
     '& $top $label': {
-      background: [
-        'linear-gradient(#fff 0 0) padding-box',
-        `linear-gradient(180deg, white 80%, ${colors.blue[500]} ) border-box`],
+      borderBlockEndWidth: borders.b2,
     },
     '& $right $label': {
-      background: [
-        'linear-gradient(#fff 0 0) padding-box',
-        `linear-gradient(270deg, white 95%, ${colors.blue[500]} ) border-box`],
+      borderInlineStartWidth: borders.b2,
     },
     '& $bottom $label': {
-      background: [
-        'linear-gradient(#fff 0 0) padding-box',
-        `linear-gradient(0deg, white 80%, ${colors.blue[500]} ) border-box`],
+      borderBlockStartWidth: borders.b2,
     },
     '& $left $label': {
-      background: [
-        'linear-gradient(#fff 0 0) padding-box',
-        `linear-gradient(90deg, white 95%, ${colors.blue[500]} ) border-box`],
+      borderInlineEndWidth: borders.b2,
     },
 
   },
