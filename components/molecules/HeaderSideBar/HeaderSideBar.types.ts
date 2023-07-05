@@ -7,6 +7,7 @@ export interface HeaderSideBarProps {
 }
 
 export interface ControlledHeaderSideBarProps extends HeaderSideBarProps {
-  isOpened?:boolean;
-  onClick:(value: boolean) => void;
+  isCollopsed?:boolean;
+  onClick:() => void;
+  logoOnClick:() => void;
 }

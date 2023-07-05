@@ -29,7 +29,7 @@ const useStyles = createUseStyles({
 
 export interface ControlledButtonSideBarProps  {
   isCollopsed?: boolean;
-  onChange: (isOpened: boolean) => void;
+  onChange: (isCollopsed: boolean) => void;
   onBlur: () => void;
   firstIcon: JSX.Element;
   secandIcon: JSX.Element;
@@ -37,7 +37,7 @@ export interface ControlledButtonSideBarProps  {
 
 export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useStyles();
-  const { isCollopsed: isOpened, onChange, onBlur, secandIcon,firstIcon } = props;
+  const { isCollopsed, onChange, onBlur, secandIcon,firstIcon } = props;
   return (
     <div
       className={`${classes.button} `}
@@ -46,7 +46,7 @@ export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, re
       }}
       {...{ref,onBlur}}
     >
-      {isOpened ? (
+      {!isCollopsed ? (
         <span className={classes.icon}>{firstIcon}</span>
       ) : (
         <span className={classes.icon}>{secandIcon}</span>
