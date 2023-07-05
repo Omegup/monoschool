@@ -1,9 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SideBar } from '@omegup-school/ui-molecules';
+import { ControlledSideBarProps, SideBar } from '@omegup-school/ui-molecules';
 import { SearchStatus} from '@omegup-school/ui-assets';
 import { Logo } from '@omegup-school/ui-assets';
 import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
+
+
+type DemoType = ControlledSideBarProps & { color: 'red' | 'blue' };
+
+const SelectDemo = ({
+  color,
+  ...rest
+}: DemoType) => {
+  return <SideBar {...rest} />
+}
+
 const meta = {
   title: 'molecule/SideBar',
   component: SideBar,
@@ -17,8 +28,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    size: 'medium',
-    style: 'solid',
     children: [
       /*/"<SubMenu parentName='SubMenu'
       parentId={0}
