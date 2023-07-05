@@ -2,8 +2,6 @@ import { ControlledButtonSideBarProps } from "../ButtonSideBar";
 import { ControlledHeaderSideBarProps } from "../HeaderSideBar";
 
 export interface ChildMenuProps {
-  style: 'solid' | 'border' | 'flat' | 'text';
-  size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   icon?: JSX.Element ,
   label: string,
@@ -12,8 +10,6 @@ export interface ChildMenuProps {
   isCollopsed?:boolean
 }
 export interface SubMenuProps {
-  style: 'solid' | 'border' | 'flat' | 'text';
-  size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   isOpened?:boolean;
   parentName: string;
@@ -22,8 +18,6 @@ export interface SubMenuProps {
 }
 
 export interface SideBarProps {
-  style: 'solid' | 'border' | 'flat' | 'text';
-  size: 'large' | 'medium' | 'small';
   children:JSX.Element[],
   header:ControlledHeaderSideBarProps,
   isCollopsed:boolean,

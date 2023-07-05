@@ -1,13 +1,11 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
 
 import {spacing, widths } from '@omegup-school/ui-atoms/sizes';
+import { forwardRef } from 'react';
 import { createUseStyles } from 'react-jss';
 
 
 const useStyles = createUseStyles({
-  large: {},
-  medium: {},
-  small: {},
   button: {
     width: 'fit-content',
     display: 'flex',
@@ -29,10 +27,8 @@ const useStyles = createUseStyles({
   label: {},
 });
 
-export type ButtonSideBarProps = {
-  size: 'large' | 'medium' | 'small';
-};
-export interface ControlledButtonSideBarProps extends ButtonSideBarProps {
+
+export interface ControlledButtonSideBarProps  {
   isOpened?: boolean;
   onChange: (isOpened: boolean) => void;
   onBlur: () => void;
@@ -40,21 +36,16 @@ export interface ControlledButtonSideBarProps extends ButtonSideBarProps {
   secandIcon: JSX.Element;
 }
 
-export const ButtonSideBar = ({
-  isOpened,
-  onChange,
-  size,
-  firstIcon,
-  secandIcon,
-}: ControlledButtonSideBarProps) => {
+export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useStyles();
-  console.log(size);
+  const { isOpened, onChange, onBlur, secandIcon,firstIcon } = props;
   return (
     <div
-      className={`${classes.button} ${classes[size]} `}
+      className={`${classes.button} `}
       onClick={() => {
-        onChange(!isOpened);
+        onChange;
       }}
+      {...{ref,onBlur}}
     >
       {isOpened ? (
         <span className={classes.icon}>{firstIcon}</span>
@@ -63,4 +54,4 @@ export const ButtonSideBar = ({
       )}
     </div>
   );
-};
+})
