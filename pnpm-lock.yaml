@@ -512,6 +512,9 @@ importers:
       '@omegup-school/ui-assets':
         specifier: workspace:*
         version: link:../components/assets
+      '@omegup-school/ui-atoms':
+        specifier: workspace:*
+        version: link:../components/atoms
       '@omegup-school/ui-cells':
         specifier: workspace:*
         version: link:../components/cells

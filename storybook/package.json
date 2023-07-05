@@ -9,6 +9,7 @@
     "@omegup-school/ui-molecules": "workspace:*",
     "@omegup-school/ui-cells": "workspace:*",
     "@omegup-school/ui-assets": "workspace:*",
+    "@omegup-school/ui-atoms": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.3"

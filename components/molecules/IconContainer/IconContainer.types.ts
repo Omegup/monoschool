@@ -1,7 +1,8 @@
+import { spacing } from "@omegup-school/ui-atoms/sizes";
 import { ReactNode } from "react";
 
 export interface IconContainerProps {
-  padding?: number,
+  padding?: keyof typeof spacing,
   height?: number | string,
   width?: number | string,
 }
