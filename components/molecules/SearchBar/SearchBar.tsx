@@ -3,12 +3,12 @@ import { ControlledSearchBarProps } from './SearchBar.types';
 import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
-  (props: ControlledSearchBarProps) => {
+  (props: ControlledSearchBarProps,ref: React.Ref<HTMLInputElement>) => {
     const { variant, firstIcon, placeholder,inputType,secondIcon, displayClose, onChange,onClick, value } =props;
     const classes = useSearchBarStyles();
 
     return (
-      <div className={classes[variant]}>
+      <div {...{ref}} className={classes[variant]}>
         <div className={classes.container}>
           <span className={classes.firstIcon}>{firstIcon}</span>
           <input
