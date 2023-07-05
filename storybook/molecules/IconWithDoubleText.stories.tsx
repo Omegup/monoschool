@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconWithDoubleText } from '@omegup-school/ui-cells';
+import { IconWithDoubleText } from '@omegup-school/ui-external-molecules';
 import { Logo } from '@omegup-school/ui-assets';
 
 const ICONS = {

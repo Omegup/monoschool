@@ -1,6 +1,6 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
+import { colors } from '@omegup-school/ui-configs/colors';
 import { createUseStyles } from 'react-jss';
-import { styles } from '../common/styles';
+import { styles } from '@omegup-school/ui-atoms/common/styles';
 
 const useStyles = createUseStyles({
   header: {

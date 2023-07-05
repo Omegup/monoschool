@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { DoubleText } from '@omegup-school/ui-cells';
+import { DoubleText } from '@omegup-school/ui-external-molecules';
 
 const meta = {
   title: 'Atom/DoubleText',

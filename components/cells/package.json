@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "@omegup-school/ui-assets": "workspace:*",
-    "@omegup-school/ui-molecules": "workspace:*",
-    "@omegup-school/ui-layouts": "workspace:*",
+    "@omegup-school/ui-external-molecules": "workspace:*",
     "react": "^18.2.0",
     "react-hook-form": "^7.44.3"
   },

@@ -1,8 +1,7 @@
-export * from './Button';
-export * from './Link';
-export * from './Panel';
-export * from './Select';
-export * from './SignIn';
-export * from './Text';
-export * from './IconContainer';
-export * from './Container';
+// export * from './SignIn';
+export * from './SmallText';
+export * from './XSmallText';
+export * from './TwoItemsCol';
+export * from './TwoItemsRow';
+export * from './ItemPS5';
+

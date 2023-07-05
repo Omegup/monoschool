@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SmallText } from '@omegup-school/ui-cells';
+import { SmallText } from '@omegup-school/ui-molecules';
 
 const meta = {
   title: 'Atom/TextSmall',

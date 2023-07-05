@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Logo } from '@omegup-school/ui-assets/icons'
-import { TextWithIcon } from '@omegup-school/ui-cells';
+import { TextWithIcon } from '@omegup-school/ui-external-molecules';
 const ICONS = {
   icon1: <Logo height={24} width={24} />,
   icon2: <Logo height={24} width={24} fill='green' />,

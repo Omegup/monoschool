@@ -1,13 +1,11 @@
 {
-  "name": "@omegup-school/ui-molecules",
+  "name": "@omegup-school/ui-external-molecules",
   "version": "1.0.0",
   "dependencies": {
     "@omegup-school/ui-assets": "workspace:*",
-    "@omegup-school/ui-configs": "workspace:*",
-    "@omegup-school/ui-atoms": "workspace:*",
-    "jss": "^10.10.0",
+    "@omegup-school/ui-molecules": "workspace:*",
     "react": "^18.2.0",
-    "react-jss": "^10.10.0"
+    "react-hook-form": "^7.44.3"
   },
   "devDependencies": {
     "@types/omegup-school": "workspace:*",

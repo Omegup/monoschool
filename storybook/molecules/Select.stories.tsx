@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from '@omegup-school/ui-molecules';
+import { Select } from '@omegup-school/ui-atoms';
 
 const meta = {
   title: 'Atom/Select',
