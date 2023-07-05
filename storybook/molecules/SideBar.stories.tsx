@@ -1,12 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-<<<<<<< HEAD
 import { SideBar, SearchBar, SubMenu } from '@omegup-school/ui-molecules';
 import { Close, SearchStatus, Square, Tick, UserTick } from '@omegup-school/ui-assets';
-=======
-import { SideBar } from '@omegup-school/ui-molecules';
-import { SearchStatus } from '@omegup-school/ui-assets';
->>>>>>> NDI-29-Side-Bar
 import { Logo } from '@omegup-school/ui-assets';
 import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
 
@@ -40,17 +35,11 @@ export const Primary: Story = {
       onChange={()=>{} } onBlur={()=>{} }/>
 
 
-<<<<<<< HEAD
-
-=======
-    /*/
->>>>>>> NDI-29-Side-Bar
     ],
     header: {
       onClick: () => {},
       title: 'Omega School',
       Logo: <Logo width={'100%'} />,
-<<<<<<< HEAD
       Search: (
         <SearchBar
           value={''}
@@ -65,10 +54,6 @@ export const Primary: Story = {
         />
       ),
       SearchIcon: SearchStatus,
-=======
-      Search: <>"SearchBar"</>,
-      SearchIcon: <SearchStatus width="100%" />,
->>>>>>> NDI-29-Side-Bar
     },
     button: {
       onChange: () => {},
