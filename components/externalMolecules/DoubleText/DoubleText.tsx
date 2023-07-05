@@ -15,7 +15,7 @@ export const DoubleText = forwardRef((
       direction="column"
     >
       <Text text={text} variant="paragraph_xSmall_regular" />
-      <Text text={text} variant="paragraph_small_medium" />
+      <Text text={subText} variant="paragraph_small_medium" />
     </Container>
   )
 })
