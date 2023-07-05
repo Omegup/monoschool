@@ -18,6 +18,5 @@ export const TextWithIcon = forwardRef((
       {icon}
       <Text text={text} ref={ref} variant="paragraph_small_medium" />
     </Container>
-
   )
 })
