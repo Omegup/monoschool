@@ -1,6 +1,6 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { typography } from "@omegup-school/ui-atoms/typography";
-import { createUseStyles } from "react-jss";
+import { colors } from '@omegup-school/ui-atoms/colors';
+import { typography } from '@omegup-school/ui-atoms/typography';
+import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
   topSearchContainer: {
@@ -31,7 +31,7 @@ export const useStyles = createUseStyles({
         color: colors.blue[500],
         backgroundColor: `${colors.light[300]}`,
       },
-    }
+    },
   },
 
   tabSearch: {
@@ -54,9 +54,8 @@ export const useStyles = createUseStyles({
 
       '& $tabNumber': {
         color: colors.dark.default,
-
       },
-    }
+    },
   },
 
   tabText: {
@@ -75,6 +74,5 @@ export const useStyles = createUseStyles({
     backgroundColor: `${colors.grey[100]}`,
     padding: '0 8px',
     borderRadius: '10px',
-  }
-
+  },
 });

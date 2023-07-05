@@ -6,8 +6,7 @@ const meta = {
   title: 'Atom/TabSearch',
   component: TabSearch,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 } satisfies Meta<typeof TabSearch>;
 
 export default meta;
@@ -23,8 +22,7 @@ export const Primary: Story = {
       { label: 'Tous', badge: 20 },
       { label: 'Apprenant', badge: 12 },
       { label: 'Parents', badge: 3 },
-      { label: 'Professeur', badge: 1 }
-    ]
-
+      { label: 'Professeur', badge: 1 },
+    ],
   },
 };

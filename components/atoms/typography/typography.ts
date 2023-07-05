@@ -44,14 +44,14 @@ export const typography = makeTypo({
       small: {
         fontWeight: '500',
         fontSize: 12,
-      }
+      },
     },
     large: {
       regular: {
         fontWeight: '400',
         fontSize: 18,
-      }
-    }
+      },
+    },
   },
   heading: {
     h3: {
