@@ -99,6 +99,9 @@ export const useSelectStyles = createUseStyles({
   },
   disabled: {
     opacity: '0.4',
+    '&&&& > $container': {
+        backgroundColor: colors.background.default,
+     }
   },
   enabled: {
     '&:focus-within:not(:focus) > $input': {
@@ -122,6 +125,7 @@ export const useSelectStyles = createUseStyles({
   container: {
     display: 'flex',
     alignItems: 'center',
+    alignContent: 'center',
   },
   Essential: {
     ...chipsSizes,
