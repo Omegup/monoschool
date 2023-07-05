@@ -34,7 +34,7 @@ export const Chips = forwardRef(
           <span className={classes.firstIcon}>{firstIcon}</span>
           <span className={classes.labelText}>{label}</span>
 
-          <span className={classes.secondIcon}  {...{ ref, onBlur }} onClick={() => onClick}>
+          <span className={classes.secondIcon}  {...{ ref }} onClick={() => onClick}>
             {secondIcon}
           </span>
         </div>
