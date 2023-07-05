@@ -17,7 +17,6 @@ const SideBarDemo = ({
   isCollopsedS,
   ...rest
 }: DemoType) => {
-  console.log(isCollopsedS)
  const  headerSideBar= (
     <HeaderSideBar
       logoOnClick={() => { console.log("sds") } }
