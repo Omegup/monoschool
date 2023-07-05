@@ -42,15 +42,15 @@ export const Primary: Story = {
       Logo: <Logo width={'100%'} />,
       Search: (
         <SearchBar
-          value={''}
-          onChange={() => {}}
-          onBlur={() => {}}
-          size={'large'}
-          style={'solid'}
-          displayClose={false}
-          label={'Rechercher'}
-          Icon={<SearchStatus width={'100%'} />}
-          closeIcon={<Close width={'100%'} />}
+        placeholder={"Rechercher"}
+        variant="sideBar"
+        inputType="text"
+        displayClose={ true}
+        firstIcon={<SearchStatus width={'100%'} />}
+        secondIcon={<Close width={'100%'} />}
+        value=""
+        onChange={(value) => {console.log(value)}}
+        onClick={() => {}}
         />
       ),
       SearchIcon: SearchStatus,
