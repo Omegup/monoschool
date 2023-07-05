@@ -1,10 +1,5 @@
 import { ReactNode } from "react";
-
-export interface AvatarWithNameProps {
-
-}
-export interface ControlledAvatarWithNameProps extends AvatarWithNameProps {
+export interface ControlledAvatarWithNameProps {
   text: string;
   avatar: ReactNode;
-  onClick?: () => void;
 }

@@ -7,9 +7,9 @@ export const XSmallText = forwardRef((
   ref: React.Ref<HTMLSpanElement>
 ) => {
 
-  const { text, onClick } = props
+  const { text } = props
 
   return (
-    <Text size="XSmall" ref={ref} weight={400} value={text} {...{ onClick }} />
+    <Text size="XSmall" ref={ref} weight={400} value={text} />
   )
 })
