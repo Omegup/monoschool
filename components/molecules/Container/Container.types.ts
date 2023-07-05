@@ -1,8 +1,9 @@
+import { spacing } from "@omegup-school/ui-atoms/sizes";
 import { ReactNode } from "react";
 
 export interface ContainerProps {
-  paddingInline?: number,
-  paddingBlock?: number,
+  paddingInline?: keyof typeof spacing,
+  paddingBlock?: keyof typeof spacing,
   gap?: number,
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
   alignItems?: 'center' | 'start' | 'end'

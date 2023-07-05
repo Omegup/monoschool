@@ -1,4 +1,4 @@
-import { ItemP10, TwoItemsCol, TwoItemsRow } from "@omegup-school/ui-layouts";
+import { ItemPS5, TwoItemsCol, TwoItemsRow } from "@omegup-school/ui-layouts";
 import { forwardRef } from "react";
 import { SmallText } from "../SmallText";
 import { XSmallText } from "../XSmallText";
@@ -13,7 +13,7 @@ export const IconWithDoubleText = forwardRef((
 
   return (<TwoItemsRow
     ref={ref}
-    item1={<ItemP10
+    item1={<ItemPS5
       item={icon}
     />}
     item2={<TwoItemsCol

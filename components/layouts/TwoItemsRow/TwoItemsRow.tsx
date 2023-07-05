@@ -13,7 +13,7 @@ export const TwoItemsRow = forwardRef((
     <Container
       ref={ref}
       direction="row"
-      paddingInline={10}
+      paddingInline={'s5'}
       justifyContent="start"
       gap={10}
       children={[

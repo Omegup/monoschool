@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
-import { ControlledItemP10Props } from "./ItemP10.types";
+import { ControlledItemPS5Props } from "./ItemPS5.types";
 import { Container } from "@omegup-school/ui-molecules";
 
-export const ItemP10 = forwardRef((
-  props: ControlledItemP10Props,
+export const ItemPS5 = forwardRef((
+  props: ControlledItemPS5Props,
   ref: React.Ref<HTMLDivElement>
 ) => {
 
@@ -12,8 +12,8 @@ export const ItemP10 = forwardRef((
   return (
     <Container
       ref={ref}
-      paddingBlock={10}
-      paddingInline={10}
+      paddingBlock={'s5'}
+      paddingInline={'s5'}
       children={[
         item
       ]}

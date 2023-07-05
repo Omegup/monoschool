@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
 
-export interface ControlledItemP10Props {
+export interface ControlledItemPS5Props {
   item: ReactNode;
 }
