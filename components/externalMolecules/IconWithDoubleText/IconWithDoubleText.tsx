@@ -1,22 +1,34 @@
 import { forwardRef } from "react";
-import { ControlledIconWithDoubleTextProps } from "./IconWithDoubleText.types";
-import { SmallText, XSmallText, ItemPS5, TwoItemsCol, TwoItemsRow } from "@omegup-school/ui-molecules";
+import { IconWithDoubleTextProps } from "./IconWithDoubleText.types";
+import { Container, Text } from "@omegup-school/ui-atoms";
 
 export const IconWithDoubleText = forwardRef((
-  props: ControlledIconWithDoubleTextProps,
+  props: IconWithDoubleTextProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
 
   const { text, subText, icon } = props
 
-  return (<TwoItemsRow ref={ref}  >
-    <ItemPS5
-      item={icon}
-    />
-    <TwoItemsCol>
-      <XSmallText text={text} />
-      <SmallText text={subText} />
-    </TwoItemsCol>
-  </TwoItemsRow>
+  return (<Container
+    ref={ref}
+    direction="row"
+    paddingInline={'s5'}
+    alignItems="center"
+    gap={"s2"}
+  >
+    <Container
+      ref={ref}
+      paddingBlock={'s5'}
+      paddingInline={'s5'}
+    >
+      {[icon]}
+    </Container>
+    <Container
+      ref={ref}
+      direction="column">
+      <Text text={text} variant="paragraph_xSmall_regular" />
+      <Text text={subText} variant="paragraph_small_medium" />
+    </Container>
+  </Container>
   )
 })

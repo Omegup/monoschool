@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { ControlledAvatarWithNameProps } from "./AvatarWithName.types";
-import { SmallText ,TwoItemsRow} from "@omegup-school/ui-molecules";
+import { Container, Text } from "@omegup-school/ui-atoms";
 
 export const AvatarWithName = forwardRef((
   props: ControlledAvatarWithNameProps,
@@ -10,9 +10,13 @@ export const AvatarWithName = forwardRef((
   const { text, avatar } = props
 
   return (
-    <TwoItemsRow ref={ref}>
+    <Container
+      ref={ref}
+      gap={'s2'}
+      alignItems="center"
+    >
       {avatar}
-      < SmallText text={text} />
-    </TwoItemsRow>
+      <Text text={text} ref={ref} variant="paragraph_small_medium" />
+    </Container>
   )
 })

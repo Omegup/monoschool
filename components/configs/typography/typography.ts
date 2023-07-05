@@ -1,60 +1,46 @@
-import { Record } from 'omegup-school';
+import { typography } from "./typography.cnst";
 
-type d = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
-const makeTypo = <
-  A extends string,
-  B extends string,
-  C extends string,
-  S extends Record<
-    A,
-    Record<B, Record<C, { fontWeight: `${d}00`; fontSize: number }>>
-  >
->(
-  styles: S
-) => styles;
-export const typography = makeTypo({
-  paragraph: {
-    small: {
-      regular: {
-        fontSize: 14,
-        fontWeight: '400',
-      },
-    },
-    medium: {
-      semiBold: {
-        fontWeight: '600',
-        fontSize: 16,
-      },
-      regular: {
-        fontWeight: '400',
-        fontSize: 16,
-      },
-    },
-    xSmall: {
-      semiBold: {
-        fontWeight: '600',
-        fontSize: 12,
-      },
-    },
-  },
-  heading: {
-    h3: {
-      bold: {
-        fontWeight: '700',
-        fontSize: 32,
-      },
-    },
-    h4: {
-      bold: {
-        fontWeight: '700',
-        fontSize: 28,
-      },
-    },
-    h5: {
-      bold: {
-        fontWeight: '700',
-        fontSize: 24,
-      },
-    },
-  },
-});
+const flatObject = <Q>(state: Q) => {
+  type K = string & keyof Q;
+  interface H<L extends K> extends HKT<string & keyof Q[L], string> {
+    readonly out: `${L}_${I<string & keyof Q[L], this>}`;
+  }
+  type KK<ks extends K = K> = ks extends K
+    ? `${string & keyof Q[ks]}_${ks}`
+    : never;
+  type UU = {
+    readonly [k in KK]: k extends `${string}_${infer ks extends K}`
+      ? k extends `${infer k extends string & keyof Q[ks]}_${ks}`
+        ? readonly [App<H<ks>, k>, Q[ks][k]]
+        : never
+      : never;
+  };
+
+  const mapper = <L extends K>(
+    [k, v]: readonly [L, Q[L]]
+  ): Entry<Q[L], H<L>>[] => {
+    type T = Q[L];
+    type K = string & keyof T;
+    interface F extends HKT<K> {
+      readonly out: readonly [I<K, this>, T[I<K, this>]];
+    }
+    interface G extends HKT<K> {
+      readonly out: readonly [`${L}_${I<K, this>}`, T[I<K, this>]];
+    }
+    return Object.entries(v).map<K, F, G>(
+      <k extends K>([c, d]: App<F, k>): App<G, k> => [`${k}_${c}`, d]
+    );
+  };
+  interface F extends HKT<K> {
+    readonly out: readonly [I<K, this>, Q[I<K, this>]];
+  }
+  interface G extends HKT<K> {
+    readonly out: Entry<Q[I<K, this>], H<I<K, this>>>;
+  }
+  const entries = Object.entries(state).flatMap<K, F, G>(
+    mapper
+  ) as {} as readonly UU[KK][];
+  return Object.fromEntries<KK, UU>(entries);
+};
+
+export const typoStyles = flatObject(flatObject(typography));

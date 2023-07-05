@@ -1,10 +1,10 @@
-import { spacing } from "@omegup-school/ui-configs/sizes";
+import { gaps, spacing } from "@omegup-school/ui-configs/sizes";
 import { ReactNode } from "react";
 
 export interface ContainerProps {
   paddingInline?: keyof typeof spacing,
   paddingBlock?: keyof typeof spacing,
-  gap?: number,
+  gap?: keyof typeof gaps,
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
   alignItems?: 'center' | 'start' | 'end'
   justifyContent?: 'center' | 'start' | 'end'

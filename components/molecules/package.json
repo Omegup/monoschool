@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "@omegup-school/ui-assets": "workspace:*",
-    "@omegup-school/ui-configs": "workspace:*",
     "@omegup-school/ui-atoms": "workspace:*",
     "jss": "^10.10.0",
     "react": "^18.2.0",

@@ -1,18 +1,17 @@
 import { forwardRef } from "react";
-import { ControlledTextProps } from "./Text.types";
+import { TextProps } from "./Text.types";
 import { useTextStyles } from "./Text.styles";
 
 export const Text = forwardRef((
-  props: ControlledTextProps,
+  props: TextProps,
   ref?: React.Ref<HTMLSpanElement>
 ) => {
 
-  const { value, weight, size } = props
-  const { textStyle } = useTextStyles({ weight, size })
-
+  const { text, variant } = props
+  const clesses = useTextStyles()
   return (
-    <span ref={ref} className={textStyle}>
-      {value}
+    <span ref={ref} className={clesses[variant]}>
+      {text}
     </span>
   )
 

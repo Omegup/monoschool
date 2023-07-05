@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { ControlledDoubleTextProps } from "./DoubleText.types";
-import { SmallText, XSmallText ,TwoItemsCol} from "@omegup-school/ui-molecules";
+import { Container, Text } from "@omegup-school/ui-atoms";
 
 export const DoubleText = forwardRef((
   props: ControlledDoubleTextProps,
@@ -10,9 +10,12 @@ export const DoubleText = forwardRef((
   const { text, subText } = props
 
   return (
-    <TwoItemsCol ref={ref}>
-      <XSmallText text={text} />
-      <SmallText text={subText} />
-    </TwoItemsCol>
+    <Container
+      ref={ref}
+      direction="column"
+    >
+      <Text text={text} variant="paragraph_xSmall_regular" />
+      <Text text={text} variant="paragraph_small_medium" />
+    </Container>
   )
 })

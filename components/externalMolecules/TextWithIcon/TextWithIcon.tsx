@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { ControlledTextWithIconProps } from "./TextWithIcon.types";
-import { XSmallText ,TwoItemsRow} from "@omegup-school/ui-molecules";
+import { Container, Text } from "@omegup-school/ui-atoms";
 
 export const TextWithIcon = forwardRef((
   props: ControlledTextWithIconProps,
@@ -10,12 +10,14 @@ export const TextWithIcon = forwardRef((
   const { icon, text } = props
 
   return (
-    <TwoItemsRow
+    <Container
       ref={ref}
-      children={
-        [icon,
-          <XSmallText text={text} />
-        ]}
-    />
+      gap={'s2'}
+      alignItems="center"
+    >
+      {icon}
+      <Text text={text} ref={ref} variant="paragraph_small_medium" />
+    </Container>
+
   )
 })

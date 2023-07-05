@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface ControlledIconWithDoubleTextProps {
+export interface IconWithDoubleTextProps {
   text: string;
   subText: string;
   icon: ReactNode,
