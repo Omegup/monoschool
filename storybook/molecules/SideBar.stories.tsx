@@ -53,7 +53,7 @@ export const Primary: Story = {
         onClick={() => {}}
         />
       ),
-      SearchIcon: SearchStatus,
+      SearchIcon: <SearchStatus width={'100%'} />,
     },
     button: {
       onChange: () => {},
