@@ -1,9 +1,9 @@
 import { useSelectStyles } from './SideBar.styles';
-import { ControlledSideBarProps } from './SideBar.types';
+import { SideBarProps } from './SideBar.types';
 import { forwardRef } from 'react';
 
 export const SideBar = forwardRef(
-  (props: ControlledSideBarProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: SideBarProps, ref: React.Ref<HTMLDivElement>) => {
     const { children, headerSideBar, isCollopsed, buttonSideBar } = props;
     const classes = useSelectStyles();
     const collopsedClass = classes[isCollopsed ? 'collopsed':'notCollopsed'];;
