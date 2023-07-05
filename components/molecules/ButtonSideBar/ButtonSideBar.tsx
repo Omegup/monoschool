@@ -24,7 +24,6 @@ const useStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
   },
-  label: {},
 });
 
 

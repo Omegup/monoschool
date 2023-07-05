@@ -13,7 +13,6 @@ export const SideBar = forwardRef(
     return (
       <div {...ref} className={`${classes.container}  ${openedClass}`}>
         <div className={classes.sideBarButton}>
-          {' '}
           <ButtonSideBar {...button} isOpened={isCollopsed} />
         </div>
         <HeaderSideBar isOpened={isCollopsed} {...header} />

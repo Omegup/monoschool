@@ -40,5 +40,4 @@ export const useSelectStyles = createUseStyles({
       color:colors.blue[500],
     }
   },
-  square: {},
 });
