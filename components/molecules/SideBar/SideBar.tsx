@@ -9,11 +9,11 @@ export const SideBar = forwardRef(
     const { children, header, isCollopsed, button } = props;
     const classes = useSelectStyles();
 
-    const openedClass = classes[isCollopsed ? 'opened' : 'closed'];
+    const collopsedClass = isCollopsed ? classes['collopsed']:'';
     return (
-      <div {...ref} className={`${classes.container}  ${openedClass}`}>
+      <div {...ref} className={`${classes.container}  ${collopsedClass}`}>
         <div className={classes.sideBarButton}>
-          <ButtonSideBar {...button} isOpened={isCollopsed} />
+          <ButtonSideBar {...button} isCollopsed={isCollopsed} />
         </div>
         <HeaderSideBar isOpened={isCollopsed} {...header} />
         {children.map((child) => child)}

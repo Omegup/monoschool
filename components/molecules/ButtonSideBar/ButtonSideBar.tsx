@@ -28,7 +28,7 @@ const useStyles = createUseStyles({
 
 
 export interface ControlledButtonSideBarProps  {
-  isOpened?: boolean;
+  isCollopsed?: boolean;
   onChange: (isOpened: boolean) => void;
   onBlur: () => void;
   firstIcon: JSX.Element;
@@ -37,7 +37,7 @@ export interface ControlledButtonSideBarProps  {
 
 export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useStyles();
-  const { isOpened, onChange, onBlur, secandIcon,firstIcon } = props;
+  const { isCollopsed: isOpened, onChange, onBlur, secandIcon,firstIcon } = props;
   return (
     <div
       className={`${classes.button} `}
