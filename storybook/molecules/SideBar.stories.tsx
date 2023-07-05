@@ -1,26 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { ControlledSideBarProps, SideBar } from '@omegup-school/ui-molecules';
-import { SearchStatus} from '@omegup-school/ui-assets';
+import { SideBar } from '@omegup-school/ui-molecules';
+import { SearchStatus } from '@omegup-school/ui-assets';
 import { Logo } from '@omegup-school/ui-assets';
 import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
-
-
-type DemoType = ControlledSideBarProps & { color: 'red' | 'blue' };
-
-const SelectDemo = ({
-  color,
-  ...rest
-}: DemoType) => {
-  return <SideBar {...rest} />
-}
 
 const meta = {
   title: 'molecule/SideBar',
   component: SideBar,
   tags: ['autodocs'],
-  argTypes: {
-  },
+  argTypes: {},
 } satisfies Meta<typeof SideBar>;
 
 export default meta;
@@ -45,19 +34,20 @@ export const Primary: Story = {
       onChange={()=>{} } onBlur={()=>{} }/>
 
 
-    /*/],
+    /*/
+    ],
     header: {
       onClick: () => {},
       title: 'Omega School',
-      Logo: <Logo width={"100%"} />,
-      Search:<>"SearchBar"</>,
-      SearchIcon:<SearchStatus width="100%"/>,
+      Logo: <Logo width={'100%'} />,
+      Search: <>"SearchBar"</>,
+      SearchIcon: <SearchStatus width="100%" />,
     },
-    button:{
+    button: {
       onChange: () => {},
       onBlur: () => {},
-      firstIcon:<ArrowCircleLeft width='100%'/>,
-      secandIcon:<ArrowCircleRight width='100%'/>,
+      firstIcon: <ArrowCircleLeft width="100%" />,
+      secandIcon: <ArrowCircleRight width="100%" />,
     },
     value: false,
     onChange: () => {},
