@@ -6,7 +6,7 @@ import { ControlledChipsProps } from '@omegup-school/ui-molecules/Chips/Chips.ty
 
 const IconOption = ( option:string ) => {
   switch (option) {
-    case 'SearchStatus':
+    case 'Essential':
       return <Essential width={'100%'} />;
     case 'Close':
       return <Close width={'100%'} />;
@@ -17,7 +17,7 @@ const IconOption = ( option:string ) => {
   }
 };
 
-type DemoType = ControlledChipsProps & { firstIcon: 'SearchStatus' | 'Close'|'Add',secondIcon:'SearchStatus' | 'Close'|'Add'};
+type DemoType = ControlledChipsProps & { firstIcon: 'Essential' | 'Close'|'Add',secondIcon:'Essential' | 'Close'|'Add'};
 const ChipsDemo = ({
   firstIcon,secondIcon,
   ...rest
@@ -34,8 +34,8 @@ const meta = {
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
     style: { control: 'select', options: ['border' , 'flat'] } ,
-    firstIcon: { control: 'select', options: ['SearchStatus' , 'Close','Add'] } ,
-    secondIcon: { control: 'select', options: ['SearchStatus' , 'Close','Add'] } ,
+    firstIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
+    secondIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
   },
    
 
