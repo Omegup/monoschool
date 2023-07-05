@@ -1,8 +1,26 @@
 import { ControlledButtonSideBarProps } from "../ButtonSideBar";
 import { ControlledHeaderSideBarProps } from "../HeaderSideBar";
+<<<<<<< HEAD
+=======
+
+export interface ChildMenuProps {
+  disabled?: boolean;
+  icon?: JSX.Element ,
+  label: string,
+  selected?: boolean,
+  id:number,
+  isCollopsed?:boolean
+}
+export interface SubMenuProps {
+  disabled?: boolean;
+  isOpened?:boolean;
+  parentName: string;
+  parentId:number;
+  items:ChildMenuProps[]
+}
+
+>>>>>>> NDI-29-Side-Bar
 export interface SideBarProps {
-  style: 'solid' | 'border' | 'flat' | 'text';
-  size: 'large' | 'medium' | 'small';
   children:JSX.Element[],
   header:ControlledHeaderSideBarProps,
   isCollopsed:boolean,

@@ -1,16 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+<<<<<<< HEAD
 import { SideBar, SearchBar, SubMenu } from '@omegup-school/ui-molecules';
 import { Close, SearchStatus, Square, Tick, UserTick } from '@omegup-school/ui-assets';
+=======
+import { SideBar } from '@omegup-school/ui-molecules';
+import { SearchStatus } from '@omegup-school/ui-assets';
+>>>>>>> NDI-29-Side-Bar
 import { Logo } from '@omegup-school/ui-assets';
+import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
+
 const meta = {
   title: 'molecule/SideBar',
   component: SideBar,
   tags: ['autodocs'],
-  argTypes: {
-    style: { control: 'select', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
-  },
+  argTypes: {},
 } satisfies Meta<typeof SideBar>;
 
 export default meta;
@@ -18,8 +22,6 @@ type Story = StoryObj<typeof meta>;
 const isCollopsed=false;
 export const Primary: Story = {
   args: {
-    size: 'medium',
-    style: 'solid',
     children: [
      <SubMenu parentName='SubMenu'
       parentId={0}
@@ -38,15 +40,17 @@ export const Primary: Story = {
       onChange={()=>{} } onBlur={()=>{} }/>
 
 
+<<<<<<< HEAD
 
+=======
+    /*/
+>>>>>>> NDI-29-Side-Bar
     ],
     header: {
-      onChange: () => {},
-      onBlur: () => {},
-      style: 'text',
-      size: 'medium',
+      onClick: () => {},
       title: 'Omega School',
       Logo: <Logo width={'100%'} />,
+<<<<<<< HEAD
       Search: (
         <SearchBar
           value={''}
@@ -61,11 +65,16 @@ export const Primary: Story = {
         />
       ),
       SearchIcon: SearchStatus,
+=======
+      Search: <>"SearchBar"</>,
+      SearchIcon: <SearchStatus width="100%" />,
+>>>>>>> NDI-29-Side-Bar
     },
     button: {
       onChange: () => {},
       onBlur: () => {},
-      size: 'medium',
+      firstIcon: <ArrowCircleLeft width="100%" />,
+      secandIcon: <ArrowCircleRight width="100%" />,
     },
     value: false,
     onChange: () => {},

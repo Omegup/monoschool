@@ -1,28 +1,11 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
-import { shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
-import { borders, spacing, widths } from '@omegup-school/ui-atoms/sizes';
-import { createUseStyles } from 'react-jss';
-import { styles } from '../common/styles';
-import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
 
-type Sizes = readonly [
-  `$${ButtonSideBarProps['size']}>$button>&`,
-  { width: string; height: string }
-];
-const SideBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.ButtonSideBar).map(([k, v]) => [
-    `$${k}>$button>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
+import {spacing, widths } from '@omegup-school/ui-atoms/sizes';
+import { forwardRef } from 'react';
+import { createUseStyles } from 'react-jss';
+
 
 const useStyles = createUseStyles({
-  large: {},
-  medium: {},
-  small: {},
   button: {
     width: 'fit-content',
     display: 'flex',
@@ -35,43 +18,39 @@ const useStyles = createUseStyles({
     boxShadow:
       '0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)',
   },
-  arrow: { ...SideBarSizes, display: 'flex', alignItems: 'center' },
-  label: {},
+  icon: {
+    width: widths.sideBar.icon,
+    height: widths.sideBar.icon,
+    display: 'flex',
+    alignItems: 'center',
+  },
 });
 
-export type ButtonSideBarProps = {
-  size: 'large' | 'medium' | 'small';
-};
-export interface ControlledButtonSideBarProps extends ButtonSideBarProps {
+
+export interface ControlledButtonSideBarProps  {
   isOpened?: boolean;
   onChange: (isOpened: boolean) => void;
   onBlur: () => void;
+  firstIcon: JSX.Element;
+  secandIcon: JSX.Element;
 }
 
-export const ButtonSideBar = ({
-  isOpened,
-  onChange,
-  size,
-}: ControlledButtonSideBarProps) => {
+export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useStyles();
-  console.log(size)
+  const { isOpened, onChange, onBlur, secandIcon,firstIcon } = props;
   return (
     <div
-      className={`${classes.button} ${classes[size]} `}
+      className={`${classes.button} `}
       onClick={() => {
-        onChange(!isOpened);
+        onChange;
       }}
+      {...{ref,onBlur}}
     >
       {isOpened ? (
-        <span className={classes.arrow}>
-          {' '}
-          <ArrowCircleLeft />{' '}
-        </span>
+        <span className={classes.icon}>{firstIcon}</span>
       ) : (
-        <span className={classes.arrow}>
-          <ArrowCircleRight />
-        </span>
+        <span className={classes.icon}>{secandIcon}</span>
       )}
     </div>
   );
-};
+})
