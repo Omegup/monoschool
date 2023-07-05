@@ -1,7 +1,7 @@
-import { colors } from '@omegup-school/ui-atoms/colors'
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes'
-import { createUseStyles } from 'react-jss'
-import { styles } from '../common/styles'
+import { colors } from '@omegup-school/ui-atoms/colors';
+import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
+import { createUseStyles } from 'react-jss';
+import { styles } from '../common/styles';
 
 export const useStyles = createUseStyles({
   solid: {},
@@ -33,7 +33,6 @@ export const useStyles = createUseStyles({
     '& $left $label': {
       borderInlineEndWidth: borders.b2,
     },
-
   },
   flat: {
     '& $label': {
@@ -44,59 +43,55 @@ export const useStyles = createUseStyles({
   },
   large: {
     '& $label': {
-      ...styles.paragraph_medium_regular
-    }
+      ...styles.paragraph_medium_regular,
+    },
   },
   medium: {
     '& $label': {
-      ...styles.paragraph_small_regular
-    }
+      ...styles.paragraph_small_regular,
+    },
   },
   small: {
     '& $label': {
-      ...styles.paragraph_xSmall_regular
-    }
+      ...styles.paragraph_xSmall_regular,
+    },
   },
-  disabled: {},
-  enabled: {},
-  container: {
-  },
+  container: {},
   flex: {
     width: 'fit-content',
     display: 'flex',
     alignItems: 'center',
-
   },
   triangle: {
-    borderStyle: 'solid',
+    border: ['solid', borders.b10, 'transparent'],
   },
   top: {
     flexDirection: 'column',
     '& > $triangle': {
-      borderWidth: [borders.b10, borders.b10, 0],
-      borderColor: [colors.blue[500], 'transparent'],
+      borderBlockStartColor: colors.blue[500],
+      borderBlockEndWidth: 0,
     },
   },
   right: {
     flexDirection: 'row-reverse',
     '& > $triangle': {
-      borderWidth: [borders.b10, borders.b10, borders.b10, 0],
-      borderColor: ['transparent', colors.blue[500], 'transparent', 'transparent'],
-    }
+      borderInlineEndColor: colors.blue[500],
+      borderInlineStartWidth: 0,
+    },
   },
   bottom: {
     flexDirection: 'column-reverse',
     '& > $triangle': {
-      borderWidth: [0, borders.b10, borders.b10],
-      borderColor: [colors.blue[500], 'transparent'],
-    }
+      borderBlockEndColor: colors.blue[500],
+      borderBlockStartWidth: 0,
+    },
   },
   left: {
     flexDirection: 'row',
     '& > $triangle': {
-      borderWidth:  [borders.b10, 0, borders.b10, borders.b10],
-      borderColor: ['transparent', 'transparent', 'transparent', colors.blue[500]],
-    }
+      borderInlineStartColor: colors.blue[500],
+      borderInlineEndWidth: 0,
+    },
   },
   label: {
     color: colors.background.default,
@@ -107,4 +102,4 @@ export const useStyles = createUseStyles({
   labelText: {
     ...styles.paragraph_small_regular,
   },
-})
+});
