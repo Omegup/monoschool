@@ -1,34 +1,36 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconWithDoubleText } from '@omegup-school/ui-external-molecules';
-import { Logo } from '@omegup-school/ui-assets';
+import * as icons from '@omegup-school/ui-assets/icons';
+import { IconWithDoubleTextProps } from '@omegup-school/ui-external-molecules/IconWithDoubleText/IconWithDoubleText.types';
+import { Icon } from './Icon';
 
-const ICONS = {
-  icon1: <Logo height={24} width={24} />,
-  icon2: <Logo height={24} width={24} fill='green' />,
-  icon3: <Logo height={24} width={24} fill='yellow' />,
-  icon4: <Logo height={24} width={24} fill='red' />,
-}
+const Demo = ({
+  icon,
+  ...restProps
+}: Omit<IconWithDoubleTextProps, 'icon'> & { icon: keyof typeof icons }) => {
+  return <IconWithDoubleText icon={<Icon name={icon} />} {...restProps} />;
+};
+
 const meta = {
   title: 'Atom/IconWithDoubleText',
   component: IconWithDoubleText,
   tags: ['autodocs'],
   argTypes: {
-    icon: { control: 'select', options: Object.keys(ICONS), },
+    icon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
   },
 } satisfies Meta<typeof IconWithDoubleText>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Demo>;
 
 export const Primary: Story = {
-  render: ({ icon = 'icon1', text, subText, }) => <IconWithDoubleText
-    icon={ICONS[icon as keyof typeof ICONS]}
-    subText={subText}
-    text={text}
-  />,
+  render: Demo,
   args: {
-    icon: 'icon1',
+    icon: 'Square',
     text: 'Text Description',
-    subText: 'Subtext Description'
+    subText: 'Subtext Description',
   },
 };
