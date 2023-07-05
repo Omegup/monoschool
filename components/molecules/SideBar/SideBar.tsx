@@ -7,14 +7,7 @@ import { HeaderSideBar } from '../HeaderSideBar';
 
 export const SideBar = forwardRef(
   (props: ControlledSideBarProps, ref: React.Ref<HTMLInputElement>) => {
-    const {
-      size,
-      style,
-      children,
-      header,
-      isCollopsed,
-      button,
-    } = props;
+    const { size, style, children, header, isCollopsed, button } = props;
     const classes = useSelectStyles();
 
     const openedClass = classes[isCollopsed ? 'opened' : 'closed'];
@@ -26,24 +19,9 @@ export const SideBar = forwardRef(
         <div className={classes.container}>
           <div className={classes.sideBarButton}>
             {' '}
-            <ButtonSideBar
-              onChange={button.onChange}
-              onBlur={button.onBlur}
-              isOpened={isCollopsed}
-              size={size}
-            />
+            <ButtonSideBar {...button} isOpened={isCollopsed} />
           </div>
-          <HeaderSideBar
-            isOpened={isCollopsed}
-            onChange={header.onChange}
-            onBlur={header.onBlur}
-            style={style}
-            size={size}
-            title={header.title}
-            Logo={header.Logo}
-            Search={header.Search}
-            SearchIcon={header.SearchIcon}
-          />
+          <HeaderSideBar isOpened={isCollopsed} {...header} />
           {children.map((child) => child)}
         </div>
       </label>

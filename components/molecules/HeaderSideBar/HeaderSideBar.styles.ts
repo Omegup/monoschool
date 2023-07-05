@@ -3,35 +3,8 @@ import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
-import { HeaderSideBarProps } from './HeaderSideBar.types';
-
-type Sizes = readonly [
-  `$${HeaderSideBarProps['size']}>$container>&`,
-  { width: string; height: string }
-];
-const HeaderSideBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.checkbox).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
 
 export const useSelectStyles = createUseStyles({
-  solid: {},
-  border: {},
-  flat: {},
-  text: {},
-  large: {},
-  medium: {},
-  small: {},
-  disabled: {},
-  enabled: {},
-  input: {},
-  label: {},
-  tick: {},
   container: {
     display: 'flex',
     flexDirection: 'column',
@@ -46,20 +19,26 @@ export const useSelectStyles = createUseStyles({
     gap: spacing.s8,
     alignSelf: 'stretch',
   },
-  icon: {
+  logoIcon: {
     width: widths.logo.svg,
     height:widths.logo.svg,
   },
   labelText: {
     ...styles.paragraph_medium_semiBold,
   },
-  SearchStatus: {
-    ...HeaderSideBarSizes,
+  SearchIcon: {
+    width: widths.sideBar.icon,
+    height:widths.sideBar.icon,
     display: 'flex',
     padding: spacing.s5,
     justifyContent: 'center',
     alignItems: 'center',
     gap: spacing.s5,
+    borderRadius: borders.r5,
+    '&:hover':{
+      backgroundColor:colors.light[500],
+      color:colors.blue[500],
+    }
   },
   square: {},
 });
