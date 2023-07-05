@@ -13,7 +13,6 @@ export const TwoItemsCol = forwardRef((
     <Container
       ref={ref}
       direction="column"
-      alignItems="start"
     >{children}</Container>
   )
 })

@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { ControlledIconWithDoubleTextProps } from "./IconWithDoubleText.types";
-import { SmallText, XSmallText , ItemPS5, TwoItemsCol, TwoItemsRow} from "@omegup-school/ui-molecules";
+import { SmallText, XSmallText, ItemPS5, TwoItemsCol, TwoItemsRow } from "@omegup-school/ui-molecules";
 
 export const IconWithDoubleText = forwardRef((
   props: ControlledIconWithDoubleTextProps,
@@ -9,9 +9,7 @@ export const IconWithDoubleText = forwardRef((
 
   const { text, subText, icon } = props
 
-  return (<TwoItemsRow
-    ref={ref}
-  >
+  return (<TwoItemsRow ref={ref}  >
     <ItemPS5
       item={icon}
     />

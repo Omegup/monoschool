@@ -9,7 +9,7 @@ export const useContainerStyles = createUseStyles({
     paddingInline: ({ paddingInline }: Partial<ContainerProps>) => paddingInline ? spacing[paddingInline] : 0,
     paddingBlock: ({ paddingBlock }: Partial<ContainerProps>) => paddingBlock || 0,
     gap: ({ gap }: Partial<ContainerProps>) => gap || 0,
-    alignItems: ({ alignItems }: Partial<ContainerProps>) => alignItems || "center",
-    justifyContent: ({ justifyContent }: Partial<ContainerProps>) => justifyContent || "center",
+    alignItems: ({ alignItems }: Partial<ContainerProps>) => alignItems || "start",
+    justifyContent: ({ justifyContent }: Partial<ContainerProps>) => justifyContent || "start",
   }
 })

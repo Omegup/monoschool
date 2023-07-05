@@ -14,7 +14,7 @@ export const TwoItemsRow = forwardRef((
       ref={ref}
       direction="row"
       paddingInline={'s5'}
-      justifyContent="start"
+      alignItems="center"
       gap={10}
     >
       {children}
