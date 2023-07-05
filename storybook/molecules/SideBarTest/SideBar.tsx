@@ -6,7 +6,7 @@ import { Logo } from '@omegup-school/ui-assets';
 import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
 
 export const SubSideBar = forwardRef((ref: React.Ref<HTMLInputElement>) => {
-  const [isCollopsed,SetCollopsed]=useState(false)
+  const [isCollopsed,SetCollopsed]=useState(true)
   return (
     <SideBar
       value={false}
