@@ -1,28 +1,25 @@
-import { Close } from '@omegup-school/ui-assets';
 import { useSearchBarStyles } from './SearchBar.styles';
 import { ControlledSearchBarProps } from './SearchBar.types';
-import { colors } from '@omegup-school/ui-atoms/colors';
 import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
-  (props: ControlledSearchBarProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, Icon, label,closeIcon, displayClose, onChange, value, onBlur } =
-      props;
+  (props: ControlledSearchBarProps,ref: React.Ref<HTMLInputElement>) => {
+    const { variant, firstIcon, placeholder,inputType,secondIcon, displayClose, onChange,onClick, value } =props;
     const classes = useSearchBarStyles();
 
     return (
-      <div className={`${classes[size]} ${classes[style]}`}>
+      <div {...{ref}} className={classes[variant]}>
         <div className={classes.container}>
-          <span className={classes.SearchStatus}>{Icon}</span>
+          <span className={classes.firstIcon}>{firstIcon}</span>
           <input
             className={classes.input}
-            type="text"
-            placeholder={label}
+            type={inputType}
+            placeholder={placeholder}
             onChange={(e) => onChange(e.target.value)}
-            {...{ ref, onBlur }}
+            value={value}
           />
-          <span className={classes.Close}>
-            {displayClose && closeIcon}
+          <span className={classes.secondIcon} onClick={onClick}>
+            {displayClose && secondIcon}
           </span>
         </div>
       </div>

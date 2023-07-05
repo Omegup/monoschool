@@ -2,61 +2,103 @@ import { colors } from '@omegup-school/ui-atoms/colors';
 import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
-import { SearchBarProps } from './SearchBar.types';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
-type Sizes = readonly [
-  `$${SearchBarProps['size']}>$container>&`,
-  { width: string; height: string }
-];
-const searchBarSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.searchBar).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
-
 export const useSearchBarStyles = createUseStyles({
-  solid: {},
-  border: {},
-  flat: {},
-  text: {},
-  large: {},
-  medium: {},
-  small: {},
-  disabled: {},
-  enabled: {},
-  input: {
-  border:colors.background.overlay,
-  outline: colors.background.overlay,
-  padding:"0",
-  margin:"0",
-  width:"100%",
+  navBar: {
+    '& $container ': {
+      gap: spacing.s8,
+      border: [borders.b2, 'solid', colors.grey[500]],
+      '& $input': {
+        color: colors.grey[500],},
+    
+      '& $firstIcon , $secondIcon': {
+        color: colors.grey[500],
+      },
+    },
   },
-  label: {},
+  sideBar: {
+    '& $container': {
+      gap: spacing.s8,
+      border: [borders.b2, 'solid', colors.grey[500]],
+      '& $input': {
+        color: colors.grey[500],},
+    
+      '& $firstIcon , $secondIcon': {
+        color: colors.grey[500],
+      },
+      '&:has($input:focus)':{
+        backgroundColor:colors.light[200],
+        border: [borders.b2, 'solid', colors.blue[500]],
+        '& $input': {
+          backgroundColor: colors.light[200],
+          color: colors.blue[500],
+          '&::placeholder': {
+            color: colors.blue[500],
+          },
+        },
+        '& $firstIcon , $secondIcon': {
+          color: colors.blue[500],
+        },
+      }
+    },
+    '&:hover': {
+      '& $container ': {
+        backgroundColor: colors.light[500],
+        border: [borders.b2, 'solid', colors.blue[500]],
+        '& $input': {
+          color: colors.blue[500],
+          backgroundColor: colors.light[500],
+          '&::placeholder': {
+            color: colors.blue[500],
+          },
+        },
+        '& $firstIcon , $secondIcon': {
+          color: colors.blue[500],
+        },
+      },
+    },
+   
+  },
+  filterSearch: {
+    '& $container ': {
+      gap: spacing.s2,
+      
+      border: [borders.b2, 'solid', colors.background.overlay],
+      '& $input': {
+        color: colors.grey[400],},
+    
+      '& $firstIcon , $secondIcon': {
+        color: colors.grey[400],
+      },
+    },
+  },
+  input: {
+    border: colors.background.overlay,
+    outline: colors.background.overlay,
+    padding: '0',
+    margin: '0',
+    width: '100%',
+  },
   container: {
-    display: "flex",
-    padding: spacing.s4,
-    alignItems: "center",
-    gap:spacing.s4,
-    borderRadius: borders.r5,
-    border: [borders.b2,"solid",colors.background.overlay],
+    display: 'flex',
+    alignItems: 'center',
     background: colors.background.default,
     boxShadow: shadowXSmall,
+    padding: spacing.s4,
+    borderRadius: borders.r5,
   },
-  SearchStatus: {
-    ...searchBarSizes
+  firstIcon: {
+    width: widths.searchBar.default,
+    height: widths.searchBar.default,
   },
-  Close: {
-    ...searchBarSizes,
+  secondIcon: {
+    width: widths.searchBar.default,
+    height: widths.searchBar.default,
   },
   labelText: {
     ...styles.paragraph_small_regular,
-    fontcolor:colors.grey[400],
+    fontcolor: colors.grey[400],
   },
-  
 });

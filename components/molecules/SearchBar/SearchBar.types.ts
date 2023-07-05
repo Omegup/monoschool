@@ -1,13 +1,13 @@
 export type SearchBarProps = {
-  size: 'large' | 'medium' | 'small';
-  style: 'solid' | 'border' | 'flat' | 'text';
+  variant:'navBar' | 'sideBar' | 'filterSearch';
   displayClose: boolean;
-  label: string;
-  Icon: JSX.Element;
-  closeIcon:JSX.Element
+  placeholder: string;
+  firstIcon: JSX.Element;
+  secondIcon:JSX.Element;
+  inputType:string;
 };
 export interface ControlledSearchBarProps extends SearchBarProps {
   value: string;
   onChange: (value: string) => void;
-  onBlur: () => void;
+  onClick: () => void;
 }

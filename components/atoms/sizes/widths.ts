@@ -10,10 +10,8 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
-  ButtonSideBar: {
-    small: '20px',
-    medium: '24px',
-    large: '28px',
+  searchBar:{
+    default: "24px",
   },
   logo:{
     svg: '40px',

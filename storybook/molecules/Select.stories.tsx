@@ -21,6 +21,9 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     disabled: false,
-    value:true
+    value: false,
+  onChange: () => {},
+  onBlur: () => {},
+  
   },
 };
