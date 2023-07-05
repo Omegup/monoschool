@@ -18,7 +18,6 @@ const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
     },
   ])
 );
-
 export const useViewModeSwitcherStyles = createUseStyles({
   solid: {},
   border: {},
@@ -50,9 +49,11 @@ export const useViewModeSwitcherStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
+    '&:hover':{
+      backgroundColor:colors.light[500]
+    }
   },
   input: {
-   
    position: "absolute",
     opacity: 0,
     '&>*:checked ':{
@@ -60,12 +61,10 @@ export const useViewModeSwitcherStyles = createUseStyles({
     },
     '&>*:not(:checked)':{
       cursor:"pointer"
-    }
-     
+    } 
   },
   checkmark: {
     position: "absolute",
-
   },
   container: {
     display: "flex",
@@ -76,7 +75,6 @@ export const useViewModeSwitcherStyles = createUseStyles({
     borderRadius: "10px 0px 0px 10px",
   },
   elementRight: {
-    
     borderRadius: "0px 10px 10px 0px",
   },
   element:{
@@ -85,6 +83,7 @@ export const useViewModeSwitcherStyles = createUseStyles({
     justifyContent: "center",
     alignItems: "center",
     gap: "10px",
+   
     '&:focus': {
       outline: 'none'
     },
@@ -102,6 +101,4 @@ export const useViewModeSwitcherStyles = createUseStyles({
       cursor:"pointer"
     }
   }
-
-
 });

@@ -1,6 +1,5 @@
 export interface ViewModeSwitcherProps {
-  style: 'solid' | 'border' | 'flat' | 'text';
-  size: 'large' | 'medium' | 'small';
+
   name: string;
   isChecked?:boolean
   

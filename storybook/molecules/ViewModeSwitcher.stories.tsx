@@ -10,8 +10,7 @@ const meta = {
   component: ViewModeSwitcher,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'select', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
+    
   },
 } satisfies Meta<typeof ViewModeSwitcher>;
 
@@ -21,8 +20,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     name: 'ViewModeSwitcher',
-    size: 'medium',
-    style: 'solid',
     isChecked: true,
     elementRight: elementsViewModeRight,
     elementLeft: elementsViewModeLeft,
