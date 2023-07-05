@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Chips } from '@omegup-school/ui-molecules';
-import { Close, Essential } from '@omegup-school/ui-assets';
+import { Close,Add, Essential } from '@omegup-school/ui-assets';
 import { ControlledChipsProps } from '@omegup-school/ui-molecules/Chips/Chips.types';
 
 const IconOption = ( option:string ) => {
@@ -10,12 +10,14 @@ const IconOption = ( option:string ) => {
       return <Essential width={'100%'} />;
     case 'Close':
       return <Close width={'100%'} />;
+    case 'Add':
+      return <Add width={'100%'} />;
     default:
       return <Close width={'100%'} />;
   }
 };
 
-type DemoType = ControlledChipsProps & { firstIcon: 'SearchStatus' | 'Close',secondIcon:'SearchStatus' | 'Close'};
+type DemoType = ControlledChipsProps & { firstIcon: 'SearchStatus' | 'Close'|'Add',secondIcon:'SearchStatus' | 'Close'|'Add'};
 const ChipsDemo = ({
   firstIcon,secondIcon,
   ...rest
@@ -27,15 +29,17 @@ const ChipsDemo = ({
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
   title: 'molecule/Chips',
-  component: Chips,
+  component: ChipsDemo,
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
-    style: { control: 'select', options: ['border' , 'flat'] } 
+    style: { control: 'select', options: ['border' , 'flat'] } ,
+    firstIcon: { control: 'select', options: ['SearchStatus' , 'Close','Add'] } ,
+    secondIcon: { control: 'select', options: ['SearchStatus' , 'Close','Add'] } ,
   },
    
 
-} satisfies Meta<typeof Chips>;
+} satisfies Meta<typeof ChipsDemo>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -50,8 +54,8 @@ export const Primary: Story = {
     value:false,
     onChange: () => {},
     onClick:()=>{},
-    firstIcon: <Essential width={"100%"} />,
-    secondIcon: <Close width={"100%"} />
+    firstIcon: "SearchStatus",
+    secondIcon: "Close",
   },
 };
 
