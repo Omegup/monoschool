@@ -8,7 +8,6 @@ export const SideBar = forwardRef(
   (props: ControlledSideBarProps, ref: React.Ref<HTMLDivElement>) => {
     const { children, header, isCollopsed, button } = props;
     const classes = useSelectStyles();
-
     const collopsedClass = classes[isCollopsed ? 'collopsed':'notCollopsed'];;
     return (
       <div {...ref} className={`${classes.container}  ${collopsedClass}`}>
