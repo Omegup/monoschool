@@ -11,7 +11,7 @@ type Sizes = readonly [
 ];
 
 
-export const useSelectStyles = createUseStyles({
+export const useChildMenutStyles = createUseStyles({
   solid: {},
   border: {},
   flat: {},
@@ -37,7 +37,7 @@ export const useSelectStyles = createUseStyles({
     flexShrink: 0
     ,
     '&$selected': {
-      backgroundColor: colors.light[500],
+
       cursor: "pointer",
       display: "flex",
       justifyContent: "center",
@@ -47,9 +47,7 @@ export const useSelectStyles = createUseStyles({
     '&$notSelected': {
       color: colors.blue[500],
     },
- 
   },
-
   icon: {
     width: "24px",
     height: "24px",
@@ -58,19 +56,26 @@ export const useSelectStyles = createUseStyles({
     },
   },
   label: {
-    fontSize: "16px",
-    '&:hover': {
-      cursor: "pointer",
+    '& label': {
+      cursor: "pointer"
+    },
+    '$large > &': {
+      fontSize: spacing.s9,
+    },
+    '$medium > &': {
+      fontSize: spacing.s8,
+    },
+    '$small > &': {
+      fontSize: spacing.s7,
     },
   },
-
   mobileIcon: {
     width: "24px",
     height: "24px",
     justifyContent: "center",
     alignItems: "center",
     color: colors.grey[100],
-   
+
     '&$selected': {
       color: colors.blue[500],
       cursor: "pointer",
@@ -86,45 +91,46 @@ export const useSelectStyles = createUseStyles({
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
-   
+
     '&$selected': {
       color: colors.blue[500],
       cursor: "pointer",
     },
   },
-  tabletteIcon: {
-    width: "24px",
-    height: "24px",
-    '&$selected': {
-      color: colors.blue[500],
-      cursor: "pointer",
-    },
-  },
-  tabletteLabel: {
-    fontSize: "16px",
-    '&$selected': {
-      color: colors.blue[500],
-      cursor: "pointer",
-    },
-  },
+
   container: {
     display: "inline-flex",
     padding: spacing.s5,
     alignItems: "center",
-    alignSelf: "stretch",
-    gap: "15px",
+    gap: '15px',
+    cursor: "pointer",
     '&$selected': {
-      color: colors.grey[100]
+      color: colors.grey[100],
+      borderRadius: "10px",
+      background: colors.blue[500]
     },
     '&$notSelected': {
-
       color: colors.grey[500],
+
     },
     '&:hover': {
       color: colors.blue[500],
-      cursor: "pointer",
+      borderRadius: "10px",
+      background: colors.blue[100]
     },
+    // '$solid > &': {
+    //   border: "3px solid "
+    // },
+    // '$flat > &': {
+    //   border: "3px solid "
+    // },
+    // '$border > &': {
+    //   border: "1.5px solid "
+    // },
+    // '$text > &': {
+    //   border: "3px solid "
 
+    // },
 
   },
 

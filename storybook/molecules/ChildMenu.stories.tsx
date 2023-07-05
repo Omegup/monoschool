@@ -1,14 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ChildMenu } from '@omegup-school/ui-molecules';
-import { UserTick } from '@omegup-school/ui-assets';
+import { ClipboardTick, UserTick } from '@omegup-school/ui-assets';
 
 const meta = {
   title: 'Atom/ChildMenu',
   component: ChildMenu,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'ChildMenu', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'ChildMenu', options: ['large', 'medium', 'small'] },
+    // style: { control: 'select', options: ['solid', 'border', 'text', 'flat'] },
+    size: { control: 'select', options: ['large', 'medium', 'small'] },
+    viewMode: { control: 'select', options: ['mobile','default'] },
+    icon:{control:'select',options:[<UserTick width='24' height='24' />,<ClipboardTick width='24' height='24' />]}
   },
 } satisfies Meta<typeof ChildMenu>;
 
@@ -23,9 +25,8 @@ export const Primary: Story = {
     selected: true,
     id: 1,
     isCollopsed: false,
-    value: true,
-    size: 'large',
-    style: 'border',
-    viewMode: 'mobile'
+    size: 'medium',
+    // style: 'border',
+    viewMode: 'default'
   },
 };

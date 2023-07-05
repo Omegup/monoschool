@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { SubMenu } from '@omegup-school/ui-molecules';
-import {  Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
+import {  ClipboardTick, Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
 
 
 
@@ -10,8 +10,12 @@ const meta = {
   component: SubMenu,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'subMenu', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'subMenu', options: ['large', 'medium', 'small'] },
+    size: { control: 'select', options: ['large', 'medium', 'small'] },
+    viewMode:{control:'select',options:['mobile','default']},
+    items:{
+      control :'select',
+      options:[]
+            }
   },
 } satisfies Meta<typeof SubMenu>;
 
@@ -23,15 +27,15 @@ export const Primary: Story = {
     parentName: 'SubMenu',
     parentId:0,
     size: 'medium',  
-    style: 'solid',
     disabled: false, 
     isCollopsed:false,
+    viewMode:'default',
     items: [
-      { icon: <Tick color='red' width='24' height='24'/>, label: "Présence des elèves", selected: true, style: "solid", size: "medium" ,id:1},
-      { icon: <WifiSquare  width='24' height='24' />, label: "Rapports des élèves", selected: false, style: "solid", size: "medium",id:2, },
-      { icon: <UserTick width='24' height='24' />, label: "Présence des enseigants", selected: false, style: "solid", size: "medium" ,id:3}],
+      { icon: <ClipboardTick  />, label: "Présence des elèves", selected: false,  size: "medium" ,id:1},
+      { icon: <UserTick   />, label: "Rapports des élèves", selected: true,  size: "medium",id:2, },
+      { icon: <UserTick/>, label: "Présence des enseigants", selected: false,  size: "medium" ,id:3}],
     isOpened: true,
-    value: true
+ 
 
 
   },
