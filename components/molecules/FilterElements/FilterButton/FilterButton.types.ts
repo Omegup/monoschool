@@ -4,7 +4,6 @@ export type FilterButtonProps = {
   icon:JSX.Element;
 };
 export interface ControlledFilterButtonProps extends FilterButtonProps {
-  value: boolean;
-  onChange: (value: boolean) => void;
+  onClick: () => void;
   onBlur: () => void;
 }

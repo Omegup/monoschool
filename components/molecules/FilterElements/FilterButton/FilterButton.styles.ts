@@ -21,18 +21,12 @@ export const useFilterStyles = createUseStyles({
         fill: colors.blue[500],
       },
     },
-    
-    '& > $input:checked + $container': {
-     backgroundColor:"red",
-     
-    },
   },
   input: { clip: 'rect(0 0 0 0)', position: 'absolute' },
   iconContainer: {
     width:widths.buttonFilter.default,
     height:widths.buttonFilter.default,
     display: 'flex',
-    alignItems: 'center',
     justifyContent:'center',
     
   },icon:{
@@ -43,7 +37,7 @@ export const useFilterStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     gap: spacing.s4,
-    padding: '8px',
+    padding: spacing.s4,
     justifyContent: 'space-between',
   },
   labelText: {
@@ -51,5 +45,4 @@ export const useFilterStyles = createUseStyles({
     width: '100%',
     
   },
-  square: {},
 });

@@ -26,13 +26,14 @@ export const Primary: Story = {
     size: 'medium',
     showImage:true,
     SearchBar:"searchBar",
-    child:[{ size:"medium" ,
-      label:"Bacem achour",
-      showImage:true,
-       value:false,
-        onChange:()=>{} ,
-        onBlur:()=>{},
-         imageURL:Ellipse47,
+    child:[{   <FilterCheckBox
+      label={item.label}
+      showImage={showImage}
+      value={item.value}
+      onChange={item.onChange}
+      onBlur={item.onBlur}
+      imageURL={item.imageURL} 
+      checkbox={undefined}          />
 
     },{ size:"medium" ,
     label:"Sana Binhamed",

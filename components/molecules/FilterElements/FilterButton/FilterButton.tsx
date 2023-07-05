@@ -4,19 +4,16 @@ import { forwardRef } from 'react';
 
 
 export const FilterButton = forwardRef(
-  (props: ControlledFilterButtonProps, ref: React.Ref<HTMLInputElement>) => {
-    const { label, showIcon,icon, onChange, value, onBlur } = props;
+  (props: ControlledFilterButtonProps, ref: React.Ref<HTMLDivElement>) => {
+    const { label, showIcon,icon, onClick, onBlur } = props;
     const classes = useFilterStyles();
     return (
-      <div >
-        <div className={`${classes.label} `}>
-      
+        <div  {...ref} className={`${classes.label} `}>
         <input
-          type="checkbox"
+          type="button"
           className={classes.input}
-          onChange={(e) => onChange(e.target.checked)}
-          {...{ ref, onBlur }}
-          checked={value}
+          onClick={onClick}
+          {...onBlur}
         />
         <div className={classes.container}>
           <text className={classes.labelText}>{label}</text>
@@ -29,7 +26,6 @@ export const FilterButton = forwardRef(
           )}
         </div>
          </div>
-      </div>
     );
   }
 );

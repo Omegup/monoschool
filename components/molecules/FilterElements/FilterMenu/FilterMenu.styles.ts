@@ -1,35 +1,10 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
 import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
-import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
-
-import { FilterMenuProps } from './FilterMenu.types';
 import {shadowXSmall } from '@omegup-school/ui-atoms/effects/shadow';
 
-type Sizes = readonly [
-  `$${FilterMenuProps['size']}>$container>&`,
-  { width: string; height: string }
-];
-const buttonSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.filter).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
 
 export const useFilterStyles = createUseStyles({
-  solid: {},
-  border: {},
-  flat: {},
-  text: {},
-  large: {},
-  medium: {},
-  small: {},
-  disabled: {},
-  enabled: {},
   container: {
     width:"fit-content",
     padding: spacing.s5,
@@ -42,7 +17,7 @@ export const useFilterStyles = createUseStyles({
   },
   
   line: {
-    margin:"5px",
+    margin:spacing.s3,
     border: [borders.b1,"solid"],
     borderColor:colors.background.overlay
   },
