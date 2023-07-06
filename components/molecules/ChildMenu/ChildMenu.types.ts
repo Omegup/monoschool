@@ -6,7 +6,7 @@ export interface ChildMenuProps {
   selected: boolean,
   id:number,
   isCollopsed?:boolean,
-  viewMode?:'mobile'|'default'
+  viewMode?:'mobile'|'default' 
 }
 
 export interface ControlledChildMenuProps extends ChildMenuProps {
