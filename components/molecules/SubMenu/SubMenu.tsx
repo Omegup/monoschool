@@ -2,7 +2,7 @@
 import { useSelectStyles } from './SubMenu.styles';
 import { ControlledSubMenuProps } from './SubMenu.types';
  import{forwardRef} from "react"
-import { ChildMenu, Container } from '../../atoms/';
+import { ChildMenu, Container } from '@omegup-school/ui-atoms';
 
 
 export const SubMenu = forwardRef(

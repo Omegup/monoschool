@@ -1,1 +1,1 @@
-export * from './SubMenu';
+export * from '../molecules/SubMenu';
