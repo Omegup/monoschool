@@ -2,7 +2,6 @@ import { ChildMenuProps, ControlledChildMenuProps } from "../ChildMenu/ChildMenu
 
 export interface SubMenuProps {
   size: 'large' | 'medium' | 'small';
-  disabled?: boolean;
   isCollopsed?:boolean;
   parentName: string;
   parentId: number;
