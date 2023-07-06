@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "storybook": "storybook dev -p 6006",
+    "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
     "@omegup-school/ui-atoms": "workspace:*",
     "@omegup-school/ui-cells": "workspace:*",
-    "@omegup-school/ui-external-molecules": "workspace:*",
     "@omegup-school/ui-molecules": "workspace:*",
     "@omegup-school/ui-assets": "workspace:*",
     "@omegup-school/ui-configs": "workspace:*",

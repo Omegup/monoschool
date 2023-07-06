@@ -4,3 +4,4 @@ export * from './Panel';
 export * from './Select';
 export * from './Text';
 export * from './Container';
+export * from './Tooltip';
