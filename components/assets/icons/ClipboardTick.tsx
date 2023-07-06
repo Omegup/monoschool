@@ -10,7 +10,7 @@ export const ClipboardTick = ({
   color?: string;
 }) => {
   return (
-    <svg
+    <svg 
       width={width}
       height={height}
       viewBox="0 0 24 24"
