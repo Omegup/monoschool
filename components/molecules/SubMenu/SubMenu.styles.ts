@@ -26,7 +26,6 @@ export const useSelectStyles = createUseStyles({
     borderRadius: borders.r5,
     backgroundColor: colors.blue[500],
     '&:hover >$items': {
-
       borderRadius: borders.r5,
       backgroundColor: colors.light[500],
       cursor: "pointer",
