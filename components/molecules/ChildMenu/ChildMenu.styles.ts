@@ -116,7 +116,7 @@ export const useChildMenutStyles = createUseStyles({
     '&:hover': {
       color: colors.blue[500],
       borderRadius: "10px",
-      background: colors.blue[100]
+      background: colors.light[500]
     },
     // '$solid > &': {
     //   border: "3px solid "
