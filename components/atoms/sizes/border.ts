@@ -6,4 +6,8 @@ export const borders = {
   b4: 2,
   b5: 2.5,
   b6: 3,
+  b7: 3.5,
+  b8: 4,
+  b9: 4.5,
+  b10: 5
 };
