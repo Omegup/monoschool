@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 export const ViewModeSwitcher = forwardRef(
   (props: ControlledViewModeSwitcherProps, ref: React.Ref<HTMLInputElement>) => {
-    const { onChange, elementLeft, elementRight, onBlur, name, isChecked } = props;
+    const { onChange, elementLeft, elementRight, isChecked } = props;
     const classes = useViewModeSwitcherStyles()
     const checkedClassRight = classes[isChecked ? 'checked' : 'notChecked'];
     const checkedClassLeft = classes[isChecked ? 'notChecked' : 'checked'];
@@ -14,23 +14,21 @@ export const ViewModeSwitcher = forwardRef(
       <div className={ `${classes.container} `}>
         <div className={`${classes.elementLeft} ${checkedClassLeft} ${classes.element} `}>
           <input type="radio"
-            name={name}
-            id="elementLeft"
+             id="elementLeft"
             className={classes.input}
             checked={isChecked}
             onChange={(e) => onChange(e.target.checked)}
-            {...{ ref, onBlur }}
+            {...{ ref }}
           />
           {elementLeft}
         </div>
         <div className={`${classes.elementRight} ${checkedClassRight} ${classes.element} `}>
           <input type="radio"
-            name={name}
-            checked={!isChecked}
+             checked={!isChecked}
             id="elementRight"
             className={classes.input}
             onChange={(e) => onChange(e.target.checked)}
-            {...{ ref, onBlur }}
+            {...{ ref }}
           />
           {elementRight}
         </div>
