@@ -8,30 +8,8 @@ export const useStyles = createUseStyles({
     display: 'flex',
     marginInline: spacing.s4,
   },
-
   selected: {
-    // TODO: remove !important
-    borderBottom: `${borders.b2}px solid ${colors.blue[500]} !important`,
-    '& $tabText': {
-      color: colors.blue[500],
-    },
-    '& $tabNumber': {
-      color: colors.blue[500],
-      backgroundColor: `${colors.light[300]}`,
-    },
-    '&:hover': {
-      cursor: 'default',
-      borderBottom: `${borders.b2}px solid ${colors.blue[500]}`,
-      '&& $tabText': {
-        color: colors.blue[500],
-      },
-      '&& $tabNumber': {
-        color: colors.blue[500],
-        backgroundColor: `${colors.light[300]}`,
-      },
-    },
   },
-
   tabSearch: {
     display: 'flex',
     flexDirection: 'row',
@@ -55,8 +33,28 @@ export const useStyles = createUseStyles({
         color: colors.dark.default,
       },
     },
+    '&$selected': {
+      borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]} `,
+      '& $tabText': {
+        color: colors.blue[500],
+      },
+      '& $tabNumber': {
+        color: colors.blue[500],
+        backgroundColor: `${colors.light[300]}`,
+      },
+      '&:hover': {
+        cursor: 'default',
+        borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]}`,
+        '&& $tabText': {
+          color: colors.blue[500],
+        },
+        '&& $tabNumber': {
+          color: colors.blue[500],
+          backgroundColor: `${colors.light[300]}`,
+        },
+      },
+    }
   },
-
   tabText: {
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
@@ -64,7 +62,6 @@ export const useStyles = createUseStyles({
     marginBottom: spacing.s5,
     paddingInline: spacing.s2,
   },
-
   tabNumber: {
     alignItems: 'center',
     fontSize: typography.paragraph.xSmall.regular.fontSize,
