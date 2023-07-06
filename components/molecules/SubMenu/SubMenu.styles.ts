@@ -9,15 +9,7 @@ type Sizes = readonly [
   `$${SubMenuProps['size']}>$container>&`,
   { width: string; height: string }
 ];
-const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.checkbox).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
+
 
 export const useSelectStyles = createUseStyles({
   solid: {},
@@ -40,7 +32,15 @@ export const useSelectStyles = createUseStyles({
       cursor: "pointer",
     },
   },
-  notSelected: {},
+  notSelected: {
+    '&:hover >$items': {
+
+      borderRadius: borders.r5,
+      backgroundColor: colors.light[500],
+      cursor: "pointer",
+    },
+
+  },
   mobile: {},
   itemsList: {
     display: "flex",

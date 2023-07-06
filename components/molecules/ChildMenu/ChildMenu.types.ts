@@ -1,8 +1,7 @@
 export interface ChildMenuProps {
   // style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
-  disabled?: boolean;
-  icon?: JSX.Element ,
+   icon?: JSX.Element ,
   label: string,
   selected: boolean,
   id:number,

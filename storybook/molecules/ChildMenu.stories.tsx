@@ -19,7 +19,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    disabled: true,
     icon: <UserTick width='24' height='24' />,
     label: "Présence des enseigants",
     selected: true,
