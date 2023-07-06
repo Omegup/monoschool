@@ -22,10 +22,10 @@ export const useStyles = createUseStyles({
     '&:hover': {
       cursor: 'default',
       borderBottom: `${borders.b2}px solid ${colors.blue[500]}`,
-      '& $tabText': {
+      '&& $tabText': {
         color: colors.blue[500],
       },
-      '& $tabNumber': {
+      '&& $tabNumber': {
         color: colors.blue[500],
         backgroundColor: `${colors.light[300]}`,
       },
