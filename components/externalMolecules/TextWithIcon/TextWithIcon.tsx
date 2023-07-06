@@ -12,7 +12,7 @@ export const TextWithIcon = forwardRef((
   return (
     <Container
       ref={ref}
-      gap={'s2'}
+      gap={'s5'}
       alignItems="center"
     >
       {icon}

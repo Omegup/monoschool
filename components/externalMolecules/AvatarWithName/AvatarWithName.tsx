@@ -12,7 +12,7 @@ export const AvatarWithName = forwardRef((
   return (
     <Container
       ref={ref}
-      gap={'s2'}
+      gap={'s5'}
       alignItems="center"
     >
       {avatar}
