@@ -1,18 +1,22 @@
 import { JssStyle } from 'jss';
 import {
-  DEFAULT_CHECKBOX_EVENTS_SELECTORS,
   CHECKBOX_SIZES,
-  CHECKBOX_VARIANTS,
+  CHECKBOX_VARIANTS
 } from './NakedCheckBox.constants';
 
 export type CheckboxVariant = (typeof CHECKBOX_VARIANTS)[number];
 export type CheckboxSize = (typeof CHECKBOX_SIZES)[number];
-
-export type CheckboxEventsSelectors = typeof DEFAULT_CHECKBOX_EVENTS_SELECTORS;
-
-export type CheckBoxEvents = keyof CheckboxEventsSelectors;
-
-export type CheckboxSelectors = ReturnType<ValueOf<CheckboxEventsSelectors>>;
+export type CheckboxStatus = 'checked' | 'notChecked';
+export type CheckboxInteractionStatus = {
+  isHovered: boolean;
+  isMouseDown: boolean;
+  isFocused: boolean;
+};
+export type CheckboxInteractionsStyles =
+  | 'focused'
+  | 'hovered'
+  | 'focusedAndHovered'
+  | 'pressed';
 
 export type CheckboxStyleVariables = {
   outlineColor?: string;
@@ -21,28 +25,38 @@ export type CheckboxStyleVariables = {
   color?: string;
 };
 
+export type CheckboxStylesTheme = {
+  [InteractionStyle in CheckboxInteractionsStyles]: CheckboxStyleVariables;
+};
 export type CheckboxVariantTheme = {
-  [Event in CheckBoxEvents]: CheckboxStyleVariables;
+  [Status in CheckboxStatus]: CheckboxStylesTheme;
 };
 
 export type CheckboxInitialVariantTheme = {
-  initialContainerStyles: CheckboxStyleVariables;
+  normal: {
+    [Status in CheckboxStatus]: CheckboxStyleVariables;
+  };
 };
 
-export type CheckboxTheme = {
-  [Variant in CheckboxVariant]: Partial<
-    CheckboxInitialVariantTheme & CheckboxVariantTheme
-  >;
+
+export type CheckboxStyles = {
+  [Variant in Partial<CheckboxVariant>]: CheckboxInitialVariantTheme &
+    Partial<CheckboxVariantTheme>;
 };
 
 export type CheckboxCommonVariantStyles = {
-  [Selector in CheckboxSelectors]: JssStyle;
+  [Selector : string]: JssStyle;
 };
 
 export interface NakedCheckboxProps {
   variant?: CheckboxVariant;
   size?: CheckboxSize;
 }
+
+export type CheckBoxVariantStylesBuilder = {
+  interactionStatus: CheckboxInteractionStatus;
+  style: CheckboxInteractionsStyles;
+};
 
 export interface ControlledNakedCheckboxProps extends NakedCheckboxProps {
   checked: boolean;
