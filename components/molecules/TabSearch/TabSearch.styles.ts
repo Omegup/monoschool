@@ -10,6 +10,7 @@ export const useStyles = createUseStyles({
   },
 
   selected: {
+    // TODO: remove !important
     borderBottom: `${borders.b2}px solid ${colors.blue[500]} !important`,
     '& $tabText': {
       color: colors.blue[500],
