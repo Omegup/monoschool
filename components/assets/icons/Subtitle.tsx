@@ -1,9 +1,9 @@
-import { colors } from '@omegup-school/ui-configs/colors';
+import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const Subtitle = ({
-  color = colors.blue[500],
-  width = 80,
-  height = 80,
+  width = widths.icon.svg,
+  height = width,
+  color = 'currentColor',
 }: {
   color?: string;
   width?: number | string;

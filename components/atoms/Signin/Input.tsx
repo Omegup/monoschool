@@ -1,8 +1,7 @@
 import { colors } from '@omegup-school/ui-configs/colors';
-import { spacing, borders } from '@omegup-school/ui-configs/sizes';
-import React from 'react';
+import { borders, spacing } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
-import { styles } from '@omegup-school/ui-atoms/common/styles';
+import { styles } from '../common/styles';
 
 const useStyles = createUseStyles({
   root: {

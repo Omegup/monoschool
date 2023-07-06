@@ -14,7 +14,7 @@ export const IconWithDoubleText = forwardRef((
     direction="row"
     paddingInline={'s5'}
     alignItems="center"
-    gap={"s2"}
+    gap={"s5"}
   >
     <Container
       ref={ref}
