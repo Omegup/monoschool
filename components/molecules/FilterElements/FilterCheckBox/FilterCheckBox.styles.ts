@@ -12,9 +12,7 @@ export const useFilterCheckBoxStyles = createUseStyles({
   label: {
     display: 'flex',
     borderRadius: borders.r5,
-    '&:focus': {
-      outline: 'none',
-    },
+  
     '&:hover > $input:not(:checked) + $container': {
       color: colors.blue[500],
     },
@@ -25,10 +23,7 @@ export const useFilterCheckBoxStyles = createUseStyles({
     alignItems: 'center',
     color: colors.grey[400],
     gap: spacing.s4,
-    '$medium > &': {
-      padding: spacing.s4,
-      borderRadius: borders.r5,
-    },
+    padding:spacing.s4,
   },
   image: {
     borderRadius: '50%',
