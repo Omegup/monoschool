@@ -68,7 +68,7 @@ export const useViewModeSwitcherStyles = createUseStyles({
     transition: "background-color 700ms ease",
     "&:after": {
       //   transition:  "right 500ms ease, \n          background-color 500ms ease, \n          box-shadow 500ms ease"
-    },
+    }, 
     '&:focus': {
       outline: 'none'
     },
