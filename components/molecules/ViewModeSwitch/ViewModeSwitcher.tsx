@@ -15,7 +15,7 @@ export const ViewModeSwitcher = forwardRef(
         <div className={`${classes.elementLeft} ${checkedClassLeft} ${classes.element} `}>
           <input type="radio"
             name={name}
-            id={elementLeft.id}
+            id="elementLeft"
             className={classes.input}
             checked={isChecked}
             onChange={(e) => onChange(e.target.checked)}
@@ -27,7 +27,7 @@ export const ViewModeSwitcher = forwardRef(
           <input type="radio"
             name={name}
             checked={!isChecked}
-            id={elementRight.id}
+            id="elementRight"
             className={classes.input}
             onChange={(e) => onChange(e.target.checked)}
             {...{ ref, onBlur }}

@@ -4,14 +4,10 @@ export interface ViewModeSwitcherProps {
   isChecked?:boolean
   
   elementLeft: {
-    id: string,
     icon: JSX.Element,
-   
-  }
+     }
   elementRight: {
-    id: string,
     icon: JSX.Element,
-
   }
 }
 export interface ControlledViewModeSwitcherProps extends ViewModeSwitcherProps {

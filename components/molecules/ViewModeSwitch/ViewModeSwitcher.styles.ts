@@ -4,20 +4,6 @@ import { widths } from '@omegup-school/ui-atoms/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { ViewModeSwitcherProps } from './ViewModeSwitcher.types';
-
-type Sizes = readonly [
-  `$${ViewModeSwitcherProps['size']}>$container>&`,
-  { width: string; height: string }
-];
-const checkboxSizes = Object.fromEntries<'', Record<'', Sizes>>(
-  Object.entries(widths.checkbox).map(([k, v]) => [
-    `$${k}>$container>&`,
-    {
-      width: v,
-      height: v,
-    },
-  ])
-);
 export const useViewModeSwitcherStyles = createUseStyles({
   solid: {},
   border: {},
@@ -28,47 +14,40 @@ export const useViewModeSwitcherStyles = createUseStyles({
   small: {},
   disabled: {},
   enabled: {},
-  checked:{
-    borderRadius: borders.r5,
+  checked: {
+  
     backgroundColor: colors.blue[500],
-    color:colors.light[300],
+    color: colors.light[300],
     cursor: "default",
-    display: "flex",
-    padding: "6px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "10px",
+    '&> $input': {
+      cursor: "default"
+    },
   },
-  notChecked:{
-    borderRadius: borders.r5,
-    backgroundColor: colors.light[300],
-    color:colors.blue[500],
+  notChecked: {
+      backgroundColor: colors.light[300],
+    color: colors.blue[500],
     cursor: "pointer",
-    display: "flex",
-    padding: "6px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "10px",
-    '&:hover':{
-      backgroundColor:colors.light[500]
-    }
+    '&> $input': {
+      cursor: "pointer"
+    },
+   
   },
   input: {
-   position: "absolute",
+    position: "absolute",
     opacity: 0,
-    '&>*:checked ':{
-      cursor:"default"
-    },
-    '&>*:not(:checked)':{
-      cursor:"pointer"
-    } 
   },
   checkmark: {
     position: "absolute",
   },
   container: {
-    display: "flex",
     justifyContent: "right",
+    display: "inline-flex",
+    alignItems: "flex-start",
+    borderRadius: "10px",
+    background: "var(--background-background, #FFFFFE)",
+    boxShadow: "0px 1px 3px 0px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1)",
+ 
+    
   }
   ,
   elementLeft: {
@@ -77,28 +56,34 @@ export const useViewModeSwitcherStyles = createUseStyles({
   elementRight: {
     borderRadius: "0px 10px 10px 0px",
   },
-  element:{
+  element: {
     display: "flex",
     padding: "6px 7px",
     justifyContent: "center",
     alignItems: "center",
-    gap: "10px",
-   
+    gap: "10px", 
+
+    
+  
+     transition: "background-color 700ms ease",
+    "&:after": {
+    
+     //   transition:  "right 500ms ease, \n          background-color 500ms ease, \n          box-shadow 500ms ease"
+  
+            
+
+  },
     '&:focus': {
       outline: 'none'
     },
-    '&hover':{
-      cursor: "pointer",
-    },
-    '&active': {
-      color:colors.blue[500],
-      opacity: 0,
-    },  
-    '&>*:checked ':{
-      cursor:"default"
-    },
-    '&>*:not(:checked)':{
-      cursor:"pointer"
+    // '&:hover > $input:checked': {
+    //   cursor: "default"
+    // },
+    // '&:hover > $input:not(checked)': {
+    //   cursor: "pointer"
+    // },
+    '&:hover:checked': {
+      cursor: "default"
     }
   }
 });
