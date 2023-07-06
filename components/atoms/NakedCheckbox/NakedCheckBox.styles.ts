@@ -1,10 +1,10 @@
-import { borders } from '@omegup-school/ui-atoms/sizes';
 import { createUseStyles } from 'react-jss';
 import { CHECKBOX_SIZES, CHECKBOX_VARIANTS } from './NakedCheckBox.constants';
 import {
   checkboxSizesBuilder,
   checkboxVariantsBuilder,
 } from './NakedCheckbox.helpers';
+import { borders } from '@omegup-school/ui-configs/sizes/border';
 
 export const useCheckBoxStyles = createUseStyles(
   ({ containerStateSelector }: { containerStateSelector: string }) => ({

@@ -1,16 +1,12 @@
-import { NakedCheckBox } from "../Internals";
-import { joinClassNames } from "../common/utils";
 import { ContainerStateContext } from "../contexts/pointer";
 import { useLabeledCheckBoxStyles } from "./LabeledCheckBox.styles";
 import { LabeledCheckBoxProps } from "./LabeledCheckBox.types";
+import { joinClassNames } from "@omegup-school/ui-configs/typography";
 
 export const LabeledCheckBox = ({
   label,
-  disabled,
   checked,
-  size,
-  variant,
-  onChange,
+  checkBox,
 }: LabeledCheckBoxProps) => {
 
   const classes = useLabeledCheckBoxStyles();
@@ -21,7 +17,7 @@ export const LabeledCheckBox = ({
       checked && classes.enabled,
     )}>
       <ContainerStateContext.Provider value={classes.labeledCheckBox}>
-        <NakedCheckBox  {...{ disabled, checked, size, variant , onChange }} />
+        {checkBox}
         <label className={classes.label}>{label}</label>
       </ContainerStateContext.Provider>
     </div>

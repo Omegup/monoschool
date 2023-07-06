@@ -1,4 +1,4 @@
-import { spacing } from "@omegup-school/ui-atoms/sizes";
+import { spacing } from "@omegup-school/ui-configs/sizes";
 import { createUseStyles } from "react-jss";
 
 

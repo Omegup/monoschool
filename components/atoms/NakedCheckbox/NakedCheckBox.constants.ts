@@ -1,4 +1,5 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
+
+import { colors } from '@omegup-school/ui-configs/colors';
 import {
   CheckBoxVariantStylesBuilder,
   CheckboxSize,

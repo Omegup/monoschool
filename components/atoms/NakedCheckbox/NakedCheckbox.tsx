@@ -1,9 +1,9 @@
 import { Tick } from "@omegup-school/ui-assets"
-import { joinClassNames } from "../../common/utils"
-import { useContainerStateSelector } from "../../contexts/pointer"
+import { useContainerStateSelector } from "../contexts/pointer"
 import { DEFAULT_CHECKBOX_SIZE, DEFAULT_CHECKBOX_VARIANT } from "./NakedCheckBox.constants"
 import { useCheckBoxStyles } from "./NakedCheckBox.styles"
 import { ControlledNakedCheckboxProps, NakedCheckboxProps } from "./NakedCheckBox.types"
+import { joinClassNames } from "@omegup-school/ui-configs/typography"
 
 export const NakedCheckBox = ({
   variant = DEFAULT_CHECKBOX_VARIANT,
