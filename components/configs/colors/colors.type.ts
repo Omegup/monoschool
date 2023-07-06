@@ -34,3 +34,4 @@ export type GradientsPalette = Record<
   Gradients,
   Record<ColorLevels, readonly string[]>
 >;
+

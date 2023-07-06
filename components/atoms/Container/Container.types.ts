@@ -1,3 +1,4 @@
+import { colors } from "@omegup-school/ui-configs/colors";
 import { gaps, spacing } from "@omegup-school/ui-configs/sizes";
 import { ReactNode } from "react";
 
@@ -7,7 +8,7 @@ export interface ContainerProps {
   gap?: keyof typeof gaps,
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
   alignItems?: 'center' | 'start' | 'end'
-  justifyContent?: 'center' | 'start' | 'end'
+  justifyContent?: 'center' | 'start' | 'end',
 }
 export interface ControlledContainerProps extends ContainerProps {
   children: ReactNode[];
