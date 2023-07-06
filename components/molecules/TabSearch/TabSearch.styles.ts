@@ -71,7 +71,7 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     backgroundColor: `${colors.grey[100]}`,
-    paddingInlineEnd: spacing.s4,
+    paddingInline: spacing.s4,
     borderRadius: borders.r5,
   },
 });
