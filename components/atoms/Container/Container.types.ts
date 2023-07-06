@@ -10,5 +10,5 @@ export interface ContainerProps {
   justifyContent?: 'center' | 'start' | 'end',
 }
 export interface ControlledContainerProps extends ContainerProps {
-  children: ReactNode[];
+  children: ReactNode;
 }

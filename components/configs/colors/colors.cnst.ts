@@ -122,7 +122,7 @@ export const colors: ColorsPalette = {
     '800': '#3B5F93',
     '900': '#23427A',
   },
-}
+};
 export const gradients: GradientsPalette = {
   'gradient-pink': {
     '100': ['#D8F6FE', '#FEE0DA'],
