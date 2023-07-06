@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 export const FilterCheckBox = forwardRef(
   (props: ControlledFilterCheckBoxProps, ref: React.Ref<HTMLInputElement>) => {
-    const { label, imageURL, checkbox, showImage, onChange, value, onBlur } =
+    const { label, imageURL, checkbox, showImage, onChange, value } =
       props;
     const classes = useFilterCheckBoxStyles();
 
@@ -15,7 +15,6 @@ export const FilterCheckBox = forwardRef(
           type="checkbox"
           className={classes.input}
           onChange={(e) => onChange(e.target.checked)}
-          {...{ ref, onBlur }}
           checked={value}
         />
         <div className={classes.container}>

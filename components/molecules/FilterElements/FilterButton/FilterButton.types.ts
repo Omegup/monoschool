@@ -5,5 +5,4 @@ export type FilterButtonProps = {
 };
 export interface ControlledFilterButtonProps extends FilterButtonProps {
   onClick: () => void;
-  onBlur: () => void;
 }

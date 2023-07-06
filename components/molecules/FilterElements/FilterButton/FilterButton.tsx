@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 export const FilterButton = forwardRef(
   (props: ControlledFilterButtonProps, ref: React.Ref<HTMLDivElement>) => {
-    const { label, showIcon,icon, onClick, onBlur } = props;
+    const { label, showIcon,icon, onClick } = props;
     const classes = useFilterStyles();
     return (
         <div  {...ref} className={`${classes.label} `}>
@@ -13,7 +13,6 @@ export const FilterButton = forwardRef(
           type="button"
           className={classes.input}
           onClick={onClick}
-          {...onBlur}
         />
         <div className={classes.container}>
           <text className={classes.labelText}>{label}</text>

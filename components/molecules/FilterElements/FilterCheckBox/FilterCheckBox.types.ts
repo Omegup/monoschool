@@ -8,5 +8,4 @@ export type FilterCheckBoxProps = {
 export interface ControlledFilterCheckBoxProps extends FilterCheckBoxProps {
   value: boolean;
   onChange: (value: boolean) => void;
-  onBlur: () => void;
 }

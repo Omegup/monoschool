@@ -8,8 +8,6 @@ const meta = {
   component: FilterCheckBox,
   tags: ['autodocs'],
   argTypes: {
-    style: { control: 'select', options: ['solid', 'border', 'text', 'flat'] },
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
   },
 } satisfies Meta<typeof FilterCheckBox>;
 
@@ -20,13 +18,10 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     label: 'Text cell',
-    size: 'medium',
-    style: 'solid',
     showImage: false,
     imageURL: 'https://www.w3schools.com/howto/img_avatar.png',
     checkbox:<>box</>,
     value: false,
     onChange: () => {},
-    onBlur: () => {},
   },
 };
