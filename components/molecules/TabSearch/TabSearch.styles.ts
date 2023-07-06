@@ -1,32 +1,29 @@
 import { colors } from '@omegup-school/ui-atoms/colors';
+import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
 import { typography } from '@omegup-school/ui-atoms/typography';
 import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
   topSearchContainer: {
     display: 'flex',
+    marginInline: spacing.s4,
   },
 
   selected: {
-    borderBottom: `1px solid ${colors.blue[500]}`,
-
+    borderBottom: `${borders.b2}px solid ${colors.blue[500]} !important`,
     '& $tabText': {
       color: colors.blue[500],
     },
-
     '& $tabNumber': {
       color: colors.blue[500],
       backgroundColor: `${colors.light[300]}`,
     },
-
-    '&&:hover': {
+    '&:hover': {
       cursor: 'default',
-      borderBottom: `1px solid ${colors.blue[500]}`,
-
+      borderBottom: `${borders.b2}px solid ${colors.blue[500]}`,
       '& $tabText': {
         color: colors.blue[500],
       },
-
       '& $tabNumber': {
         color: colors.blue[500],
         backgroundColor: `${colors.light[300]}`,
@@ -42,11 +39,12 @@ export const useStyles = createUseStyles({
     width: 'fit-content',
     height: '100%',
     cursor: 'pointer',
-    paddingRight: '5px',
+    paddingInlineEnd: spacing.s2,
+    borderBottom: `${borders.b2}px solid ${colors.background.overlay}`,
 
     '&:hover': {
       cursor: 'pointer',
-      borderBottom: `1px solid ${colors.dark.default}`,
+      borderBottom: `${borders.b2}px solid ${colors.dark.default}`,
 
       '& $tabText': {
         color: colors.dark.default,
@@ -62,8 +60,8 @@ export const useStyles = createUseStyles({
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
-    marginBottom: '10px',
-    paddingInline: '5px',
+    marginBottom: spacing.s5,
+    paddingInline: spacing.s2,
   },
 
   tabNumber: {
@@ -72,7 +70,7 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: `${colors.grey[500]}`,
     backgroundColor: `${colors.grey[100]}`,
-    padding: '0 8px',
-    borderRadius: '10px',
+    paddingInlineEnd: spacing.s4,
+    borderRadius: borders.r5,
   },
 });
