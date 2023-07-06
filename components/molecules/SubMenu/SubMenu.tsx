@@ -8,13 +8,13 @@ import { ChildMenu } from '../ChildMenu';
 export const SubMenu = forwardRef(
   (props: ControlledSubMenuProps,
     ref: React.Ref<HTMLDivElement>) => {
-    const { size, disabled, parentName, items,  onChange, viewMode, onBlur, isCollopsed } = props;
+    const { size, parentName, items,  onChange, viewMode, onBlur, isCollopsed } = props;
     const classes = useSelectStyles()
-    const disabledClass = classes[disabled ? 'disabled' : 'enabled'];
+  
     const vieModeClassContainer = classes[viewMode == 'mobile' ? 'mobile' : 'container']
 
     return (
-      <div ref={ref} className={`${classes.container}  ${classes[size]} ${disabledClass}`}>
+      <div ref={ref} className={`${classes.container}  ${classes[size]} `}>
         {viewMode !== 'mobile' && <label
           tabIndex={-1}
           className={`${classes.parentName}`}>
