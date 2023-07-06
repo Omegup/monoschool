@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-import { Select } from '@omegup-school/ui-molecules';
+import { Select } from '@omegup-school/ui-atoms';
 
 const meta = {
   title: 'Atom/Select',
@@ -22,5 +21,8 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     disabled: false,
+    value: true,
+  onChange: () => {},
+  onBlur: () => {},
   },
 };
