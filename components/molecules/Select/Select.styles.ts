@@ -47,10 +47,8 @@ export const useSelectStyles = createUseStyles({
         opacity: 1,
       },
     },
-    '&:focus': {
-      outline: 'none'
-    },
-    '&:focus-within:not(:focus) > $input': {
+
+    '& > $input:focus': {
       '& + $container': {
         outlineWidth: borders.b5,
         outlineColor: 'currentcolor',
