@@ -2,8 +2,7 @@ import { ControlledFilterCheckBoxProps } from "../FilterCheckBox/FilterCheckBox.
 
 export type SubFilterMenuProps = {
   label: string;
-  size: 'large' | 'medium' | 'small';
   showImage:boolean;
-  child:ControlledFilterCheckBoxProps[]
+  child:JSX.Element[]
   SearchBar:JSX.Element
 };

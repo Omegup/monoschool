@@ -24,8 +24,7 @@ export const Primary: Story = {
     label: 'Text cell',
     icon:  <ArrowRight bold={true} width={"100%"} />,
     showIcon: true,
-    value:false,
-    onChange: () =>{},
+    onClick: () =>{},
     onBlur: () => {},
   },
 };

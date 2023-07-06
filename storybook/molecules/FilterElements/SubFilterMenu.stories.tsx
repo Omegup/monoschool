@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { SubFilterMenu } from '@omegup-school/ui-molecules';
+import { FilterCheckBox, SubFilterMenu } from '@omegup-school/ui-molecules';
 import { Ellipse46, Ellipse47, Ellipse48, Ellipse49} from '@omegup-school/ui-assets';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -10,7 +10,6 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
 
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
   },
    
 
@@ -26,40 +25,24 @@ export const Primary: Story = {
     size: 'medium',
     showImage:true,
     SearchBar:"searchBar",
-    child:[{   <FilterCheckBox
-      label={item.label}
-      showImage={showImage}
-      value={item.value}
-      onChange={item.onChange}
-      onBlur={item.onBlur}
-      imageURL={item.imageURL} 
+    child:[  <FilterCheckBox
+      label={"Sana Binhamed"}
+      showImage={true}
+      value={false}
+      onChange={()=>{}}
+      onBlur={()=>{}}
+      imageURL={Ellipse46} 
       checkbox={undefined}          />
 
-    },{ size:"medium" ,
-    label:"Sana Binhamed",
-    showImage:true,
-     value:false,
-      onChange:()=>{} ,
-      onBlur:()=>{},
-       imageURL:Ellipse46,
-
-  },{ size:"medium" ,
-  label:"Atef chrigui",
-  showImage:true,
-   value:false,
-    onChange:()=>{} ,
-    onBlur:()=>{},
-     imageURL:Ellipse48,
-
-},{ size:"medium" ,
-label:"Jihen brahim",
-showImage:true,
- value:false,
-  onChange:()=>{} ,
-  onBlur:()=>{},
-   imageURL:Ellipse49,
-
-}]
+    ,<FilterCheckBox
+    label={"Atef chrigui"}
+    showImage={true}
+    value={false}
+    onChange={()=>{}}
+    onBlur={()=>{}}
+    imageURL={Ellipse46} 
+    checkbox={undefined}          />
+    ]
 
   },
 };
