@@ -5,10 +5,7 @@ import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { SubMenuProps } from './SubMenu.types';
 
-type Sizes = readonly [
-  `$${SubMenuProps['size']}>$container>&`,
-  { width: string; height: string }
-];
+
 
 
 export const useSelectStyles = createUseStyles({

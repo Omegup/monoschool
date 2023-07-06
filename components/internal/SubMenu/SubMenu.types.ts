@@ -1,7 +1,6 @@
-import { ChildMenuProps, ControlledChildMenuProps } from "../ChildMenu/ChildMenu.types";
+import { ChildMenuProps } from "../../atoms/ChildMenu/ChildMenu.types";
 
 export interface SubMenuProps {
-  size: 'large' | 'medium' | 'small';
   isCollopsed?:boolean;
   parentName: string;
   parentId: number;
@@ -9,6 +8,5 @@ export interface SubMenuProps {
   items: ChildMenuProps[]
 }
 export interface ControlledSubMenuProps extends SubMenuProps {
-  onChange: (value: boolean) => void;
-  onBlur: () => void;
-}
+  onClick: (value: boolean) => void;
+ }

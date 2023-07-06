@@ -1,6 +1,6 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
-import { widths } from '@omegup-school/ui-atoms/sizes/widths';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { ChildMenuProps } from './ChildMenu.types';
@@ -11,7 +11,7 @@ type Sizes = readonly [
 ];
 
 
-export const useSelectStyles = createUseStyles({
+export const useChildMenutStyles = createUseStyles({
   solid: {},
   border: {},
   flat: {},
@@ -36,20 +36,17 @@ export const useSelectStyles = createUseStyles({
     backgroundColor: colors.blue[500],
     flexShrink: 0
     ,
-    // '&$selected': {
-    //   backgroundColor: colors.light[500],
-    //   cursor: "pointer",
-    //   display: "flex",
-    //   justifyContent: "center",
-    //   alignItems: "center",
-    //   borderRadius: "10px"
-    // },
+    '&$selected': {
+      cursor: "pointer",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: "10px"
+    },
     '&$notSelected': {
       color: colors.blue[500],
     },
- 
   },
-
   icon: {
     width: "24px",
     height: "24px",
@@ -58,30 +55,30 @@ export const useSelectStyles = createUseStyles({
     },
   },
   label: {
-    fontSize: spacing.s8,
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
-     fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "normal",
-    '&:hover': {
-      cursor: "pointer",
+    '& label': {
+      cursor: "pointer"
+    },
+    '$large > &': {
+      fontSize: spacing.s9,
+    },
+    '$medium > &': {
+      fontSize: spacing.s8,
+    },
+    '$small > &': {
+      fontSize: spacing.s7,
     },
   },
-
   mobileIcon: {
     width: "24px",
     height: "24px",
     justifyContent: "center",
     alignItems: "center",
     color: colors.grey[100],
-   
-    // '&$selected': {
-    //   color: colors.blue[500],
-    //   cursor: "pointer",
+    '&$selected': {
+      color: colors.blue[500],
+      cursor: "pointer",
 
-    // },
+    },
   },
   mobileLabel: {
     justifyContent: "center",
@@ -92,22 +89,7 @@ export const useSelectStyles = createUseStyles({
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
-   
-    // '&$selected': {
-    //   color: colors.blue[500],
-    //   cursor: "pointer",
-    // },
-  },
-  tabletteIcon: {
-    width: "24px",
-    height: "24px",
-    '&$selected': {
-      color: colors.blue[500],
-      cursor: "pointer",
-    },
-  },
-  tabletteLabel: {
-    fontSize: "16px",
+
     '&$selected': {
       color: colors.blue[500],
       cursor: "pointer",
@@ -117,21 +99,23 @@ export const useSelectStyles = createUseStyles({
     display: "inline-flex",
     padding: spacing.s5,
     alignItems: "center",
-    alignSelf: "stretch",
-    gap: "15px",
+    gap: '15px',
+    cursor: "pointer",
     '&$selected': {
-      color: colors.grey[100]
+      color: colors.grey[100],
+      borderRadius: "10px",
+      background: colors.blue[500]
     },
     '&$notSelected': {
-
       color: colors.grey[500],
+
     },
     '&:hover': {
       color: colors.blue[500],
-      cursor: "pointer",
+      borderRadius: "10px",
+      background: colors.light[500]
     },
-
-
+    
   },
 
 }

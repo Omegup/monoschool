@@ -1,8 +1,4 @@
-lockfileVersion: '6.0'
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
+lockfileVersion: 5.4
 
 importers:
 
@@ -63,53 +59,41 @@ importers:
 
   components/assets:
     specifiers:
-      '@omegup-school/ui-atoms': workspace:*
+      '@omegup-school/ui-configs': workspace:*
       '@types/react': ^18.2.8
       react: ^18.2.0
       tslib: ^2.5.3
       typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-configs':
-        specifier: workspace:*
-        version: link:../configs
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
+      '@omegup-school/ui-configs': link:../configs
+      react: 18.2.0
     devDependencies:
       '@types/react': 18.2.14
       tslib: 2.6.0
       typescript: 5.1.6
 
   components/atoms:
+    specifiers:
+      '@omegup-school/ui-assets': workspace:*
+      '@omegup-school/ui-configs': workspace:*
+      '@types/omegup-school': workspace:*
+      '@types/react': ^18.2.8
+      jss: ^10.10.0
+      react: ^18.2.0
+      react-jss: ^10.10.0
+      tslib: ^2.5.3
+      typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-assets':
-        specifier: workspace:*
-        version: link:../assets
-      '@omegup-school/ui-configs':
-        specifier: workspace:*
-        version: link:../configs
-      jss:
-        specifier: ^10.10.0
-        version: 10.10.0
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-jss:
-        specifier: ^10.10.0
-        version: 10.10.0(react@18.2.0)
+      '@omegup-school/ui-assets': link:../assets
+      '@omegup-school/ui-configs': link:../configs
+      jss: 10.10.0
+      react: 18.2.0
+      react-jss: 10.10.0_react@18.2.0
     devDependencies:
-      '@types/omegup-school':
-        specifier: workspace:*
-        version: link:../../lib/type-helpers
-      '@types/react':
-        specifier: ^18.2.8
-        version: 18.2.8
-      tslib:
-        specifier: ^2.5.3
-        version: 2.5.3
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
+      '@types/omegup-school': link:../../lib/type-helpers
+      '@types/react': 18.2.14
+      tslib: 2.6.0
+      typescript: 5.1.6
 
   components/cells:
     specifiers:
@@ -122,43 +106,25 @@ importers:
       tslib: ^2.5.3
       typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-assets':
-        specifier: workspace:*
-        version: link:../assets
-      '@omegup-school/ui-molecules':
-        specifier: workspace:*
-        version: link:../molecules
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-hook-form:
-        specifier: ^7.44.3
-        version: 7.44.3(react@18.2.0)
+      '@omegup-school/ui-assets': link:../assets
+      '@omegup-school/ui-molecules': link:../molecules
+      react: 18.2.0
+      react-hook-form: 7.45.1_react@18.2.0
     devDependencies:
-      '@types/omegup-school':
-        specifier: workspace:*
-        version: link:../../lib/type-helpers
-      '@types/react':
-        specifier: ^18.2.8
-        version: 18.2.8
-      tslib:
-        specifier: ^2.5.3
-        version: 2.5.3
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
+      '@types/omegup-school': link:../../lib/type-helpers
+      '@types/react': 18.2.14
+      tslib: 2.6.0
+      typescript: 5.1.6
 
   components/configs:
+    specifiers:
+      '@types/omegup-school': workspace:*
+      tslib: ^2.5.3
+      typescript: ^5.1.3
     devDependencies:
-      '@types/omegup-school':
-        specifier: workspace:*
-        version: link:../../lib/type-helpers
-      tslib:
-        specifier: ^2.5.3
-        version: 2.5.3
-      typescript:
-        specifier: ^5.1.3
-        version: 5.1.3
+      '@types/omegup-school': link:../../lib/type-helpers
+      tslib: 2.6.0
+      typescript: 5.1.6
 
   components/molecules:
     specifiers:
@@ -166,21 +132,13 @@ importers:
       '@omegup-school/ui-atoms': workspace:*
       '@types/omegup-school': workspace:*
       '@types/react': ^18.2.8
-      jss: ^10.10.0
       react: ^18.2.0
-      react-jss: ^10.10.0
       tslib: ^2.5.3
       typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-assets':
-        specifier: workspace:*
-        version: link:../assets
-      '@omegup-school/ui-atoms':
-        specifier: workspace:*
-        version: link:../atoms
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
+      '@omegup-school/ui-assets': link:../assets
+      '@omegup-school/ui-atoms': link:../atoms
+      react: 18.2.0
     devDependencies:
       '@types/omegup-school': link:../../lib/type-helpers
       '@types/react': 18.2.14
@@ -434,6 +392,9 @@ importers:
   storybook:
     specifiers:
       '@omegup-school/ui-assets': workspace:*
+      '@omegup-school/ui-atoms': workspace:*
+      '@omegup-school/ui-cells': workspace:*
+      '@omegup-school/ui-configs': workspace:*
       '@omegup-school/ui-molecules': workspace:*
       '@storybook/addon-controls': 7.0.21
       '@storybook/addon-essentials': 7.0.21
@@ -453,30 +414,14 @@ importers:
       tslib: ^2.5.3
       typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-assets':
-        specifier: workspace:*
-        version: link:../components/assets
-      '@omegup-school/ui-atoms':
-        specifier: workspace:*
-        version: link:../components/atoms
-      '@omegup-school/ui-cells':
-        specifier: workspace:*
-        version: link:../components/cells
-      '@omegup-school/ui-configs':
-        specifier: workspace:*
-        version: link:../components/configs
-      '@omegup-school/ui-molecules':
-        specifier: workspace:*
-        version: link:../components/molecules
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      react-hook-form:
-        specifier: ^7.44.3
-        version: 7.44.3(react@18.2.0)
+      '@omegup-school/ui-assets': link:../components/assets
+      '@omegup-school/ui-atoms': link:../components/atoms
+      '@omegup-school/ui-cells': link:../components/cells
+      '@omegup-school/ui-configs': link:../components/configs
+      '@omegup-school/ui-molecules': link:../components/molecules
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-hook-form: 7.45.1_react@18.2.0
     devDependencies:
       '@storybook/addon-controls': 7.0.21_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-essentials': 7.0.21_biqbaboplfbrettd7655fr4n2y
