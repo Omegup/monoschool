@@ -1,16 +1,30 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { CheckboxSize, CheckboxVariant } from '@omegup-school/ui-atoms/NakedCheckbox/NakedCheckBox.types';
 import { Checkbox } from '@omegup-school/ui-molecules/Checkbox';
-
+import {
+  CheckboxSize,
+  CheckboxVariant,
+} from '@omegup-school/ui-atoms/NakedCheckbox/NakedCheckbox-styles/NakedCheckbox-styles.types';
 
 const meta = {
   title: 'Molecules/CheckBox',
   component: Checkbox,
   tags: ['autodocs'],
   argTypes: {
-    variant: { control: 'select', options: ['solid', 'border', 'scale', 'cell', 'select'] as CheckboxVariant[] },
-    size: { control: 'select', options: ['large', 'medium', 'small'] as CheckboxSize[] },
+    variant: {
+      control: 'select',
+      options: [
+        'solid',
+        'border',
+        'scale',
+        'cell',
+        'select',
+      ] satisfies CheckboxVariant[],
+    },
+    size: {
+      control: 'select',
+      options: ['large', 'medium', 'small'] satisfies CheckboxSize[],
+    },
     disabled: { control: 'boolean' },
     checked: { control: 'boolean' },
     label: { control: 'text' },
@@ -20,11 +34,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
+const states = {
+  checked: false,
+  disabled: false,
+};
+
 export const Solid: Story = {
   args: {
     label: 'CheckBox',
     size: 'medium',
     variant: 'solid',
+    ...states,
   },
 };
 export const Border: Story = {
@@ -32,6 +52,7 @@ export const Border: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'border',
+    ...states,
   },
 };
 export const Scale: Story = {
@@ -39,6 +60,7 @@ export const Scale: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'scale',
+    ...states,
   },
 };
 export const Cell: Story = {
@@ -46,6 +68,7 @@ export const Cell: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'cell',
+    ...states,
   },
 };
 export const Select: Story = {
@@ -53,5 +76,6 @@ export const Select: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'select',
+    ...states,
   },
 };

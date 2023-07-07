@@ -6,7 +6,7 @@ import { joinClassNames } from "@omegup-school/ui-configs/typography";
 export const LabeledCheckBox = ({
   label,
   checked,
-  checkBox,
+  children,
 }: LabeledCheckBoxProps) => {
 
   const classes = useLabeledCheckBoxStyles();
@@ -17,7 +17,7 @@ export const LabeledCheckBox = ({
       checked && classes.enabled,
     )}>
       <ContainerStateContext.Provider value={classes.labeledCheckBox}>
-        {checkBox}
+        {children}
         <label className={classes.label}>{label}</label>
       </ContainerStateContext.Provider>
     </div>

@@ -1,5 +1,5 @@
 export interface LabeledCheckBoxProps {
   label: string;
-  checkBox: JSX.Element;
+  children: JSX.Element;
   checked: boolean;
 }
