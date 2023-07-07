@@ -1,63 +1,69 @@
 import { forwardRef } from 'react';
-import { Container, Text } from '@omegup-school/ui-atoms';
-import { ControlledFieldProps } from './Field.type';
-import { FieldLabel } from '..';
+import { Container, FieldLabelLayout, Text } from '@omegup-school/ui-atoms';
+import { FieldProps } from './Field.type';
 import { FieldInfoMessage } from '../FieldInfoMessage';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { FieldContext } from '@omegup-school/ui-atoms';
+import { FieldLabel } from '../FieldLabel';
 
+export const colors: {
+  [k in
+    | 'error'
+    | 'info'
+    | 'success'
+    | 'warning'
+    | 'default']: keyof typeof colorsStyles;
+} = {
+  error: 'danger_700',
+  default: 'grey_400',
+  info: 'headline_500',
+  success: 'success_700',
+  warning: 'warning_600',
+};
+const sizes: { [k in 'spaced' | 'condensed']: 'xSmall' | 'medium' } = {
+  spaced: 'medium',
+  condensed: 'xSmall',
+};
 export const Field = forwardRef(
-  (props: ControlledFieldProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: FieldProps, ref: React.Ref<HTMLDivElement>) => {
     const {
-      color,
+      color='default',
       input,
-      onChange,
       required,
-      value,
       variant,
       descriptionText,
       infoText,
       label,
       disabled,
     } = props;
-    const size: 'xSmall' | 'medium' = (
-      {
-        spaced: 'medium',
-        condensed: 'xSmall',
-      } as { [k in 'spaced' | 'condensed']: 'xSmall' | 'medium' }
-    )[variant];
-    const infoTextColor: keyof typeof colorsStyles = (
-      {
-        danger: 'danger_700',
-        default: 'grey_500',
-        info: 'headline_500',
-        success: 'success_700',
-        warning: 'warning_600',
-      } as {
-        [k in
-          | 'danger'
-          | 'info'
-          | 'success'
-          | 'warning'
-          | 'default']: keyof typeof colorsStyles;
-      }
-    )[color];
+    const size: 'xSmall' | 'medium' = sizes[variant];
+    const infoTextColor: keyof typeof colorsStyles = colors[color];
     return (
-      <Container ref={ref} gap={'s5'} alignItems="center">
-        {variant == 'spaced' && label && (
-          <FieldLabel {...{ label, size, required }} />
-        )}
-        
-        {input}
+      <Container ref={ref} gap={'s4'} direction="column" alignItems="start">
+        <FieldLabelLayout {...{ variant }}>
+          <Container>
+            {label && (
+              <FieldLabel
+                {...{ label, size, required }}
+                {...(variant === 'condensed' ? { color: colors[color] } : {})}
+              />
+            )}
+          </Container>
+          <FieldContext.Provider value={{ disabled }}>
+            {input}
+          </FieldContext.Provider>
+        </FieldLabelLayout>
         {infoText && (
           <FieldInfoMessage {...{ label: infoText, color: infoTextColor }} />
         )}
-        {label && <FieldLabel {...{ label, size }} />}
         {descriptionText && (
-          <Text
-            text={descriptionText}
-            variant="paragraph_xSmall_regular"
-            color={'dark_default'}
-          />
+          <Container paddingInline="s8">
+            <Text
+              text={descriptionText}
+              variant="paragraph_xSmall_regular"
+              color={'dark_default'}
+            />
+          </Container>
         )}
       </Container>
     );

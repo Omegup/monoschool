@@ -9,5 +9,5 @@ export const borders = {
   b7: 3.5,
   b8: 4,
   b9: 4.5,
-  b10: 5
-};
+  b10: 5,
+} as const;

@@ -6,7 +6,7 @@ import { spacing } from '@omegup-school/ui-configs/sizes';
 
 export const FieldLabel = forwardRef(
   (props: FieldLabelProps, ref: React.Ref<HTMLDivElement>) => {
-    const { label, size, required = false } = props;
+    const { label, size, required = false, color = 'dark_default' } = props;
     const variant: keyof typeof typoStyles = (
       {
         xSmall: 'paragraph_xSmall_semiBold',
@@ -21,7 +21,7 @@ export const FieldLabel = forwardRef(
     )[size];
     return (
       <Container ref={ref} {...{ paddingInline }}>
-        <Text text={label} color="danger_700" {...{ variant }} />
+        <Text text={label} {...{ variant, ...(color ? { color } : {}) }} />
         {required && <Text text={'*'} color="danger_700" {...{ variant }} />}
       </Container>
     );
