@@ -5,3 +5,4 @@ export * from './ArrowDownSecond'
 export * from './ArrowLeftSecond'
 export * from './ArrowRightSecond'
 export * from './ArrowUpSecond'
+export * from './Subtitle';

@@ -1,4 +1,4 @@
-import { rotation, widths } from '@omegup-school/ui-atoms/sizes';
+import { widths, rotation } from '@omegup-school/ui-configs/sizes';
 import { ArrowDownSecond } from './ArrowDownSecond';
 import { IconProps } from './Icons.types';
 

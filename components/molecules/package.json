@@ -4,9 +4,8 @@
   "dependencies": {
     "@omegup-school/ui-assets": "workspace:*",
     "@omegup-school/ui-atoms": "workspace:*",
-    "jss": "^10.10.0",
-    "react": "^18.2.0",
-    "react-jss": "^10.10.0"
+    "@omegup-school/ui-configs": "workspace:*",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@types/omegup-school": "workspace:*",
