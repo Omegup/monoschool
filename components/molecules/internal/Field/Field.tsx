@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
 import { Container, Text } from '@omegup-school/ui-atoms';
 import { ControlledFieldProps } from './Field.type';
-import { FieldLabel } from '../internal';
-import { FieldInfoMessage } from '../internal/FieldInfoMessage';
+import { FieldLabel } from '..';
+import { FieldInfoMessage } from '../FieldInfoMessage';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
 
 export const Field = forwardRef(
@@ -47,6 +47,7 @@ export const Field = forwardRef(
           <FieldLabel {...{ label, size, required }} />
         )}
         
+        {input}
         {infoText && (
           <FieldInfoMessage {...{ label: infoText, color: infoTextColor }} />
         )}
