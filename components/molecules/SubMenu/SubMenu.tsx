@@ -38,31 +38,7 @@ export const SubMenu = forwardRef(
             />
   )  }
      </Container>
-      // <div ref={ref} className={`${classes.container}  ${classes[size]} `}>
-      //   {viewMode !== 'mobile' && <label
-      //     tabIndex={-1}
-      //     className={`${classes.parentName}`}>
-      //     {parentName}
-      //   </label>}
-      //   <div className={`${classes.itemsList}  `} >
-
-      //     {items.map((ch, index) =>
-      //       <ChildMenu
-      //         key={index}
-      //         onChange={(e) => { ch.selected = true }}
-      //         onBlur={() => { }}
-      //         size={size}
-      //         icon={ch.icon}
-      //         label={ch.label}
-      //         id={ch.id}
-      //         selected={ch.selected}
-      //         isCollopsed={isCollopsed}
-      //       />
-      //     )
-      //     }
-      //   </div>
-
-      // </div>
+     
     );
   }
 );
