@@ -9,7 +9,7 @@ export const useNakedDropDownStyles = createUseStyles({
     width: '100%',
     border: ({ border, borderColor }: Partial<NakedDropDownProps>) =>
       borderColor
-        ? `${border ? spacing[border] : 0}px solid ${colorsStyles[borderColor]}`
+        ? `${border ? borders[border] : 0}px solid ${colorsStyles[borderColor]}`
         : '',
     paddingInline: spacing['s8'],
     paddingBlock: spacing['s6'],

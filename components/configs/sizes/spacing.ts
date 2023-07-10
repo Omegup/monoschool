@@ -8,5 +8,4 @@ export const spacing = {
   s7: 14,
   s8: 16,
   s9: 20,
-  s10: 1,
 } as const;

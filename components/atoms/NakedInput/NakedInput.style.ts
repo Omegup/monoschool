@@ -14,7 +14,7 @@ export const useNakedInputStyles = createUseStyles({
     opacity: ({ disabled }: Partial<NakedInputProps>) => (disabled ? 0.5 : 0.8),
     border: ({ border, borderColor }: Partial<NakedInputProps>) =>
       borderColor
-        ? `${border ? spacing[border] : 0}px solid ${colorsStyles[borderColor]}`
+        ? `${border ? borders[border] : 0}px solid ${colorsStyles[borderColor]}`
         : '',
     '&>input': {
       color: colorsStyles['dark_default'],

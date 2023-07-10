@@ -56,7 +56,7 @@ const Demo = ({
           setText(e.target.value);
         }}
         value={text}
-        border="s10"
+        border="b2"
         borderColor={FIELD_COLORS[props.color]}
       />
     ),
@@ -92,7 +92,7 @@ const Demo = ({
           setText(e.target.value);
         }}
         value={text}
-        border="s10"
+        border="b2"
         borderColor={FIELD_COLORS[props.color]}
       />
     ),

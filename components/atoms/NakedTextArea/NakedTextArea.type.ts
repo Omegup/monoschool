@@ -1,5 +1,5 @@
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
-import { spacing } from '@omegup-school/ui-configs/sizes';
+import { borders } from '@omegup-school/ui-configs/sizes';
 import { typoStyles } from '@omegup-school/ui-configs/typography';
 import { ReactNode } from 'react';
 
@@ -7,7 +7,7 @@ export interface NakedTextAreaProps {
   startIcon?: ReactNode;
   endIcon?: ReactNode;
   borderColor?: keyof typeof colorsStyles;
-  border?: keyof typeof spacing;
+  border?: keyof typeof borders;
   disabled?: boolean;
   textVariant?: keyof typeof typoStyles;
   placeholder?: string;

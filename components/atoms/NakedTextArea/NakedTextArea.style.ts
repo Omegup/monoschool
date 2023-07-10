@@ -13,7 +13,7 @@ export const useNakedTextAreaStyles = createUseStyles({
     gap: spacing['s2'],
     border: ({ border, borderColor }: Partial<NakedTextAreaProps>) =>
       borderColor
-        ? `${border ? spacing[border] : 0}px solid ${colorsStyles[borderColor]}`
+        ? `${border ? borders[border] : 0}px solid ${colorsStyles[borderColor]}`
         : '',
     borderRadius: borders['r5'],
     opacity: ({ disabled }: Partial<NakedTextAreaProps>) =>
