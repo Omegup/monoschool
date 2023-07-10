@@ -8,3 +8,4 @@ export * from './Tooltip';
 export * from './FilterButton';
 export * from './FilterContainer';
 export * from './NakedCheckbox'
+export * from './FilterCheckBox'

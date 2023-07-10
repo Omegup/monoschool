@@ -1,8 +1,9 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
-import { widths } from '@omegup-school/ui-atoms/sizes/widths';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes/widths';
 import { createUseStyles } from 'react-jss';
-import { styles } from '../../common/styles';
+import { styles } from '../common/styles';
+
 
 export const useFilterCheckBoxStyles = createUseStyles({
   input: {
@@ -12,7 +13,7 @@ export const useFilterCheckBoxStyles = createUseStyles({
   label: {
     display: 'flex',
     borderRadius: borders.r5,
-  
+    color:colors.grey[300],
     '&:hover > $input:not(:checked) + $container': {
       color: colors.blue[500],
     },
@@ -24,13 +25,14 @@ export const useFilterCheckBoxStyles = createUseStyles({
     color: colors.grey[400],
     gap: spacing.s4,
     padding:spacing.s4,
+    cursor: 'pointer',
   },
   image: {
     borderRadius: '50%',
     display: 'block',
     position: 'relative',
-    width: widths.image.small,
-    height: widths.image.small,
+    width: widths.avatar.small,
+    height: widths.avatar.small,
   },
   labelText: {
     ...styles.paragraph_small_regular,

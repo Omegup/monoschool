@@ -15,6 +15,7 @@ export const useContainerStyles = createUseStyles({
     background: colors.background.default,
     /* Drop Shadow/Small */
     boxShadow: shadowXSmall,
+    
   },
   border: {
     '& $line': {

@@ -1,54 +1,83 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { FilterListeButton } from '@omegup-school/ui-molecules';
-import { Icon } from './Icon';
-import { ControlledFilterButtonProps } from '@omegup-school/ui-atoms/FilterButton/FilterButton.types';
+import { FilterListeChekbox } from '@omegup-school/ui-molecules';
 
-const Demo = ({ icon, ...restProps }: Omit<ControlledFilterButtonProps>) => {
-  return <FilterListeButton {...restProps} />;
-};
+import { Ellipse47, Ellipse57, Ellipse71 } from '@omegup-school/ui-assets';
+
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'molecule/Filter1',
-  component: Demo,
+  title: 'molecule/Filter2',
+  component: FilterListeChekbox,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Demo>;
+} satisfies Meta<typeof FilterListeChekbox>;
 
 export default meta;
-type Story = StoryObj<typeof Demo>;
+type Story = StoryObj<typeof FilterListeChekbox>;
+const states = {
+  checked: false,
+  disabled: false,
+};
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
   args: {
     data: [
       {
-        showIcon: true,
-        label: 'Apprenant',
-        icon: <Icon name={'ArrowRight'} width="20px" />,
-        active: false,
-        onClick: (e) => {console.log(e)},
+        label: 'Bacem achour',
+        showImage: true,
+        imageURL: Ellipse71,
+
+        onChange: () => {
+          console.log();
+        },
+
+        onBlur: () => {
+          console.log('blur');
+        },
+        ...states,
       },
       {
-        showIcon: true,
-        label: 'Classe',
-        icon: <Icon name={'ArrowRight'} width="20px" />,
-        active: false,
-        onClick: () => {},
+        label: 'Sana Binhamed',
+        showImage: true,
+        imageURL: Ellipse47,
+
+        onChange: () => {
+          console.log();
+        },
+
+        onBlur: () => {
+          console.log('blur');
+        },
+        ...states,
       },
       {
-        showIcon: false,
-        label: 'Facturé aujourd’hui',
-        icon: <Icon name={'ArrowRight'} width="20px" />,
-        active: false,
-        onClick: () => {},
+        label: 'Atef Chrigui',
+        showImage: true,
+        imageURL: Ellipse57,
+
+        onChange: () => {
+          console.log();
+        },
+
+        onBlur: () => {
+          console.log('blur');
+        },
+        ...states,
       },
       {
-        showIcon: false,
-        label: 'Facturé ce mois ci',
-        icon: <Icon name={'ArrowRight'} width="20px" />,
-        active: false,
-        onClick: () => {},
+        label: 'Jihen brahim',
+        showImage: true,
+        imageURL: Ellipse47,
+
+        onChange: () => {
+          console.log();
+        },
+
+        onBlur: () => {
+          console.log('blur');
+        },
+        ...states,
       },
     ],
   },

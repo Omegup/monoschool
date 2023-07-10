@@ -5,3 +5,4 @@ export * from './IconWithDoubleText';
 export * from './FilterListeButton';
 export * from './Checkbox';
 export * from './SignIn';
+export * from './FilterListeChekbox';

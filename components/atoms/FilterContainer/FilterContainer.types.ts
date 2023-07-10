@@ -1,4 +1,6 @@
+import { ReactNode } from "react";
+
 export interface ContainerProps {
   variant:"border"|"flat"
-  children: JSX.Element[];
+  children: ReactNode;
 }

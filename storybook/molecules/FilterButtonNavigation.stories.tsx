@@ -4,19 +4,17 @@ import { FilterListeButton } from '@omegup-school/ui-molecules';
 import { Icon } from './Icon';
 import { ControlledFilterButtonProps } from '@omegup-school/ui-atoms/FilterButton/FilterButton.types';
 
-const Demo = ({ icon, ...restProps }: Omit<ControlledFilterButtonProps>) => {
-  return <FilterListeButton {...restProps} />;
-};
+
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'molecule/Filter2',
-  component: Demo,
+  title: 'molecule/Filter1',
+  component: FilterListeButton,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Demo>;
+} satisfies Meta<typeof FilterListeButton>;
 
 export default meta;
-type Story = StoryObj<typeof Demo>;
+type Story = StoryObj<typeof FilterListeButton>;
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Primary: Story = {
