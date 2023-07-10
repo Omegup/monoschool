@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss";
 import { ContainerProps } from "./Container.types";
 import { spacing } from "@omegup-school/ui-configs/sizes";
+import { colors } from "@omegup-school/ui-configs/colors";
 
 export const useContainerStyles = createUseStyles({
   container: {
@@ -11,5 +12,6 @@ export const useContainerStyles = createUseStyles({
     gap: ({ gap }: Partial<ContainerProps>) => gap ? spacing[gap] : 0,
     alignItems: ({ alignItems }: Partial<ContainerProps>) => alignItems || "start",
     justifyContent: ({ justifyContent }: Partial<ContainerProps>) => justifyContent || "start",
+    backgroundColor:  ({ backgroundColor }: Partial<ContainerProps>) => backgroundColor || "",
   }
 })

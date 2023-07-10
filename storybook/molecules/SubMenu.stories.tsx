@@ -2,12 +2,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 import { SubMenu } from '@omegup-school/ui-molecules';
 import {  ClipboardTick, Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
+import { ControlledNavBarMobileProps } from '@omegup-school/ui-molecules/NavBarMobile/NavBarMobile.types';
+import { ControlledSubMenuProps } from '@omegup-school/ui-molecules/SubMenu/SubMenu.types';
 
 
+const Demo = (props: ControlledSubMenuProps) => {
+  
+  return  <div style={{ width: 300 }}>
+    <SubMenu 
+      {...props
+      } />
+  </div>
+}
 
 const meta = {
   title: 'Atom/SubMenu',
-  component: SubMenu,
+  component: Demo,
   tags: ['autodocs'],
   argTypes: {
     viewMode:{control:'select',options:['mobile','default']},

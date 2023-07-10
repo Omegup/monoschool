@@ -1,18 +1,22 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import { NavBarMobile } from '@omegup-school/ui-molecules';
-import { Home, Logo, Message, Notification } from '@omegup-school/ui-assets';
+import { ClipboardTick, Message, Notification, Tick, UserTick, WifiSquare } from '@omegup-school/ui-assets';
+import { ControlledNavBarMobileProps } from '@omegup-school/ui-molecules/NavBarMobile/NavBarMobile.types';
+
 
 const ICONS = {
-  icon1: <Home  />,
-  icon2: <Message   />,
-  icon3: <Notification   />,
-  icon4: <Logo  fill='red' />,
-}
 
+}
+const Demo = (props: ControlledNavBarMobileProps) => {
+  
+  return  <div style={{ width: 350 }}>
+    <NavBarMobile
+      {...props} />
+  </div>
+}
 const meta = {
   title: 'Atom/NavBarMobile',
-  component: NavBarMobile,
+  component: Demo,
   tags: ['autodocs'],
   argTypes: {
     style: { control: 'NavBarMobile', options: ['solid', 'border', 'text', 'flat'] },
@@ -30,10 +34,10 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     items: [
-      { icon: <Home  width='24' height='24' />, label: "Acceuil", selected: false, style: "solid", size: "medium", id: 1 },
-      { icon: <Message width='24' height='24' />, label: "Messagerie", selected: false, style: "solid", size: "medium", id: 2, },
-      { icon: <Notification width='24' height='24' />, label: "Notifications", selected: false, style: "solid", size: "medium", id: 3 }],
- 
+      { icon: <UserTick width='24' height='24' />, label: "Acceuil", selected: false, size: "medium", },
+      { icon: <Message width='24' height='24' />, label: "Messagerie", selected: false, size: "medium" },
+      { icon: <Notification width='24' height='24' />, label: "Notifications", selected: false, size: "medium", }],
+
 
 
   },

@@ -1,35 +1,41 @@
 import { Square, Tick } from '@omegup-school/ui-assets';
-import { useNavBarMobileStyles } from './NavBarMobile.styles';
+// import { useNavBarMobileStyles } from './NavBarMobile.styles';
 import { ControlledNavBarMobileProps } from './NavBarMobile.types';
 import { forwardRef } from 'react';
-import { ChildMenu } from '../ChildMenu';
+import { ChildMenu } from '../../atoms/ChildMenu';
+import { Container } from '@omegup-school/ui-atoms';
+import { colors } from "@omegup-school/ui-configs/colors";
 
 
 export const NavBarMobile = forwardRef(
   (props: ControlledNavBarMobileProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, style, onChange, items, onBlur } = props;
-    const classes = useNavBarMobileStyles();
-
+    const { size, style, onclick, items, onBlur } = props;
+    // const classes = useNavBarMobileStyles();
     return (
+      <Container
+        ref={ref}
+        direction="row"
+        justifyContent="start"
+        gap='s9'
+        alignItems='start'
+        backgroundColor={colors.blue[500]}
 
-
-      <div className={`${classes.container}`}>
-        {items.map((ch, index) =>
-          <div className={classes.itemMenu}   key={index} >
-            <ChildMenu value={false} onChange={(e) => { ch.selected = true }}
+      >
+        {
+          items.map((ch, index) =>
+            <ChildMenu
+              key={index}
+              onClick={(e) => { ch.selected = true }}
               onBlur={() => { }}
-              style={'solid'}
-              size={'large'}
+              size={'medium'}
               icon={ch.icon}
               label={ch.label}
-              id={ch.id}
               selected={ch.selected}
-              viewMode='mobile'
-               />
-          </div>
-        )
-        }
-      </div>
+              viewMode={"mobile"}
+            />
+          )}
+      </Container>
 
     );
-  })
+  }
+);

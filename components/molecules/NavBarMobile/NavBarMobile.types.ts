@@ -1,4 +1,4 @@
-import { ChildMenuProps, ControlledChildMenuProps } from "../ChildMenu/ChildMenu.types";
+import { ChildMenuProps, ControlledChildMenuProps} from "@omegup-school/ui-atoms/ChildMenu/ChildMenu.types";
 
 export interface NavBarMobileProps {
   style: 'solid' | 'border' | 'flat' | 'text';
@@ -9,6 +9,6 @@ export interface NavBarMobileProps {
 }
 
 export interface ControlledNavBarMobileProps extends NavBarMobileProps {
-  onChange: (value: boolean) => void;
+  onclick: (value: boolean) => void;
   onBlur: () => void;
 }

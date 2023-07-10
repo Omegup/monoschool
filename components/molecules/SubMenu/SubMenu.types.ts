@@ -1,4 +1,4 @@
-import { ChildMenuProps } from "@omegup-school/ui-atoms/ChildMenu/ChildMenu.types";
+import { ChildMenuProps, ControlledChildMenuProps} from "@omegup-school/ui-atoms/ChildMenu/ChildMenu.types";
 
 export interface SubMenuProps {
   isCollopsed?:boolean;

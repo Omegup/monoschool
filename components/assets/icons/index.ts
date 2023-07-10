@@ -5,3 +5,6 @@ export * from './UserTick';
 export * from './WifiSquare';
 export * from './ClipboardTick';
 export * from './Subtitle';
+export * from './Home';
+export * from './Message';
+export * from './Notification';

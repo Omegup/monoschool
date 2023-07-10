@@ -16,11 +16,7 @@ export const SubMenu = forwardRef(
       direction="column"
       justifyContent="start"
       gap='s5'
-      alignItems='start'
-      
-       
-     
-      
+      alignItems='start'  
     >
      {viewMode !== 'mobile' &&  <Text text={title} ref={ref} variant="heading_h4_bold" />
       }

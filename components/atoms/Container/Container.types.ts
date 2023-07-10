@@ -8,6 +8,7 @@ export interface ContainerProps {
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
   alignItems?: 'center' | 'start' | 'end'
   justifyContent?: 'center' | 'start' | 'end',
+  backgroundColor?:string,
 
 }
 export interface ControlledContainerProps extends ContainerProps {
