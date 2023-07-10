@@ -7,3 +7,4 @@ export * from './Container';
 export * from './Tooltip';
 export * from './FilterButton';
 export * from './FilterContainer';
+export * from './NakedCheckbox'
