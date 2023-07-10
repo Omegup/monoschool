@@ -18,7 +18,7 @@ export const useNakedInputStyles = createUseStyles({
         : '',
     '&>input': {
       color: colorsStyles['dark_default'],
-
+      padding: 0,
       outline: 'none',
       border: 'none',
       height: 24,

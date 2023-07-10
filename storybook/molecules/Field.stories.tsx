@@ -1,4 +1,8 @@
-import { NakedInput, NakedTextArea } from '@omegup-school/ui-atoms';
+import {
+  NakedDropDown,
+  NakedInput,
+  NakedTextArea,
+} from '@omegup-school/ui-atoms';
 import { Field } from '@omegup-school/ui-molecules/internal/Field';
 import { FIELD_COLORS, colorsStyles } from '@omegup-school/ui-configs/colors';
 import { FieldProps } from '@omegup-school/ui-molecules/internal/Field/Field.type';
@@ -17,7 +21,7 @@ const Demo = ({
   startIcon: keyof typeof icons;
   endIcon: keyof typeof icons;
 }) => {
-  const [text, setText] = useState('Input');
+  const [text, setText] = useState('');
 
   const inputs = {
     input: (
@@ -92,6 +96,22 @@ const Demo = ({
         borderColor={FIELD_COLORS[props.color]}
       />
     ),
+    // dropDown: (
+    //   <NakedDropDown
+    //     options={[
+    //       { id: '1', label: 'opt1' },
+    //       { id: '2', label: 'opt2' },
+    //       { id: '3', label: 'opt3' },
+    //     ]}
+    //     disabled={props.disabled}
+    //     onChange={(e) => {
+    //       setText(e.target.value);
+    //     }}
+    //     value={text}
+    //     border="s10"
+    //     borderColor={FIELD_COLORS[props.color]}
+    //   />
+    // ),
   };
   return (
     <div style={{ width: 350 }}>
@@ -115,7 +135,7 @@ const meta = {
     },
     input: {
       control: 'select',
-      options: ['input', 'textArea'],
+      options: ['input', 'textArea' /*, 'dropDown'*/],
     },
     startIcon: {
       control: 'select',

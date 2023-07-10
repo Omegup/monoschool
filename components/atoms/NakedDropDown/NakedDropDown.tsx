@@ -1,14 +1,13 @@
 import { forwardRef } from 'react';
-import { ControlleNakedTextAreaProps } from './NakedTextArea.type';
-import { useNakedTextAreaStyles } from './NakedTextArea.style';
+import { ControlleNakedDropDownProps } from './NakedDropDown.type';
+import { useNakedDropDownStyles } from './NakedDropDown.style';
 import { styles } from '../common/styles';
 import { FIELD_COLORS } from '@omegup-school/ui-configs/colors';
 
-export const NakedTextArea = forwardRef(
-  (props: ControlleNakedTextAreaProps, ref: React.Ref<HTMLDivElement>) => {
+export const NakedDropDown = forwardRef(
+  (props: ControlleNakedDropDownProps, ref: React.Ref<HTMLDivElement>) => {
     const {
       onChange,
-      endIcon,
       startIcon,
       value,
       border,
@@ -16,12 +15,11 @@ export const NakedTextArea = forwardRef(
       disabled = false,
       textVariant = 'paragraph_medium_semiBold',
       placeholder = '',
-      rows = 3,
+      options,
     } = props;
-    const classes = useNakedTextAreaStyles({
+    const classes = useNakedDropDownStyles({
       border,
       startIcon,
-      endIcon,
       ...(!disabled
         ? borderColor === FIELD_COLORS['default'] && value
           ? { borderColor: 'dark_overline' }
@@ -32,15 +30,19 @@ export const NakedTextArea = forwardRef(
       ...styles,
     });
     return (
-      <div ref={ref} className={`${classes.inputContainer} `}>
-        <div> {startIcon}</div>
-        <textarea
-          {...{ onChange, value, disabled, placeholder, rows }}
+      <div ref={ref} className={`${classes.selectContainer} `}>
+        {startIcon}
+        <select
+          {...{ onChange, value, disabled, placeholder }}
           className={`${classes[textVariant]} ${
             disabled ? classes.disabled : ''
           }`}
-        />
-        <div>{endIcon}</div>
+        >
+          <option value="">Selectionner</option>
+          {options.map(({ id, ...restProps }) => (
+            <option key={id}>{restProps.label}</option>
+          ))}
+        </select>
       </div>
     );
   }

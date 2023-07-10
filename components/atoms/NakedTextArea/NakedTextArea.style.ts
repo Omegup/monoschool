@@ -1,5 +1,5 @@
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
-import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { borders, spacing, widths } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { NakedTextAreaProps } from './NakedTextArea.type';
@@ -55,10 +55,9 @@ export const useNakedTextAreaStyles = createUseStyles({
       paddingInlinestart: ({ startIcon }: Partial<NakedTextAreaProps>) =>
         startIcon ? 0 : spacing['s5'],
       paddingInlineEnd: ({ endIcon }: Partial<NakedTextAreaProps>) =>
-        endIcon ? 0 : spacing['s5'],
+        endIcon ? `${+widths.icon.svg + spacing['s5']}px` : spacing['s5'],
       paddingBlock: spacing['s3'],
       color: colorsStyles['dark_default'],
-
       lineHeight: '24px',
       border: 'none',
       outline: 'none',

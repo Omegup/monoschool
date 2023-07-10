@@ -21,7 +21,7 @@ export const FieldLabel = forwardRef(
     )[size];
     return (
       <Container ref={ref} {...{ paddingInline }}>
-        <Text text={label} {...{ variant, ...(color ? { color } : {}) }} />
+        <Text text={label} {...{ variant, color }} />
         {required && <Text text={'*'} color="danger_700" {...{ variant }} />}
       </Container>
     );

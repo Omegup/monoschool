@@ -9,7 +9,7 @@ export const FIELD_COLORS: {
     | 'default']: keyof typeof colorsStyles;
 } = {
   error: 'danger_700',
-  default: 'grey_400',
+  default: 'grey_500',
   info: 'headline_500',
   success: 'success_700',
   warning: 'warning_600',
