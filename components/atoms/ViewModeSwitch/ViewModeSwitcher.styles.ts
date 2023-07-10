@@ -1,6 +1,6 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
-import { widths } from '@omegup-school/ui-atoms/sizes/widths';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { ViewModeSwitcherProps } from './ViewModeSwitcher.types';
@@ -49,8 +49,6 @@ export const useViewModeSwitcherStyles = createUseStyles({
     borderRadius: "10px",
     background: "var(--background-background, #FFFFFE)",
     boxShadow: "0px 1px 3px 0px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(0, 0, 0, 0.1)",
-
-
   }
   ,
   elementLeft: {

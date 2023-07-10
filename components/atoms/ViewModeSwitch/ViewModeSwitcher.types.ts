@@ -1,5 +1,4 @@
 export interface ViewModeSwitcherProps {
-
    isChecked?:boolean
   elementLeft:  JSX.Element,
   elementRight:  JSX.Element,
