@@ -7,7 +7,10 @@ export interface ContainerProps {
   gap?: keyof typeof spacing,
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
   alignItems?: 'center' | 'start' | 'end'
-  justifyContent?: 'center' | 'start' | 'end'
+  justifyContent?: 'center' | 'start' | 'end',
+  backgroundColor?:string,
+  borderRadius?: keyof typeof spacing,
+
 }
 export interface ControlledContainerProps extends ContainerProps {
   children: ReactNode[];
