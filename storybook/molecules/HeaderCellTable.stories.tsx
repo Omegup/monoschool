@@ -1,26 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { HeaderCellTable } from '@omegup-school/ui-molecules';
+import { HeaderCell } from '@omegup-school/ui-molecules';
 
 const meta = {
-  title: 'Atom/HeaderCellTable',
-  component: HeaderCellTable,
+  title: 'Atom/HeaderCell',
+  component: HeaderCell,
   tags: ['autodocs'],
   argTypes: {
     sortType: { control: 'select', options: ['asc', 'desc', null] },
     
   },
-} satisfies Meta<typeof HeaderCellTable>;
+} satisfies Meta<typeof HeaderCell>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    label: 'Name',
-    isSortable: true,
     sortType: 'asc',
-    onSort: (sort) => {
-      console.log(sort);
-    },
+    text :"test",
+    onSort: () => console.log('click'),
+
   },
 };

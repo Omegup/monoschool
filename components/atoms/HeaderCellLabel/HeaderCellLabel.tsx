@@ -1,4 +1,3 @@
-import React from 'react'
 import { useStyles } from './HeaderCellLabel.styles';
 
 export const HeaderCellLabel = ({ value }: { value: string }) => {

@@ -4,11 +4,10 @@ import { createUseStyles } from "react-jss";
 
 
 export const useStyles = createUseStyles({
-    cellLabel: {
+  cellLabel: {
     fontSize: typography.paragraph.overline.small.fontSize,
     fontWeight: typography.paragraph.overline.small.fontWeight,
     textTransform: 'uppercase',
     color: colors.headline[500],
-    marginRight: 13,
   },
 });

@@ -1,35 +1,7 @@
-import { colors } from "@omegup-school/ui-configs/colors";
-import { typography } from "@omegup-school/ui-configs/typography/typography.cnst";
 import { createUseStyles } from "react-jss";
 
 
-export const useStyles = createUseStyles({
-  cellLabel: {
-    fontSize: typography.paragraph.overline.small.fontSize,
-    fontWeight: typography.paragraph.overline.small.fontWeight,
-    textTransform: 'uppercase',
-    color: colors.headline[500],
-    marginRight: 13,
-  },
-  // cellContainer: {
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   flexDirection: 'row',
-  //   cursor: 'pointer',
-  //   '&:hover': {
-  //   }
-  // },
-  
-  hoveredContainer: {
-    '& $iconContainerTop': {
-      transform: 'translate(-50%, -65%)',
-      opacity: 1,
-    },
-    '& $iconContainerDown': {
-      transform: 'translate(-50%, -45%)', 
-      opacity: 1,
-    },
-  },
+export const useStyles = createUseStyles(({ containerStateSelector }: { containerStateSelector: string }) => ({
 
   dispalyIcons: {
     '$cellSortIcon>&': {
@@ -38,7 +10,6 @@ export const useStyles = createUseStyles({
     '& $iconContainerTop': {
       transform: 'translate(-50%, -65%)',
       opacity: 1,
-
     },
     '& $iconContainerDown': {
       transform: 'translate(-50%, -45%)',
@@ -46,7 +17,14 @@ export const useStyles = createUseStyles({
     },
   },
   cellSortIcon: {
-    position: 'relative',
+    [`.${containerStateSelector}:hover & $iconContainerTop`]: {
+      transform: 'translate(-50%, -65%)',
+      opacity: 1,
+    },
+    [`.${containerStateSelector}:hover & $iconContainerDown`]: {
+      transform: 'translate(-50%, -45%)',
+      opacity: 1,
+    },
   },
   iconContainerTop: {
     position: 'absolute',
@@ -64,4 +42,4 @@ export const useStyles = createUseStyles({
     pointerEvents: 'auto',
     transformOrigin: 'center',
   },
-});
+}));

@@ -1,12 +1,15 @@
-import { ArrowDownSecond, ArrowUpSecond } from '@omegup-school/ui-assets'
-import React from 'react'
+import { ArrowDownSecond, ArrowUpSecond } from '@omegup-school/ui-assets';
+import { useContainerStateSelector } from '../contexts/pointer';
 import { useStyles } from './HeaderCellIcons.styles';
 import { colors } from '@omegup-school/ui-configs/colors';
 
-export const HeaderCellIcons = ({ sortType, isHovered = false }: { sortType: 'asc' | 'desc' | null, isHovered?: boolean }) => {
-  const classes = useStyles();
+export const HeaderCellIcons = ({ sortType }: { sortType: 'asc' | 'desc' | null }) => {
+  const containerStateSelector = useContainerStateSelector();
+
+  const classes = useStyles({theme: {containerStateSelector}});
+
   return (
-    <div className={`${classes.cellSortIcon} ${isHovered && classes.hoveredContainer}`}>
+    <div className={`${classes.cellSortIcon}`}>
       <div className={`${classes.iconContainerTop}  ${sortType && classes.dispalyIcons}`}>
         <ArrowUpSecond
           width='8.75'
