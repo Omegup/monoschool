@@ -1,0 +1,9 @@
+{
+  "name": "@omegup-school/ui-configs",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/omegup-school": "workspace:*",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3"
+  }
+}

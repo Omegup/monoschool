@@ -5,11 +5,11 @@ import {
   FormPanel,
   LoginPanel,
   SpaceBetween,
-  Select,
   SignInBanner,
   OutlinedInput,
   SignInHeader,
-} from '@omegup-school/ui-cells';
+} from '@omegup-school/ui-cells/SignIn';
+import { Select } from '@omegup-school/ui-cells';
 
 import { UseFormSetError, useForm } from 'react-hook-form';
 
