@@ -45,6 +45,7 @@ export const useCheckBoxStyles = createUseStyles(
       borderRadius: borders.r3,
       borderWidth: borders.b3,
       borderStyle: 'solid',
+      boxSizing: 'border-box',
     },
 
     ...checkboxThemeToJss(containerStateSelector),
