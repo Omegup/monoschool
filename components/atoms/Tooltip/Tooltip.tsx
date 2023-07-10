@@ -1,6 +1,7 @@
 import { useStyles } from './Tooltip.styles'
+import { TooltipProps } from './Tooltip.types'
 
-export const Tooltip = ({ size, variant, position, label }: any) => {
+export const Tooltip = ({ size, variant, position, label }: TooltipProps) => {
   const classes = useStyles({ position, size })
 
   return (
