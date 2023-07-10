@@ -65,12 +65,8 @@ importers:
       tslib: ^2.5.3
       typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-configs':
-        specifier: workspace:*
-        version: link:../configs
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
+      '@omegup-school/ui-configs': link:../configs
+      react: 18.2.0
     devDependencies:
       '@types/react': 18.2.14
       tslib: 2.6.0
