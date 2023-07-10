@@ -27,7 +27,7 @@ export const Primary: Story = {
         label: 'Apprenant',
         icon: <Icon name={'ArrowRight'} width="20px" />,
         active: false,
-        onClick: () => {},
+        onClick: (e) => {console.log(e)},
       },
       {
         showIcon: true,
