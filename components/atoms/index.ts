@@ -8,3 +8,4 @@ export * from './Tooltip';
 export * from './contexts';
 export * from './FieldLabelLayout';
 export * from './NakedInput';
+export * from './NakedTextArea';

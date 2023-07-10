@@ -2,24 +2,10 @@ import { forwardRef } from 'react';
 import { Container, FieldLabelLayout, Text } from '@omegup-school/ui-atoms';
 import { FieldProps } from './Field.type';
 import { FieldInfoMessage } from '../FieldInfoMessage';
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { FIELD_COLORS, colorsStyles } from '@omegup-school/ui-configs/colors';
 import { FieldContext } from '@omegup-school/ui-atoms';
 import { FieldLabel } from '../FieldLabel';
 
-export const colors: {
-  [k in
-    | 'error'
-    | 'info'
-    | 'success'
-    | 'warning'
-    | 'default']: keyof typeof colorsStyles;
-} = {
-  error: 'danger_700',
-  default: 'grey_400',
-  info: 'headline_500',
-  success: 'success_700',
-  warning: 'warning_600',
-};
 const sizes: { [k in 'spaced' | 'condensed']: 'xSmall' | 'medium' } = {
   spaced: 'medium',
   condensed: 'xSmall',
@@ -27,7 +13,7 @@ const sizes: { [k in 'spaced' | 'condensed']: 'xSmall' | 'medium' } = {
 export const Field = forwardRef(
   (props: FieldProps, ref: React.Ref<HTMLDivElement>) => {
     const {
-      color='default',
+      color = 'default',
       input,
       required,
       variant,
@@ -37,7 +23,7 @@ export const Field = forwardRef(
       disabled,
     } = props;
     const size: 'xSmall' | 'medium' = sizes[variant];
-    const infoTextColor: keyof typeof colorsStyles = colors[color];
+    const infoTextColor: keyof typeof colorsStyles = FIELD_COLORS[color];
     return (
       <Container ref={ref} gap={'s4'} direction="column" alignItems="start">
         <FieldLabelLayout {...{ variant }}>
@@ -45,7 +31,9 @@ export const Field = forwardRef(
             {label && (
               <FieldLabel
                 {...{ label, size, required }}
-                {...(variant === 'condensed' ? { color: colors[color] } : {})}
+                {...(variant === 'condensed'
+                  ? { color: FIELD_COLORS[color] }
+                  : {})}
               />
             )}
           </Container>

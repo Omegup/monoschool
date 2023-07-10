@@ -7,32 +7,33 @@ import { NakedInputProps } from './NakedInput.type';
 export const useNakedInputStyles = createUseStyles({
   inputContainer: {
     display: 'flex',
+    paddingInline: spacing['s8'],
+    paddingBlock: spacing['s6'],
+    borderRadius: borders['r5'],
+    gap: spacing['s2'],
+    opacity: ({ disabled }: Partial<NakedInputProps>) => (disabled ? 0.5 : 0.8),
+    border: ({ border, borderColor }: Partial<NakedInputProps>) =>
+      borderColor
+        ? `${border ? spacing[border] : 0}px solid ${colorsStyles[borderColor]}`
+        : '',
     '&>input': {
-      paddingInline: spacing['s8'],
-      paddingBlock: spacing['s6'],
-      border: ({ border, borderColor }: Partial<NakedInputProps>) =>
-        borderColor
-          ? `${border ? spacing[border] : 0}px solid ${
-              colorsStyles[borderColor]
-            }`
-          : '',
-      borderRadius: borders['r5'],
+      color: colorsStyles['dark_default'],
+
       outline: 'none',
+      border: 'none',
       height: 24,
       maxHeight: 24,
       flex: 1,
     },
     '&:has(input:focus)': {
-      '&>input': {
-        border: `${spacing.s1}px solid ${colorsStyles['blue_700']}`,
-        borderRadius: borders['r5'],
-      },
+      border: `${spacing.s1}px solid ${colorsStyles['blue_700']}`,
+      borderRadius: borders['r5'],
+      '&>input': {},
     },
   },
   filledInput: {
-    '&>input': {
-      border: `${spacing.s1}px solid ${colorsStyles['dark_overline']}`,
-    },
+    border: `${spacing.s1}px solid ${colorsStyles['dark_overline']}`,
+    '&>input': {},
   },
   disabled: { backgroundColor: colorsStyles['background_default'] },
   ...styles,

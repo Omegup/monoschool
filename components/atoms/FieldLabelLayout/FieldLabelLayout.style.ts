@@ -10,7 +10,6 @@ export const useFieldLabelLayoutStyles = createUseStyles({
       position: 'relative',
     },
   },
-
   spaced: {
     gap: 8,
   },
@@ -20,6 +19,7 @@ export const useFieldLabelLayoutStyles = createUseStyles({
       background: colors.background.default,
       insetBlockStart: -9,
       insetInlineStart: 16,
+      zIndex: 1,
     },
     '&:has(input:focus)': {
       '&>div>div:first-child': {

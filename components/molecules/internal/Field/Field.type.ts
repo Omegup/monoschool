@@ -9,4 +9,6 @@ export interface FieldProps {
   color: 'error' | 'info' | 'success' | 'warning' | 'default';
   disabled?: boolean;
   input: ReactNode;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
 }
