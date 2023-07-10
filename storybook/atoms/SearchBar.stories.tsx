@@ -21,6 +21,7 @@ const Demo = ({
       variant={'navBar'}
       displayClose={true}
       inputType={'text'}
+
       {...restProps}    />
   );
 };
@@ -33,10 +34,7 @@ const meta = {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
-    secondIcon: {
-      control: 'select',
-      options: Object.keys(icons) as (keyof typeof icons)[],
-    },
+   
   },
 } satisfies Meta<typeof SearchBar>;
 
@@ -46,8 +44,6 @@ type Story = StoryObj<typeof Demo>;
 export const Primary: Story = {
   render: Demo,
   args: {
-    text: 'Text Description',
-    secondIcon: <Icon name={'Close'} />,
     firstIcon: 'SearchStatus',
     value:''
   },
