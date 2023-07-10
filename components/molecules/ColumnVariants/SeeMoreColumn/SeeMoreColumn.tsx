@@ -1,7 +1,11 @@
+import { Button, Container, Link } from "@omegup-school/ui-atoms"
 import { ControlledSeeMoreColumnProps } from "./SeeMoreColumn.types"
 
-export const SeeMoreColumn = ({}:ControlledSeeMoreColumnProps) => {
+export const SeeMoreColumn = ({ text, onClick }: ControlledSeeMoreColumnProps) => {
   return (
-    <div>SeeMoreColumn</div>
+    <Container onClick={onClick} paddingBlock="s7" paddingInline="s7">
+      <Link text={text} />
+      <></>
+    </Container>
   )
 }
