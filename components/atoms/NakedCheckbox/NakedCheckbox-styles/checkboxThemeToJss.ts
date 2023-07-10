@@ -1,4 +1,5 @@
 import { JssStyle } from 'jss';
+import { INTERACTION_MAP } from './InteractiveStyles';
 import { Interaction, InteractionMap } from './InteractiveStyles.types';
 import {
   CheckboxStateTheme,
@@ -6,26 +7,30 @@ import {
   CheckboxVariant,
   CheckboxVariantTheme,
 } from './NakedCheckbox-styles.types';
-import { INTERACTION_MAP } from './InteractiveStyles';
 import { CHECKBOX_THEME } from './checkboxTheme';
 
 const checkboxInteractionToCssSelector = (
   containerStateSelector: string,
   interactionStatus: Interaction,
-  isChecked: boolean
+  isChecked: boolean,
+  isDisabled: boolean
 ) => {
+  const entries = Object.entries(interactionStatus).map(
+    ([pseudoClass, state]): readonly [keyof Interaction, string] => [
+      pseudoClass,
+      state ? `:${pseudoClass}` : `:not(${pseudoClass})`,
+    ]
+  );
   const {
     active = '',
     focus = '',
     hover = '',
-  } = Object.fromEntries(
-    Object.entries(interactionStatus).map(([pseudoClass, state]) => [
-      pseudoClass,
-      state ? `:${pseudoClass}` : `:not(${pseudoClass})`,
-    ])
-  );
+  } = Object.fromEntries(entries) satisfies {
+    [key in keyof Interaction]: string;
+  };
   const checked = isChecked ? ':checked' : ':not(:checked)';
-  return `.${containerStateSelector}${hover}${active} &$label:has(> $input${focus}${checked})`;
+  const disabled = isDisabled ? ':disabled' : ':not(:disabled)';
+  return `.${containerStateSelector}${hover}${active} &$label:has(> $input${focus}${checked}${disabled})`;
 };
 
 const checkboxStateThemeToJss = (styles: CheckboxStateTheme): JssStyle => ({
@@ -34,6 +39,7 @@ const checkboxStateThemeToJss = (styles: CheckboxStateTheme): JssStyle => ({
     borderColor: styles.checkboxBorderColor,
     backgroundColor: styles.checkboxBackgroundColor,
     color: styles.tickColor,
+    opacity: styles.checkboxOpacity,
   },
 });
 
@@ -47,7 +53,8 @@ const checkboxStateThemeToJssEntries =
       checkboxInteractionToCssSelector(
         containerStateSelector,
         interaction,
-        status === 'checked'
+        status === 'checked',
+        state === 'disabled'
       ),
       checkboxStateThemeToJss(stateTheme),
     ]);

@@ -18,6 +18,12 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         tickColor: colors.background.default,
         checkboxBackgroundColor: colors.blue[500],
       },
+      disabled: {
+        checkboxBorderColor: colors.blue[500],
+        tickColor: colors.background.default,
+        checkboxBackgroundColor: colors.blue[500],
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.blue[900],
       },
@@ -38,6 +44,10 @@ export const CHECKBOX_THEME: CheckboxTheme = {
     },
     unchecked: {
       normal: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+      disabled: {
+        ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.blue[900],
       },
@@ -61,6 +71,11 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         checkboxBorderColor: colors.blue[500],
         tickColor: colors.blue[500],
       },
+      disabled: {
+        checkboxBorderColor: colors.blue[500],
+        tickColor: colors.blue[500],
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.pink[500],
       },
@@ -82,6 +97,10 @@ export const CHECKBOX_THEME: CheckboxTheme = {
     },
     unchecked: {
       normal: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+      disabled: {
+        ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.pink[500],
       },
@@ -109,6 +128,12 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         tickColor: colors.background.default,
         checkboxBackgroundColor: colors.blue[500],
       },
+      disabled: {
+        checkboxBorderColor: colors.blue[500],
+        tickColor: colors.background.default,
+        checkboxBackgroundColor: colors.blue[500],
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.pink[500],
       },
@@ -120,6 +145,10 @@ export const CHECKBOX_THEME: CheckboxTheme = {
     },
     unchecked: {
       normal: COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+      disabled: {
+        ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.pink[500],
       },
@@ -136,6 +165,12 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         checkboxBorderColor: colors.blue[500],
         tickColor: colors.background.default,
         checkboxBackgroundColor: colors.blue[500],
+      },
+      disabled: {
+        checkboxBorderColor: colors.blue[500],
+        tickColor: colors.background.default,
+        checkboxBackgroundColor: colors.blue[500],
+        checkboxOpacity: 0.4,
       },
       focused: {
         checkboxOutlineColor: colors.light[500],
@@ -161,6 +196,11 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
         checkboxBorderColor: colors.grey[300],
       },
+      disabled: {
+        ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+        checkboxBorderColor: colors.grey[300],
+        checkboxOpacity: 0.4,
+      },
       focused: {
         checkboxOutlineColor: colors.blue[400],
       },
@@ -181,6 +221,12 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         checkboxBorderColor: colors.light[500],
         tickColor: colors.blue[500],
         checkboxBackgroundColor: colors.light[500],
+      },
+      disabled: {
+        checkboxBorderColor: colors.light[500],
+        tickColor: colors.blue[500],
+        checkboxBackgroundColor: colors.light[500],
+        checkboxOpacity: 0.4,
       },
       focused: {
         checkboxBorderColor: colors.light[500],
@@ -207,6 +253,11 @@ export const CHECKBOX_THEME: CheckboxTheme = {
       normal: {
         ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
         checkboxBorderColor: colors.dark.default,
+      },
+      disabled: {
+        ...COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES,
+        checkboxBorderColor: colors.dark.default,
+        checkboxOpacity: 0.4,
       },
       focused: {
         checkboxBorderColor: colors.blue[500],

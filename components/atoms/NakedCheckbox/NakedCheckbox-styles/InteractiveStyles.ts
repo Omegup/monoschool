@@ -2,6 +2,7 @@ import { InteractionMap } from './InteractiveStyles.types';
 
 export const INTERACTION_MAP: InteractionMap = {
   normal: [{}],
+  disabled: [{}],
   focused: [
     {
       hover: false,

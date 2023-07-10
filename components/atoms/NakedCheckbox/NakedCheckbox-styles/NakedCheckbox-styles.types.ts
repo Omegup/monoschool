@@ -10,6 +10,7 @@ export type CheckboxStateTheme = {
   checkboxBorderColor?: string;
   checkboxBackgroundColor?: string;
   tickColor?: string;
+  checkboxOpacity?: number;
 };
 
 

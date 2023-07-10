@@ -19,7 +19,9 @@ const CHECKBOX_SIZE_JSS = Object.fromEntries(
       containerWidthJss(width),
     ]
   )
-);
+) satisfies {
+  [key in CheckboxSize]: JssStyle;
+};
 
 export const useCheckBoxStyles = createUseStyles(
   ({ containerStateSelector }: { containerStateSelector: string }) => ({
@@ -50,33 +52,3 @@ export const useCheckBoxStyles = createUseStyles(
     ...CHECKBOX_SIZE_JSS,
   })
 );
-
-const containerStateSelector = 'ccc'
-
-console.log({
-  label: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center',
-    border: `${borders.b2}px solid transparent`,
-    borderRadius: borders.r4,
-  },
-  input: {
-    clip: 'rect(0 0 0 0)',
-    position: 'absolute',
-    '&:disabled + $container': {
-      opacity: 0.4,
-    },
-  },
-  container: {
-    display: 'grid',
-    placeItems: 'center',
-    borderRadius: borders.r3,
-    borderWidth: borders.b3,
-    borderStyle: 'solid',
-  },
-
-  ...checkboxThemeToJss(containerStateSelector),
-
-  ...CHECKBOX_SIZE_JSS,
-})
