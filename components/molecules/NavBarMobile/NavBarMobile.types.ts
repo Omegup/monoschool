@@ -4,8 +4,7 @@ export interface NavBarMobileProps {
   style: 'solid' | 'border' | 'flat' | 'text';
   size: 'large' | 'medium' | 'small';
   parentName: string;
-  parentId: number;
-  items: ChildMenuProps[]
+   items: ChildMenuProps[]
 }
 
 export interface ControlledNavBarMobileProps extends NavBarMobileProps {

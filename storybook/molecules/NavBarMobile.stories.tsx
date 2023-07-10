@@ -8,8 +8,8 @@ const ICONS = {
 
 }
 const Demo = (props: ControlledNavBarMobileProps) => {
-  
-  return  <div style={{ width: 350 }}>
+
+  return  <div style={{ width: 345 ,}}>
     <NavBarMobile
       {...props} />
   </div>
@@ -30,8 +30,7 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     parentName: 'NavBarMobile',
-    parentId: 0,
-    size: 'medium',
+     size: 'medium',
     style: 'solid',
     items: [
       { icon: <UserTick width='24' height='24' />, label: "Acceuil", selected: false, size: "medium", },

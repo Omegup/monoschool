@@ -9,6 +9,7 @@ export interface ContainerProps {
   alignItems?: 'center' | 'start' | 'end'
   justifyContent?: 'center' | 'start' | 'end',
   backgroundColor?:string,
+  borderRadius?: keyof typeof spacing,
 
 }
 export interface ControlledContainerProps extends ContainerProps {

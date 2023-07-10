@@ -13,5 +13,7 @@ export const useContainerStyles = createUseStyles({
     alignItems: ({ alignItems }: Partial<ContainerProps>) => alignItems || "start",
     justifyContent: ({ justifyContent }: Partial<ContainerProps>) => justifyContent || "start",
     backgroundColor:  ({ backgroundColor }: Partial<ContainerProps>) => backgroundColor || "",
+    borderRadius: ({ borderRadius }: Partial<ContainerProps>) => borderRadius ? spacing[borderRadius] : 0,
+
   }
 })

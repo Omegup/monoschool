@@ -19,7 +19,9 @@ export const NavBarMobile = forwardRef(
         gap='s9'
         alignItems='start'
         backgroundColor={colors.blue[500]}
-
+        borderRadius="s5"
+        paddingInline='s5'
+ 
       >
         {
           items.map((ch, index) =>
