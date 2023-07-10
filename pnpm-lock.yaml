@@ -1,4 +1,4 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
 
 settings:
   autoInstallPeers: true
@@ -177,6 +177,9 @@ importers:
       '@omegup-school/ui-atoms':
         specifier: workspace:*
         version: link:../atoms
+      '@omegup-school/ui-configs':
+        specifier: workspace:*
+        version: link:../configs
       react:
         specifier: ^18.2.0
         version: 18.2.0
