@@ -44,6 +44,7 @@ export const Solid: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'solid',
+    ...states,
   },
 };
 export const Border: Story = {
@@ -51,6 +52,7 @@ export const Border: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'border',
+    ...states,
   },
 };
 export const Scale: Story = {
@@ -58,6 +60,7 @@ export const Scale: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'scale',
+    ...states,
   },
 };
 export const Cell: Story = {
@@ -65,6 +68,7 @@ export const Cell: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'cell',
+    ...states,
   },
 };
 export const Select: Story = {
@@ -72,5 +76,6 @@ export const Select: Story = {
     label: 'CheckBox',
     size: 'medium',
     variant: 'select',
+    ...states,
   },
 };

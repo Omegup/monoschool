@@ -44,6 +44,3 @@ interface CombineHKT<A, B, C> extends HKT<[HKT<A, B>, HKT<B, C>], HKT<A, C>> {
 type AppMap<Dom, F extends HKT<Dom>, X extends Dom[]> = App<F, Dom>[] & {
   [I in keyof X]: App<F, X[I]>;
 };
-
-type ValueOf<T> = T[keyof T];
-

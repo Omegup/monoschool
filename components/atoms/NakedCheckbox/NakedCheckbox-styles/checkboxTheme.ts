@@ -245,8 +245,8 @@ export const CHECKBOX_THEME: CheckboxTheme = {
       },
       pressed: {
         checkboxBorderColor: colors.light[500],
-        tickColor: colors.blue[500],
-        checkboxBackgroundColor: colors.blue[500],
+        tickColor: 'transparent',
+        checkboxBackgroundColor: 'transparent',
       },
     },
     unchecked: {
