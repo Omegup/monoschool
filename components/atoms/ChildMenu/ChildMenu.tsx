@@ -5,7 +5,7 @@ import { Children, forwardRef } from 'react';
 export const ChildMenu = forwardRef(
   (props: ControlledChildMenuProps,
     ref: React.Ref<HTMLDivElement>) => {
-    const { size, icon, isCollopsed,  label, onChange, onBlur, selected, viewMode } = props;
+    const { size, icon, isCollopsed,  label, onClick, onBlur, selected, viewMode } = props;
     const classes = useChildMenutStyles();
     const selectedClass = classes[selected ? 'selected' : 'notSelected'];
     const vieModeClassContainer = classes[viewMode == 'mobile' ? 'mobile' : 'container']

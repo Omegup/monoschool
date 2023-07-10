@@ -89,7 +89,6 @@ export const useChildMenutStyles = createUseStyles({
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
-
     '&$selected': {
       color: colors.blue[500],
       cursor: "pointer",
@@ -98,9 +97,11 @@ export const useChildMenutStyles = createUseStyles({
   container: {
     display: "inline-flex",
     padding: spacing.s5,
-    alignItems: "center",
+    alignItems: "flex-start",
     gap: '15px',
     cursor: "pointer",
+    alignSelf:'stretch',
+    
     '&$selected': {
       color: colors.grey[100],
       borderRadius: "10px",

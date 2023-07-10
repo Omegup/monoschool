@@ -4,10 +4,12 @@ export interface ChildMenuProps {
   label: string,
   selected: boolean,
   isCollopsed?:boolean,
-  viewMode?:'mobile'|'default'
+  viewMode?:'mobile'|'default',
+  alignSelf?: 'stretch'|'end'|'center'
+
 }
 export interface ControlledChildMenuProps extends ChildMenuProps {
-  onChange: (value: boolean) => void;
+  onClick: (value: boolean) => void;
   onBlur: () => void;
 }
  

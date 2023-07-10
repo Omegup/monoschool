@@ -2,7 +2,7 @@ import { ChildMenuProps } from "@omegup-school/ui-atoms/ChildMenu/ChildMenu.type
 
 export interface SubMenuProps {
   isCollopsed?:boolean;
-  parentName: string;
+  title: string;
   parentId: number;
   viewMode?:'mobile'|'default';
   items: ChildMenuProps[]

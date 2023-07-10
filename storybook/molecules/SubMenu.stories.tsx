@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    parentName: 'SubMenu',
+    title: 'SubMenu',
     parentId:0,
      isCollopsed:false,
     viewMode:'default',

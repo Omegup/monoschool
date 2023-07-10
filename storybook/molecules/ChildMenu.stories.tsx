@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ChildMenu } from '@omegup-school/ui-molecules';
+import { ChildMenu } from '@omegup-school/ui-atoms';
 import { ClipboardTick, UserTick } from '@omegup-school/ui-assets';
 
 const meta = {
@@ -22,7 +22,6 @@ export const Primary: Story = {
     icon: <UserTick width='24' height='24' />,
     label: "Présence des enseigants",
     selected: true,
-    id: 1,
     isCollopsed: false,
     size: 'medium',
     // style: 'border',
