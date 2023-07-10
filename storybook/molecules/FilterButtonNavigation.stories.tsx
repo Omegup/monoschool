@@ -24,16 +24,30 @@ export const Primary: Story = {
     data: [
       {
         showIcon: true,
-        label: 'text label',
+        label: 'Apprenant',
+        icon: <Icon name={'ArrowRight'} width="20px" />,
+        active: false,
+        onClick: () => {},
+      },
+      {
+        showIcon: true,
+        label: 'Classe',
         icon: <Icon name={'ArrowRight'} width="20px" />,
         active: false,
         onClick: () => {},
       },
       {
         showIcon: false,
-        label: 'text label fgdfgdfg',
+        label: 'Facturé aujourd’hui',
         icon: <Icon name={'ArrowRight'} width="20px" />,
-        active: true,
+        active: false,
+        onClick: () => {},
+      },
+      {
+        showIcon: false,
+        label: 'Facturé ce mois ci',
+        icon: <Icon name={'ArrowRight'} width="20px" />,
+        active: false,
         onClick: () => {},
       },
     ],

@@ -10,24 +10,20 @@ export const useContainerStyles = createUseStyles({
     padding: spacing.s5,
     flexDirection: 'column',
     alignItems: 'flex-start',
-
     borderRadius: borders.r5,
     border: [borders.b2, 'solid', colors.background.overlay],
     background: colors.background.default,
-
     /* Drop Shadow/Small */
     boxShadow: shadowXSmall,
   },
   border: {
-    '& $line':{
+    '& $line': {
       margin: [spacing.s2],
       border: [borders.b1, 'solid'],
       borderColor: colors.background.overlay,
       width: '-webkit-fill-available',
     },
-    
   },
   flat: {},
-  line: {}
-    
+  line: {},
 });
