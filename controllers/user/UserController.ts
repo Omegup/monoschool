@@ -1,34 +1,36 @@
 import { IAuthService } from '@omegup-school/auth-service-port';
 import { SignInUserDTO } from '@omegup-school/user-dtos/SignInUserDTO';
 import { SignInUser } from '@omegup-school/user-usecases/signInUser';
-import { SignInPresenter } from '@omegup-school/user-presenter/SignInPresenter';
+import { ISignInPresenter, SignInErrorHandler } from '@omegup-school/user-presenter-port/SignInPresenter';
 import { IUserController } from '@omegup-school/user-controller-port/IUserController';
 import { Either } from 'omegup-school';
 
 export class UserController implements IUserController {
   constructor(
     private signInUser: SignInUser,
-    private authService: IAuthService
+    private authService: IAuthService,
+    private presenter: ISignInPresenter
   ) {}
 
-  async signIn(
+  signIn = async (
     data: SignInUserDTO,
-    presenter: SignInPresenter
-  ): Promise<Either<void, 'login' | 'network' | 'unknown'>> {
+    handleError: SignInErrorHandler
+  ): Promise<Either<void, 'login' | 'network' | 'unknown'>> => {
     const signInResult = await this.signInUser.execute(data);
     if (signInResult.ok) {
       this.authService.signIn(signInResult.result);
       return { ok: true };
     }
+    const presentError = this.presenter.presentError(handleError)
     switch (signInResult.error) {
       case 'login':
-        presenter.presentError('email', { message: 'Login Error' });
+        presentError('email', { message: 'Login Error' });
         return signInResult;
       case 'network':
-        presenter.presentError('root', { message: 'Network Error' });
+        presentError('root', { message: 'Network Error' });
         return signInResult;
       case 'unknown':
-        presenter.presentError('root', { message: 'Unknow Error' });
+        presentError('root', { message: 'Unknow Error' });
         return signInResult;
     }
   }

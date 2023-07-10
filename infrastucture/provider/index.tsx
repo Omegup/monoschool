@@ -27,8 +27,7 @@ const FacadeProvider = ({
   const authService = new AuthService(navService);
   const userGateway = new UserAPIAdapter();
   const signInUser = new SignInUser(userGateway);
-  const userController = new UserController(signInUser, authService);
-  const wrapErrorHandler =
+  const errorInterceptor =
     <TErrorEvent extends ErrorEvent>(
       handleError: (...error: TErrorEvent) => void
     ) =>
@@ -38,18 +37,16 @@ const FacadeProvider = ({
       }
       handleError(...error);
     };
-  const wrapPresenter =
-    <TErrorEvent extends ErrorEvent, TPresenter>(
-      Constructor: new (
-        handleError: (...error: TErrorEvent) => void
-      ) => TPresenter
-    ) =>
-    (handleError: (...error: TErrorEvent) => void) =>
-      new Constructor(wrapErrorHandler(handleError));
+  const signInPresenter = new SignInPresenter(errorInterceptor);
+  const userController = new UserController(
+    signInUser,
+    authService,
+    signInPresenter
+  );
   const value: Facade = {
     authService,
     navService,
-    signInPresenter: wrapPresenter(SignInPresenter),
+    signInPresenter,
     userController,
     userGateway,
   };

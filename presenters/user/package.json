@@ -2,7 +2,6 @@
   "name": "@omegup-school/user-presenter",
   "version": "1.0.0",
   "dependencies": {
-    "@omegup-school/user-entity": "workspace:*",
     "@omegup-school/user-presenter-port": "workspace:*"
   },
   "devDependencies": {

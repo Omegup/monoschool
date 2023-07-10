@@ -6,5 +6,5 @@ export type SignInErrorHandler = (
   }
 ) => void
 export interface ISignInPresenter {
-  presentError: SignInErrorHandler;
+  presentError: (handleError: SignInErrorHandler) => SignInErrorHandler;
 }

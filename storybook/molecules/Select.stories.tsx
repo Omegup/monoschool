@@ -21,5 +21,6 @@ export const Primary: Story = {
     size: 'medium',
     style: 'solid',
     disabled: false,
+    value: false,
   },
 };
