@@ -1,5 +1,7 @@
-import { OutlinedInput as InputMolecule } from '@omegup-school/ui-molecules/SignIn/Input';
-import { OutlinedInputProps as InputPropsMolecule } from '@omegup-school/ui-molecules/SignIn/Input.types';
+import {
+  OutlinedInput as InputMolecule,
+  OutlinedInputProps as InputPropsMolecule,
+} from '@omegup-school/ui-molecules/SignIn/Input';
 import {
   Control,
   FieldPathValue,

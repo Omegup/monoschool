@@ -1,7 +1,7 @@
 import {
   SelectProps as SelectPropsMolecule,
   Select as SelectMolecule,
-} from '@omegup-school/ui-molecules/SignIn';
+} from '@omegup-school/ui-molecules';
 import {
   Control,
   FieldPathValue,
