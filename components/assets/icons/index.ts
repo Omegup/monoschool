@@ -9,3 +9,4 @@ export * from './GridSix';
 export * from './ArrowRight';
 export * from './Essential';
 export * from './Add';
+export * from './Subtitle';
