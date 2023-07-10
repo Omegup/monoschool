@@ -5,3 +5,5 @@ export * from './Select';
 export * from './Text';
 export * from './Container';
 export * from './Tooltip';
+export * from './ChildMenu';
+export * from  './ViewModeSwitcher';

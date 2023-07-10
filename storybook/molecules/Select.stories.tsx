@@ -16,11 +16,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    value:true,
     label: 'Select',
     size: 'medium',
     style: 'solid',
     disabled: false,
-    value: true,
   onChange: () => {},
   onBlur: () => {},
   },
