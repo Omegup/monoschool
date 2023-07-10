@@ -2,9 +2,7 @@ import { colors } from '@omegup-school/ui-configs/colors';
 import { borders, spacing } from '@omegup-school/ui-configs/sizes';
 import { widths } from '@omegup-school/ui-configs/sizes/widths';
 import { createUseStyles } from 'react-jss';
-import { styles } from '../common/styles';
-import { ViewModeSwitcherProps } from './ViewModeSwitcher.types';
-export const useViewModeSwitcherStyles = createUseStyles({
+  export const useViewModeSwitcherStyles = createUseStyles({
   solid: {},
   border: {},
   flat: {},
