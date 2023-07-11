@@ -55,6 +55,10 @@ export const typography = makeTypo({
         fontWeight: '400',
         fontSize: 18,
       },
+      semiBold: {
+        fontWeight: '600',
+        fontSize: 12,
+      },
     },
   },
   heading: {
