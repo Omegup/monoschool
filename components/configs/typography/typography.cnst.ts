@@ -60,18 +60,6 @@ export const typography = makeTypo({
         fontSize: 12,
       },
     },
-    overline: {
-      small: {
-        fontWeight: '500',
-        fontSize: 12,
-      }
-    },
-    large: {
-      regular: {
-        fontWeight: '400',
-        fontSize: 18,
-      }
-    }
   },
   heading: {
     h3: {
