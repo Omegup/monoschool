@@ -6,3 +6,7 @@ export * from './Text';
 export * from './Container';
 export * from './Tooltip';
 export * from './TagToggle';
+export * from './NakedCheckbox';
+export * from './Tab';
+export * from './TabContainer';
+export * from './TabBadge';
