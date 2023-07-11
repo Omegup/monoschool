@@ -1,4 +1,8 @@
-lockfileVersion: 5.4
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 importers:
 
@@ -136,9 +140,18 @@ importers:
       tslib: ^2.5.3
       typescript: ^5.1.3
     dependencies:
-      '@omegup-school/ui-assets': link:../assets
-      '@omegup-school/ui-atoms': link:../atoms
-      react: 18.2.0
+      '@omegup-school/ui-assets':
+        specifier: workspace:*
+        version: link:../assets
+      '@omegup-school/ui-atoms':
+        specifier: workspace:*
+        version: link:../atoms
+      '@omegup-school/ui-configs':
+        specifier: workspace:*
+        version: link:../configs
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
     devDependencies:
       '@types/omegup-school': link:../../lib/type-helpers
       '@types/react': 18.2.12

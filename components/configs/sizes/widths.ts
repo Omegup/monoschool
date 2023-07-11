@@ -14,5 +14,13 @@ export const widths = {
     small: '16px',
     medium: '24px',
     large: '28px',
-  }
+  },
+  nakedCheckbox: {
+    large: '20px',
+    medium: '16.67px',
+    small: '13.33px',
+  },
+  avatar: {
+    small: '20px',
+  },
 };

@@ -6,3 +6,4 @@ export * from './Text';
 export * from './Container';
 export * from './Tooltip';
 export * from './SearchBar';
+export * from './NakedCheckbox'
