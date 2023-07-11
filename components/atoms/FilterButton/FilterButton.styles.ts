@@ -18,8 +18,6 @@ export const useContainerStyles = createUseStyles({
       color: colors.blue[500],
     },
     width:"-webkit-fill-available",
-    
-   
   },
   selected: {
     backgroundColor: colors.light[300],
