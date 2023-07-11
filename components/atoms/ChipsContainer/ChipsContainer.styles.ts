@@ -108,11 +108,13 @@ export const useSelectStyles = createUseStyles({
     },
   },
   enabled: {
-    '&  > $input:focus-visible + $container': {
-      outlineWidth: borders.b2,
+    '&& $input:focus-visible + $container': {
+      outlineWidth: borders.b2, 
       outlineColor: colors.blue[600],
       outlineStyle: 'solid',
+      backgroundColor:colors.background.default,
     },
+  
   },
   input: {
     clip: 'rect(0 0 0 0)',
@@ -120,9 +122,7 @@ export const useSelectStyles = createUseStyles({
   },
   label: {
     display: 'inline-flex',
-    '&:focus': {
-      outline: 'none',
-    },
+  
   },
   container: {
     display: 'flex',
