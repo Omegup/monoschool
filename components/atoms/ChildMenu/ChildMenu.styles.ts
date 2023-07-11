@@ -109,13 +109,13 @@ export const useChildMenutStyles = createUseStyles({
     },
     '&$notSelected': {
       color: colors.grey[500],
-
+      '&:hover': {
+        color: colors.blue[500],
+        borderRadius: "10px",
+        background: colors.light[100]
+      },
     },
-    '&:hover': {
-      color: colors.blue[500],
-      borderRadius: "10px",
-      background: colors.light[500]
-    },
+   
     
   },
 
