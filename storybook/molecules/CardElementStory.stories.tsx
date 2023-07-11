@@ -29,7 +29,7 @@ type Story = StoryObj<typeof Demo>;
 export const Primary: Story = {
   render: Demo,
   args: {
-    avatar: 'Square',
+    avatar: 'Avatar',
     text: 'Team1',
   },
 };
