@@ -6,8 +6,34 @@ const meta = {
   title: 'Atom/TabSearch',
   component: TabSearch,
   tags: ['autodocs'],
-  argTypes: {},
+  argTypes: {
+    tabProps: {
+      label: {
+        control: {
+          control: {
+            type: 'object',
+          },
+          table: {
+            type: {
+              summary: 'BadgeProps[]',
+            },
+          },
+        },
+      },
+      badge: {
+        control: {
+          type: 'object',
+        },
+        table: {
+          type: {
+            summary: 'BadgeProps[]',
+          },
+        },
+      },
+    }
+  },
 } satisfies Meta<typeof TabSearch>;
+
 
 export default meta;
 type Story = StoryObj<typeof meta>;

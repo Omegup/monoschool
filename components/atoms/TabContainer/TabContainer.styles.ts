@@ -3,11 +3,19 @@ import { borders, spacing } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
+  selected: {
+    borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]} `,
+  },
   topSearchContainer: {
     display: 'flex',
-    marginInline: spacing.s4,
-  },
-  selected: {
+    borderBottom: `${borders.b2}px solid ${colors.background.overlay}`,
+    '&:hover': {
+      cursor: 'pointer',
+      borderBottom: `${borders.b2}px solid ${colors.dark.default}`,
+    },
+    '&$selected': {
+      borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]} `,
+    }
   },
   tabSearch: {
     display: 'flex',
@@ -17,41 +25,7 @@ export const useStyles = createUseStyles({
     width: 'fit-content',
     height: '100%',
     cursor: 'pointer',
+    paddingInline: spacing.s4,
     paddingInlineEnd: spacing.s2,
-    borderBottom: `${borders.b2}px solid ${colors.background.overlay}`,
-
-    '&:hover': {
-      cursor: 'pointer',
-      borderBottom: `${borders.b2}px solid ${colors.dark.default}`,
-
-      '& $tabText': {
-        color: colors.dark.default,
-      },
-
-      '& $tabNumber': {
-        color: colors.dark.default,
-      },
-    },
-    '&$selected': {
-      borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]} `,
-      '& $tabText': {
-        color: colors.blue[500],
-      },
-      '& $tabNumber': {
-        color: colors.blue[500],
-        backgroundColor: `${colors.light[300]}`,
-      },
-      '&:hover': {
-        cursor: 'default',
-        borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]}`,
-        '&& $tabText': {
-          color: colors.blue[500],
-        },
-        '&& $tabNumber': {
-          color: colors.blue[500],
-          backgroundColor: `${colors.light[300]}`,
-        },
-      },
-    }
   },
 });

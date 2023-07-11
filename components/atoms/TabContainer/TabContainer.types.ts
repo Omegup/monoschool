@@ -1,11 +1,7 @@
 export interface TabSearchProps {
-  selected : boolean;
-  label: string;
-  badge?: number;
+  children: React.ReactNode;
+  selected: boolean;
   onClick?: () => void;
-  // tabProps: TabProps[];
-  // selectedIndex: number;
-  // setSelectedIndex: (index: number) => void;
 }
 
 export interface TabProps {
