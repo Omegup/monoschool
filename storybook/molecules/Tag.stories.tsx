@@ -9,7 +9,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     type: { control: 'select', options: ['success', 'warning', 'error', 'active', 'info', 'inactive'] satisfies TagType[] },
-
+    label: { control: 'text' },
   },
 } satisfies Meta<typeof Tag>;
 
@@ -18,6 +18,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    label: 'Test',
     type: 'success',
   },
 };
