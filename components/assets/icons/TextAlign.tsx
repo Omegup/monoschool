@@ -1,6 +1,6 @@
 import { widths } from '@omegup-school/ui-configs/sizes';
 
-export const TextAline = ({
+export const TextAlign = ({
   width = widths.icon.svg,
   height = width,
   color = 'currentColor',
