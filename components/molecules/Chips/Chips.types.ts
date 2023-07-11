@@ -1,14 +1,8 @@
-export type ChipsProps = {
-  style:  'border' | 'flat'
-  size: 'large' | 'medium' | 'small';
-  disabled?: boolean;
-  label: string;
-  firstIcon:JSX.Element;
-  secondIcon:JSX.Element;
-};
-export interface ControlledChipsProps extends ChipsProps {
-  value: boolean;
-  onChange: (value: boolean) => void;
-  onBlur: () => void;
-  onClick:()=>void;
-}
+import { ControlledChipsButtonProps } from '@omegup-school/ui-atoms/ChipsButton/ChipsButton.types';
+import { ControlledChipsContainerProps } from '@omegup-school/ui-atoms/ChipsContainer/ChipsContainer.types';
+
+
+
+
+export type ControlledChipsProps = ControlledChipsContainerProps &
+  ControlledChipsButtonProps & { label: string,secondIcon:JSX.Element,icon:JSX.Element};

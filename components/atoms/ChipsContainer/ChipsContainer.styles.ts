@@ -1,11 +1,11 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing, widths } from '@omegup-school/ui-atoms/sizes';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders, spacing, widths } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
-import { styles } from '../common/styles';
-import { ChipsProps } from './Chips.types';
+
+import { ChipsContainerProps } from './ChipsContainer.types';
 
 type Sizes = readonly [
-  `$${ChipsProps['size']}>$container>&`,
+  `$${ChipsContainerProps['size']}>$container>&`,
   { width: string; height: string }
 ];
 const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
@@ -70,9 +70,7 @@ export const useSelectStyles = createUseStyles({
       gap: 7,
       borderRadius: '14px',
       border: [borders.b3, 'solid'],
-      '& > $labelText': {
-        fontSize: '16px',
-      },
+    
     },
   },
   medium: {
@@ -81,9 +79,7 @@ export const useSelectStyles = createUseStyles({
       gap: spacing.s3,
       borderRadius: spacing.s6,
       border: [borders.b2, 'solid'],
-      '& > $labelText': {
-        fontSize: '14px',
-      },
+      
     },
   },
   small: {
@@ -92,34 +88,30 @@ export const useSelectStyles = createUseStyles({
       gap: spacing.s3,
       borderRadius: 8.4,
       border: [borders.b1, 'solid'],
-      '& > $labelText': {
-        fontSize: '12px',
-      },
+      
     },
   },
   disabled: {
-      '&$flat > $input:not(:checked) + $container': {
-        opacity: '0.4',
-        backgroundColor: colors.background.overlay,
-      },
-      '&&&$flat > $input:checked + $container': {
-        opacity: '0.3',
-        backgroundColor: colors.blue[100],
-      },
+    pointerEvents: 'none',
+    '&$flat > $input:not(:checked) + $container': {
+      opacity: '0.4',
+      backgroundColor: colors.background.overlay,
+    },
+    '&&&$flat > $input:checked + $container': {
+      opacity: '0.3',
+      backgroundColor: colors.blue[100],
+    },
 
-      '&&$border > $input + $container': {
-        opacity: '0.4',
-        backgroundColor: colors.background.default,
-      },
-     
+    '&&$border > $input + $container': {
+      opacity: '0.4',
+      backgroundColor: colors.background.default,
+    },
   },
   enabled: {
-    '&:focus-within:not(:focus) > $input': {
-      '& + $container': {
-        outlineWidth: borders.b2,
-        outlineColor: colors.blue[600],
-        outlineStyle: 'solid',
-      },
+    '&  > $input:focus-visible + $container': {
+      outlineWidth: borders.b2,
+      outlineColor: colors.blue[600],
+      outlineStyle: 'solid',
     },
   },
   input: {
@@ -137,16 +129,10 @@ export const useSelectStyles = createUseStyles({
     alignItems: 'center',
     alignContent: 'center',
   },
-  firstIcon: {
-    ...chipsSizes,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  secondIcon: {
-    ...chipsSizes,
-    display: 'flex',
-    alignItems: 'center',
-  },
-  labelText: {},
-  square: {},
+
+icon:{
+  ...chipsSizes,
+  display:'flex',
+  justifyItems:"center"
+}
 });

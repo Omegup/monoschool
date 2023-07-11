@@ -6,3 +6,5 @@ export * from './Text';
 export * from './Container';
 export * from './Tooltip';
 export * from './NakedCheckbox'
+export * from './ChipsContainer'
+export * from './ChipsButton'

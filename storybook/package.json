@@ -11,10 +11,7 @@
     "@omegup-school/ui-cells": "workspace:*",
     "@omegup-school/ui-molecules": "workspace:*",
     "@omegup-school/ui-assets": "workspace:*",
-<<<<<<< HEAD
-=======
     "@omegup-school/ui-configs": "workspace:*",
->>>>>>> e89f597a24390b6bc21ce281fce1fb571120b3db
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.3"

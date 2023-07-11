@@ -1,6 +1,4 @@
 import { widths } from '@omegup-school/ui-configs/sizes';
-import { IconProps } from './Icons.types';
-import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const Square = ({
   width = widths.icon.svg,

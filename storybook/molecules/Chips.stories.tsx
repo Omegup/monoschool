@@ -1,8 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Chips } from '@omegup-school/ui-molecules';
+
 import { Close,Add, Essential } from '@omegup-school/ui-assets';
-import { ControlledChipsProps } from '@omegup-school/ui-molecules/Chips/Chips.types';
+import { Chips,ControlledChipsProps } from '@omegup-school/ui-molecules';
+
 
 const IconOption = ( option:string ) => {
   switch (option) {
@@ -23,17 +24,17 @@ const ChipsDemo = ({
   ...rest
 }: DemoType) => {
   return (
-    <Chips {...rest} firstIcon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
+    <Chips {...rest} icon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
   )
 }
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta = {
-  title: 'molecule/Chips',
+  title: 'molecules/Chips',
   component: ChipsDemo,
   tags: ['autodocs'],
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
-    style: { control: 'select', options: ['border' , 'flat'] } ,
+    variant: { control: 'select', options: ['border' , 'flat'] } ,
     firstIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
     secondIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
   },
@@ -48,12 +49,12 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     label: "Label",
-    style:"border",
+    variant:"border",
     size: 'medium',
     disabled: false,
     value:false,
-    onChange: () => {},
-    onClick:()=>{},
+    onChange: (e) => {console.log(e)},
+    onClick:(e) => {console.log(e)},
     firstIcon: "SearchStatus",
     secondIcon: "Close",
   },
