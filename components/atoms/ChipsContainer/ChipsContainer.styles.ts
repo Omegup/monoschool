@@ -19,6 +19,32 @@ const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
 );
 
 export const useSelectStyles = createUseStyles({
+  enabled: {
+    '&  $input:focus-visible + $container':{
+       backgroundColor:'red',
+    },
+ 
+   /*/ '&:active:focus:not(:hover))': {
+      outlineWidth: borders.b2,
+      outlineColor: colors.blue[600],
+      outlineStyle: 'solid',
+      backgroundColor: colors.background.default,
+    },/*/
+  },
+  input: {
+    //clip: 'rect(0 0 0 0)',
+    position: 'absolute',
+  
+  },
+  label: {
+    display: 'inline-flex',
+  },
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    alignContent: 'center',
+    cursor: 'pointer',
+  },
   border: {
     '& > $input:not(:checked) + $container': {
       borderColor: colors.background.outline,
@@ -35,7 +61,7 @@ export const useSelectStyles = createUseStyles({
       '&:hover ': {
         backgroundColor: colors.light[200],
       },
-      '&:active ': {
+      '&:active:not(:focus) ': {
         backgroundColor: colors.light[400],
       },
     },
@@ -70,7 +96,6 @@ export const useSelectStyles = createUseStyles({
       gap: 7,
       borderRadius: '14px',
       border: [borders.b3, 'solid'],
-    
     },
   },
   medium: {
@@ -79,7 +104,6 @@ export const useSelectStyles = createUseStyles({
       gap: spacing.s3,
       borderRadius: spacing.s6,
       border: [borders.b2, 'solid'],
-      
     },
   },
   small: {
@@ -88,7 +112,6 @@ export const useSelectStyles = createUseStyles({
       gap: spacing.s3,
       borderRadius: 8.4,
       border: [borders.b1, 'solid'],
-      
     },
   },
   disabled: {
@@ -102,37 +125,15 @@ export const useSelectStyles = createUseStyles({
       backgroundColor: colors.blue[100],
     },
 
-    '&&$border > $input + $container': {
+    '&&$border > $container': {
       opacity: '0.4',
       backgroundColor: colors.background.default,
     },
   },
-  enabled: {
-    '&& $input:focus-visible + $container': {
-      outlineWidth: borders.b2, 
-      outlineColor: colors.blue[600],
-      outlineStyle: 'solid',
-      backgroundColor:colors.background.default,
-    },
-  
-  },
-  input: {
-    clip: 'rect(0 0 0 0)',
-    position: 'absolute',
-  },
-  label: {
-    display: 'inline-flex',
-  
-  },
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    alignContent: 'center',
-  },
 
-icon:{
-  ...chipsSizes,
-  display:'flex',
-  justifyItems:"center"
-}
+  icon: {
+    ...chipsSizes,
+    display: 'flex',
+    justifyItems: 'center',
+  },
 });

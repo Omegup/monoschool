@@ -18,13 +18,13 @@ const IconOption = ( option:string ) => {
   }
 };
 
-type DemoType = ControlledChipsProps & { firstIcon: 'Essential' | 'Close'|'Add',secondIcon:'Essential' | 'Close'|'Add'};
+type DemoType = Omit<ControlledChipsProps, 'secondIcon' | 'icon'> & { firstIcon: 'Essential' | 'Close'|'Add' | 'SearchStatus',secondIcon:'Essential' | 'Close'|'Add' | 'Close'};
 const ChipsDemo = ({
-  firstIcon,secondIcon,
+  firstIcon,secondIcon,onChange,
   ...rest
 }: DemoType) => {
   return (
-    <Chips {...rest} icon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
+    <Chips {...rest} onChange={onChange} icon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
   )
 }
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
@@ -35,7 +35,7 @@ const meta = {
   argTypes: {
     size: { control: 'select', options: ['large', 'medium', 'small'] },
     variant: { control: 'select', options: ['border' , 'flat'] } ,
-    firstIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
+    firstIcon: { control: 'select', options: ['Essential' , 'Close','Add', 'SearchStatus'] } ,
     secondIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
   },
    
@@ -52,11 +52,10 @@ export const Primary: Story = {
     variant:"border",
     size: 'medium',
     disabled: false,
-    value:false,
-    onChange: (e) => {console.log(e)},
-    onClick:(e) => {console.log(e)},
     firstIcon: "SearchStatus",
     secondIcon: "Close",
+    children: null,
+    value: true,
   },
 };
 
