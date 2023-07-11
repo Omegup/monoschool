@@ -17,6 +17,7 @@ export const useSearchBarStyles = createUseStyles({
       '& $icon': {
         color: colors.grey[500],
         width: widths.searchBar.medium,
+        height:widths.searchBar.medium,
       },
     },
   },
@@ -31,6 +32,7 @@ export const useSearchBarStyles = createUseStyles({
       '& $icon': {
         color: colors.grey[500],
         width: widths.searchBar.medium,
+        height:widths.searchBar.medium,
       },
       '&:has($input:focus)': {
         backgroundColor: colors.light[200],
@@ -80,6 +82,7 @@ export const useSearchBarStyles = createUseStyles({
       '& $icon': {
         color: colors.grey[400],
         width: widths.searchBar.small,
+        height:widths.searchBar.small,
       },
      
     },

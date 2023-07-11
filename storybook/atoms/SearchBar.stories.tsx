@@ -5,38 +5,45 @@ import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from '../molecules/Icon';
 
 const Demo = ({
-  firstIcon,value,
+  firstIcon,value,clearIcon,displayClearIcon,placeholder,variant,
   ...restProps
-}: Omit<TextWithIconProps, 'firstIcon'> & {
-  firstIcon: keyof typeof icons;
+}: TextWithIconProps & {
+  variant:'navBar' | 'sideBar' | 'filterSearch', placeholder:string, firstIcon: keyof typeof icons,clearIcon: keyof typeof icons,displayClearIcon:true,value:string
 }) => {
   return (
     <SearchBar
+      displayClearIcon={displayClearIcon} 
       firstIcon={<Icon name={firstIcon} />}
-      secondIcon={<Icon name={"Close"} />}
+      clearIcon={<Icon name={clearIcon} />}
       value={value}
-      placeholder={'Recherche'}
-      CloseOnClick={() => console.log('delete')}
+      placeholder={placeholder}
+      onClear={() => console.log('delete')}
       onChange={(value) => console.log(value)}
-      variant={'navBar'}
-      displayClose={true}
-      inputType={'text'}
+      variant={variant}
 
       {...restProps}    />
   );
 };
 const meta = {
   title: 'Atom/SearchBar',
-  component: SearchBar,
+  component: Demo,
   tags: ['autodocs'],
   argTypes: {
     firstIcon: {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
+    clearIcon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+    variant: {
+      control: 'select',
+      options: ["navBar","sideBar","filterSearch"],
+    },
    
   },
-} satisfies Meta<typeof SearchBar>;
+} satisfies Meta<typeof Demo>;
 
 export default meta;
 type Story = StoryObj<typeof Demo>;
@@ -44,7 +51,12 @@ type Story = StoryObj<typeof Demo>;
 export const Primary: Story = {
   render: Demo,
   args: {
+    variant:'navBar',
     firstIcon: 'SearchStatus',
-    value:''
+    clearIcon:"Close",
+    displayClearIcon:true,
+    value:'',
+    placeholder:"Recherche",
+    
   },
 };

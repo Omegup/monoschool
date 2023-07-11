@@ -4,7 +4,7 @@ import { forwardRef } from 'react';
 
 export const SearchBar = forwardRef(
   (props: ControlledSearchBarProps,ref: React.Ref<HTMLInputElement>) => {
-    const { variant, firstIcon, placeholder,inputType,secondIcon, displayClose, onChange,CloseOnClick, value } = props;
+    const { variant, firstIcon, placeholder,clearIcon, displayClearIcon, onChange,onClear, value } = props;
     const classes = useSearchBarStyles();
 
     return (
@@ -13,13 +13,13 @@ export const SearchBar = forwardRef(
           <span className={classes.icon}>{firstIcon}</span>
           <input
             className={classes.input}
-            type={inputType}
+            type="text"
             placeholder={placeholder}
             onChange={(e) => onChange(e.target.value)}
             value={value}
           />
-          <span className={classes.icon} onClick={CloseOnClick}>
-            {displayClose && secondIcon}
+          <span className={classes.icon} onClick={onClear}>
+            {displayClearIcon && clearIcon}
           </span>
         </div>
       </div>
