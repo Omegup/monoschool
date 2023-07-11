@@ -25,7 +25,7 @@ export const ChipsButton = forwardRef(
       <button
         {...ref}
         className={`${classes.button}  ${classes[size]}`}
-        onClick={(e) => onClick(e)}
+        onClick={onClick}
       >
         <span className={classes.icon}>{icon}</span>
       </button>
