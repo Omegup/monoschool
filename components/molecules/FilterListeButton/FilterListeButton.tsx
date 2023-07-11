@@ -7,7 +7,7 @@ export const FilterListeButton = forwardRef(
     const { data } = props;
 
     return (
-      <FilterContainer ref={ref} variant={'border'}>
+      <FilterContainer ref={ref} hasSeparatedLine={true}>
         {data.map((item) => (
           <FilterButton ref={ref} onClick={item.onClick} active={item.active}>
             <Text

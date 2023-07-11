@@ -13,7 +13,7 @@ export const FilterListeChekbox = forwardRef(
     const { data } = props;
 
     return (
-      <FilterContainer ref={ref} variant={'flat'}>
+      <FilterContainer ref={ref} hasSeparatedLine={false}>
         <div>//searchBar</div>
         {data.map((item) => (
           <FilterCheckBox

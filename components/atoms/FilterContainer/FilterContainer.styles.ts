@@ -17,7 +17,7 @@ export const useContainerStyles = createUseStyles({
     boxShadow: shadowXSmall,
     
   },
-  border: {
+  hasSeparatedLine: {
     '& $line': {
       margin: [spacing.s2],
       border: [borders.b1, 'solid'],
@@ -25,6 +25,5 @@ export const useContainerStyles = createUseStyles({
       width: '-webkit-fill-available',
     },
   },
-  flat: {},
   line: {},
 });
