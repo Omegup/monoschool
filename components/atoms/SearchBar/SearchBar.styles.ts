@@ -72,7 +72,7 @@ export const useSearchBarStyles = createUseStyles({
 
       border: [borders.b2, 'solid', colors.background.overlay],
       '& $input': {
-        color: colors.grey[400],
+        color: colors.grey[500],
         ...styles.paragraph_xSmall_regular,
         '&::placeholder': {
           color: colors.grey[400],
