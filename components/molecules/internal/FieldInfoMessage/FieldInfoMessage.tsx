@@ -1,8 +1,6 @@
-import { Container, Text } from '@omegup-school/ui-atoms';
+import { Container, IconContainer, Text } from '@omegup-school/ui-atoms';
 import { forwardRef } from 'react';
 import { FieldInfoMessageProps } from './FieldInfoMessage.type';
-import { Info } from '@omegup-school/ui-assets';
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
 
 export const FieldInfoMessage = forwardRef(
   (props: FieldInfoMessageProps, ref: React.Ref<HTMLDivElement>) => {
@@ -16,7 +14,12 @@ export const FieldInfoMessage = forwardRef(
         gap="s2"
         alignItems="center"
       >
-        <Info color={colorsStyles[color!]} height={16} width={16} />
+        <IconContainer
+          name="Info"
+          color={color}
+          height={'smallSvg'}
+          width={'smallSvg'}
+        />
         <Text
           text={label}
           {...{ variant: 'paragraph_xSmall_regular', color }}
