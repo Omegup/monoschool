@@ -9,8 +9,8 @@ export const useStyles = createUseStyles(({ containerStateSelector }: { containe
     alignItems: 'center',
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
-    color: `${colors.grey[500]}`,
-    backgroundColor: `${colors.grey[100]}`,
+    color: colors.grey[500],
+    backgroundColor: colors.grey[100],
     paddingInline: spacing.s4,
     borderRadius: borders.r5,
     [`.${containerStateSelector}:hover &`]: {
@@ -18,7 +18,7 @@ export const useStyles = createUseStyles(({ containerStateSelector }: { containe
     },
     '&&$selected': {
       color: colors.blue[500],
-      backgroundColor: `${colors.light[300]}`,
+      backgroundColor: colors.light[300],
     },
   },
 })); 

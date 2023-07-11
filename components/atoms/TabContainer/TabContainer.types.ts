@@ -1,7 +1,7 @@
 export interface TabSearchProps {
   children: React.ReactNode;
   selected: boolean;
-  onClick?: () => void;
+  onClick: () => void;
 }
 
 export interface TabProps {

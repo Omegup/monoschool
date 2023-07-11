@@ -7,7 +7,7 @@ export const TabBadge = ({ badge,selected  }: { badge?: number,selected : boolea
   const classes = useStyles({theme: {containerStateSelector}});
   return (
     <>
-      {badge && (
+      {badge !== undefined && (
         <span className={`${classes.tabNumber} ${selected ? classes.selected : ''}`}>{badge}</span>
       )}
     </>

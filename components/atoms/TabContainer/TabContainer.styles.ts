@@ -8,13 +8,13 @@ export const useStyles = createUseStyles({
   },
   topSearchContainer: {
     display: 'flex',
-    borderBottom: `${borders.b2}px solid ${colors.background.overlay}`,
+    borderColor: colors.background.overlay,
     '&:hover': {
       cursor: 'pointer',
-      borderBottom: `${borders.b2}px solid ${colors.dark.default}`,
+      borderColor: colors.dark.default,
     },
     '&$selected': {
-      borderBlockEnd: `${borders.b2}px solid ${colors.blue[500]} `,
+      borderColor: colors.blue[500],
     }
   },
   tabSearch: {

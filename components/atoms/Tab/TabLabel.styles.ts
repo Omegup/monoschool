@@ -9,7 +9,7 @@ export const useStyles = createUseStyles(({ containerStateSelector }: { containe
   tabText: {
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
-    color: `${colors.grey[500]}`,
+    color: colors.grey[500],
     marginBottom: spacing.s5,
     paddingInline: spacing.s2,
     [`.${containerStateSelector}:hover &`]: {
