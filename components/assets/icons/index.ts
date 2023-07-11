@@ -7,3 +7,4 @@ export * from './ArrowCircleLeft';
 export * from './UserTick';
 export * from './Close';
 export * from './SearchStatus';
+export * from './Subtitle';

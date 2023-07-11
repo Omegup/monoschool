@@ -1,18 +1,16 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { widths } from '@omegup-school/ui-atoms/sizes';
+import { colors } from '@omegup-school/ui-configs/colors';
 
 export const Logo = ({
-  width = widths.icon.svg,
-  height = width,
-  color = colors.blue[500],
+  fill = colors.blue[500],
+  width = 80,
+  height = 80,
 }: {
-  width?: string;
-  height?: string;
-  color?: string;
+  fill?: string;
+  width?: number | string;
+  height?: number | string;
 }) => (
   <svg
-    width={width}
-    height={height}
+    {...{ width, height }}
     viewBox="0 0 80 80"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
