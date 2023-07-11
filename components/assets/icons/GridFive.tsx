@@ -1,4 +1,4 @@
-import { widths } from '@omegup-school/ui-atoms/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes';
 import { IconProps } from './Icons.types';
 
 export const GridFive = ({

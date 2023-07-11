@@ -1,5 +1,7 @@
 export interface TabsProps {
-  tabs: { label: string, Icon?: ({bold}:{bold: boolean})=>JSX.Element }[],
+  tabs: Tabs[],
   onSelect: (index: number) => void,
   selected: number
 }
+
+export interface Tabs { label: string, Icon: ({ bold }: { bold: boolean }) => JSX.Element }

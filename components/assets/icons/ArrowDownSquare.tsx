@@ -1,5 +1,4 @@
-import { widths } from '@omegup-school/ui-atoms/sizes';
-import { IconProps } from './Icons.types';
+import { widths } from "@omegup-school/ui-configs/sizes";
 
 export const ArrowDownSquare = ({
   width = widths.icon.svg,

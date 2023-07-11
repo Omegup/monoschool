@@ -1,4 +1,4 @@
-import { rotation, widths } from '@omegup-school/ui-atoms/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes';
 import { ArrowDownSquare } from './ArrowDownSquare';
 import { IconProps } from './Icons.types';
 
@@ -23,11 +23,8 @@ export const ArrowLeftSquare = ({
         </>
       ) : (
         <>
-      
-<path d="M8.5 21H14.5C19.5 21 21.5 19 21.5 14V8C21.5 3 19.5 1 14.5 1H8.5C3.5 1 1.5 3 1.5 8V14C1.5 19 3.5 21 8.5 21Z" stroke={color} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.76 14.53L9.23999 11L12.76 7.46997" stroke={color} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-
+          <path d="M8.5 21H14.5C19.5 21 21.5 19 21.5 14V8C21.5 3 19.5 1 14.5 1H8.5C3.5 1 1.5 3 1.5 8V14C1.5 19 3.5 21 8.5 21Z" stroke={color} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12.76 14.53L9.23999 11L12.76 7.46997" stroke={color} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </>
       )}
     </svg>

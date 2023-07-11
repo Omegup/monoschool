@@ -1,4 +1,4 @@
-import { widths ,rotation} from '@omegup-school/ui-atoms/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes';
 import { ArrowDownSquare} from './ArrowDownSquare';
 import { IconProps } from './Icons.types';
 
@@ -11,6 +11,6 @@ export const ArrowUpSquare = ({
 }: IconProps) => {
   return (
    <ArrowDownSquare  width={width}
-   height={height} bold={bold} color={color} rotation={rotation.down} />
+   height={height} bold={bold} color={color}/>
   );
 };
