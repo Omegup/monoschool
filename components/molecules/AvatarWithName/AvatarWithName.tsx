@@ -14,7 +14,7 @@ export const AvatarWithName = forwardRef((
       ref={ref}
       gap={'s5'}
       alignItems="center"
-    >
+   >
       {avatar}
       <Text text={text} ref={ref} variant="paragraph_small_medium" />
     </Container>
