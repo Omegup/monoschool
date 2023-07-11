@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { GridElement, Square, TextAline, Tick, UserTick } from '../../components/assets'
+import { GridElement, Square, TextAlign, Tick, UserTick } from '../../components/assets'
 import { ViewModeSwitcher } from '@omegup-school/ui-atoms';
 import { ViewModeSwitcherProps } from '@omegup-school/ui-atoms/ViewModeSwitcher/ViewModeSwitcher.types';
  const elementsViewModeRight = { icon: <GridElement /> }
-const elementsViewModeLeft = { icon: <TextAline /> }
+const elementsViewModeLeft = { icon: <TextAlign /> }
  
 
 
@@ -25,6 +25,6 @@ export const Primary: Story = {
   args: {
      isChecked: true,
     elementRight: <GridElement />,
-    elementLeft: <TextAline />,
+    elementLeft: <TextAlign />,
   },
 };

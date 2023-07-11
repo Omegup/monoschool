@@ -36,7 +36,7 @@ export const Primary: Story = {
   render: Demo,
   args: {
     textName: "Yassine Brahim",
-    avatar: 'Square',
+    avatar: 'Avatar',
     amount: '100.000DT',
     date: '10/15/2200',
     status: "" ,
