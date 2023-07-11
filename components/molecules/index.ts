@@ -5,6 +5,5 @@ export * from './IconWithDoubleText';
 export * from './Checkbox';
 export * from './SignIn';
 export * from './SideBar';
-export * from './HeaderSideBar';
-export * from './ButtonSideBar';
+
 

@@ -1,5 +1,5 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders, spacing } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 
 export const useSelectStyles = createUseStyles({

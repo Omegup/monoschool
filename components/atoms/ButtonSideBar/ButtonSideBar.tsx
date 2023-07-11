@@ -1,6 +1,6 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
+import { colors } from '@omegup-school/ui-configs/colors';
 
-import {spacing, widths } from '@omegup-school/ui-atoms/sizes';
+import {spacing, widths } from '@omegup-school/ui-configs/sizes';
 import { forwardRef } from 'react';
 import { createUseStyles } from 'react-jss';
 
@@ -29,22 +29,21 @@ const useStyles = createUseStyles({
 
 export interface ControlledButtonSideBarProps  {
   isCollopsed?: boolean;
-  onChange: (isCollopsed: boolean) => void;
-  onBlur: () => void;
+  onClick: (isCollopsed: boolean) => void;
   firstIcon: JSX.Element;
   secandIcon: JSX.Element;
 }
 
 export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useStyles();
-  const { isCollopsed, onChange, onBlur, secandIcon,firstIcon } = props;
+  const { isCollopsed, onClick, secandIcon,firstIcon } = props;
   return (
     <div
       className={`${classes.button} `}
       onClick={() => {
-        onChange;
+        onClick;
       }}
-      {...{ref,onBlur}}
+      {...ref}
     >
       {!isCollopsed ? (
         <span className={classes.icon}>{firstIcon}</span>

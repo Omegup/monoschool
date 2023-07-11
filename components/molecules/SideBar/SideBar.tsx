@@ -1,20 +1,42 @@
-import { useSelectStyles } from './SideBar.styles';
 import { SideBarProps } from './SideBar.types';
-import { forwardRef } from 'react';
+import {
+  ButtonSideBar,
+  HeaderSideBar,
+  SideBarContainer,Text
+} from '@omegup-school/ui-atoms';
+export const SideBar = (props: SideBarProps) => {
+  const {
+    children,
+    titre,
+    isCollopsed,
+    SearchIcon,
+    logo,
+    firstIcon,
+    secandIcon,
+  } = props;
 
-export const SideBar = forwardRef(
-  (props: SideBarProps, ref: React.Ref<HTMLDivElement>) => {
-    const { children, headerSideBar, isCollopsed, buttonSideBar } = props;
-    const classes = useSelectStyles();
-    const collopsedClass = classes[isCollopsed ? 'collopsed':'notCollopsed'];;
-    return (
-      <div {...ref} className={`${classes.container}  ${collopsedClass}`}>
-        <div className={classes.sideBarButton}>
-        {buttonSideBar} 
-        </div>
-        {headerSideBar} 
-        {children.map((child) => child)}
-      </div>
-    );
-  }
-);
+  return (
+    <SideBarContainer
+      isCollopsed={false}
+      buttonSideBar={
+        <ButtonSideBar
+          firstIcon={firstIcon}
+          secandIcon={secandIcon}
+          onClick={() => {}}
+          isCollopsed={isCollopsed}
+        />
+      }
+    >
+      <HeaderSideBar
+        logoOnClick={() => {}}
+        title={<Text variant={'paragraph_medium_semiBold'} text={titre}/>}
+        logo={logo}
+        search={<>"SearchBar"</>}
+        searchIcon={SearchIcon}
+        onClick={() => {}}
+        isCollopsed={isCollopsed}
+      />
+      {children}
+    </SideBarContainer>
+  );
+};

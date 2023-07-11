@@ -1,5 +1,5 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { widths } from '@omegup-school/ui-atoms/sizes';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const ArrowCircleRight = ({
   width = widths.icon.svg,

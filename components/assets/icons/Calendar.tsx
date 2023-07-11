@@ -1,4 +1,4 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
+import { colors } from '@omegup-school/ui-configs/colors';
 
 export const Calendar = ({ fill = colors.blue[500] }: { fill?: string }) => (
 

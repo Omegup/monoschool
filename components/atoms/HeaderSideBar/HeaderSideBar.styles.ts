@@ -1,6 +1,6 @@
-import { colors } from '@omegup-school/ui-atoms/colors';
-import { borders, spacing } from '@omegup-school/ui-atoms/sizes';
-import { widths } from '@omegup-school/ui-atoms/sizes/widths';
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes/widths';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 
@@ -22,10 +22,11 @@ export const useSelectStyles = createUseStyles({
   logoIcon: {
     width: widths.logo.svg,
     height:widths.logo.svg,
+    display:"flex",
+    alignContent:"centre",
+    alignItems:"center"
   },
-  labelText: {
-    ...styles.paragraph_medium_semiBold,
-  },
+
   SearchIcon: {
     width: widths.sideBar.icon,
     height:widths.sideBar.icon,

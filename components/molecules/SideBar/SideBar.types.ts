@@ -1,7 +1,13 @@
+import { ReactNode } from "react"
+
 export interface SideBarProps {
-  children:JSX.Element[],
+  children:ReactNode,
   isCollopsed:boolean,
   buttonSideBar:JSX.Element
-  headerSideBar:JSX.Element
+  firstIcon:JSX.Element;
+  logo:JSX.Element;
+  SearchIcon:JSX.Element;
+  secandIcon:JSX.Element;
+  titre:string;
 }
 

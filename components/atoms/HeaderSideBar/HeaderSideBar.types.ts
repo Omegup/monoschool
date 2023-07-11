@@ -1,9 +1,9 @@
 
 export interface HeaderSideBarProps {
-  title: string;
-  Logo:JSX.Element;
-  Search:JSX.Element;
-  SearchIcon:JSX.Element,
+  title: JSX.Element;
+  logo:JSX.Element;
+  search:JSX.Element;
+  searchIcon:JSX.Element,
 }
 
 export interface ControlledHeaderSideBarProps extends HeaderSideBarProps {
