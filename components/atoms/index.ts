@@ -10,4 +10,6 @@ export * from './FieldLabelLayout';
 export * from './NakedInput';
 export * from './NakedTextArea';
 export * from './NakedDropDown';
-export * from './NakedCheckbox'
+export * from './NakedCheckbox';
+export * from './NakedButton';
+export * from './IconContainer';

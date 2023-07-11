@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconWithDoubleText } from '@omegup-school/ui-molecules';
 import * as icons from '@omegup-school/ui-assets/icons';
-import { IconWithDoubleTextProps } from '@omegup-school/ui-molecules/IconWithDoubleText/IconWithDoubleText.types';
+import { IconWithDoubleTextProps } from '@omegup-school/ui-molecules/internal/IconWithDoubleText/IconWithDoubleText.types';
 import { Icon } from './Icon';
 
 const Demo = ({
