@@ -7,4 +7,5 @@ export * from './UserTick';
 export * from './WifiSquare';
 export * from './ClipboardTick';
 export * from './Subtitle';
+export * from './avatar'
  
