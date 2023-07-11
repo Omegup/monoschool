@@ -7,4 +7,5 @@ export * from './TextWithIcon';
 export * from './IconWithDoubleText';
 export * from './CardFeeStudent';
 export * from './ElementCardDateTags';
- 
+export * from './Checkbox';
+export * from './SignIn';
