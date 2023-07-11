@@ -8,3 +8,4 @@ export * from './ArrowUpSquare'
 export * from './GridFive'
 export * from './GridNine'
 export * from './GridSix'
+export * from './Subtitle';
