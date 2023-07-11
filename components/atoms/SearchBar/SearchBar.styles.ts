@@ -10,9 +10,11 @@ export const useSearchBarStyles = createUseStyles({
     '& $container ': {
       gap: spacing.s7,
       border: [borders.b2, 'solid', colors.grey[500]],
+      background:'transparent',
       '& $input': {
         color: colors.grey[500],
         ...styles.paragraph_medium_regular,
+        background:'transparent',
       },
       '& $icon': {
         color: colors.grey[500],
@@ -99,6 +101,7 @@ export const useSearchBarStyles = createUseStyles({
     boxShadow: shadowXSmall,
     padding: spacing.s4,
     borderRadius: borders.r5,
+    width:"fit-content",
   },
   icon: {
     display: 'flex',
