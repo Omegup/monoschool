@@ -8,4 +8,3 @@ export * from './Tooltip';
 export * from './ChildMenu';
 export * from  './ViewModeSwitcher';
 export * from  './CardContainerFee';
-export * from '../molecules/ElementCardDateTags'
