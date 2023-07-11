@@ -2,7 +2,8 @@ import { forwardRef } from 'react';
 import { ControlleNakedDropDownProps } from './NakedDropDown.type';
 import { useNakedDropDownStyles } from './NakedDropDown.style';
 import { styles } from '../common/styles';
-import { FIELD_COLORS } from '@omegup-school/ui-configs/colors';
+import { joinClassNames } from '@omegup-school/ui-configs/typography';
+import { FIELD_COLORS } from '../constants/FieldColors.cnst';
 
 export const NakedDropDown = forwardRef(
   (props: ControlleNakedDropDownProps, ref: React.Ref<HTMLDivElement>) => {
@@ -30,13 +31,14 @@ export const NakedDropDown = forwardRef(
       ...styles,
     });
     return (
-      <div ref={ref} className={`${classes.selectContainer} `}>
+      <div ref={ref} className={classes.selectContainer}>
         {startIcon}
         <select
           {...{ onChange, value, disabled, placeholder }}
-          className={`${classes[textVariant]} ${
+          className={joinClassNames(
+            classes[textVariant],
             disabled ? classes.disabled : ''
-          }`}
+          )}
         >
           <option value="">Selectionner</option>
           {options.map(({ id, ...restProps }) => (

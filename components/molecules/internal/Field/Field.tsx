@@ -2,9 +2,10 @@ import { forwardRef } from 'react';
 import { Container, FieldLabelLayout, Text } from '@omegup-school/ui-atoms';
 import { FieldProps } from './Field.type';
 import { FieldInfoMessage } from '../FieldInfoMessage';
-import { FIELD_COLORS, colorsStyles } from '@omegup-school/ui-configs/colors';
 import { FieldContext } from '@omegup-school/ui-atoms';
 import { FieldLabel } from '../FieldLabel';
+import { NakedInputProps } from '@omegup-school/ui-atoms/NakedInput/NakedInput.type';
+import { FIELD_COLORS } from '@omegup-school/ui-atoms/constants/FieldColors.cnst';
 
 const sizes: { [k in 'spaced' | 'condensed']: 'xSmall' | 'medium' } = {
   spaced: 'medium',
@@ -22,15 +23,18 @@ export const Field = forwardRef(
       label,
       disabled,
     } = props;
+
+    const textCheck = (text: string | null | undefined) =>
+      text != undefined && text != null;
     const size: 'xSmall' | 'medium' = sizes[variant];
-    const infoTextColor: keyof typeof colorsStyles = FIELD_COLORS[color];
+    const infoTextColor: NakedInputProps['borderColor'] = FIELD_COLORS[color];
     return (
       <Container ref={ref} gap={'s4'} direction="column" alignItems="start">
         <FieldLabelLayout {...{ variant }}>
           <Container>
-            {label && (
+            {textCheck(label) && (
               <FieldLabel
-                {...{ label, size, required }}
+                {...{ label: label!, size, required }}
                 {...(variant === 'condensed'
                   ? { color: FIELD_COLORS[color] }
                   : {})}
@@ -41,13 +45,13 @@ export const Field = forwardRef(
             {input}
           </FieldContext.Provider>
         </FieldLabelLayout>
-        {infoText && (
-          <FieldInfoMessage {...{ label: infoText, color: infoTextColor }} />
+        {textCheck(infoText) && (
+          <FieldInfoMessage {...{ label: infoText!, color: infoTextColor }} />
         )}
-        {descriptionText && (
+        {textCheck(descriptionText) && (
           <Container paddingInline="s8">
             <Text
-              text={descriptionText}
+              text={descriptionText!}
               variant="paragraph_xSmall_regular"
               color={'dark_default'}
             />

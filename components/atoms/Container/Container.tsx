@@ -8,7 +8,7 @@ export const Container = forwardRef(
     const classes = useContainerStyles(styling);
 
     return (
-      <div className={`${classes.container}`} ref={ref}>
+      <div className={classes.container} ref={ref}>
         {children}
       </div>
     );

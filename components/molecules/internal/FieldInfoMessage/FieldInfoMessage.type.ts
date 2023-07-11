@@ -1,6 +1,6 @@
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { TextProps } from '@omegup-school/ui-atoms/Text/Text.types';
 
 export interface FieldInfoMessageProps {
   label: string;
-  color: keyof typeof colorsStyles;
+  color: TextProps['color'];
 }

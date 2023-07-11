@@ -2,7 +2,8 @@ import { forwardRef } from 'react';
 import { ControlleNakedTextAreaProps } from './NakedTextArea.type';
 import { useNakedTextAreaStyles } from './NakedTextArea.style';
 import { styles } from '../common/styles';
-import { FIELD_COLORS } from '@omegup-school/ui-configs/colors';
+import { joinClassNames } from '@omegup-school/ui-configs/typography';
+import { FIELD_COLORS } from '../constants/FieldColors.cnst';
 
 export const NakedTextArea = forwardRef(
   (props: ControlleNakedTextAreaProps, ref: React.Ref<HTMLDivElement>) => {
@@ -32,15 +33,16 @@ export const NakedTextArea = forwardRef(
       ...styles,
     });
     return (
-      <div ref={ref} className={`${classes.inputContainer} `}>
-        <div> {startIcon}</div>
+      <div ref={ref} className={classes.inputContainer}>
+        <div className={classes.startIcon}> {startIcon}</div>
         <textarea
           {...{ onChange, value, disabled, placeholder, rows }}
-          className={`${classes[textVariant]} ${
+          className={joinClassNames(
+            classes[textVariant],
             disabled ? classes.disabled : ''
-          }`}
+          )}
         />
-        <div>{endIcon}</div>
+        <div className={classes.endIcon}>{endIcon}</div>
       </div>
     );
   }

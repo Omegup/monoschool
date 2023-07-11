@@ -16,7 +16,7 @@ export const FieldInfoMessage = forwardRef(
         gap="s2"
         alignItems="center"
       >
-        <Info color={colorsStyles[color]} height={16} width={16} />
+        <Info color={colorsStyles[color!]} height={16} width={16} />
         <Text
           text={label}
           {...{ variant: 'paragraph_xSmall_regular', color }}
