@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
 import { ControlledCardFeeStudentProps } from "./CardFeeStudent.types";
-import { CardContainerFee, ElementCardDateTags, Text } from "@omegup-school/ui-atoms";
+import { CardContainerFee, Text } from "@omegup-school/ui-atoms";
 import { AvatarWithName } from "../AvatarWithName";
 import { DoubleText } from "../DoubleText";
-import { Tick } from "@omegup-school/ui-assets";
+ import { ElementCardDateTags } from "../ElementCardDateTags";
 
 export const CardFeeStudent = forwardRef((
   props: ControlledCardFeeStudentProps,

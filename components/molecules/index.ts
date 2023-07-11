@@ -6,4 +6,5 @@ export * from './DoubleText';
 export * from './TextWithIcon';
 export * from './IconWithDoubleText';
 export * from './CardFeeStudent';
+export * from './ElementCardDateTags';
  
