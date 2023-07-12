@@ -5,5 +5,4 @@ export interface RadioProps {
   name : string,
   variant : 'solid' | 'scale' | 'border',
   size : 'small' | 'medium' | 'large',
-  label : string,
 }

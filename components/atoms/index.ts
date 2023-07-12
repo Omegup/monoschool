@@ -10,3 +10,5 @@ export * from './NakedCheckbox';
 export * from './Tab';
 export * from './TabContainer';
 export * from './TabBadge';
+export * from './Radio';
+export * from './LabelRadio';

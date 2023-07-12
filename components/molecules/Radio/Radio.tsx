@@ -1,28 +1,12 @@
-import { useRadioStyles } from './Radio.styles';
+import { Container, LabelRadio } from '@omegup-school/ui-atoms';
 import { RadioProps } from './Radio.types';
 
-export const Radio = ({ name, variant, size, checked, disabled }: RadioProps) => {
-  const classes = useRadioStyles();
+export const Radio = ({ name, variant, size, checked, disabled,label }: RadioProps) => {
 
   return (
-    <div className={`${classes.radioContainer} ${classes[size]} ${disabled && classes.disabled}`}>
-      <input
-        className={`
-            ${classes.radio} 
-            ${size}
-            ${variant === 'border'
-            ? classes.borderRadio
-            : classes.scaledRadio}
-        `}
-        type="radio"
-        id="radio"
-        name={name}
-        value="radio"
-        checked={checked}
-      />
-      <label htmlFor="radio" className={`${classes.radioLabel} ${size}`}>
-        Radio
-      </label>
-    </div>
+    <Container>
+      <Radio checked={checked} name={name} onCheck={() => console.log('test')} size={size} variant={variant} disabled={disabled}/>
+      <LabelRadio label={label}/>
+    </Container>
   );
 }

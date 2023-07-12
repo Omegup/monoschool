@@ -9,7 +9,6 @@ const meta = {
     variant: {
       control: 'select',
       options: ['solid', 'scale', 'border']
-
     },
     size: { control: 'select', options: ['large', 'medium', 'small'] },
   },
@@ -21,10 +20,11 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     name: 'Ala Bouziri',
+    label: 'Ala Bouziri',
     variant: 'scale',
     size: 'medium',
     disabled: false,
-    checked: false,
     onCheck: () => { },
+    checked: false,
   },
 };
