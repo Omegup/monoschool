@@ -1,28 +1,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Close,Add, Essential } from '@omegup-school/ui-assets';
+import { Close, Add, Essential } from '@omegup-school/ui-assets';
 import { Chips, ControlledChipsProps } from '@omegup-school/ui-molecules';
+import * as icons from '@omegup-school/ui-assets/icons';
+import { Icon } from './Icon';
 
-
-const IconOption = ( option:string ) => {
-  switch (option) {
-    case 'Essential':
-      return <Essential width={'100%'} />;
-    case 'Close':
-      return <Close width={'100%'} />;
-    case 'Add':
-      return <Add width={'100%'} />;
-    default:
-      return <Close width={'100%'} />;
-  }
-};
-
-
-const ChipsDemo =  ({ClearIcon,...rest}:Omit<ControlledChipsProps, "children">&{ClearIcon:string} ) => {
-  
- 
-  return (
-   <Chips  {...rest} ClearIcon={IconOption(ClearIcon)} label={''}></Chips>
-  );
+const Demo = ({
+  icon,ClearIcon,
+  ...restProps
+}: Omit<ControlledChipsProps, 'icon'|'ClearIcon'> & { icon: keyof typeof icons ,ClearIcon:keyof typeof icons}) => {
+  return <Chips icon={<Icon name={icon} width='100%'  />}  ClearIcon={<Icon name={ClearIcon} width='100%' />} {...restProps} />;
 };
 
 const meta = {
@@ -32,12 +18,16 @@ const meta = {
   argTypes: {
     variant: {
       control: 'select',
-      options: [
-        'flat',
-        'border']
+      options: ['flat', 'border'],
     },
-    firstIcon: { control: 'select', options: ['Essential' , 'Close','Add', 'SearchStatus'] } ,
-    ClearIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
+    icon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+    ClearIcon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
     size: {
       control: 'select',
       options: ['large', 'medium', 'small'],
@@ -49,31 +39,31 @@ const meta = {
 } satisfies Meta<Partial<typeof Chips>>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Demo>;
 
-const states = {
-  
-};
+const states = {};
 
 export const Border: Story = {
+  render: Demo,
   args: {
     label: 'label',
     size: 'medium',
     variant: 'border',
     checked: false,
     disabled: false,
-    icon:<Essential width='100%' />,
-    ClearIcon:<Close width='100%'/>
+    icon: 'Essential',
+    ClearIcon: 'Close',
   },
 };
 export const Flat: Story = {
+  render: Demo,
   args: {
     label: 'label',
     size: 'medium',
     variant: 'flat',
     checked: false,
     disabled: false,
-    icon:<Essential width='100%' />,
-    ClearIcon:<Close width='100%'/>
+    icon: 'Essential',
+    ClearIcon: 'Close',
   },
 };
