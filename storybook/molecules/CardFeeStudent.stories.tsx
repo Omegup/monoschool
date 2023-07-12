@@ -33,7 +33,7 @@ const meta = {
     },
     statusText: {
       control: 'select',
-      options:  ['success' , 'warning' ,'error' ,'active' ,'info' ,'inactive'],
+      options:  ['Payée' , 'En Attente' ,'Non Payée' , 'Dispencé'],
     }
   },
 } satisfies Meta<typeof CardFeeStudent>;
@@ -48,7 +48,7 @@ export const Primary: Story = {
     amount: '100.000DT',
     date: '10/15/2200',
     status: 'success' ,
-    statusText:'success',
+    statusText:'Payée',
     subscription: "Abonnement de Transport "
   },
 };
