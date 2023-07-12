@@ -10,7 +10,7 @@ export const useStyles = createUseStyles({
     cursor: 'pointer',
     '&>div>svg>path': {
       fill: colors.blue[500],
-      stroke: colors.light[500],
+      // stroke: colors.light[500],
     }
   },
 
