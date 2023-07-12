@@ -1,16 +1,24 @@
 import { forwardRef } from 'react';
-import { useAvatarStyles } from './Avatar.style';
-import { controlledAvatarProps } from './Avatar.type';
+import { useAvatarImageStyles, useAvatarStyles } from './Avatar.style';
+import { AvatarImageProps, AvatarProps } from './Avatar.type';
 
 export const Avatar = forwardRef(
-  (props: controlledAvatarProps, ref: React.Ref<HTMLDivElement>) => {
-    const { children, src, onClick, ...styling } = props;
+  (props: AvatarProps, ref: React.Ref<HTMLDivElement>) => {
+    const { children, onClick, ...styling } = props;
     const classes = useAvatarStyles(styling);
 
     return (
       <div ref={ref} {...{ onClick }} className={classes.mainContainer}>
-        {src ? <img className={classes.image} src={src} /> : children}
+        {children}
       </div>
     );
+  }
+);
+
+export const AvatarImage = forwardRef(
+  (props: AvatarImageProps, ref: React.Ref<HTMLImageElement>) => {
+    const { src } = props;
+    const classes = useAvatarImageStyles();
+    return <img className={classes.image} ref={ref} src={src} />;
   }
 );

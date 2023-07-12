@@ -2,6 +2,9 @@ import { createUseStyles } from 'react-jss';
 import { AvatarProps } from './Avatar.type';
 import { widths } from '@omegup-school/ui-configs/sizes';
 
+const size = ({ size }: Partial<AvatarProps>) =>
+  widths.avatar[size ?? 'medium'];
+
 export const useAvatarStyles = createUseStyles({
   mainContainer: {
     display: 'flex',
@@ -9,12 +12,11 @@ export const useAvatarStyles = createUseStyles({
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
-    // backgroundColor: Math.floor(Math.random() * 10),
-    width: ({ size }: Partial<AvatarProps>) =>
-      size ? widths.avatar[size] : widths.avatar.medium,
-    height: ({ size }: Partial<AvatarProps>) =>
-      size ? widths.avatar[size] : widths.avatar.medium,
+    width: size,
+    height: size,
   },
+});
+export const useAvatarImageStyles = createUseStyles({
   image: {
     objectFit: 'cover',
     width: '100%',
