@@ -5,8 +5,9 @@ import { styles } from '../common/styles';
 import { ControlledNakedButtonProps } from './NakedButton.type';
 
 export const useNakedInputStyles = createUseStyles({
-  inputContainer: {
+  buttonContainer: {
     display: 'flex',
+    overflow: 'hidden',
     paddingInline: ({ paddingInline }: Partial<ControlledNakedButtonProps>) =>
       paddingInline ? spacing[paddingInline] : 0,
     paddingBlock: ({ paddingBlock }: Partial<ControlledNakedButtonProps>) =>
@@ -24,10 +25,17 @@ export const useNakedInputStyles = createUseStyles({
       borderColor
         ? `${border ? borders[border] : 0}px solid ${colorsStyles[borderColor]}`
         : '',
+        lineHeight:({ lineHeight }: Partial<ControlledNakedButtonProps>)=>lineHeight?H:''
+  },
+  button: {
+    backgroundColor: 'transparent',
+    outline: 'none',
+    border: 'none',
+    color: ({ color }: Partial<ControlledNakedButtonProps>) =>
+      color ? colorsStyles[color] : '',
   },
   filledInput: {
     border: `${spacing.s1}px solid ${colorsStyles['dark_overline']}`,
-    '&>input': {},
   },
   disabled: { backgroundColor: colorsStyles['background_default'] },
   ...styles,

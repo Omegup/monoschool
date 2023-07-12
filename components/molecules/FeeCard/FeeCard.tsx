@@ -78,8 +78,20 @@ export const FeeCard = forwardRef(
             text={estimatedBillableAmount}
           />
         </Container>
-        <Container>
-          <NakedButton text='Voir plus' bg='blue_500' />
+        <Container width="100%" justifyContent="space-between">
+          <Container paddingInline="s5">
+            <></>
+          </Container>
+          <NakedButton
+            text="Voir plus"
+            bg="blue_500"
+            textVariant="paragraph_xSmall_regular"
+            borderRadius="r6"
+            paddingBlock="s5"
+            paddingInline="s5"
+            lineheigth=''
+            color="light_100"
+          />
         </Container>
       </Container>
     );

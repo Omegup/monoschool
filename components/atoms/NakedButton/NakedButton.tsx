@@ -2,6 +2,7 @@ import { forwardRef } from 'react';
 import { ControlledNakedButtonProps } from './NakedButton.type';
 import { useNakedInputStyles } from './NakedButton.style';
 import { styles } from '../common/styles';
+import { joinClassNames } from '@omegup-school/ui-configs/typography';
 
 export const NakedButton = forwardRef(
   (props: ControlledNakedButtonProps, ref: React.Ref<HTMLDivElement>) => {
@@ -10,30 +11,25 @@ export const NakedButton = forwardRef(
       endIcon,
       startIcon,
       text,
-      border,
-      borderColor,
       disabled = false,
-      bg,
-      shadow,
       textVariant = 'paragraph_medium_semiBold',
+      ...styling
     } = props;
     const classes = useNakedInputStyles({
-      border,
       disabled,
-      borderColor,
-      bg,
-      textVariant,
-      shadow,
+      ...styling,
       ...styles,
     });
     return (
-      <div ref={ref} className={`${classes.inputContainer} `} {...{ onClick }}>
+      <div ref={ref} className={classes.buttonContainer} {...{ onClick }}>
         {startIcon}
         <button
           {...{ disabled }}
-          className={`${classes[textVariant]} ${
+          className={joinClassNames(
+            classes.button,
+            classes[textVariant],
             disabled ? classes.disabled : ''
-          }`}
+          )}
         >
           {text}
         </button>
