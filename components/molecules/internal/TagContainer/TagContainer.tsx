@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { TagContainerProps } from "./TagContainer.types";
-import { Container, Text } from "@omegup-school/ui-atoms";
+import { Container, TagToggle, Text } from "@omegup-school/ui-atoms";
 
 
 
@@ -9,7 +9,7 @@ export const TagContainer = forwardRef((
   ref: React.Ref<HTMLDivElement>
 ) => {
 
-  const { status, text } = props
+  const { type, label } = props
 
   return (
     <Container
@@ -18,7 +18,7 @@ export const TagContainer = forwardRef((
       display="inline-flex"
       width="-webkit-fill-available">
 
-<Text text={text??"Success"} ref={ref} variant="paragraph_xSmall_regular" />
+<TagToggle type={type} label={label}/>
   </Container>
   )
 })

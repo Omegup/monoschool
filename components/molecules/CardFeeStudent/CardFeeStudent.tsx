@@ -23,7 +23,7 @@ export const CardFeeStudent = forwardRef((
       paddingInline="s5"
       AvatarWithName={<AvatarWithName text={textName ?? ""} avatar={avatar} />}
       DoubleText={<DoubleText text={subscription ?? ""} subText={amount ?? ""} />}
-      ElementCardWithDateTags={<ElementCardDateTags text={statusText ?? ""} status={status} date={date ?? ""} />}
+      ElementCardWithDateTags={<ElementCardDateTags label={statusText ?? ""} type={status??'success'} date={date ?? ""} />}
     />
   )
 })

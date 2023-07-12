@@ -8,12 +8,12 @@ export const ElementCardDateTags = forwardRef((
   ref: React.Ref<HTMLDivElement>
 ) => {
 
-  const { status,text,date, ...styling } = props
+  const { type,label,date, ...styling } = props
  
   return (
     <Container justifyContent="space-between"  ref={ref}>
     <CardSecondaryText text={date}/>
-    <TagContainer status={status}text={text}/>
+    <TagContainer type={type??'success'} label={label}/>
     </Container>
   )
 })

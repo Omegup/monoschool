@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-export interface ControlledAvatarWithNameProps {
+export interface AvatarWithNameProps {
   text: string;
   avatar: ReactNode;
 }

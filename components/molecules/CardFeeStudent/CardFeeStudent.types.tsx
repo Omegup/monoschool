@@ -5,6 +5,9 @@ export interface ControlledCardFeeStudentProps {
   subscription?:string;
   amount?:string;
   date?:string;
-  status?:string;
+  status?:TagType;
   statusText?:string
 }
+ 
+
+type TagType = 'success' | 'warning' | 'error' | 'active' | 'info' | 'inactive'

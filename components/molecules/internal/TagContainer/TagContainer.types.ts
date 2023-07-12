@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 export interface TagContainerProps {
-  status?:string;
-  text?:string
+  type?: TagType;
+  label? : string;
 }
+
+type TagType = 'success' | 'warning' | 'error' | 'active' | 'info' | 'inactive'

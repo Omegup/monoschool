@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { ControlledAvatarWithNameProps } from "./AvatarWithName.types";
+import { AvatarWithNameProps } from "./AvatarWithName.types";
 import { Container, Text } from "@omegup-school/ui-atoms";
 
 export const AvatarWithName = forwardRef((

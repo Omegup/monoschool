@@ -26,6 +26,14 @@ const meta = {
     avatar: {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+    status: {
+      control: 'select',
+      options:  ['success' , 'warning' ,'error' ,'active' ,'info' ,'inactive'],
+    },
+    statusText: {
+      control: 'select',
+      options:  ['success' , 'warning' ,'error' ,'active' ,'info' ,'inactive'],
     }
   },
 } satisfies Meta<typeof CardFeeStudent>;
@@ -39,8 +47,8 @@ export const Primary: Story = {
     avatar: 'Avatar',
     amount: '100.000DT',
     date: '10/15/2200',
-    status: "" ,
-    statusText:"Success",
+    status: 'success' ,
+    statusText:'success',
     subscription: "Abonnement de Transport "
   },
 };
