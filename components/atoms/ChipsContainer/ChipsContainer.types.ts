@@ -8,6 +8,6 @@ export type ChipsContainerProps = {
 };
 export interface ControlledChipsContainerProps extends ChipsContainerProps {
   checked: boolean;
-  onChange: (value: boolean) => void;
+  onChange: (checked: boolean) => void;
   onBlur: () => void;
 }

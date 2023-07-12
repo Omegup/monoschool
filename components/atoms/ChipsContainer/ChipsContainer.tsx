@@ -20,6 +20,7 @@ export const ChipsContainer = forwardRef(
           classes[size],
           disabledClass
         )}
+        onClick={(event) => event.stopPropagation()}
       >
         <input
           type="checkbox"

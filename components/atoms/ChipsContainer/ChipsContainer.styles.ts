@@ -49,9 +49,10 @@ export const useSelectStyles = createUseStyles({
       '&:hover ': {
         backgroundColor: colors.light[200],
       },
-      '&:active:not(:focus) ': {
+      '&:active:hover ': {
         backgroundColor: colors.light[400],
       },
+    
     },
   },
   flat: {
@@ -104,7 +105,7 @@ export const useSelectStyles = createUseStyles({
   },
   enabled: {
     ///focus
-    '&:has($input:active:not(:hover)),&:has($input:focus-visible)': {
+    '&:has($input:active:not(:hover)),&:has($input:focus)': {
       '& > $container': {
         outlineWidth: borders.b2,
         outlineColor: colors.blue[600],
@@ -117,7 +118,8 @@ export const useSelectStyles = createUseStyles({
       '&$flat > $input:checked + $container': {
         backgroundColor: colors.light[100],
       },
-    },
+    }
+    
   },
   disabled: {
     pointerEvents: 'none',
