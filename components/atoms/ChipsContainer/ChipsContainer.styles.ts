@@ -19,15 +19,6 @@ const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
 );
 
 export const useSelectStyles = createUseStyles({
-  enabled: {
-    ///focus
-    '&&:has($input:active:not(:hover)) > $container': {
-      outlineWidth: borders.b2,
-      outlineColor: colors.blue[600],
-      outlineStyle: 'solid',
-      backgroundColor: colors.background.default,
-    },
-  },
   input: {
     clip: 'rect(0 0 0 0)',
     position: 'absolute',
@@ -111,6 +102,23 @@ export const useSelectStyles = createUseStyles({
       border: [borders.b1, 'solid'],
     },
   },
+  enabled: {
+    ///focus
+    '&:has($input:active:not(:hover)),&:has($input:focus-visible)': {
+      '& > $container': {
+        outlineWidth: borders.b2,
+        outlineColor: colors.blue[600],
+        outlineStyle: 'solid',
+        backgroundColor: colors.background.default,
+      },
+      '&$flat > $input:not(:checked) + $container': {
+        backgroundColor: colors.background.secondary,
+      },
+      '&$flat > $input:checked + $container': {
+        backgroundColor: colors.light[100],
+      },
+    },
+  },
   disabled: {
     pointerEvents: 'none',
     '&$flat > $input:not(:checked) + $container': {
@@ -121,13 +129,11 @@ export const useSelectStyles = createUseStyles({
       opacity: '0.3',
       backgroundColor: colors.blue[100],
     },
-
     '&&$border > $container': {
       opacity: '0.4',
       backgroundColor: colors.background.default,
     },
   },
-
   icon: {
     ...chipsSizes,
     display: 'flex',
