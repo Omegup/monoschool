@@ -9,6 +9,11 @@ const useExternal = (): External => {
   return { navigation: { navigate } };
 };
 function App() {
+
+
+  
+
+
   return (
     <BrowserRouter>
       <FacadeProvider useExternal={useExternal}>
@@ -20,5 +25,8 @@ function App() {
     </BrowserRouter>
   );
 }
+
+
+
 
 export default App;
