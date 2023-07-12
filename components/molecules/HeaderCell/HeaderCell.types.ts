@@ -4,5 +4,5 @@ export interface HeaderCellProps  {
 };
 
 export interface ControlledHeaderCellProps extends HeaderCellProps {
-  onSort : (sort : 'asc' | 'desc' | null) => any;
+  onSort : (sort : 'asc' | 'desc' | null) => void;
 } ;

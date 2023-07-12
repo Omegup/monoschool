@@ -8,5 +8,6 @@ export const useHeaderCellTableStyles = createUseStyles({
       display: 'flex',
       alignItems: 'center',
       gap: spacing.s5,
+      cursor: 'pointer',
   },
 });
