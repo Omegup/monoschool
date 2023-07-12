@@ -5,10 +5,13 @@ import { forwardRef } from 'react';
 
 export const ChipsContainer = forwardRef(
   (props: ControlledChipsContainerProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, variant, disabled, onChange, onBlur, value, children, icon } =
+    const { size, variant, disabled, onChange, onBlur, checked, children, icon } =
       props;
     const classes = useSelectStyles(),
       disabledClass = classes[disabled ? 'disabled' : 'enabled'];
+      const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+        onChange(event.target.checked);
+      };
     return (
       <label
           className={joinClassNames(
@@ -21,9 +24,9 @@ export const ChipsContainer = forwardRef(
         <input
           type="checkbox"
           className={classes.input}
-          onChange={(e) => onChange(e.target.checked)}
+          onChange={changeHandler}
           {...{ ref, onBlur }}
-          checked={value}
+          checked={checked}
         />
           <div className={classes.container}>
             <span className={classes.icon}>{icon}</span>

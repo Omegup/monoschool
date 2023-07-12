@@ -52,10 +52,10 @@ export const Primary: Story = {
     variant:"border",
     size: 'medium',
     disabled: false,
-    firstIcon: "SearchStatus",
+    firstIcon: "Essential",
     secondIcon: "Close",
     children: null,
-    value: true,
+    checked: true,
   },
 };
 

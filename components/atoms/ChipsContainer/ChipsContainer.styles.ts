@@ -20,24 +20,21 @@ const chipsSizes = Object.fromEntries<'', Record<'', Sizes>>(
 
 export const useSelectStyles = createUseStyles({
   enabled: {
-    '&  $input:focus-visible + $container':{
-       backgroundColor:'red',
-    },
- 
-   /*/ '&:active:focus:not(:hover))': {
+    ///focus
+    '&&:has($input:active:not(:hover)) > $container': {
       outlineWidth: borders.b2,
       outlineColor: colors.blue[600],
       outlineStyle: 'solid',
       backgroundColor: colors.background.default,
-    },/*/
+    },
   },
   input: {
-    //clip: 'rect(0 0 0 0)',
+    clip: 'rect(0 0 0 0)',
     position: 'absolute',
-  
   },
   label: {
     display: 'inline-flex',
+    userSelect: 'none',
   },
   container: {
     display: 'flex',

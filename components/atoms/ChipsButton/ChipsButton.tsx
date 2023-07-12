@@ -20,12 +20,12 @@ const useStyles = createUseStyles({
 export const ChipsButton = forwardRef(
   (props: ControlledChipsButtonProps, ref: React.Ref<HTMLButtonElement>) => {
     const classes = useStyles();
-    const { icon, onClick, size } = props;
+    const { icon, onClear, size } = props;
     return (
       <button
         {...ref}
         className={`${classes.button}  ${classes[size]}`}
-        onClick={onClick}
+        onClick={onClear}
       >
         <span className={classes.icon}>{icon}</span>
       </button>

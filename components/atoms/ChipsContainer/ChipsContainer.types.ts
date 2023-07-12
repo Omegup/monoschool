@@ -7,7 +7,7 @@ export type ChipsContainerProps = {
   icon:JSX.Element;
 };
 export interface ControlledChipsContainerProps extends ChipsContainerProps {
-  value: boolean;
+  checked: boolean;
   onChange: (value: boolean) => void;
   onBlur: () => void;
 }
