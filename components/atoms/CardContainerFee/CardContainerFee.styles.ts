@@ -14,9 +14,9 @@ export const useCardContainerFeeStyles = createUseStyles({
     paddingInline: ({ paddingInline }: Partial<CardContainerFeeProps>) => paddingInline ? spacing[paddingInline] : 0,
     background: colors.background["default"],
     '&:hover': {
-      borderRadius: "10px",
-      background: colors.light[100],
-      cursor: "pointer"
+      // borderRadius: "10px",
+      // background: colors.light[100],
+      // cursor: "pointer"
     },
     borderRadius: "10px",
     border: "1px solid var(--background-overlay, #EBEBEB)",
