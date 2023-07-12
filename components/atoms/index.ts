@@ -7,3 +7,8 @@ export * from './Container';
 export * from './Tooltip';
 export * from './ChildMenu';
 export * from './NakedCheckbox'
+export * from './TagToggle';
+export * from './NakedCheckbox';
+export * from './Tab';
+export * from './TabContainer';
+export * from './TabBadge';

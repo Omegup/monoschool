@@ -12,5 +12,5 @@ export interface ContainerProps {
 
 }
 export interface ControlledContainerProps extends ContainerProps {
-  children: ReactNode[];
+  children: ReactNode;
 }
