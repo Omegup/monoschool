@@ -5,3 +5,7 @@ export * from './internal/IconWithDoubleText';
 export * from './Checkbox';
 export * from './SignIn';
 export * from './FeeCard';
+export * from '@omegup-school/ui-atoms/TagToggle'
+export * from './Checkbox';
+export * from './TabSearch';
+export * from './Tag';
