@@ -1,3 +1,4 @@
+import { Button } from '../Button';
 import { useChildMenutStyles } from './ChildMenu.styles';
 import { ControlledChildMenuProps } from './ChildMenu.types';
 import { Children, forwardRef } from 'react';
@@ -21,6 +22,7 @@ export const ChildMenu = forwardRef(
             <label >
               {label}
             </label>
+            {/* <Button label={label} /> */}
           </div>
         }
       </div>

@@ -56,16 +56,8 @@ export const useChildMenutStyles = createUseStyles({
   },
   label: {
     '& label': {
-      cursor: "pointer"
-    },
-    '$large > &': {
-      fontSize: spacing.s9,
-    },
-    '$medium > &': {
-      fontSize: spacing.s8,
-    },
-    '$small > &': {
-      fontSize: spacing.s7,
+      cursor: "pointer",
+
     },
   },
   mobileIcon: {
@@ -100,8 +92,11 @@ export const useChildMenutStyles = createUseStyles({
     alignItems: "flex-start",
     gap: '15px',
     cursor: "pointer",
-    alignSelf:'stretch',
-    
+    alignSelf: 'stretch',
+    fontSize: "16px",
+    fontStyle: "normal",
+    fontWeight: 400,
+    lineHeight: "normal",
     '&$selected': {
       color: colors.grey[100],
       borderRadius: "10px",
@@ -115,8 +110,8 @@ export const useChildMenutStyles = createUseStyles({
         background: colors.light[100]
       },
     },
-   
-    
+
+
   },
 
 }

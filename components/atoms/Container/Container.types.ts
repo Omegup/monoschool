@@ -1,4 +1,5 @@
 import { spacing } from "@omegup-school/ui-configs/sizes";
+import { colors } from "@omegup-school/ui-configs/colors";
 import { ReactNode } from "react";
 
 export interface ContainerProps {

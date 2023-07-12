@@ -43,6 +43,10 @@ export const typography = makeTypo({
         fontWeight: '400',
         fontSize: 12,
       },
+      bold: {
+        fontWeight: '700',
+        fontSize: 12,
+      },
     },
   },
   heading: {
@@ -65,4 +69,5 @@ export const typography = makeTypo({
       },
     },
   },
+  
 });

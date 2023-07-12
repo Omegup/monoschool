@@ -3,7 +3,7 @@
 import { ControlledSubMenuProps } from './SubMenu.types';
  import{forwardRef} from "react"
 import { ChildMenu, Container, Text } from '@omegup-school/ui-atoms';
-
+ 
 
 export const SubMenu = forwardRef(
   (props: ControlledSubMenuProps,
@@ -17,12 +17,15 @@ export const SubMenu = forwardRef(
       justifyContent="start"
       gap='s5'
       alignItems='start'
-      
-       
-     
-      
+
     >
-     {viewMode !== 'mobile' &&  <Text text={title} ref={ref} variant="heading_h4_bold" />
+     {viewMode !== 'mobile' &&  
+     <Text text={title} ref={ref}
+      variant="paragraph_xSmall_bold"
+        letterSpacing='0.12px' 
+       lineHeigt='normal'
+      textTransform='uppercase'
+      color="#B9CAD7"/>
       }
        {
        items.map((ch, index) =>
