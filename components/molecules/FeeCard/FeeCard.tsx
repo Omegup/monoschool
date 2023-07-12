@@ -14,6 +14,7 @@ import {
 } from '@omegup-school/ui-assets';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import { FeeCardShadow } from '@omegup-school/ui-configs/effects/shadow';
+import { CardHeaderDoubleText } from '../internal/CardDoubleText';
 
 export const FeeCard = forwardRef(
   (props: FeeCardProps, ref: React.Ref<HTMLDivElement>) => {
@@ -37,17 +38,23 @@ export const FeeCard = forwardRef(
         shadow={FeeCardShadow}
         bg={'light_100'}
         borderRadius={'r5'}
-        width={300}
-        height={330}
+        width={299.25}
+        maxWidth={299.25}
+        maxHeight={328}
       >
-        <Container width={'100%'} justifyContent="space-between">
-          <CardIconedDetail
-            icon={<Subtitle color={colorsStyles['blue_500']} />}
-            text="Description"
-            subText={feeName}
-          />
+        <Container
+          width={'100%'}
+          justifyContent="space-between"
+          alignItems="center"
+        >
+          <Container ref={ref} direction="row" alignItems="center" gap={'s5'}>
+            <Container ref={ref} paddingBlock={'s5'} paddingInline={'s5'}>
+              <Subtitle color={colorsStyles['blue_500']} />
+            </Container>
+            <CardHeaderDoubleText subText={feeName} text={'Description'} />
+          </Container>
           <IconContainer paddingInline="s5" rotation={90}>
-            <More />
+            <More color={colorsStyles['dark_default']} />
           </IconContainer>
         </Container>
         <CardIconedDetail
@@ -71,7 +78,7 @@ export const FeeCard = forwardRef(
           justifyContent="space-between"
         >
           <CardIconedinfo
-            icon={<DocumentText color={colorsStyles['headline_600']} />}
+            icon={<DocumentText color={colorsStyles['blue_500']} />}
             text={billableAmount}
           />
           <CardIconedinfo

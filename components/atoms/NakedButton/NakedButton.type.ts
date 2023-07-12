@@ -17,6 +17,7 @@ export interface NakedButtonProps {
   paddingBlock?: keyof typeof spacing;
   color?: keyof typeof colorsStyles;
   lineHeight?: keyof typeof heights.lineHieght;
+  height?:keyof typeof heights.button
 }
 
 export interface ControlledNakedButtonProps extends NakedButtonProps {

@@ -1,33 +1,19 @@
-import { forwardRef } from "react";
-import { CardIconedDetailProps } from "./CardIconedDetail.types";
-import { Container, Text } from "@omegup-school/ui-atoms";
+import { Container } from '@omegup-school/ui-atoms';
+import { forwardRef } from 'react';
+import { CardDoubleText } from '../CardDoubleText';
+import { CardIconedDetailProps } from './CardIconedDetail.types';
 
-export const CardIconedDetail = forwardRef((
-  props: CardIconedDetailProps,
-  ref: React.Ref<HTMLDivElement>
-) => {
+export const CardIconedDetail = forwardRef(
+  (props: CardIconedDetailProps, ref: React.Ref<HTMLDivElement>) => {
+    const { text, subText, icon } = props;
 
-  const { text, subText, icon } = props
-
-  return (<Container
-    ref={ref}
-    direction="row"
-    alignItems="center"
-    gap={"s5"}
-  >
-    <Container
-      ref={ref}
-      paddingBlock={'s5'}
-      paddingInline={'s5'}
-    >
-      {[icon]}
-    </Container>
-    <Container
-      ref={ref}
-      direction="column">
-      <Text text={text} variant="paragraph_xSmall_regular" />
-      <Text text={subText} variant="paragraph_small_medium" />
-    </Container>
-  </Container>
-  )
-})
+    return (
+      <Container ref={ref} direction="row" alignItems="center" gap={'s5'}>
+        <Container ref={ref} paddingBlock={'s5'} paddingInline={'s5'}>
+          {[icon]}
+        </Container>
+        <CardDoubleText subText={subText} text={text} />
+      </Container>
+    );
+  }
+);

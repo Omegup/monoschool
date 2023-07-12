@@ -28,5 +28,7 @@ export const useContainerStyles = createUseStyles({
       }`,
     width: ({ width }: Partial<ContainerProps>) => width || '',
     height: ({ height }: Partial<ContainerProps>) => height || '',
+    maxWidth: ({ maxWidth }: Partial<ContainerProps>) => maxWidth || '',
+    maxHeight: ({ maxHeight }: Partial<ContainerProps>) => maxHeight || '',
   },
 });

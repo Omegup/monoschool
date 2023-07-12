@@ -15,7 +15,6 @@ export const useNakedInputStyles = createUseStyles({
       paddingBlock ? spacing[paddingBlock] : 0,
     borderRadius: ({ borderRadius }: Partial<ControlledNakedButtonProps>) =>
       borderRadius ? borders[borderRadius] : 0,
-    gap: spacing['s2'],
     opacity: ({ disabled }: Partial<ControlledNakedButtonProps>) =>
       disabled ? 0.5 : 0.8,
     boxShadow: ({ shadow }: Partial<ControlledNakedButtonProps>) =>
@@ -32,6 +31,8 @@ export const useNakedInputStyles = createUseStyles({
     backgroundColor: 'transparent',
     outline: 'none',
     border: 'none',
+    height: ({ height }: Partial<ControlledNakedButtonProps>) =>
+      heights.button[height ?? 'small'],
     color: ({ color }: Partial<ControlledNakedButtonProps>) =>
       color ? colorsStyles[color] : '',
     lineHeight: ({ lineHeight }: Partial<ControlledNakedButtonProps>) =>

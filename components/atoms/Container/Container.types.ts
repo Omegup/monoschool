@@ -16,6 +16,8 @@ export interface ContainerProps {
   bg?: keyof typeof colorsStyles;
   height?: number | string;
   width?: number | string;
+  maxWidth?: number | string;
+  maxHeight?: number | string;
 }
 export interface ControlledContainerProps extends ContainerProps {
   children: ReactNode;

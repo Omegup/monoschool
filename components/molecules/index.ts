@@ -1,5 +1,5 @@
 export * from './internal/CardAvataredInfo';
-export * from './internal/DoubleText';
+export * from './internal/CardDoubleText';
 export * from './internal/CardIconedinfo';
 export * from './internal/CardIconedDetail';
 export * from './Checkbox';

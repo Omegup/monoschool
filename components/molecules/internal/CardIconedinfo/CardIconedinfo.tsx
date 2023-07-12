@@ -9,7 +9,7 @@ export const CardIconedinfo = forwardRef(
     return (
       <Container ref={ref} gap={'s5'} paddingInline="s5" alignItems="center">
         {icon}
-        <Text text={text} ref={ref} variant="paragraph_small_medium" />
+        <Text text={text} ref={ref} variant="paragraph_xSmall_medium" />
       </Container>
     );
   }
