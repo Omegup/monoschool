@@ -37,10 +37,10 @@ const chipsStateThemeToJss = (styles: ChipsStateTheme): JssStyle => ({
     borderColor: styles.chipsBorderColor,
     backgroundColor: styles.chipsBackgroundColor,
     opacity: styles.chipsOpacity,
-    color:styles.ChipsColor,
-    outlineWidth:styles.chipsOutlineWidth,
-    outlineStyle:styles.chispOutlineStyle,
-    outlineColor:styles.chipsOutlineColor,
+    color: styles.ChipsColor,
+    outlineWidth: styles.chipsOutlineWidth,
+    outlineStyle: styles.chispOutlineStyle,
+    outlineColor: styles.chipsOutlineColor,
   },
 });
 
@@ -59,8 +59,7 @@ const chipsStateThemeToJssEntries =
       chipsStateThemeToJss(stateTheme),
     ]);
 
-const chipsVariantThemeToJss = (
-  variantTheme: ChipsVariantTheme,): JssStyle => {
+const chipsVariantThemeToJss = (variantTheme: ChipsVariantTheme): JssStyle => {
   const themeEntries = Object.entries(variantTheme);
   const entries = themeEntries.flatMap(([status, statusTheme]) => {
     const statusThemeEntries = Object.entries(statusTheme);
@@ -74,14 +73,10 @@ const chipsVariantThemeToJss = (
 
 export const chipsThemeToJss = (): Record<ChipsVariant, JssStyle> => {
   const themeEntries = Object.entries(CHIPS_THEME);
-  const from =  Object.fromEntries(
-    themeEntries.map(
-      ([variant, theme]): readonly [ChipsVariant, JssStyle] => [
-        variant,
-        chipsVariantThemeToJss(theme),
-      ]
-    )
+  return Object.fromEntries(
+    themeEntries.map(([variant, theme]): readonly [ChipsVariant, JssStyle] => [
+      variant,
+      chipsVariantThemeToJss(theme),
+    ])
   );
-  console.log({from})
-  return from ; 
 };
