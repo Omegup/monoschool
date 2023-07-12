@@ -97,8 +97,9 @@ export const useChildMenutStyles = createUseStyles({
     fontStyle: "normal",
     fontWeight: 400,
     lineHeight: "normal",
+     
     '&$selected': {
-      color: colors.grey[100],
+      color: colors.light[500],
       borderRadius: "10px",
       background: colors.blue[500]
     },
@@ -107,12 +108,14 @@ export const useChildMenutStyles = createUseStyles({
       '&:hover': {
         color: colors.blue[500],
         borderRadius: "10px",
-        background: colors.light[100]
+        background: colors.light[500]
       },
     },
-
-
   },
+  collopsed:{
+  width:'fit-content'
+}
+  
 
 }
 

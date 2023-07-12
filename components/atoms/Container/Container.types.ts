@@ -7,9 +7,9 @@ export interface ContainerProps {
   paddingBlock?: keyof typeof spacing,
   gap?: keyof typeof spacing,
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
-  alignItems?: 'center' | 'start' | 'end'
+  alignItems?: 'center' | 'start' | 'end'|'flex-start'
   justifyContent?: 'center' | 'start' | 'end',
-
+  width?:'fit-content'|'auto'
 }
 export interface ControlledContainerProps extends ContainerProps {
   children: ReactNode;

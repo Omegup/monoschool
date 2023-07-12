@@ -7,7 +7,7 @@ import {  ClipboardTick, Tick, UserTick, WifiSquare } from '@omegup-school/ui-as
 
 const Demo = (props: ControlledSubMenuProps) => {
   
-  return  <div style={{ width: 300 }}>
+  return  <div >
     <SubMenu 
       {...props
       } />

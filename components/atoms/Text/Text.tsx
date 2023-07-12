@@ -7,10 +7,10 @@ export const Text = forwardRef((
   props: TextProps,
   ref?: React.Ref<HTMLSpanElement>
 ) => {
-  const { text, ...styling} = props
+  const { text, variant, ...styling } = props
   const classes = useTextStyles(styling)
   return (
-    <span ref={ref} className={classes.text}>
+    <span ref={ref} className={joinClassNames(classes.text, classes[variant])}>
       {text}
     </span>
   )

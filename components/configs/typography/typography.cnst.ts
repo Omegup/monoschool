@@ -43,6 +43,10 @@ export const typography = makeTypo({
         fontWeight: '600',
         fontSize: 12,
       },
+      bold: {
+        fontWeight: '700',
+        fontSize: 12,
+      },
     },
     overline: {
       small: {
