@@ -1,5 +1,5 @@
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
-import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { borders, heights, spacing } from '@omegup-school/ui-configs/sizes';
 import { typoStyles } from '@omegup-school/ui-configs/typography';
 import { MouseEvent, ReactNode } from 'react';
 
@@ -15,8 +15,8 @@ export interface NakedButtonProps {
   textVariant?: keyof typeof typoStyles;
   paddingInline?: keyof typeof spacing;
   paddingBlock?: keyof typeof spacing;
-  color?:keyof typeof colorsStyles;
-  lineHeight?:keyof typeof heights;
+  color?: keyof typeof colorsStyles;
+  lineHeight?: keyof typeof heights.lineHieght;
 }
 
 export interface ControlledNakedButtonProps extends NakedButtonProps {

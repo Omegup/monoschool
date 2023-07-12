@@ -79,9 +79,7 @@ export const FeeCard = forwardRef(
           />
         </Container>
         <Container width="100%" justifyContent="space-between">
-          <Container paddingInline="s5">
-            <></>
-          </Container>
+          <div></div> {/* TO Do replace with avatar Stacking Component*/}
           <NakedButton
             text="Voir plus"
             bg="blue_500"
@@ -89,8 +87,9 @@ export const FeeCard = forwardRef(
             borderRadius="r6"
             paddingBlock="s5"
             paddingInline="s5"
-            lineheigth=''
+            lineHeight="small"
             color="light_100"
+            shadow={FeeCardShadow}
           />
         </Container>
       </Container>

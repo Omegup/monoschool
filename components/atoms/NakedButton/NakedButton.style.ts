@@ -1,5 +1,5 @@
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
-import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { borders, heights, spacing } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { ControlledNakedButtonProps } from './NakedButton.type';
@@ -25,7 +25,6 @@ export const useNakedInputStyles = createUseStyles({
       borderColor
         ? `${border ? borders[border] : 0}px solid ${colorsStyles[borderColor]}`
         : '',
-        lineHeight:({ lineHeight }: Partial<ControlledNakedButtonProps>)=>lineHeight?H:''
   },
   button: {
     backgroundColor: 'transparent',
@@ -33,6 +32,8 @@ export const useNakedInputStyles = createUseStyles({
     border: 'none',
     color: ({ color }: Partial<ControlledNakedButtonProps>) =>
       color ? colorsStyles[color] : '',
+    lineHeight: ({ lineHeight }: Partial<ControlledNakedButtonProps>) =>
+      lineHeight ? `${heights.lineHieght[lineHeight]}px` : '',
   },
   filledInput: {
     border: `${spacing.s1}px solid ${colorsStyles['dark_overline']}`,
