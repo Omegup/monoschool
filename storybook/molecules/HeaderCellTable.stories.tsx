@@ -7,6 +7,8 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     sortType: { control: 'select', options: ['asc', 'desc', null] },
+    isSortobale: { control: 'boolean' },
+    text: { control: 'text' },
   },
 } satisfies Meta<typeof HeaderCell>;
 
@@ -15,8 +17,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    text: "test",
     sortType: 'asc',
-    text :"test",
+    isSortobale: true,
     onSort: (sort) => console.log(sort),
   },
 };

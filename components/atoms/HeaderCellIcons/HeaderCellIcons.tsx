@@ -6,7 +6,7 @@ import { colors } from '@omegup-school/ui-configs/colors';
 export const HeaderCellIcons = ({ sortType }: { sortType: 'asc' | 'desc' | null }) => {
   const containerStateSelector = useContainerStateSelector();
 
-  const classes = useStyles({theme: {containerStateSelector}});
+  const classes = useStyles({ theme: { containerStateSelector } });
 
   return (
     <div className={`${classes.cellSortIcon}`}>
@@ -14,14 +14,14 @@ export const HeaderCellIcons = ({ sortType }: { sortType: 'asc' | 'desc' | null 
         <ArrowUpSecond
           width='8.75'
           height='8.75'
-          color={sortType === 'asc' ? colors.blue[500] : colors.light[600]}
+          color={sortType === 'desc' ? colors.light[600] : colors.blue[500]}
         />
       </div>
       <div className={`${classes.iconContainerDown} ${sortType && classes.dispalyIcons}`}>
         <ArrowDownSecond
           width='8.75'
           height='8.75'
-          color={sortType === 'desc' ? colors.blue[500] : colors.light[600]}
+          color={sortType === 'asc' ? colors.light[600] : colors.blue[500]}
         />
       </div>
     </div>

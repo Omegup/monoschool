@@ -2,7 +2,7 @@ import { HeaderCellTable } from "@omegup-school/ui-atoms/HeaderCellTable"
 import { ControlledHeaderCellProps } from "./HeaderCell.types"
 import { HeaderCellIcons, HeaderCellLabel } from "@omegup-school/ui-atoms";
 
-export const HeaderCell = ({ onSort, sortType, text }: ControlledHeaderCellProps) => {
+export const HeaderCell = ({ onSort, sortType, text, isSortobale }: ControlledHeaderCellProps) => {
   const sortMap = {
     null: 'asc',
     asc: 'desc',
@@ -12,7 +12,7 @@ export const HeaderCell = ({ onSort, sortType, text }: ControlledHeaderCellProps
   return (
     <HeaderCellTable onClick={() => onSort(sortMap[`${sortType}`])}>
       <HeaderCellLabel value={text} />
-      <HeaderCellIcons sortType={sortType} />
+      {isSortobale && <HeaderCellIcons sortType={sortType} />}
     </HeaderCellTable>
   )
 }
