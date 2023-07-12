@@ -20,7 +20,7 @@ export const SubMenu = forwardRef(
         width='fit-content'
 
       >
-        {viewMode !== 'mobile' ||isCollopsed &&
+        {viewMode !== 'mobile' && !isCollopsed &&
           <Container
             ref={ref}
             paddingInline='s5'
