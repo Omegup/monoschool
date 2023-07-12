@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
-import { TextWithIconProps } from './TextWithIcon.types';
+import { CardIconedinfoProps } from './CardIconedinfo.types';
 import { Container, Text } from '@omegup-school/ui-atoms';
 
-export const TextWithIcon = forwardRef(
-  (props: TextWithIconProps, ref: React.Ref<HTMLDivElement>) => {
+export const CardIconedinfo = forwardRef(
+  (props: CardIconedinfoProps, ref: React.Ref<HTMLDivElement>) => {
     const { icon, text } = props;
 
     return (

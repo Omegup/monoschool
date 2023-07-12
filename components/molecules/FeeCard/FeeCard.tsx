@@ -1,6 +1,6 @@
 import { Container, IconContainer, NakedButton } from '@omegup-school/ui-atoms';
-import { IconWithDoubleText } from '../internal/IconWithDoubleText';
-import { TextWithIcon } from '../internal/TextWithIcon';
+import { CardIconedDetail } from '../internal/CardIconedDetail';
+import { CardIconedinfo } from '../internal/CardIconedinfo';
 import { forwardRef } from 'react';
 import { FeeCardProps } from './FeeCard.type';
 import {
@@ -29,6 +29,7 @@ export const FeeCard = forwardRef(
 
     return (
       <Container
+        ref={ref}
         direction="column"
         gap="s5"
         paddingBlock="s5"
@@ -40,7 +41,7 @@ export const FeeCard = forwardRef(
         height={330}
       >
         <Container width={'100%'} justifyContent="space-between">
-          <IconWithDoubleText
+          <CardIconedDetail
             icon={<Subtitle color={colorsStyles['blue_500']} />}
             text="Description"
             subText={feeName}
@@ -49,17 +50,17 @@ export const FeeCard = forwardRef(
             <More />
           </IconContainer>
         </Container>
-        <IconWithDoubleText
+        <CardIconedDetail
           icon={<Money color={colorsStyles['success_500']} />}
           text="Coûts"
           subText={amount}
         />
-        <IconWithDoubleText
+        <CardIconedDetail
           icon={<RepeateMusic color={colorsStyles['headline_500']} />}
           text="Occurrence"
           subText={type}
         />
-        <IconWithDoubleText
+        <CardIconedDetail
           icon={<People color={colorsStyles['blue_600']} />}
           text="Inscrits"
           subText={recipientsNumber}
@@ -69,11 +70,11 @@ export const FeeCard = forwardRef(
           paddingBlock="s5"
           justifyContent="space-between"
         >
-          <TextWithIcon
+          <CardIconedinfo
             icon={<DocumentText color={colorsStyles['headline_600']} />}
             text={billableAmount}
           />
-          <TextWithIcon
+          <CardIconedinfo
             icon={<EmptyWalletTime color={colorsStyles['grey_500']} />}
             text={estimatedBillableAmount}
           />

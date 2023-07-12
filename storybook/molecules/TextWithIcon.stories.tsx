@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { TextWithIcon } from '@omegup-school/ui-molecules';
-import { TextWithIconProps } from '@omegup-school/ui-molecules/internal/TextWithIcon/TextWithIcon.types';
+import { TextWithIconProps } from '@omegup-school/ui-molecules/internal/CardIconedinfo/TextWithIcon.types';
 import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
 

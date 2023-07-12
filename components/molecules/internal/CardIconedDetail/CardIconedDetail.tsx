@@ -1,9 +1,9 @@
 import { forwardRef } from "react";
-import { IconWithDoubleTextProps } from "./IconWithDoubleText.types";
+import { CardIconedDetailProps } from "./CardIconedDetail.types";
 import { Container, Text } from "@omegup-school/ui-atoms";
 
-export const IconWithDoubleText = forwardRef((
-  props: IconWithDoubleTextProps,
+export const CardIconedDetail = forwardRef((
+  props: CardIconedDetailProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
 
