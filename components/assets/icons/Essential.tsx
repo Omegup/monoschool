@@ -17,7 +17,7 @@ export const Essential = ({
     >
       {bold ? (
         <>
-          // to do bassem
+   
         </>
       ) : (
         <>
