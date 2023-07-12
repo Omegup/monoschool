@@ -5,9 +5,9 @@ export const Tabs = ({ tabs, onSelect, selected }: TabsProps) => {
   return (
 
     <TabsContainer>
-      <Container>
+      <Container gap='s8'>
         {tabs.map(({ label, Icon }, index) => (
-          <Tab selected={index === selected} label={label} Icon={Icon} />
+          <Tab key={index} selected={index === selected} label={label} Icon={Icon} />
         ))}
       </Container>
       <TabsArrow action={(direction) => console.log(direction)} />

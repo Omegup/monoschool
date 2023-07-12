@@ -9,7 +9,7 @@ export const useStyles = createUseStyles({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '10px 0',
+    paddingBlock: spacing.s5,
     width: 'fit-content',
     cursor: 'default',
     borderRadius: borders.r3,
@@ -38,7 +38,7 @@ export const useStyles = createUseStyles({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '10px 23px',
+    paddingBlock: spacing.s5,
     width: 'fit-content',
     cursor: 'pointer',
 
@@ -48,10 +48,11 @@ export const useStyles = createUseStyles({
     },
 
     '&:hover': {
-      '&>tabLabel': {
-        fontSize: typography.paragraph.medium.semiBold.fontSize,
-        fontWeight: typography.paragraph.medium.semiBold.fontWeight,
-        color: colors.grey[500]
+      '&>svg>path': {
+        stroke: colors.dark.default,
+      },
+      '&>$tabLabel': {
+        color: colors.dark.default,
       }
     }
   },
