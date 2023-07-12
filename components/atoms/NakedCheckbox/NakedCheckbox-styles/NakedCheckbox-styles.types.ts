@@ -1,4 +1,4 @@
-import { InteractiveStates } from './InteractiveStyles.types';
+import { InteractiveStates } from '../../common/InteractiveStyles';
 
 export type CheckboxStatus = 'checked' | 'unchecked';
 

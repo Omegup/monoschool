@@ -22,9 +22,11 @@ export const CHIPS_THEME: ChipsTheme = {
       normal: {
         chipsBorderColor: colors.blue[500],
         ChipsColor: colors.blue[500],
+        chipsBackgroundColor: 'transparent',
       },
       disabled: {
-        chipsBackgroundColor: colors.background.overlay,
+        chipsBackgroundColor: 'transparent',
+        ChipsColor: colors.blue[500],
         chipsOpacity: 0.4,
       },
       focused: {
@@ -39,6 +41,7 @@ export const CHIPS_THEME: ChipsTheme = {
       },
       pressed: {
         chipsBackgroundColor: colors.light[400],
+        chipsOutlineColor: "transparent",
       },
     },
     unchecked: {
@@ -51,15 +54,14 @@ export const CHIPS_THEME: ChipsTheme = {
         ...COMMON_FOCUS_CHIPS_BORDER_STYLES,
       },
       hovered: {
-        chipsBackgroundColor: colors.light[200],
+        chipsBackgroundColor: colors.background.secondary,
       },
       focusedAndHovered: {
         chipsOutlineColor: colors.blue[600],
       },
       pressed: {
-        chipsOutlineColor: colors.dark.default,
-        chipsBorderColor: colors.grey[300],
-        chipsBackgroundColor: colors.grey[300],
+        chipsBackgroundColor: colors.background.outline,
+        chipsOutlineColor: "transparent",
       },
     },
   },
@@ -67,35 +69,41 @@ export const CHIPS_THEME: ChipsTheme = {
   flat: {
     checked: {
       normal: {
-        chipsBorderColor: colors.light[500],
-        chipsBackgroundColor: colors.light[500],
+        chipsBorderColor: colors.light[100],
+        chipsBackgroundColor: colors.light[100],
+        ChipsColor: colors.blue[500],
       },
       disabled: {
-        chipsBackgroundColor: colors.blue[100],
+        chipsBackgroundColor: colors.light[100],
+        chipsBorderColor: "transparent",
         chipsOpacity: 0.4,
+        ChipsColor: colors.blue[500],
       },
       focused: {
         ...COMMON_FOCUS_CHIPS_STYLES,
-        chipsBackgroundColor: colors.light[500],
+        chipsBackgroundColor: colors.light[100],
+        chipsBorderColor: colors.light[500],
       },
       hovered: {
         chipsBackgroundColor: colors.light[200],
       },
       focusedAndHovered: {
-        chipsBackgroundColor: colors.light[500],
+        chipsBackgroundColor: colors.light[200],
       },
       pressed: {
         chipsBackgroundColor: colors.light[500],
+        chipsBorderColor: colors.light[500],
+        chipsOutlineColor: "transparent",
       },
     },
     unchecked: {
       normal: {
-        chipsBorderColor: colors.light[500],
+        chipsBorderColor: "transparent",
         chipsBackgroundColor: colors.background.secondary,
       },
       disabled: {
         ...COMMON_CHIPS_CONTAINER_INITIAL_STYLES,
-        chipsBorderColor: colors.dark.default,
+        chipsBorderColor: "transparent",
         chipsOpacity: 0.4,
       },
       focused: {
@@ -103,13 +111,17 @@ export const CHIPS_THEME: ChipsTheme = {
         chipsBackgroundColor: colors.background.secondary,
       },
       hovered: {
-        chipsBackgroundColor: colors.background.overlay,
+        chipsBackgroundColor:colors.background.outline,
+        chipsBorderColor: colors.background.outline,
       },
       focusedAndHovered: {
-        chipsBackgroundColor: colors.light[500],
+        chipsBackgroundColor:colors.background.secondary,
+        chipsBorderColor: colors.background.secondary,
       },
       pressed: {
+        chipsBackgroundColor:colors.background.outline,
         chipsBorderColor: colors.background.outline,
+        chipsOutlineColor: "transparent",
       },
     },
   },

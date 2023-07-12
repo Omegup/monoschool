@@ -1,6 +1,5 @@
 import { JssStyle } from 'jss';
-import { INTERACTION_MAP } from './InteractiveStyles';
-import { Interaction, InteractionMap } from './InteractiveStyles.types';
+import { Interaction, InteractionMap,INTERACTION_MAP } from '../../common/InteractiveStyles';
 import {
   ChipsStateTheme,
   ChipsStatus,
