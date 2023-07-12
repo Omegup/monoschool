@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
-
 import { Close,Add, Essential } from '@omegup-school/ui-assets';
-import { Chips,ControlledChipsProps } from '@omegup-school/ui-molecules';
+import { Chips, ControlledChipsProps } from '@omegup-school/ui-molecules';
 
 
 const IconOption = ( option:string ) => {
@@ -18,44 +16,64 @@ const IconOption = ( option:string ) => {
   }
 };
 
-type DemoType = Omit<ControlledChipsProps, 'secondIcon' | 'icon'> & { firstIcon: 'Essential' | 'Close'|'Add' | 'SearchStatus',secondIcon:'Essential' | 'Close'|'Add' | 'Close'};
-const ChipsDemo = ({
-  firstIcon,secondIcon,onChange,
-  ...rest
-}: DemoType) => {
+
+const ChipsDemo =  ({ClearIcon,...rest}:Omit<ControlledChipsProps, "children">&{ClearIcon:string} ) => {
+  
+ 
   return (
-    <Chips {...rest} onChange={onChange} icon={IconOption(firstIcon)} secondIcon={IconOption(secondIcon)} />
-  )
-}
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
+   <Chips  {...rest} ClearIcon={IconOption(ClearIcon)} label={''}></Chips>
+  );
+};
+
 const meta = {
-  title: 'molecules/Chips',
-  component: ChipsDemo,
+  title: 'Molecules/Chips',
+  component: Chips,
   tags: ['autodocs'],
   argTypes: {
-    size: { control: 'select', options: ['large', 'medium', 'small'] },
-    variant: { control: 'select', options: ['border' , 'flat'] } ,
+    variant: {
+      control: 'select',
+      options: [
+        'flat',
+        'border']
+    },
     firstIcon: { control: 'select', options: ['Essential' , 'Close','Add', 'SearchStatus'] } ,
-    secondIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
+    ClearIcon: { control: 'select', options: ['Essential' , 'Close','Add'] } ,
+    size: {
+      control: 'select',
+      options: ['large', 'medium', 'small'],
+    },
+    disabled: { control: 'boolean' },
+    checked: { control: 'boolean' },
+    label: { control: 'text' },
   },
-   
-
-} satisfies Meta<typeof ChipsDemo>;
+} satisfies Meta<Partial<typeof Chips>>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary: Story = {
-  args: {
-    label: "Label",
-    variant:"border",
-    size: 'medium',
-    disabled: false,
-    firstIcon: "Essential",
-    secondIcon: "Close",
-    children: null,
-    checked: true,
-  },
+const states = {
+  
 };
 
+export const Border: Story = {
+  args: {
+    label: 'label',
+    size: 'medium',
+    variant: 'border',
+    checked: false,
+    disabled: false,
+    icon:<Essential width='100%' />,
+    ClearIcon:<Close width='100%'/>
+  },
+};
+export const Flat: Story = {
+  args: {
+    label: 'label',
+    size: 'medium',
+    variant: 'flat',
+    checked: false,
+    disabled: false,
+    icon:<Essential width='100%' />,
+    ClearIcon:<Close width='100%'/>
+  },
+};

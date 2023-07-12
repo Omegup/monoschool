@@ -4,5 +4,5 @@ import { ControlledChipsContainerProps } from '@omegup-school/ui-atoms/ChipsCont
 
 
 
-export type ControlledChipsProps = ControlledChipsContainerProps &
-  ControlledChipsButtonProps & { label: string,secondIcon:JSX.Element,icon:JSX.Element};
+export type ControlledChipsProps = Omit<ControlledChipsContainerProps,"children"> &
+  ControlledChipsButtonProps & { label: string,ClearIcon:JSX.Element};

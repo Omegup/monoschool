@@ -1,33 +1,20 @@
-import { widths } from '@omegup-school/ui-configs/sizes';
-import { createUseStyles } from 'react-jss';
+
 import { forwardRef } from 'react';
 import { ControlledChipsButtonProps } from './ChipsButton.types';
+import { useChipsButtonStyles } from './ChipsButton.styles';
 
-const useStyles = createUseStyles({
-  button: {
-    all: 'unset',
-    cursor: 'pointer',
-  },
-  icon: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  large: { width: widths.chips.large },
-  medium: { width: widths.chips.medium },
-  small: { width: widths.chips.small },
-});
 
 export const ChipsButton = forwardRef(
   (props: ControlledChipsButtonProps, ref: React.Ref<HTMLButtonElement>) => {
-    const classes = useStyles();
-    const { icon, onClear, size } = props;
+    const classes = useChipsButtonStyles();
+    const { ClearIcon, onClear, size } = props;
     return (
       <button
         {...ref}
         className={`${classes.button}  ${classes[size]}`}
         onClick={onClear}
       >
-        <span className={classes.icon}>{icon}</span>
+        <span className={classes.ClearIcon}>{ClearIcon}</span>
       </button>
     );
   }
