@@ -17,5 +17,8 @@ export const widths = {
   },
   avatar: {
     small: '20px',
+    medium: '24px',
+    semiLarge: '35px',
+    large: '42px',
   },
 };
