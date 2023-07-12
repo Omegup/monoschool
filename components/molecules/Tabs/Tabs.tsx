@@ -5,13 +5,12 @@ export const Tabs = ({ tabs, onSelect, selected }: TabsProps) => {
   return (
 
     <TabsContainer>
-      <Container gap='s8'>
+      <Container gap='s8' alignItems='center' justifyContent='center'>
         {tabs.map(({ label, Icon }, index) => (
           <Tab key={index} selected={index === selected} label={label} Icon={Icon} />
         ))}
       </Container>
       <TabsArrow action={(direction) => console.log(direction)} />
     </TabsContainer>
-
   )
 }
