@@ -1,39 +1,47 @@
 import { joinClassNames } from '@omegup-school/ui-configs/typography';
-import { useSelectStyles } from './ChipsContainer.styles';
+import { useChipsStyles } from './ChipsContainer.styles';
 import { ControlledChipsContainerProps } from './ChipsContainer.types';
 import { forwardRef } from 'react';
+import { useContainerStateSelector } from '../contexts/pointer';
 
 export const ChipsContainer = forwardRef(
   (props: ControlledChipsContainerProps, ref: React.Ref<HTMLInputElement>) => {
-    const { size, variant, disabled, onChange, onBlur, checked, children, icon } =
-      props;
-    const classes = useSelectStyles(),
-      disabledClass = classes[disabled ? 'disabled' : 'enabled'];
-      const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        onChange(event.target.checked);
-      };
+    const {
+      size,
+      variant,
+      disabled,
+      onChange,
+      onBlur,
+      checked,
+      children,
+      icon,
+    } = props;
+
+    
+    const classes = useChipsStyles();
+    const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+      onChange(event.target.checked);
+    };
     return (
       <label
-          className={joinClassNames(
+        onClick={(event) => event.stopPropagation()}
+        className={joinClassNames(
           classes.label,
           classes[variant],
-          classes[size],
-          disabledClass
+          classes[size]
         )}
-        onClick={(event) => event.stopPropagation()}
       >
         <input
           type="checkbox"
           className={classes.input}
           onChange={changeHandler}
           {...{ ref, onBlur }}
-          checked={checked}
+          {...{ checked, disabled, ref, onBlur }}
         />
-          <div className={classes.container}>
-            <span className={classes.icon}>{icon}</span>
-            {children}
-          </div>
-        
+        <div className={classes.container}>
+          <span className={classes.icon}>{icon}</span>
+          {children}
+        </div>
       </label>
     );
   }

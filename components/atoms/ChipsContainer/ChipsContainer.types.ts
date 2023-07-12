@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
+import { ChipsVariant } from "./ChipsContainer-styles/chipsContainer-styles.types";
 export type ChipsContainerProps = {
-  variant:  'border' | 'flat'
+  variant: ChipsVariant
   size: 'large' | 'medium' | 'small';
   disabled?: boolean;
   children:ReactNode;
