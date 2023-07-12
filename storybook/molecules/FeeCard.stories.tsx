@@ -10,7 +10,7 @@ const Demo = (props: FeeCardProps) => {
   );
 };
 const meta = {
-  title: 'Atom/FeeCard',
+  title: 'Molecules/FeeCard',
   component: FeeCard,
   tags: ['autodocs'],
   argTypes: {},

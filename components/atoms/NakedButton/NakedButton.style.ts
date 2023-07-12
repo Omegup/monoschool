@@ -6,6 +6,7 @@ import { ControlledNakedButtonProps } from './NakedButton.type';
 
 export const useNakedInputStyles = createUseStyles({
   buttonContainer: {
+    cursor: 'pointer',
     display: 'flex',
     overflow: 'hidden',
     paddingInline: ({ paddingInline }: Partial<ControlledNakedButtonProps>) =>
@@ -27,6 +28,7 @@ export const useNakedInputStyles = createUseStyles({
         : '',
   },
   button: {
+    cursor: 'pointer',
     backgroundColor: 'transparent',
     outline: 'none',
     border: 'none',
