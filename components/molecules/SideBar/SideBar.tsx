@@ -11,8 +11,8 @@ export const SideBar = (props: SideBarProps) => {
     isCollopsed,
     SearchIcon,
     logo,
-    firstIcon,
-    secandIcon,
+    LeftCollopsedIcon,
+    RightCollopsedIcon,
   } = props;
 
   return (
@@ -20,8 +20,8 @@ export const SideBar = (props: SideBarProps) => {
       isCollopsed={false}
       buttonSideBar={
         <ButtonSideBar
-          firstIcon={firstIcon}
-          secandIcon={secandIcon}
+          LeftCollopsedIcon={LeftCollopsedIcon}
+          RightCollopsedIcon={RightCollopsedIcon}
           onClick={() => {}}
           isCollopsed={isCollopsed}
         />

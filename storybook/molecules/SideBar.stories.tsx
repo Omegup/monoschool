@@ -1,41 +1,70 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import {
-  SideBar,
+import { SideBar, SideBarProps } from '@omegup-school/ui-molecules';
+import * as icons from '@omegup-school/ui-assets/icons';
+import { Icon } from './Icon';
+
+const Demo = ({
+  LeftCollopsedIcon,
+  logo,
+  SearchIcon,
+  RightCollopsedIcon,
+  ...restProps
+}: Omit<
   SideBarProps,
-} from '@omegup-school/ui-molecules';
-import { SearchStatus } from '@omegup-school/ui-assets';
-import { Logo } from '@omegup-school/ui-assets';
-import { ArrowCircleLeft, ArrowCircleRight } from '@omegup-school/ui-assets';
-
-type DemoType = SideBarProps & { isCollopsedS: boolean };
-
-const SideBarDemo = ({ isCollopsedS, ...rest }: DemoType) => {
+  'LeftCollopsedIcon' | 'logo' | 'SearchIcon' | 'RightCollopsedIcon'
+> & {
+  LeftCollopsedIcon: keyof typeof icons;
+  logo: keyof typeof icons;
+  SearchIcon: keyof typeof icons;
+  RightCollopsedIcon: keyof typeof icons;
+}) => {
   return (
     <SideBar
-      {...rest}
-      firstIcon={<ArrowCircleLeft width="100%" />}
-      logo={<Logo width={'100%'} />}
-      SearchIcon={<SearchStatus width="100%" />}
-      secandIcon={<ArrowCircleRight width="100%" />}
+      {...restProps}
+      LeftCollopsedIcon={<Icon name={LeftCollopsedIcon} />} 
+      logo={<Icon name={logo} />} 
+      SearchIcon={<Icon name={SearchIcon} />} 
+      RightCollopsedIcon={<Icon name={RightCollopsedIcon} />}
       children={[]}
-      isCollopsed={isCollopsedS}
     />
   );
 };
 const meta = {
-  title: 'molecule/SideBar',
-  component: SideBarDemo,
+  title: 'molecules/SideBar',
+  component: SideBar,
   tags: ['autodocs'],
-  argTypes: {},
-} satisfies Meta<typeof SideBarDemo>;
+  argTypes: {
+    LeftCollopsedIcon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+    logo: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+    SearchIcon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+    RightCollopsedIcon: {
+      control: 'select',
+      options: Object.keys(icons) as (keyof typeof icons)[],
+    },
+  },
+} satisfies Meta<typeof SideBar>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Demo>;
 
 export const Primary: Story = {
+  render: Demo,
   args: {
-    isCollopsedS: true,
-    titre:"omega up"
+    isCollopsed: true,
+    titre: 'omega up',
+    LeftCollopsedIcon: 'ArrowCircleLeft',
+    logo: 'Logo',
+    SearchIcon: 'SearchStatus',
+    RightCollopsedIcon: 'ArrowCircleRight',
   },
 };
