@@ -4,12 +4,8 @@
   "dependencies": {
     "@omegup-school/ui-assets": "workspace:*",
     "@omegup-school/ui-molecules": "workspace:*",
-    "i18next": "^23.2.11",
-    "i18next-browser-languagedetector": "^7.1.0",
-    "i18next-http-backend": "^2.2.1",
     "react": "^18.2.0",
-    "react-hook-form": "^7.44.3",
-    "react-i18next": "^13.0.2"
+    "react-hook-form": "^7.44.3"
   },
   "devDependencies": {
     "@types/omegup-school": "workspace:*",

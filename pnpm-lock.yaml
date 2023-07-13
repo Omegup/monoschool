@@ -146,24 +146,12 @@ importers:
       '@omegup-school/ui-molecules':
         specifier: workspace:*
         version: link:../molecules
-      i18next:
-        specifier: ^23.2.11
-        version: 23.2.11
-      i18next-browser-languagedetector:
-        specifier: ^7.1.0
-        version: 7.1.0
-      i18next-http-backend:
-        specifier: ^2.2.1
-        version: 2.2.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
       react-hook-form:
         specifier: ^7.44.3
         version: 7.44.3(react@18.2.0)
-      react-i18next:
-        specifier: ^13.0.2
-        version: 13.0.2(i18next@23.2.11)(react@18.2.0)
     devDependencies:
       '@types/omegup-school':
         specifier: workspace:*
@@ -540,6 +528,15 @@ importers:
       '@omegup-school/ui-molecules':
         specifier: workspace:*
         version: link:../components/molecules
+      i18next:
+        specifier: ^23.2.11
+        version: 23.2.11
+      i18next-browser-languagedetector:
+        specifier: ^7.1.0
+        version: 7.1.0
+      i18next-http-backend:
+        specifier: ^2.2.1
+        version: 2.2.1
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -549,6 +546,9 @@ importers:
       react-hook-form:
         specifier: ^7.44.3
         version: 7.44.3(react@18.2.0)
+      react-i18next:
+        specifier: ^13.0.2
+        version: 13.0.2(i18next@23.2.11)(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@storybook/addon-controls':
         specifier: 7.0.21
@@ -8652,7 +8652,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-i18next@13.0.2(i18next@23.2.11)(react@18.2.0):
+  /react-i18next@13.0.2(i18next@23.2.11)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-NEVxC32v0oR4egwYM0QM0WE93AiJG5r0NTXTL8mhQfAhsMfDS2fSO6jpluyfsfypP988KzUQrAXncspcJ7+GHA==}
     peerDependencies:
       i18next: '>= 23.2.3'
@@ -8669,6 +8669,7 @@ packages:
       html-parse-stringify: 3.0.1
       i18next: 23.2.11
       react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
     dev: false
 
   /react-inspector@6.0.2(react@18.2.0):

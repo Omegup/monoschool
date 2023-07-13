@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TestCell } from '@omegup-school/ui-cells';
+import { TestCell } from './TestCell';
 
 const meta = {
   title: 'Cell/TestCell',

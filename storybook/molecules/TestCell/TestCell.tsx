@@ -1,21 +1,17 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import '../i18n/i18n';
+import '@omegup-school/ui-cells/i18n/i18n';
 
 const TestMolecule = ({
-  header,
-  title,
-  subTitle,
+  dictionary,
 }: {
-  header: string;
-  title: string;
-  subTitle: string;
+  dictionary: { header: string; title: string; subTitle: string };
 }) => {
   return (
     <>
-      <h1>{header}</h1>
-      <h1>{title}</h1>
-      <h1>{subTitle}</h1>
+      <h1>{dictionary.header}</h1>
+      <h1>{dictionary.title}</h1>
+      <h1>{dictionary.subTitle}</h1>
     </>
   );
 };
@@ -38,9 +34,11 @@ export const TestCell = () => {
         <option value="ar">arabic</option>
       </select>
       <TestMolecule
-        header={t('signIn.email')}
-        subTitle={t('signIn.password')}
-        title={t('signIn.logIn')}
+        dictionary={{
+          header: t('signIn.email'),
+          subTitle: t('signIn.password'),
+          title: t('signIn.logIn'),
+        }}
       />
     </div>
   );
