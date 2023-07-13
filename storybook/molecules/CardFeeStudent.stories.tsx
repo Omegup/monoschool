@@ -14,7 +14,7 @@ const Demo = ({
 }: Omit<ControlledCardFeeStudentProps, 'icon'> & { avatar: keyof typeof icons }) => {
   console.log({avatar})
   return <div style={{ maxWidth: 230 }}>
-    <CardFeeStudent avatar={<Icon name={avatar} />} {...restProps} />
+    <CardFeeStudent avatar={avatar} {...restProps} />
      </div> ;
 };
 
@@ -34,7 +34,8 @@ const meta = {
     statusText: {
       control: 'select',
       options:  ['Payée' , 'En Attente' ,'Non Payée' , 'Dispencé'],
-    }
+    },
+  
   },
 } satisfies Meta<typeof CardFeeStudent>;
 
