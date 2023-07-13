@@ -1,7 +1,8 @@
+/* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/display-name */
 import { forwardRef } from 'react';
 import { ControlledHeadListeExportButtonProps } from './HeadListeExportButton.types';
-import { Container, NakedButton } from '@omegup-school/ui-atoms';
+import {  NakedButton } from '@omegup-school/ui-atoms';
 import { shadowXSmall } from '@omegup-school/ui-configs/effects/shadow';
 
 export const HeadListeExportButton = forwardRef(
@@ -14,7 +15,6 @@ export const HeadListeExportButton = forwardRef(
           borderRadius="r5"
           paddingBlock="s4"
           paddingInline="s4"
-          lineHeight="medium"
           color="grey_400"
           shadow={shadowXSmall}
           endIcon={icon}

@@ -9,7 +9,7 @@ const Demo = ({
   ...restProps
 }: Omit<ControlledHeadListeExportButtonProps, 'icon'> & { icon: keyof typeof icons }) => {
   // eslint-disable-next-line react/react-in-jsx-scope
-  return <div style={{display:'flex'}}><HeadListeExportButton icon={<Icon name={icon} color={colors.grey[400]}/>} {...restProps} /></div>;
+  return <div style={{display:'flex'}}><HeadListeExportButton icon={<Icon name={icon} width='20' height='20' color={colors.grey[400]}/>} {...restProps} /></div>;
 };
 const meta = {
   title: 'Atom/HeadListeExportButton',

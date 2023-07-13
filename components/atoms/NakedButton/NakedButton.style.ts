@@ -33,6 +33,7 @@ export const useNakedInputStyles = createUseStyles({
     backgroundColor: 'transparent',
     outline: 'none',
     border: 'none',
+    padding:0,
     height: ({ height }: Partial<ControlledNakedButtonProps>) =>
       heights.button[height ?? 'small'],
     color: ({ color }: Partial<ControlledNakedButtonProps>) =>
