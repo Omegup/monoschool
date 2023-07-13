@@ -1,26 +1,24 @@
 import {  forwardRef } from "react";
 import { ControlledHeadListeButtonProps } from "./HeadListeButton.types";
-import { Container } from "@omegup-school/ui-atoms";
-
+import {  NakedButton } from "@omegup-school/ui-atoms";
+import { FeeCardShadow } from '@omegup-school/ui-configs/effects/shadow';
 
 export const HeadListeButton = forwardRef((
   props: ControlledHeadListeButtonProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
-
-  const { children} = props
-
+ const {label}=props
   return (
-    <Container
-    ref={ref}
-    direction="row"
-    paddingInline={'s5'}
-    alignItems="center"
-    gap={"s5"}
-  >
-  {children}
-  </Container>
-      
-   
+    <NakedButton
+  text={label}
+  bg="blue_500"
+  textVariant="paragraph_xSmall_regular"
+  borderRadius="r6"
+  paddingBlock="s5"
+  paddingInline="s5"
+  lineHeight="small"
+  color="light_100"
+  shadow={FeeCardShadow}
+/>
   )
 })
