@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 export interface  CardElementStorytProps {
   text?: string;
-  avatar?:ReactNode
+  avatarUrl?:string
  }
  export interface  ControlledCardElementStorytProps extends CardElementStorytProps {
   onclick: (value: boolean) => void;
