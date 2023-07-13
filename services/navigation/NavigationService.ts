@@ -1,4 +1,7 @@
-import { Navigation, INavigationService } from '@omegup-school/nav-service-port';
+import {
+  Navigation,
+  INavigationService,
+} from '@omegup-school/nav-service-port';
 export class NavigationService implements INavigationService {
   constructor(private navigation: Navigation) {}
 

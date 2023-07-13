@@ -6,6 +6,7 @@
     "@omegup-school/user-presenter-port": "workspace:*",
     "@omegup-school/user-controller-port": "workspace:*",
     "@omegup-school/nav-service-port": "workspace:*",
+    "@omegup-school/translate-service-port": "workspace:*",
     "@omegup-school/auth-service-port": "workspace:*"
   },
   "devDependencies": {

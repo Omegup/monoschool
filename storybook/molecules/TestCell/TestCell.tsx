@@ -1,6 +1,11 @@
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import '@omegup-school/ui-cells/i18n/i18n';
+import { useFacade } from '@omegup-school/hooks';
+import FacadeProvider from '@omegup-school/provider';
+import { External } from '@omegup-school/provider/External';
+import { useNavigate } from 'react-router';
+import { useTranslation } from 'react-i18next';
+import { BrowserRouter } from 'react-router-dom';
 
 const TestMolecule = ({
   dictionary,
@@ -15,10 +20,31 @@ const TestMolecule = ({
     </>
   );
 };
-
-export const TestCell = () => {
+const useExternal = (): External => {
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-  const [lang, setLang] = useState<string>(i18n.language);
+  return {
+    navigation: { navigate },
+    translation: {
+      translate: t,
+      currentLanguage: i18n.language,
+      changeLanguage: i18n.changeLanguage,
+    },
+  };
+};
+export const TestCell = () => {
+  return (
+    <BrowserRouter>
+      <FacadeProvider useExternal={useExternal}>
+        <SubTestCell />
+      </FacadeProvider>
+    </BrowserRouter>
+  );
+};
+export const SubTestCell = () => {
+  const { translationService } = useFacade();
+
+  const [lang, setLang] = useState<string>(translationService.currentLanguage);
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <select
@@ -26,7 +52,7 @@ export const TestCell = () => {
         value={lang}
         onChange={(e) => {
           setLang(e.target.value);
-          i18n.changeLanguage(String(e.target.value));
+          translationService.changeLanguage(String(e.target.value));
         }}
       >
         <option value="en">english</option>
@@ -35,9 +61,9 @@ export const TestCell = () => {
       </select>
       <TestMolecule
         dictionary={{
-          header: t('signIn.email'),
-          subTitle: t('signIn.password'),
-          title: t('signIn.logIn'),
+          header: translationService.translateTo('signIn.email'),
+          subTitle: translationService.translateTo('signIn.password'),
+          title: translationService.translateTo('signIn.logIn'),
         }}
       />
     </div>

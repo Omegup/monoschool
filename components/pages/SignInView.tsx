@@ -9,7 +9,7 @@ type SignInFormData = {
 };
 
 function SignInView() {
-  const { signInPresenter, userController } = useFacade();
+  const { signInPresenter, userController, } = useFacade();
 
   const [error, setError] = useState<Error>();
 

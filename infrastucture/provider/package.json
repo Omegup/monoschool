@@ -7,6 +7,8 @@
     "@omegup-school/facade": "workspace:*",
     "@omegup-school/nav-service": "workspace:*",
     "@omegup-school/nav-service-port": "workspace:*",
+    "@omegup-school/translate-service": "workspace:*",
+    "@omegup-school/translate-service-port": "workspace:*",
     "@omegup-school/user-controller": "workspace:*",
     "@omegup-school/user-presenter": "workspace:*",
     "@omegup-school/user-usecases": "workspace:*",

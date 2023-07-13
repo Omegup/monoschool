@@ -3,10 +3,19 @@ import { useNavigate, Routes, Route } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import FacadeProvider from '@omegup-school/provider';
 import { External } from '@omegup-school/provider/External';
+import { useTranslation } from 'react-i18next';
 
 const useExternal = (): External => {
   const navigate = useNavigate();
-  return { navigation: { navigate } };
+  const { t, i18n } = useTranslation();
+  return {
+    navigation: { navigate },
+    translation: {
+      translate: t,
+      currentLanguage: i18n.language,
+      changeLanguage: i18n.changeLanguage,
+    },
+  };
 };
 function App() {
   return (
