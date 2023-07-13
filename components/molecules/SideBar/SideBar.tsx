@@ -14,7 +14,7 @@ export const SideBar = (props: SideBarProps) => {
     logo,
     iconButtonCollopsed,
     iconButtonNotCollopsed,
-    onCollopsed,
+    collapseSidebar,
     onClickLogo,
     onClickSearsh,
   } = props;
@@ -26,7 +26,7 @@ export const SideBar = (props: SideBarProps) => {
         <ButtonSideBar
           iconButtonCollopsed={iconButtonCollopsed}
           iconButtonNotCollopsed={iconButtonNotCollopsed}
-          onCollopsed={onCollopsed}
+          collapseSidebar={collapseSidebar}
           isCollopsed={isCollopsed}
         />
       }

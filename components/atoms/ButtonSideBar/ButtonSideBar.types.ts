@@ -6,5 +6,5 @@ export interface ButtonSideBarProps {
 }
 
 export interface ControlledButtonSideBarProps extends ButtonSideBarProps {
-  onCollopsed: (e:MouseEventHandler<HTMLDivElement>)=>void;
+  collapseSidebar: (e:MouseEventHandler<HTMLDivElement>)=>void;
 }
