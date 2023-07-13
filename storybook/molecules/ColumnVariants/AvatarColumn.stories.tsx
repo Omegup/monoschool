@@ -1,34 +1,76 @@
 import * as icons from '@omegup-school/ui-assets/icons';
-import { IconColumn } from '@omegup-school/ui-molecules';
-import { IconColumnProps } from '@omegup-school/ui-molecules/ColumnVariants/IconColumn/IconColumn.types';
+import * as avatars from '@omegup-school/ui-assets/images';
+import { Avatar, AvatarImage } from '@omegup-school/ui-atoms';
+import { AvatarProps } from '@omegup-school/ui-atoms/Avatar/Avatar.type';
+import { AvatarColumn } from '@omegup-school/ui-molecules';
+import { AvatarColumnProps } from '@omegup-school/ui-molecules/ColumnVariants/AvatarColumn/AvatarColumn.types';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icon } from '../Icon';
 
-const Demo = ({
-  icon,
+const AvatarColumnDemo = ({
+  children,
+  src,
   ...restProps
-}: Omit<IconColumnProps, 'icon'> & { icon: keyof typeof icons }) => {
-  return <IconColumn icon={<Icon name={icon} />} {...restProps} />;
+}: Omit<AvatarColumnProps & AvatarProps, 'children'> & {
+  children: keyof typeof icons | 'none';
+  src: keyof typeof avatars | 'none';
+}) => {
+  return (
+    <AvatarColumn
+      avatar={
+        <Avatar
+          children={
+            src !== 'none' ? (
+              <AvatarImage src={avatars[src]} />
+            ) : children === 'none' ? (
+              <></>
+            ) : (
+              <Icon name={children} />
+            )
+          }
+          {...restProps}
+        />
+      }
+      text='avatar cell'
+    />
+  );
 };
-
 const meta = {
-  title: 'Molecules/Column/AvatarColumn',
-  component: Demo,
+  title: 'Molecules/AvatarColumn',
+  component: Avatar,
   tags: ['autodocs'],
   argTypes: {
-    icon: {
+    children: {
       control: 'select',
-      options: Object.keys(icons) as (keyof typeof icons)[],
+      options: ['none', ...Object.keys(icons)] as (keyof typeof icons)[],
     },
   },
-} satisfies Meta<typeof Demo>;
+} satisfies Meta<typeof Avatar>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof AvatarColumnDemo>;
 
-export const IconCell: Story = {
+export const Primary: Story = {
+  render: AvatarColumnDemo,
+  argTypes: {
+    src: {
+      control: 'select',
+      options: [
+        'none',
+        'avatarSam',
+        'avatarJoey',
+        'avatarJenna',
+        'avatarLaila',
+        'avatarCamela',
+      ],
+    },
+    text : {
+      control : 'text'
+    }
+  },
   args: {
-    text: 'AvatarColumn',
-    icon: 'Tick',
+    src: 'avatarJenna',
+    size: 'small',
+    children: 'none',
   },
 };
