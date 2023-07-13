@@ -43,6 +43,10 @@ export const typography = makeTypo({
         fontSize: 18,
         fontWeight: '500',
       },
+      semiBold: {
+        fontWeight: '600',
+        fontSize: 18,
+      },
     },
     xSmall: {
       regular: {
@@ -57,16 +61,6 @@ export const typography = makeTypo({
     overline: {
       small: {
         fontWeight: '500',
-        fontSize: 12,
-      },
-    },
-    large: {
-      regular: {
-        fontWeight: '400',
-        fontSize: 18,
-      },
-      semiBold: {
-        fontWeight: '600',
         fontSize: 12,
       },
     },
