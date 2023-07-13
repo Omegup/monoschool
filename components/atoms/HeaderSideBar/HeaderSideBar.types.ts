@@ -9,6 +9,6 @@ export interface HeaderSideBarProps {
 }
 
 export interface ControlledHeaderSideBarProps extends HeaderSideBarProps {
-  onClickSearsh:MouseEventHandler<HTMLDivElement>;
-  onClickLogo:MouseEventHandler<HTMLDivElement>;
+  onClickSearsh:(e:MouseEventHandler<HTMLDivElement>)=>void;
+  onClickLogo:(e:MouseEventHandler<HTMLDivElement>)=>void;
 }

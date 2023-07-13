@@ -1,4 +1,5 @@
 import { colors } from '@omegup-school/ui-configs/colors';
+import { shadowXSmall } from '@omegup-school/ui-configs/effects/shadow';
 import {spacing, widths } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 
@@ -11,9 +12,7 @@ export const useButtonStyles = createUseStyles({
     gap: spacing.s5,
     borderRadius: '50%',
     background: colors.background.default,
-    /* Drop Shadow/Small */
-    boxShadow:
-      '0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px -1px rgba(0, 0, 0, 0.10)',
+    boxShadow:shadowXSmall,
       cursor:'pointer',
   },
   icon: {

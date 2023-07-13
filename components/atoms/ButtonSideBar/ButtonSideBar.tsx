@@ -1,6 +1,6 @@
 import { forwardRef } from 'react';
-import { useButtonStyles } from './Container.styles';
-import { ControlledButtonSideBarProps } from './Container.types';
+import { useButtonStyles } from './ButtonSideBar.styles';
+import { ControlledButtonSideBarProps } from './ButtonSideBar.types';
 
 
 
@@ -20,4 +20,4 @@ export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, re
       )}
     </div>
   );
-})
+});
