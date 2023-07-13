@@ -1,7 +1,7 @@
 import { spacing } from "@omegup-school/ui-configs/sizes";
 import { ReactNode } from "react";
 
-export interface ContainerProps {
+export interface CardElementStoryContainerProps {
 
     paddingInline?: keyof typeof spacing,
     paddingBlock?: keyof typeof spacing,
@@ -12,7 +12,7 @@ export interface ContainerProps {
     display?: 'flex' | 'inline-flex'
     width?: "-webkit-fill-available"
 }
-export interface ControlledContainerProps extends ContainerProps {
+export interface ControlledCardElementStoryContainerProps extends CardElementStoryContainerProps {
   avatar?: ReactNode;
   text?:ReactNode
 }

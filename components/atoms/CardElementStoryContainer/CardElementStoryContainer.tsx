@@ -1,19 +1,20 @@
 import { forwardRef } from "react";
-import { ControlledContainerProps } from "./CardElementStoryContainer.types";
-import { useContainerStyles } from "./CardElementStoryContainer.styles";
+import { ControlledCardElementStoryContainerProps } from "./CardElementStoryContainer.types";
+import { useCardElementStoryContainerStyles } from "./CardElementStoryContainer.styles";
 
-export const Container = forwardRef((
-  props: ControlledContainerProps,
+export const CardElementStoryContainer = forwardRef((
+  props: ControlledCardElementStoryContainerProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
 
   const { avatar, text, ...styling } = props
-  const classes = useContainerStyles(styling)
+  const classes = useCardElementStoryContainerStyles(styling)
 
   return (
     <div className={classes.container} ref={ref}>
       <div className={classes.avatar}>
-        {avatar} </div>
+        {avatar} 
+        </div>
       <div className={classes.text}>
         {text}
       </div>
