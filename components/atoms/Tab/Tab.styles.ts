@@ -32,7 +32,7 @@ export const useStyles = createUseStyles({
     fontSize: typography.paragraph.medium.regular.fontSize,
     fontWeight: typography.paragraph.medium.regular.fontWeight,
     color: colors.grey[500],
-    paddingInlineStart: spacing.s5
+    paddingInlineStart: spacing.s3
   },
   tab: {
     display: 'flex',
