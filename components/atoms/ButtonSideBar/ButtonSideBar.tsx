@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/display-name */
 import { forwardRef } from 'react';
 import { useButtonStyles } from './ButtonSideBar.styles';
 import { ControlledButtonSideBarProps } from './ButtonSideBar.types';
@@ -7,11 +9,11 @@ import { ControlledButtonSideBarProps } from './ButtonSideBar.types';
 
 export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useButtonStyles();
-  const { isCollopsed, collapseSidebar, iconButtonCollopsed,iconButtonNotCollopsed } = props;
+  const { isCollopsed, onCollapseSidebar, iconButtonCollopsed,iconButtonNotCollopsed } = props;
   return (
     <div
       className={`${classes.button} `}
-      onClick={collapseSidebar}
+      onClick={onCollapseSidebar}
       {...ref}
     >
       {!isCollopsed ? (

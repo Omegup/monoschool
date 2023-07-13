@@ -1,3 +1,5 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable react/display-name */
 import { useSelectStyles } from './HeaderSideBar.styles';
 import { ControlledHeaderSideBarProps } from './HeaderSideBar.types';
 import { forwardRef } from 'react';

@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { SideBarProps } from './SideBar.types';
 import {
   ButtonSideBar,
@@ -14,7 +15,7 @@ export const SideBar = (props: SideBarProps) => {
     logo,
     iconButtonCollopsed,
     iconButtonNotCollopsed,
-    collapseSidebar,
+    onCollapseSidebar,
     onClickLogo,
     onClickSearsh,
   } = props;
@@ -26,7 +27,7 @@ export const SideBar = (props: SideBarProps) => {
         <ButtonSideBar
           iconButtonCollopsed={iconButtonCollopsed}
           iconButtonNotCollopsed={iconButtonNotCollopsed}
-          collapseSidebar={collapseSidebar}
+          onCollapseSidebar={onCollapseSidebar}
           isCollopsed={isCollopsed}
         />
       }
