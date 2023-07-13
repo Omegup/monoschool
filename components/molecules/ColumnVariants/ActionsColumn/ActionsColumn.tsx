@@ -1,6 +1,4 @@
 
-//TODO: Remove Fragment after Container is 
-
 import { Container } from "@omegup-school/ui-atoms"
 import { ActionsColumnProps } from "./ActionsColumn.types"
 

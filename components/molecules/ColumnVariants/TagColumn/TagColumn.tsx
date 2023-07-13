@@ -1,10 +1,10 @@
-
-// TODO : Fix it When the Tag Component is REady 
-
+import { TagToggle } from "@omegup-school/ui-atoms"
 import { TagColumnProps } from "./TagColumn.types"
 
-export const TagColumn = ({ }: TagColumnProps) => {
+export const TagColumn = ({ label, type }: TagColumnProps) => {
   return (
-    <div>TagColumn</div>
+    <TagToggle
+      {...{ label, type }}
+    />
   )
 }

@@ -1,26 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TextColumn } from '@omegup-school/ui-molecules';
+import { TagColumn } from '@omegup-school/ui-molecules';
 
 const meta = {
   title: 'Molecules/Column/TagColumn',
-  component: TextColumn,
+  component: TagColumn,
   tags: ['autodocs'],
   argTypes: {
-    text: {
-      control: 'text'
-    },
-    isSummaryColumn: {
-      control: 'boolean'
-    }
+    label : {control : 'text'},
   },
-} satisfies Meta<typeof TextColumn>;
+} satisfies Meta<typeof TagColumn>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const TextCell: Story = {
   args: {
-    text: 'TextColumn',
-    isSummaryColumn: false
+    label: 'TagColumn',
+    type : 'active'
   },
 };

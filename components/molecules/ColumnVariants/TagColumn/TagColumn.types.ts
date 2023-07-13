@@ -1,3 +1,5 @@
-export interface TagColumnProps {
-  // TODO : Fix it When the Tag Component is REady 
+import { TagToggleProps } from "@omegup-school/ui-atoms/TagToggle/TagToggle.types";
+
+export interface TagColumnProps extends TagToggleProps {
+  
 }
