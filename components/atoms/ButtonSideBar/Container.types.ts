@@ -1,8 +1,10 @@
-
-
-export interface ControlledButtonSideBarProps  {
+import { MouseEventHandler } from 'react';
+export interface ButtonSideBarProps {
   isCollopsed?: boolean;
-  onClick: (isCollopsed: boolean) => void;
-  LeftCollopsedIcon: JSX.Element;
-  RightCollopsedIcon: JSX.Element;
+  iconButtonNotCollopsed: JSX.Element;
+  iconButtonCollopsed: JSX.Element;
+}
+
+export interface ControlledButtonSideBarProps extends ButtonSideBarProps {
+  onCollopsed: MouseEventHandler<HTMLDivElement>;
 }

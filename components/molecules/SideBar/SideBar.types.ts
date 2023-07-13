@@ -1,13 +1,10 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react';
+import { ControlledButtonSideBarProps } from '@omegup-school/ui-atoms/ButtonSideBar/Container.types';
+import { ControlledHeaderSideBarProps } from '@omegup-school/ui-atoms/HeaderSideBar';
+import { SideBarContainerProps } from '@omegup-school/ui-atoms';
 
-export interface SideBarProps {
-  children:ReactNode,
-  isCollopsed:boolean,
-  collopsedButton:JSX.Element
-  LeftCollopsedIcon:JSX.Element;
-  RightCollopsedIcon:JSX.Element;
-  logo:JSX.Element;
-  SearchIcon:JSX.Element;
-  titre:string;
-}
-
+export type SideBarProps = Omit<SideBarContainerProps, 'buttonSideBar'> &
+  ControlledButtonSideBarProps &
+  Omit<ControlledHeaderSideBarProps, 'search'|'title'>&{
+    title:string
+  } ;

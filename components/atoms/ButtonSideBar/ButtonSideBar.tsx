@@ -6,19 +6,17 @@ import { ControlledButtonSideBarProps } from './Container.types';
 
 export const ButtonSideBar = forwardRef((props: ControlledButtonSideBarProps, ref: React.Ref<HTMLDivElement>)=> {
   const classes = useButtonStyles();
-  const { isCollopsed, onClick, RightCollopsedIcon,LeftCollopsedIcon } = props;
+  const { isCollopsed, onCollopsed, iconButtonCollopsed,iconButtonNotCollopsed } = props;
   return (
     <div
       className={`${classes.button} `}
-      onClick={() => {
-        onClick;
-      }}
+      onClick={onCollopsed}
       {...ref}
     >
       {!isCollopsed ? (
-        <span className={classes.icon}>{LeftCollopsedIcon}</span>
+        <span className={classes.icon}>{iconButtonNotCollopsed}</span>
       ) : (
-        <span className={classes.icon}>{RightCollopsedIcon}</span>
+        <span className={classes.icon}>{iconButtonCollopsed}</span>
       )}
     </div>
   );

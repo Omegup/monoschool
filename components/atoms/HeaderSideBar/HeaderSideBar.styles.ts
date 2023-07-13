@@ -18,6 +18,7 @@ export const useSelectStyles = createUseStyles({
     alignItems: 'center',
     gap: spacing.s8,
     alignSelf: 'stretch',
+    cursor:'pointer',
   },
   logoIcon: {
     width: widths.logo.svg,
@@ -28,6 +29,7 @@ export const useSelectStyles = createUseStyles({
   },
 
   SearchIcon: {
+    cursor:'pointer',
     width: widths.sideBar.icon,
     height:widths.sideBar.icon,
     display: 'flex',

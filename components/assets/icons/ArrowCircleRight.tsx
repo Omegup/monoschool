@@ -5,15 +5,18 @@ export const ArrowCircleRight = ({
   width = widths.icon.svg,
   height = width,
   color = colors.blue[500],
+  rotation=0,
 }: {
   width?: string;
   height?: string;
   color?: string;
+  rotation?:number;
 }) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 21 20"
+    transform= {`rotate(${rotation})`}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -26,4 +29,5 @@ export const ArrowCircleRight = ({
       stroke-linejoin="round"
     />
   </svg>
+  
 );

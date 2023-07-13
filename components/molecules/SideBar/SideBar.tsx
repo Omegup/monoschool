@@ -2,17 +2,21 @@ import { SideBarProps } from './SideBar.types';
 import {
   ButtonSideBar,
   HeaderSideBar,
-  SideBarContainer,Text
+  SideBarContainer,
+  Text,
 } from '@omegup-school/ui-atoms';
 export const SideBar = (props: SideBarProps) => {
   const {
     children,
-    titre,
+    title,
     isCollopsed,
-    SearchIcon,
+    searchIcon,
     logo,
-    LeftCollopsedIcon,
-    RightCollopsedIcon,
+    iconButtonCollopsed,
+    iconButtonNotCollopsed,
+    onCollopsed,
+    onClickLogo,
+    onClickSearsh,
   } = props;
 
   return (
@@ -20,20 +24,20 @@ export const SideBar = (props: SideBarProps) => {
       isCollopsed={false}
       buttonSideBar={
         <ButtonSideBar
-          LeftCollopsedIcon={LeftCollopsedIcon}
-          RightCollopsedIcon={RightCollopsedIcon}
-          onClick={() => {}}
+          iconButtonCollopsed={iconButtonCollopsed}
+          iconButtonNotCollopsed={iconButtonNotCollopsed}
+          onCollopsed={onCollopsed}
           isCollopsed={isCollopsed}
         />
       }
     >
       <HeaderSideBar
-        logoOnClick={() => {}}
-        title={<Text variant={'paragraph_medium_semiBold'} text={titre}/>}
+        onClickLogo={onClickLogo}
+        title={<Text variant={'paragraph_medium_semiBold'} text={title} />}
         logo={logo}
         search={<>"SearchBar"</>}
-        searchIcon={SearchIcon}
-        onClick={() => {}}
+        searchIcon={searchIcon}
+        onClickSearsh={onClickSearsh}
         isCollopsed={isCollopsed}
       />
       {children}

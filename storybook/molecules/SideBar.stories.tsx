@@ -5,27 +5,27 @@ import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
 
 const Demo = ({
-  LeftCollopsedIcon,
+  iconButtonCollopsed,
   logo,
   SearchIcon,
-  RightCollopsedIcon,
+  iconButtonNotCollopsed,
   ...restProps
 }: Omit<
   SideBarProps,
-  'LeftCollopsedIcon' | 'logo' | 'SearchIcon' | 'RightCollopsedIcon'
+  'iconButtonCollopsed' | 'logo' | 'SearchIcon' | 'iconButtonNotCollopsed'
 > & {
-  LeftCollopsedIcon: keyof typeof icons;
+  iconButtonCollopsed: keyof typeof icons;
   logo: keyof typeof icons;
   SearchIcon: keyof typeof icons;
-  RightCollopsedIcon: keyof typeof icons;
+  iconButtonNotCollopsed: keyof typeof icons;
 }) => {
   return (
     <SideBar
       {...restProps}
-      LeftCollopsedIcon={<Icon name={LeftCollopsedIcon} />} 
+      iconButtonCollopsed={<Icon name={iconButtonCollopsed}  />} 
       logo={<Icon name={logo} />} 
-      SearchIcon={<Icon name={SearchIcon} />} 
-      RightCollopsedIcon={<Icon name={RightCollopsedIcon} />}
+      searchIcon={<Icon name={SearchIcon} />} 
+      iconButtonNotCollopsed={<Icon name={iconButtonNotCollopsed} />}
       children={[]}
     />
   );
@@ -35,7 +35,7 @@ const meta = {
   component: SideBar,
   tags: ['autodocs'],
   argTypes: {
-    LeftCollopsedIcon: {
+    iconButtonNotCollopsed: {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
@@ -43,11 +43,11 @@ const meta = {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
-    SearchIcon: {
+    searchIcon: {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
-    RightCollopsedIcon: {
+    iconButtonCollopsed: {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
@@ -61,10 +61,10 @@ export const Primary: Story = {
   render: Demo,
   args: {
     isCollopsed: true,
-    titre: 'omega up',
-    LeftCollopsedIcon: 'ArrowCircleLeft',
+    title: 'omega up',
+    iconButtonCollopsed: 'ArrowCircleRight',
+    iconButtonNotCollopsed: 'ArrowCircleLeft',
     logo: 'Logo',
     SearchIcon: 'SearchStatus',
-    RightCollopsedIcon: 'ArrowCircleRight',
   },
 };

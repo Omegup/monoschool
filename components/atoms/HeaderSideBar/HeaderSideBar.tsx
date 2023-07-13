@@ -4,18 +4,18 @@ import { forwardRef } from 'react';
 
 export const HeaderSideBar = forwardRef(
   (props: ControlledHeaderSideBarProps, ref: React.Ref<HTMLDivElement>) => {
-    const { title, logo, search, searchIcon,logoOnClick,onClick, isCollopsed } = props;
+    const { title, logo, search, searchIcon,onClickLogo,onClickSearsh, isCollopsed } = props;
     const classes = useSelectStyles();
     return (
       <div {...ref} className={classes.container}>
-        <div className={classes.logo} onClick={logoOnClick}>
+        <div className={classes.logo} onClick={onClickLogo}>
           <span className={classes.logoIcon}> {logo} </span>
           {!isCollopsed && title}
         </div>
         {!isCollopsed ? (
           search
         ) : (
-          <span className={classes.SearchIcon} onClick={onClick}>{searchIcon}</span>
+          <span className={classes.SearchIcon} onClick={onClickSearsh}>{searchIcon}</span>
         )}
       </div>
     );
