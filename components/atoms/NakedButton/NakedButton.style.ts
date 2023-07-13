@@ -11,6 +11,8 @@ export const useNakedInputStyles = createUseStyles({
     overflow: 'hidden',
     paddingInline: ({ paddingInline }: Partial<ControlledNakedButtonProps>) =>
       paddingInline ? spacing[paddingInline] : 0,
+    gap: ({ gap }: Partial<ControlledNakedButtonProps>) =>
+      gap ? spacing[gap] : 0,
     paddingBlock: ({ paddingBlock }: Partial<ControlledNakedButtonProps>) =>
       paddingBlock ? spacing[paddingBlock] : 0,
     borderRadius: ({ borderRadius }: Partial<ControlledNakedButtonProps>) =>

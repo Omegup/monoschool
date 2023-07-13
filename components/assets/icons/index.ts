@@ -10,3 +10,4 @@ export * from './EmptyWalletTime';
 export * from './Money';
 export * from './RepeateMusic';
 export * from './People';
+export * from './ArrowBottomDivide';
