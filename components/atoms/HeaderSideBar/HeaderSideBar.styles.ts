@@ -11,6 +11,7 @@ export const useSelectStyles = createUseStyles({
     alignItems: 'flex-start',
     gap: spacing.s3,
     color: colors.grey[500],
+    userSelect:'none'
   },
   logo: {
     display: 'flex',
