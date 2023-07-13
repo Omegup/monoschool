@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler } from 'react';
 
 export interface HeaderSideBarProps {
   title: JSX.Element;
@@ -9,6 +9,6 @@ export interface HeaderSideBarProps {
 }
 
 export interface ControlledHeaderSideBarProps extends HeaderSideBarProps {
-  onClickSearsh:(e:MouseEventHandler<HTMLDivElement>)=>void;
-  onClickLogo:(e:MouseEventHandler<HTMLDivElement>)=>void;
+  onClickSearsh:(event:MouseEventHandler<HTMLDivElement>)=>void;
+  onClickLogo:(event:MouseEventHandler<HTMLSpanElement>)=>void;
 }
