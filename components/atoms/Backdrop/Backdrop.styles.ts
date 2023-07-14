@@ -1,9 +1,12 @@
+import { colors } from '@omegup-school/ui-configs/colors'
 import { createUseStyles } from 'react-jss'
+import { opacityMedium } from '@omegup-school/ui-configs/effects/opacity';
 
 export const useStyles = createUseStyles({
   backdrop: {
     position: "fixed",
-    background: "rgba(0,0,0,0.5)",
+    background: colors.background.overlay,
+    opacity: opacityMedium,
     left: 0,
     top: 0,
     right: 0,

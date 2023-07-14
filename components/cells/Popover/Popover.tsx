@@ -1,7 +1,4 @@
-import {
-  useContext,
-  useState,
-} from "react"
+import { useContext, useState } from "react"
 import { PopoverProps } from "./Popover.types"
 import { Content } from "../Content"
 import { Trigger } from "../Trigger"
@@ -9,12 +6,7 @@ import { Close } from "../Close"
 import { PopoverContext } from "../contexts/PopoverContext"
 import { Backdrop } from "@omegup-school/ui-molecules/Popover"
 
-const defaultRect = {
-  left: 0,
-  top: 0,
-  width: 0,
-  height: 0,
-}
+const defaultRect = { left: 0, top: 0, width: 0, height: 0 }
 
 export const Popover = ({
   children,

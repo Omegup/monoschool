@@ -1,3 +1,3 @@
 export type FooterProps = {
-  size: 'large' | 'medium' | 'small';
+  size?: 'large' | 'medium' | 'small';
 };

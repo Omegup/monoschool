@@ -74,7 +74,7 @@ function getPopoverCoords(
     case "top-center":
       return {
         top: triggerRect.top-popoverRect.height - 5,
-        left: triggerRect.left - triggerRect.width / 2,
+        left: triggerRect.left + triggerRect.width / 2 - popoverRect.width / 2,
       }
     case "bottom-center":
     default:
