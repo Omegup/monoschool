@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable react/react-in-jsx-scope */
 import { BriefCase, GridFive, Teacher } from '@omegup-school/ui-assets';
 import { CardNumberDashboard } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';

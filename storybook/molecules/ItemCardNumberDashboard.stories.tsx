@@ -1,4 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
 import * as icons from '@omegup-school/ui-assets/icons';
 import { ItemCardNumberDashboard, Text } from '@omegup-school/ui-atoms';
 import { ControlledItemCardNumberDashboardProps } from '@omegup-school/ui-atoms/ItemCardNumberDashboard/ItemCardNumberDashboard.types';
@@ -16,7 +15,6 @@ const Demo = ({
   label: string;
   number: string;
 }) => {
-  // eslint-disable-next-line react/react-in-jsx-scope
   return (<div style={{display:'flex'}}>
     <ItemCardNumberDashboard
       {...restProps}

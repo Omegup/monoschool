@@ -1,7 +1,3 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/no-children-prop */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Container,
   ItemCardNumberDashboard,
@@ -12,7 +8,6 @@ import { ControlledCardNumberDashboardProps } from './CardNumberDashboard.types'
 export const CardNumberDashboard = ({
   items,
 }: ControlledCardNumberDashboardProps) => {
-  // eslint-disable-next-line quotes
   const variant: ['blue', 'headLine', 'light'] = ['blue', 'headLine', 'light'];
   return (
     <Container

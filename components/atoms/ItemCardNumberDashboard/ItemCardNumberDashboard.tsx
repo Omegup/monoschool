@@ -1,6 +1,3 @@
-/* eslint-disable react/display-name */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { joinClassNames } from '@omegup-school/ui-configs/typography';
 import { forwardRef } from 'react';
 import { useCardNumberDashboardStyles } from './ItemCardNumberDashboard.styles';
