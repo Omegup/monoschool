@@ -1,4 +1,4 @@
-export interface ChipsPersonProps {
+export interface ChipsContentProps {
   name: string;
   isLastIndex: boolean;
   onCancel: () => void;

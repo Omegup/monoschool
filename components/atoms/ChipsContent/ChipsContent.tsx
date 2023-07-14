@@ -1,9 +1,9 @@
 import React from 'react';
-import { ChipsPersonProps } from './ChipsPeron.types';
-import { useStyles } from './ChipsPeron.styles';
+import { ChipsContentProps } from './ChipsContent.types';
+import { useStyles } from './ChipsContent.styles';
 import { Vector } from '@omegup-school/ui-assets';
 
-export const ChipsPerson = ({ name, avatar, isLastIndex, onCancel }: ChipsPersonProps) => {
+export const ChipsContent = ({ name, avatar, isLastIndex, onCancel }: ChipsContentProps) => {
   const classes = useStyles();
 
   return (
@@ -14,10 +14,12 @@ export const ChipsPerson = ({ name, avatar, isLastIndex, onCancel }: ChipsPerson
       </div>
       {
         isLastIndex
-          ? <span className={classes.labelSeparator}>/</span>
-          : <div className={classes.cancelIcon} onClick={() => onCancel()}>
+          ?
+          <div className={classes.cancelIcon} onClick={() => onCancel()}>
             <Vector width='12' height='12' />
           </div>
+          :
+          <span className={classes.labelSeparator}>/</span>
       }
     </div>
   );

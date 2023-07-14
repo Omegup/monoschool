@@ -48,7 +48,6 @@ export const useStyles = createUseStyles({
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
   },
   container : {
-    // padding: spacing.s3,
     backgroundColor: colors.light[100],
     display: 'flex',
     alignItems: 'center',
@@ -61,6 +60,5 @@ export const useStyles = createUseStyles({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-
   }
 });

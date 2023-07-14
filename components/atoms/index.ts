@@ -13,4 +13,4 @@ export * from './TabBadge';
 export * from './Avatar';
 export * from './ChipsContainer';
 export * from './ChipsLabel';
-export * from './ChipsPerson';
+export * from './ChipsContent';
