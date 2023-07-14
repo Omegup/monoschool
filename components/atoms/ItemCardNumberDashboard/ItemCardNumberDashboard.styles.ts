@@ -41,6 +41,10 @@ export const useCardNumberDashboardStyles = createUseStyles({
     flexDirection: 'column',
     alignItems: 'flex-start',
     gap: spacing.s3,
+    '& svg':{
+        width:widths.itemCardNumberDashboard.icon,
+        height:widths.itemCardNumberDashboard.icon,
+    }
   },
   bottomLine: {
     position: 'absolute',

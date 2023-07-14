@@ -8,10 +8,9 @@ import {
   Text,
 } from '@omegup-school/ui-atoms';
 import { ControlledCardNumberDashboardProps } from './CardNumberDashboard.types';
-import { ItemCardNumberDashboardProps } from '@omegup-school/ui-atoms/ItemCardNumberDashboard/ItemCardNumberDashboard.types';
 
 export const CardNumberDashboard = ({
-  children,
+  items,
 }: ControlledCardNumberDashboardProps) => {
   // eslint-disable-next-line quotes
   const variant: ['blue', 'headLine', 'light'] = ['blue', 'headLine', 'light'];
@@ -21,16 +20,16 @@ export const CardNumberDashboard = ({
       justifyContent={'space-between'}
       width={'640px'}
     >
-      {children.map((child, index) => (
+      {items.map((item, index) => (
         <ItemCardNumberDashboard
-          onClick={child.onClick}
+          onClick={item.onClick}
           variant={variant[index]}
           TextNumber={
-            <Text variant={'display_large_bold'} text={child.number} />
+            <Text variant={'display_large_bold'} text={item.number} />
           }
         >
-          {child.icon}
-          <Text variant={'paragraph_medium_medium'} text={child.label} />
+          {item.icon}
+          <Text variant={'paragraph_medium_medium'} text={item.label} />
         </ItemCardNumberDashboard>
       ))}
     </Container>

@@ -2,7 +2,6 @@
 import * as icons from '@omegup-school/ui-assets/icons';
 import { ItemCardNumberDashboard, Text } from '@omegup-school/ui-atoms';
 import { ControlledItemCardNumberDashboardProps } from '@omegup-school/ui-atoms/ItemCardNumberDashboard/ItemCardNumberDashboard.types';
-import { CardNumberDashboard } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Icon } from './Icon';
 
@@ -12,7 +11,7 @@ const Demo = ({
   number,
   variant,
   ...restProps
-}: Omit<ControlledItemCardNumberDashboardProps, 'icon'> & {
+}: ControlledItemCardNumberDashboardProps& {
   icon: keyof typeof icons;
   label: string;
   number: string;
@@ -24,15 +23,14 @@ const Demo = ({
       variant={variant}
       TextNumber={<Text variant={'display_large_bold'} text={number} />}
     >
-      {' '}
-      <Icon name={icon}/>
+      <Icon name={icon} />
       <Text variant={'paragraph_medium_medium'} text={label} />
     </ItemCardNumberDashboard></div>
   );
 };
 const meta = {
   title: 'Atom/ItemCardNumberDashboard',
-  component: CardNumberDashboard,
+  component: ItemCardNumberDashboard,
   tags: ['autodocs'],
   argTypes: {
     icon: {
@@ -44,7 +42,7 @@ const meta = {
       options: ['light','blue','headLine'],
     },
   },
-} satisfies Meta<typeof CardNumberDashboard>;
+} satisfies Meta<typeof ItemCardNumberDashboard>;
 
 export default meta;
 type Story = StoryObj<typeof Demo>;

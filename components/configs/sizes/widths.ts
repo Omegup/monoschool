@@ -23,6 +23,7 @@ export const widths = {
   },
   itemCardNumberDashboard: {
     default:"203px",
+    icon:"24px",
     
   },
 };
