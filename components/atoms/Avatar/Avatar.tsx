@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import { useAvatarImageStyles, useAvatarStyles } from './Avatar.style';
 import { AvatarImageProps, AvatarProps } from './Avatar.type';
 
