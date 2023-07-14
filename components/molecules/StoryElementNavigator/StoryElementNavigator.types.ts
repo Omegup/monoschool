@@ -3,7 +3,8 @@ import * as avatars from '@omegup-school/ui-assets/images';
 
 export interface StoryElementNavigatorProps {
   text: string;
-  avatarUrl: string
+  lightMode:string
+  darkMode: string
 }
 export interface ControlledStoryElementNavigatorProps extends StoryElementNavigatorProps {
   onclick: (value: boolean) => void;

@@ -12,7 +12,7 @@ export interface StoryElementContainerProps {
   width?: string
   avatar?: ReactNode;
   text?: ReactNode;
-  size: keyof typeof widths.avatar;
+  size?: keyof typeof widths.avatar;
 
  
 }
