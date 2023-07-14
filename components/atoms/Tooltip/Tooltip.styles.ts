@@ -56,7 +56,9 @@ export const useStyles = createUseStyles({
       ...styles.paragraph_xSmall_regular,
     },
   },
-  container: {},
+  container: {
+    background: 'transparent'
+  },
   flex: {
     width: 'fit-content',
     display: 'flex',
@@ -64,6 +66,7 @@ export const useStyles = createUseStyles({
   },
   triangle: {
     border: ['solid', borders.b10, 'transparent'],
+    background: 'transparent'
   },
   top: {
     flexDirection: 'column',
