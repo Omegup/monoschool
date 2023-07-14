@@ -5,5 +5,5 @@ export type ChipsButtonProps = {
   ClearIcon: JSX.Element;
 };
 export interface ControlledChipsButtonProps extends ChipsButtonProps {
-  onClear: MouseEventHandler<HTMLButtonElement> ;
+  onClear: (event:MouseEventHandler<HTMLButtonElement>)=>void ;
 }

@@ -111,8 +111,8 @@ export const CHIPS_THEME: ChipsTheme = {
         chipsBackgroundColor: colors.background.secondary,
       },
       hovered: {
-        chipsBackgroundColor:colors.background.outline,
-        chipsBorderColor: colors.background.outline,
+        chipsBackgroundColor:colors.background.overlay,
+        chipsBorderColor: colors.background.overlay,
       },
       focusedAndHovered: {
         chipsBackgroundColor:colors.background.secondary,
