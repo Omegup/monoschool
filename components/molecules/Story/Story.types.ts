@@ -8,7 +8,7 @@ export interface StoryProps {
     lightmode:string
    darkmode: string
   };
-  children?: {
+  items?: {
     text: string;
     avatarUrl: string
   }[];

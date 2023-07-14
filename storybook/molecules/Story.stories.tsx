@@ -22,14 +22,52 @@ export const Primary: Story = {
       lightmode: 'components\assets\images\avatars\Ellipse47.png',
       text: 'Créer une story',
     },
-    children:
+    items:
       [{
         avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
         text: 'Team1',
-      }, {
+      },
+      {
         avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
         text: 'Team2',
-      }]
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      {
+        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+        text: 'Team2',
+      },
+      ]
     ,
     rightNavigator: {
       darkmode: 'components\assets\images\avatars\Ellipse47.png',
