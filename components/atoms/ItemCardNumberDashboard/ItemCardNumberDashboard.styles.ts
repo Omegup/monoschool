@@ -34,6 +34,7 @@ export const useCardNumberDashboardStyles = createUseStyles({
     color:colors.blue[500],
     '&:hover > $bottomLine':{
      backgroundColor:colors.blue[500],
+     
     }
   },
   childrenContainer: {
@@ -49,7 +50,8 @@ export const useCardNumberDashboardStyles = createUseStyles({
     height:'15%',
     borderBottomRightRadius: borders.r5,
     borderBottomLeftRadius: borders.r5,
-    backgroundColor:'transparent'
+    backgroundColor:'transparent',
+    transition: "background-color 2s ease",
     
   },
 });
