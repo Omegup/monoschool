@@ -23,30 +23,5 @@ export const TooltipStory = ({ size, variant, position, label }: TooltipProps) =
         <Tooltip {...{ size, variant, position, label }} />
       </Popover.Content>
     </Popover>
-    <Popover preferredPosition="bottom-center" backdrop>
-      <Popover.Trigger showOn='click' jump>
-        <input placeholder="Search" />
-      </Popover.Trigger>
-      <Popover.Content>
-        <ul>
-          <li>
-            <Popover preferredPosition="right-center"  backdrop>
-              <Popover.Trigger showOn='click'>
-                <a href="#">Students</a>
-              </Popover.Trigger>
-              <Popover.Content>
-                <ul>
-                  <li>Sub 11111111111111111</li>
-                  <li>Sub 222222222222222222</li>
-                </ul>
-              </Popover.Content>
-            </Popover>
-
-          </li>
-          <li>Student B</li>
-          <li>Student C</li>
-        </ul>
-      </Popover.Content>
-    </Popover>
   </>)
 }

@@ -1,7 +1,7 @@
 
 import { Popover } from '@omegup-school/ui-cells'
 
-export const TooltipStory = () => {
+export const MenuStory = () => {
 
   return (<>
     <Popover preferredPosition="bottom-center" backdrop>
@@ -13,7 +13,7 @@ export const TooltipStory = () => {
           <li>
             <Popover preferredPosition="right-center"  backdrop>
               <Popover.Trigger showOn='click'>
-                <a href="#">Students</a>
+                <button>Students</button>
               </Popover.Trigger>
               <Popover.Content>
                 <ul>
