@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
+    testLabel: 'lorem ipsum dolor',
     label: 'lorem ipsum dolor',
     size: 'medium',
     variant: 'solid',

@@ -1,10 +1,10 @@
 
-import { Jumper, Tooltip } from '@omegup-school/ui-atoms'
+import { Tooltip } from '@omegup-school/ui-atoms'
 import { TooltipProps } from '@omegup-school/ui-atoms/Tooltip/Tooltip.types'
 import { Popover } from '@omegup-school/ui-cells'
 import { Position } from '@omegup-school/ui-cells/Popover/Popover.types'
 
-export const TooltipStory = ({ size, variant, position, label }: TooltipProps) => {
+export const TooltipStory = ({ testLabel, size, variant, position, label }: { testLabel: string } & TooltipProps) => {
 
   const preferredPosition: { [k in TooltipProps['position']]: Position } = {
     right: 'right-center',
@@ -16,7 +16,7 @@ export const TooltipStory = ({ size, variant, position, label }: TooltipProps) =
   return (<>
     <Popover preferredPosition={preferredPosition[position]}>
       <Popover.Trigger showOn='mouseEnter' closeOn='mouseLeave' >
-        <button>Students</button>
+        <button>{testLabel}</button>
 
       </Popover.Trigger>
       <Popover.Content>
