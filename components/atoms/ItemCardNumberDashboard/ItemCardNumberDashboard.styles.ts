@@ -8,7 +8,7 @@ export const useCardNumberDashboardStyles = createUseStyles({
     paddingBlock: "21px",
     justifyContent: "center",
     alignItems: "center",
-    gap: spacing.s5,
+    gap: spacing.s3,
     borderRadius:borders.r5,
     position:"relative",
     userSelect:'none',
