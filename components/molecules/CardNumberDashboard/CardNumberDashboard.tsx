@@ -8,48 +8,31 @@ import {
   Text,
 } from '@omegup-school/ui-atoms';
 import { ControlledCardNumberDashboardProps } from './CardNumberDashboard.types';
+import { ItemCardNumberDashboardProps } from '@omegup-school/ui-atoms/ItemCardNumberDashboard/ItemCardNumberDashboard.types';
 
 export const CardNumberDashboard = ({
   children,
 }: ControlledCardNumberDashboardProps) => {
-  
-  const variant=["blue","headLine","light"];
+  // eslint-disable-next-line quotes
+  const variant: ['blue', 'headLine', 'light'] = ['blue', 'headLine', 'light'];
   return (
     <Container
       alignItems={'start'}
       justifyContent={'space-between'}
       width={'640px'}
     >
-      {children.map((child,index) => (
+      {children.map((child, index) => (
         <ItemCardNumberDashboard
           onClick={child.onClick}
           variant={variant[index]}
-          children={[
-            child.icon,
-            <Text variant={'paragraph_medium_medium'} text={child.label} />,
-          ]}
-          TextNumber={<Text variant={'display_large_bold'} text={child.number} />}
-        />
+          TextNumber={
+            <Text variant={'display_large_bold'} text={child.number} />
+          }
+        >
+          {child.icon}
+          <Text variant={'paragraph_medium_medium'} text={child.label} />
+        </ItemCardNumberDashboard>
       ))}
-
-      <ItemCardNumberDashboard
-        onClick={onClick}
-        variant={'headLine'}
-        children={[
-          icon,
-          <Text variant={'paragraph_medium_medium'} text={label} />,
-        ]}
-        TextNumber={<Text variant={'display_large_bold'} text={number} />}
-      />
-      <ItemCardNumberDashboard
-        onClick={onClick}
-        variant={'light'}
-        children={[
-          icon,
-          <Text variant={'paragraph_medium_medium'} text={label} />,
-        ]}
-        TextNumber={<Text variant={'display_large_bold'} text={number} />}
-      />
     </Container>
   );
 };

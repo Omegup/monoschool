@@ -1,11 +1,11 @@
 import { colors } from '@omegup-school/ui-configs/colors';
-import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import { borders, spacing, widths } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 
 export const useCardNumberDashboardStyles = createUseStyles({
   container: {
     display: "flex",
-    padding: "21px 49px",
+    paddingBlock: "21px",
     justifyContent: "center",
     alignItems: "center",
     gap: spacing.s5,
@@ -13,6 +13,8 @@ export const useCardNumberDashboardStyles = createUseStyles({
     position:"relative",
     userSelect:'none',
     cursor:"pointer",
+    width:widths.itemCardNumberDashboard.default,
+    
   },
  
   blue: {
