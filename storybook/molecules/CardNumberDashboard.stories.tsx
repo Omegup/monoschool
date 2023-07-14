@@ -3,7 +3,7 @@ import { CardNumberDashboard } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'molucules/CardNumberDashboard',
+  title: 'Molecules/CardNumberDashboard',
   component: CardNumberDashboard,
   tags: ['autodocs'],
   argTypes: {},
