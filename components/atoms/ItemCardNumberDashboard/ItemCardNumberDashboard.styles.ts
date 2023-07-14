@@ -50,10 +50,10 @@ export const useCardNumberDashboardStyles = createUseStyles({
     position: 'absolute',
     bottom: '0px',
     width: '100%',
-    height: '15%',
+    height: '15px',
     borderBottomRightRadius: borders.r5,
     borderBottomLeftRadius: borders.r5,
     backgroundColor: 'transparent',
-    transition: 'background-color 2s ease',
+    transition: 'background-color 800ms ease',
   },
 });
