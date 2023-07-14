@@ -1,19 +1,10 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable react/react-in-jsx-scope */
+import { CardNumberDashboard, } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';
-import { CardNumberDashboard } from '@omegup-school/ui-molecules';
-import { ControlledCardNumberDashboardProps } from '@omegup-school/ui-molecules';
-import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
 
-const Demo = ({
-  ...restProps
-}: Omit<ControlledCardNumberDashboardProps, 'icon'> & {
-  icon: keyof typeof icons;
-}) => {
-  // eslint-disable-next-line react/react-in-jsx-scope
-  return <CardNumberDashboard  {...restProps} />;
-};
+
 const meta = {
   title: 'molucules/CardNumberDashboard',
   component: CardNumberDashboard,
@@ -29,9 +20,9 @@ type Story = StoryObj<typeof CardNumberDashboard>;
 export const Primary: Story = {
   args: {
     children: [
-      { label: 'classes', icon: "", number: '9',onClick:()=>{} },
-      { label: 'classes', icon:"", number: '9' ,onClick:()=>{}},
-      { label: 'classes', icon:"", number: '9',onClick:()=>{} },
+      { label: 'classes', icon: <Icon name='GridFive'/>, number: '9',onClick:()=>{} },
+      { label: 'classes', icon:<Icon name='GridFive'/>, number: '9' ,onClick:()=>{}},
+      { label: 'classes', icon:<Icon name='GridFive'/>, number: '9',onClick:()=>{} },
     ],
   },
 };

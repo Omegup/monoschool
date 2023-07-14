@@ -1,11 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
-import type { Meta, StoryObj } from '@storybook/react';
-import { CardNumberDashboard } from '@omegup-school/ui-molecules';
-import { Text } from '@omegup-school/ui-atoms';
 import * as icons from '@omegup-school/ui-assets/icons';
-import { Icon } from './Icon';
+import { ItemCardNumberDashboard, Text } from '@omegup-school/ui-atoms';
 import { ControlledItemCardNumberDashboardProps } from '@omegup-school/ui-atoms/ItemCardNumberDashboard/ItemCardNumberDashboard.types';
-import { ItemCardNumberDashboard } from '@omegup-school/ui-atoms';
+import { CardNumberDashboard } from '@omegup-school/ui-molecules';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Icon } from './Icon';
 
 const Demo = ({
   icon,
@@ -54,7 +53,7 @@ export const Primary: Story = {
   render: Demo,
   args: {
     label: 'classes',
-    icon: 'Subtitle',
+    icon: 'GridFive',
     number: '9',
     variant:'blue',
   },

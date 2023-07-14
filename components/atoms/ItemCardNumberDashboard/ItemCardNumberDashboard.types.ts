@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEvent, ReactNode } from 'react';
 
 export interface ItemCardNumberDashboardProps {
   variant:'blue'|'headLine'|'light';
@@ -7,5 +7,5 @@ export interface ItemCardNumberDashboardProps {
 }
 
 export interface ControlledItemCardNumberDashboardProps extends ItemCardNumberDashboardProps{
-  onClick:(event:MouseEvent)=>void
+  onClick: (e:MouseEvent) => void ;
 }

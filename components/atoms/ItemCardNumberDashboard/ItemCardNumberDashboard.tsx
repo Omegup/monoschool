@@ -1,17 +1,17 @@
 /* eslint-disable react/display-name */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable @typescript-eslint/no-unused-vars */
+import { joinClassNames } from '@omegup-school/ui-configs/typography';
 import { forwardRef } from 'react';
 import { useCardNumberDashboardStyles } from './ItemCardNumberDashboard.styles';
 import { ControlledItemCardNumberDashboardProps } from './ItemCardNumberDashboard.types';
-import { joinClassNames } from '@omegup-school/ui-configs/typography';
 
 export const ItemCardNumberDashboard = forwardRef(({
   variant,
   TextNumber,
   children,
   onClick,
-}: ControlledItemCardNumberDashboardProps) => {
+}: ControlledItemCardNumberDashboardProps,ref:React.Ref<HTMLDivElement>) => {
 
   const classes = useCardNumberDashboardStyles();
 
@@ -19,7 +19,8 @@ export const ItemCardNumberDashboard = forwardRef(({
     <div className={joinClassNames(
       classes.container,classes[variant]
     )}
-    {...{onClick}}
+    {...{ref}}
+    onClick={onClick}
     >
     {TextNumber}
     <div className={classes.childrenContainer}>
