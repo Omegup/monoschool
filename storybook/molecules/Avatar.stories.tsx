@@ -15,7 +15,7 @@ const Demo = ({
 }) => {
   return (
     <Avatar
-      children={
+      children={ 
         src !== 'none' ? (
           <AvatarImage src={avatars[src]} />
         ) : children === 'none' ? (
