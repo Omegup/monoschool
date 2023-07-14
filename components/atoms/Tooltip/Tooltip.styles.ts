@@ -1,108 +1,83 @@
-import { colors } from '@omegup-school/ui-configs/colors';
-import { borders, spacing } from '@omegup-school/ui-configs/sizes';
-import { createUseStyles } from 'react-jss';
-import { styles } from '../common/styles';
+import { colors } from '@omegup-school/ui-configs/colors'
+import { borders, spacing } from '@omegup-school/ui-configs/sizes'
+import { createUseStyles } from 'react-jss'
+import { styles } from '../common/styles'
+import { TooltipProps } from './Tooltip.types'
+import { JssStyle } from 'jss'
 
-export const useStyles = createUseStyles({
-  solid: {},
+const labelUnderlineStyle: Record<TooltipProps['position'], Partial<JssStyle>> = {
+  top: { borderBlockEndWidth: borders.b2 },
+  right: { borderInlineStartWidth: borders.b2 },
+  bottom: { borderBlockStartWidth: borders.b2 },
+  left: { borderInlineEndWidth: borders.b2 }
+}
+const labelSizeStyle: Record<TooltipProps['size'], Partial<JssStyle>> = {
+  large: styles.paragraph_medium_regular,
+  medium: styles.paragraph_small_regular,
+  small: styles.paragraph_xSmall_regular,
+}
+const triangleStyle: Record<TooltipProps['position'], Partial<JssStyle>> = {
+  top: {
+    borderBlockStartColor: colors.blue[500],
+    borderBlockEndWidth: 0,
+  },
+  right: {
+    borderInlineEndColor: colors.blue[500],
+    borderInlineStartWidth: 0,
+  },
+  bottom: {
+    borderBlockEndColor: colors.blue[500],
+    borderBlockStartWidth: 0,
+  },
+  left: {
+    borderInlineStartColor: colors.blue[500],
+    borderInlineEndWidth: 0,
+  }
+}
+const flexDirection: Record<TooltipProps['position'], Partial<JssStyle>> = {
+  top: { flexDirection: 'column' },
+  right: { flexDirection: 'row-reverse' },
+  bottom: { flexDirection: 'column-reverse' },
+  left: { flexDirection: 'row' }
+}
+
+export const useStyles = createUseStyles<string, Omit<TooltipProps, 'label' | 'variant'>>({
+  container: (props) => ({
+    width: 'fit-content',
+    display: 'flex',
+    alignItems: 'center',
+    ...flexDirection[props.position]
+  }),
+  label: props => ({
+    padding: spacing.s4,
+    borderRadius: borders.r5,
+    ...labelSizeStyle[props.size]
+  }),
+  solid: {
+    color: colors.background.default,
+    backgroundColor: colors.blue[500],
+  },
   border: {
-    '& $label': {
       color: colors.blue[500],
       border: ['solid', borders.b2, colors.blue[500]],
       backgroundColor: colors.background.default,
-    },
   },
-  underline: {
-    '& $label': {
+  underline: (props) => ({
       color: colors.blue[500],
       border: ['solid', borders.b2, colors.blue[500]],
       display: 'inline-block',
       borderWidth: 0,
       borderRadius: borders.r5,
       backgroundColor: colors.background.default,
-    },
-    '& $top $label': {
-      borderBlockEndWidth: borders.b2,
-    },
-    '& $right $label': {
-      borderInlineStartWidth: borders.b2,
-    },
-    '& $bottom $label': {
-      borderBlockStartWidth: borders.b2,
-    },
-    '& $left $label': {
-      borderInlineEndWidth: borders.b2,
-    },
-  },
+      ...labelUnderlineStyle[props.position]
+  }),
   flat: {
-    '& $label': {
       color: colors.blue[500],
       border: 'none',
       backgroundColor: colors.blue[100],
-    },
   },
-  large: {
-    '& $label': {
-      ...styles.paragraph_medium_regular,
-    },
-  },
-  medium: {
-    '& $label': {
-      ...styles.paragraph_small_regular,
-    },
-  },
-  small: {
-    '& $label': {
-      ...styles.paragraph_xSmall_regular,
-    },
-  },
-  container: {
-    background: 'transparent'
-  },
-  flex: {
-    width: 'fit-content',
-    display: 'flex',
-    alignItems: 'center',
-  },
-  triangle: {
+  triangle: props => ({
     border: ['solid', borders.b10, 'transparent'],
-    background: 'transparent'
-  },
-  top: {
-    flexDirection: 'column',
-    '& > $triangle': {
-      borderBlockStartColor: colors.blue[500],
-      borderBlockEndWidth: 0,
-    },
-  },
-  right: {
-    flexDirection: 'row-reverse',
-    '& > $triangle': {
-      borderInlineEndColor: colors.blue[500],
-      borderInlineStartWidth: 0,
-    },
-  },
-  bottom: {
-    flexDirection: 'column-reverse',
-    '& > $triangle': {
-      borderBlockEndColor: colors.blue[500],
-      borderBlockStartWidth: 0,
-    },
-  },
-  left: {
-    flexDirection: 'row',
-    '& > $triangle': {
-      borderInlineStartColor: colors.blue[500],
-      borderInlineEndWidth: 0,
-    },
-  },
-  label: {
-    color: colors.background.default,
-    backgroundColor: colors.blue[500],
-    padding: spacing.s4,
-    borderRadius: borders.r5,
-  },
-  labelText: {
-    ...styles.paragraph_small_regular,
-  },
-});
+    ...triangleStyle[props.position]
+  }),
+})
