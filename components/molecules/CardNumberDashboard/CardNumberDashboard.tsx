@@ -14,6 +14,7 @@ export const CardNumberDashboard = ({
       alignItems={'start'}
       justifyContent={'space-between'}
       width={'640px'}
+      gap={'s8'}
     >
       {items.map((item, index) => (
         <ItemCardNumberDashboard
