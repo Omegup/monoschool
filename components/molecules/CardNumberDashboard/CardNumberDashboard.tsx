@@ -4,13 +4,15 @@ import {
   Text,
 } from '@omegup-school/ui-atoms';
 import { ControlledCardNumberDashboardProps } from './CardNumberDashboard.types';
+import { forwardRef } from 'react';
 
-export const CardNumberDashboard = ({
+export const CardNumberDashboard = forwardRef(({
   items,
-}: ControlledCardNumberDashboardProps) => {
+}: ControlledCardNumberDashboardProps,ref: React.Ref<HTMLDivElement>) => {
   const variant: ['blue', 'headLine', 'light'] = ['blue', 'headLine', 'light'];
   return (
     <Container
+      ref={ref}
       alignItems={'start'}
       justifyContent={'space-between'}
       width={'640px'}
@@ -30,4 +32,4 @@ export const CardNumberDashboard = ({
       ))}
     </Container>
   );
-};
+});
