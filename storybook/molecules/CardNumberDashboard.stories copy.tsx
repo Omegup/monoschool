@@ -15,7 +15,7 @@ const Demo = ({
   return <CardNumberDashboard  {...restProps} />;
 };
 const meta = {
-  title: 'Atom/CardNumberDashboard',
+  title: 'molucules/CardNumberDashboard',
   component: CardNumberDashboard,
   tags: ['autodocs'],
   argTypes: {

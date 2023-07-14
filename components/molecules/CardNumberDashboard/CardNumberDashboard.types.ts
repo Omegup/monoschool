@@ -1,7 +1,7 @@
 export interface CardNumberDashboardProps {
   label: string;
   icon:JSX.Element
-  number:string
+  number:number
   onClick:(event:MouseEvent)=>void;
 }
 export interface ControlledCardNumberDashboardProps { 
