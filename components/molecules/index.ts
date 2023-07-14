@@ -6,5 +6,6 @@ export * from './TextWithIcon';
 export * from './IconWithDoubleText';
 export * from './Checkbox';
 export * from './SignIn';
+export * from './SideBar';
 export * from './TabSearch';
 export * from './Tag';

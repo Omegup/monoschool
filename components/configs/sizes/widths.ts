@@ -10,6 +10,17 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  ButtonSideBar: {
+    small: '20px',
+    medium: '24px',
+    large: '28px',
+  },
+  logo: {
+    svg: '40px',
+  },
+  sideBar: {
+    icon: '24px',
+  },
   nakedCheckbox: {
     large: '20px',
     medium: '16.67px',

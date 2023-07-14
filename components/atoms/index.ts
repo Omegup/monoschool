@@ -5,6 +5,10 @@ export * from './Select';
 export * from './Text';
 export * from './Container';
 export * from './Tooltip';
+export * from './NakedCheckbox'
+export * from './ButtonSideBar'
+export * from './SideBarContainer'
+export * from './HeaderSideBar'
 export * from './TagToggle';
 export * from './NakedCheckbox';
 export * from './Tab';
