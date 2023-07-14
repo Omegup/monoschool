@@ -8,7 +8,11 @@ export interface InfinitScrollContainerProps {
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse';
   alignItems?: 'center' | 'start' | 'end';
   justifyContent?: 'center' | 'start' | 'end';
-  children: ReactNode;
+  children: ReactNode[];
   width: number | string;
   height: number | string;
+  ref: React.Ref<HTMLDivElement>;
+  numberOfItemToLoad: number;
+  onScrollEndReach: (itemsNumber: number) => void;
+  itemsNumber: number;
 }

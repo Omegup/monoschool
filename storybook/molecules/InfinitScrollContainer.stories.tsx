@@ -1,15 +1,27 @@
 import { InfinitScrollContainer } from '@omegup-school/ui-atoms';
 import { InfinitScrollContainerProps } from '@omegup-school/ui-atoms/InfinitScrollContainer/InfinitScrollContainer.type';
 import type { Meta, StoryObj } from '@storybook/react';
-const Demo = (props: InfinitScrollContainerProps) => {
+import { createRef, useState } from 'react';
+const Demo = (
+  props: Omit<
+    InfinitScrollContainerProps,
+    'numberOfItemToLoad' | 'itemsNumber' | 'onScrollEndReach' | 'children'
+  >
+) => {
+  const ref = createRef<HTMLDivElement>();
+  const [items, setItems] = useState(10);
   return (
     <InfinitScrollContainer
       {...props}
       direction="column"
       width={350}
       height={350}
+      ref={ref}
+      numberOfItemToLoad={5}
+      itemsNumber={items}
+      onScrollEndReach={setItems}
     >
-      {Array(20)
+      {Array(items)
         .fill('')
         .map((a, i) => (
           <div
@@ -34,7 +46,7 @@ const meta = {
 } satisfies Meta<typeof InfinitScrollContainer>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<typeof Demo>;
 
 export const Primary: Story = {
   render: Demo,

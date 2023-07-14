@@ -4,11 +4,27 @@ import { InfinitScrollContainerProps } from './InfinitScrollContainer.type';
 
 export const InfinitScrollContainer = forwardRef(
   (props: InfinitScrollContainerProps, ref: React.Ref<HTMLDivElement>) => {
-    const { children, ...styling } = props;
+    const {
+      children,
+      numberOfItemToLoad,
+      itemsNumber,
+      onScrollEndReach,
+      ...styling
+    } = props;
     const classes = useInfinitScrollContainerStyle({ ...styling });
 
+    const loadOnScroll = () => {
+      const { scrollTop, scrollHeight, clientHeight } = ref?.current;
+      if (scrollTop + clientHeight > scrollHeight - 50) {
+        onScrollEndReach(
+          children.length === itemsNumber
+            ? itemsNumber + numberOfItemToLoad
+            : itemsNumber
+        );
+      }
+    };
     return (
-      <div ref={ref} className={classes.container}>
+      <div ref={ref} className={classes.container} onScroll={loadOnScroll}>
         {children}
       </div>
     );
