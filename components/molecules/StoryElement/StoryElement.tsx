@@ -19,11 +19,11 @@ export const StoryElement = forwardRef((
       size={"xlarge"}
       onClick={() => { }}
       ref={ref}
-      gap="s5"
+      gap="s6"
       direction="column"
       justifyContent="center"
       alignItems="center"
-      width="70"
+       
       avatar={
         <Icon name="Tick" width="70" />
       }

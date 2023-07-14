@@ -11,8 +11,8 @@ export interface StoryContainerProps {
     direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
     alignItems?: 'center' | 'start' | 'end' | 'space-between' | 'flex-start'
     justifyContent?: 'center' | 'start' | 'end' | 'space-between',
-    display?: 'flex' | 'inline-flex'
-    width?: "-webkit-fill-available"
+    display?: 'flex' | 'inline-flex'|'inline-block'
+    // width?: "-webkit-fill-available"
 }
 export interface ControlledStoryContainerProps extends StoryContainerProps {
   leftNavigator:ReactNode

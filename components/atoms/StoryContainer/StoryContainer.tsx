@@ -12,9 +12,12 @@ export const StoryContainer = forwardRef((
 
   return (
     <div className={classes.StoryContainer} ref={ref}>
-      {leftNavigator}
-      {children} 
-      {rightNavigator}
+      <div className={classes.leftNavigator}>
+        {leftNavigator}</div>
+      <div className={classes.childrenList}> {children}</div>
+      <div className={classes.rightNavigator}>
+        {rightNavigator}
+      </div>
     </div>
   )
 })

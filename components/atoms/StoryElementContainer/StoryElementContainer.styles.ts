@@ -14,12 +14,12 @@ export const useStoryElementContainerStyles = createUseStyles({
     gap: ({ gap }: Partial<StoryElementContainerProps>) => gap ? spacing[gap] : 0,
     alignItems: ({ alignItems }: Partial<StoryElementContainerProps>) => alignItems || "start",
     justifyContent: ({ justifyContent }: Partial<StoryElementContainerProps>) => justifyContent || "start",
-    width:"70px",
+ 
 
     '&:hover ': {
       '&> $avatar': {
 
-        borderRadius: "60px",
+        borderRadius: "70px",
        border: "5px solid ",
        borderColor:colors.blue[500],
       background: "url(<path-to-image>), lightgray 50% / cover no-repeat",
@@ -33,15 +33,15 @@ export const useStoryElementContainerStyles = createUseStyles({
   }
   ,
   avatar: {
-
     display: 'flex',
     borderRadius: '50%',
     overflow: 'hidden',
     justifyContent: 'center',
     alignItems: 'center',
-    width: "62px",
-    height: "62px",
+    width: "70px",
+    height: "70px",
     border: "5px solid transparent",
+    backgroundColor:colors.danger[500]
  
 },
   text: {

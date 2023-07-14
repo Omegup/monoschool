@@ -6,6 +6,7 @@ import { Icon } from '@omegup-school/ui-assets/icons/Icon';
 import * as icons from '@omegup-school/ui-assets/icons';
 import { StoryElementNavigator } from "../StoryElementNavigator";
 import { StoryElement } from "../StoryElement";
+import { StoryElementCreate } from "../StoryElementCreate";
 
 
 
@@ -14,33 +15,40 @@ export const Story = forwardRef((
   ref: React.Ref<HTMLDivElement>
 ) => {
 
-  const { leftNavigator, rightNavigator, children } = props
+  const { leftNavigator, rightNavigator, items } = props
 
   return (
 
     <StoryContainer
       direction="row"
-      leftNavigator={<StoryElementNavigator
-        darkMode={leftNavigator.darkmode}
-        lightMode={leftNavigator.lightmode}
-        text={leftNavigator.text}
-        onclick={() => { }}
-        ref={ref} />}
+      display="inline-flex"
+      alignItems="flex-start"
+      gap="s6"
+      leftNavigator={
+        <StoryElementCreate
+          darkMode={leftNavigator.darkmode}
+          lightMode={leftNavigator.lightmode}
+          text={leftNavigator.text}
+          onclick={() => { }}
+          ref={ref} />
+      }
       children={
-        children?.map(e =>
+        items?.map((ch, index) =>
           <StoryElement
-            avatarUrl={e.avatarUrl}
-            text={e.text}
+            key={index}
+            avatarUrl={ch.avatarUrl}
+            text={ch.text}
             onclick={() => { }}
             ref={ref} />
         )
       }
-      rightNavigator={<StoryElementNavigator
-        darkMode={rightNavigator.darkmode}
-        lightMode={rightNavigator.lightmode}
-        text={rightNavigator.text}
-        onclick={() => { }}
-        ref={ref} />}
+      rightNavigator={
+        <StoryElementNavigator 
+          darkMode={rightNavigator.darkmode}
+          lightMode={rightNavigator.lightmode}
+          text={rightNavigator.text}
+          onclick={() => { }}
+          ref={ref} />}
     />
 
 

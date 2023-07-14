@@ -17,17 +17,17 @@ export const StoryElementNavigator = forwardRef((
       size={"xlarge"}
       onClick={() => { }}
       ref={ref}
-      gap="s5"
+      gap="s6"
       direction="column"
       justifyContent="center"
       alignItems="center"
       width="70"
       
       iconlight={
-        <Icon name="AddCircle" width="70px" height="70px" />
+        <Icon name="ArrowCircle" width="70px" height="70px" />
       }
       icondark={
-        <Icon name="AddCircleDark" width="70px" height="70px"/>
+        <Icon name="ArrowCircleDark" width="70px" height="70px"/>
       }
       text={<Text text={text} ref={ref} variant="paragraph_xSmall_semiBold" />}
     />

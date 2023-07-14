@@ -5,3 +5,5 @@ export * from './Subtitle';
 export * from './Avatar'
 export * from './AddCircle'
 export * from './AddCircleDark'
+export * from './ArrowCircle'
+export * from './ArrowCircleDark'
