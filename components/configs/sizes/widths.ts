@@ -2,10 +2,6 @@ export const widths = {
   icon: {
     svg: '24',
   },
-  avatar: {
-    svg: '106',
-    small: '20px',
-  },
   panel: {
     form: '490px',
   },
@@ -45,5 +41,10 @@ export const widths = {
     medium: '16.67px',
     small: '13.33px',
   },
-
+  avatar: {
+    small: '20px',
+    medium: '24px',
+    semiLarge: '35px',
+    large: '42px',
+  },
 };
