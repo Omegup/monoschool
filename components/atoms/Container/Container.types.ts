@@ -11,5 +11,5 @@ export interface ContainerProps {
 }
 export interface ControlledContainerProps extends ContainerProps {
   onClick?: () => void,
-  children: ReactNode[];
+  children: ReactNode;
 }
