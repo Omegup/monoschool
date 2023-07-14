@@ -1,14 +1,14 @@
 import { AvatarImage, Avatar, Container, Text,StoryElementContainer } from "@omegup-school/ui-atoms";
 import { forwardRef } from "react";
-import { ControlledCardElementStorytProps, CardElementStorytProps } from "./StoryElement.types";
+import { ControlledStoryElementProps, StoryElementProps } from "./StoryElement.types";
 import * as avatars from '@omegup-school/ui-assets/images';
 import { Icon } from '@omegup-school/ui-assets/icons/Icon';
 import * as icons from '@omegup-school/ui-assets/icons';
 
 
 
-export const CardElementStory = forwardRef((
-  props: ControlledCardElementStorytProps,
+export const StoryElement = forwardRef((
+  props: ControlledStoryElementProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
 

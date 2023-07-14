@@ -17,7 +17,8 @@ type Story = StoryObj<typeof StoryElementNavigator>;
 
 export const Primary: Story = {
    args: {
-    avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+    darkMode: 'components\assets\images\avatars\Ellipse47.png',
+    lightMode: 'components\assets\images\avatars\Ellipse47.png',
     text: 'Créer une story',
   },
 };

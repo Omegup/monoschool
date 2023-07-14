@@ -10,5 +10,6 @@ export * from "./StoryElement"
 export * from './TabSearch';
 export * from './Tag';
 export * from './StoryElementNavigator';
+export * from './Story';
 
 

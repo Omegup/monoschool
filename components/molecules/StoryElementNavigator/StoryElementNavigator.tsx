@@ -11,7 +11,7 @@ export const StoryElementNavigator = forwardRef((
   props: ControlledStoryElementNavigatorProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
-  const { text, avatarUrl } = props
+  const { text, lightMode,darkMode } = props
   return (
     <StoryElementNavigatorContainer
       size={"xlarge"}
