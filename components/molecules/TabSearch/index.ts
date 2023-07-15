@@ -1,1 +1,1 @@
-export * from './TabSearch'
+export * from './TabSearch';
