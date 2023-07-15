@@ -1,7 +1,9 @@
-import { ReactNode } from 'react';
-
 export interface TaskItemProps {
-  
   text: string;
-  checked:boolean
+  checked: boolean;
+  finishedTaskText: string;
+}
+
+export interface ControlledTaskItemProps extends TaskItemProps {
+  onClick: () => void;
 }

@@ -5,6 +5,7 @@ export interface AvatarProps {
   size: keyof typeof widths.avatar;
   children?: ReactNode;
   onClick: () => void;
+  selected?: boolean;
 }
 export interface AvatarImageProps {
   src: string;

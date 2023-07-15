@@ -6,8 +6,8 @@ export interface ContainerProps {
   paddingBlock?: keyof typeof spacing;
   gap?: keyof typeof spacing;
   direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse';
-  alignItems?: 'center' | 'start' | 'end';
-  justifyContent?: 'center' | 'start' | 'end';
+  alignItems?: 'center' | 'start' | 'end' | 'stretch';
+  justifyContent?: 'center' | 'start' | 'end' | 'stretch';
 }
 export interface ControlledContainerProps extends ContainerProps {
   children: ReactNode;

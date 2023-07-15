@@ -1,6 +1,11 @@
 import { forwardRef } from 'react';
-import { useAvatarImageStyles, useAvatarStyles } from './Avatar.style';
+import {
+  useAvatarImageStyles,
+  useAvatarStyles,
+  useDashboardTaskAvatarStyles,
+} from './Avatar.style';
 import { AvatarImageProps, AvatarProps } from './Avatar.type';
+import { joinClassNames } from '@omegup-school/ui-configs/typography';
 
 export const Avatar = forwardRef(
   (props: AvatarProps, ref: React.Ref<HTMLDivElement>) => {
@@ -20,5 +25,25 @@ export const AvatarImage = forwardRef(
     const { src } = props;
     const classes = useAvatarImageStyles();
     return <img className={classes.image} ref={ref} src={src} />;
+  }
+);
+
+export const DashboardTaskAvatar = forwardRef(
+  (props: AvatarProps, ref: React.Ref<HTMLDivElement>) => {
+    const { children, onClick, selected, ...styling } = props;
+    const classes = useDashboardTaskAvatarStyles(styling);
+
+    return (
+      <div
+        ref={ref}
+        {...{ onClick }}
+        className={joinClassNames(
+          classes.mainContainer,
+          selected ? classes.selected : ''
+        )}
+      >
+        {children}
+      </div>
+    );
   }
 );
