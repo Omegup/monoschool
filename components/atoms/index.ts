@@ -5,6 +5,10 @@ export * from './Select';
 export * from './Text';
 export * from './Container';
 export * from './Tooltip';
+export * from './ChildMenu';
+export * from  './ViewModeSwitcher';
+export * from  './CardContainerFee';
+export * from './NakedCheckbox'
 export * from './TagToggle';
 export * from './NakedCheckbox';
 export * from './Tab';

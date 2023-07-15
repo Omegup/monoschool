@@ -7,7 +7,7 @@ export const Tick = ({
 }: {
   width?: string;
   height?: string;
-  color?: string;
+  color?: string; 
 }) => {
   return (
     <svg

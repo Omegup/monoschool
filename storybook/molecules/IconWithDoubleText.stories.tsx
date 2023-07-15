@@ -8,8 +8,8 @@ const Demo = ({
   icon,
   ...restProps
 }: Omit<IconWithDoubleTextProps, 'icon'> & { icon: keyof typeof icons }) => {
-  return <IconWithDoubleText icon={<Icon name={icon} />} {...restProps} />;
-};
+  return <IconWithDoubleText icon={<Icon name={icon} height='24' width='24' />} {...restProps} />;
+};                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
 const meta = {
   title: 'Atom/IconWithDoubleText',
