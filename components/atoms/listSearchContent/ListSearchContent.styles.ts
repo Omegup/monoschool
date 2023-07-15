@@ -1,5 +1,6 @@
 
 import { colors } from '@omegup-school/ui-configs/colors';
+import { spacing } from '@omegup-school/ui-configs/sizes';
 import { typography } from '@omegup-school/ui-configs/typography/typography.cnst';
 import { createUseStyles } from 'react-jss';
 
@@ -14,7 +15,7 @@ export const useStyles = createUseStyles({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    paddingLeft: '10px',
+    paddingInlineStart: spacing.s5,
   },
   iconSearch: {
      backgroundColor: colors.pink[200],
