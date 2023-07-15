@@ -8,3 +8,4 @@ export * from './Checkbox';
 export * from './SignIn';
 export * from './TabSearch';
 export * from './Tag';
+export * from './DashboardTaskManager';
