@@ -1,6 +1,7 @@
 export const widths = {
   icon: {
     svg: '24',
+    smallSvg:'16'
   },
   panel: {
     form: '490px',
