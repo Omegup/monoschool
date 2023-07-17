@@ -14,8 +14,6 @@ export const useStoryElementNavigatorContainerStyles = createUseStyles({
     alignItems: ({ alignItems }: Partial<StoryElementNavigatorContainerProps>) => alignItems || "start",
     justifyContent: ({ justifyContent }: Partial<StoryElementNavigatorContainerProps>) => justifyContent || "start",
     width: "70px",
-
-
     '&:hover ': {
       '&> $iconlight': {
         display: "none"
@@ -32,8 +30,6 @@ export const useStoryElementNavigatorContainerStyles = createUseStyles({
   }
   ,
   avatar: {
-
-
   },
   iconlight: {
     display: 'flex',

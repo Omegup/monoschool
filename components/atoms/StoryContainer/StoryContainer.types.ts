@@ -5,17 +5,20 @@ import { StoryElementNavigatorContainerProps } from "../StoryElementNavigatorCon
 
 export interface StoryContainerProps {
 
-    paddingInline?: keyof typeof spacing,
-    paddingBlock?: keyof typeof spacing,
-    gap?: keyof typeof spacing,
-    direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
-    alignItems?: 'center' | 'start' | 'end' | 'space-between' | 'flex-start'
-    justifyContent?: 'center' | 'start' | 'end' | 'space-between',
-    display?: 'flex' | 'inline-flex'|'inline-block'
-    // width?: "-webkit-fill-available"
+  paddingInline?: keyof typeof spacing,
+  paddingBlock?: keyof typeof spacing,
+  gap?: keyof typeof spacing,
+  direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse',
+  alignItems?: 'center' | 'start' | 'end' | 'space-between' | 'flex-start'
+  justifyContent?: 'center' | 'start' | 'end' | 'space-between',
+  display?: 'flex' | 'inline-flex' | 'inline-block'
+
 }
 export interface ControlledStoryContainerProps extends StoryContainerProps {
-  leftNavigator:ReactNode
+  leftNavigator?: ReactNode
   children?: ReactNode[];
-  rightNavigator:ReactNode
+  rightNavigator?: ReactNode;
+ createElement?: ReactNode;
+  elementWidth?:number;
+ 
 }

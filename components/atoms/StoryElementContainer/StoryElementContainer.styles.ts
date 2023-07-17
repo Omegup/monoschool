@@ -1,5 +1,4 @@
 import { createUseStyles } from "react-jss";
- 
 import { spacing } from "@omegup-school/ui-configs/sizes";
 import { Avatar } from "@omegup-school/ui-assets";
 import { colors } from "@omegup-school/ui-configs/colors";
@@ -33,6 +32,7 @@ export const useStoryElementContainerStyles = createUseStyles({
   }
   ,
   avatar: {
+
     display: 'flex',
     borderRadius: '50%',
     overflow: 'hidden',

@@ -2,22 +2,28 @@ import { ReactNode } from "react";
 import * as avatars from '@omegup-school/ui-assets/images';
 
 export interface StoryProps {
- 
-  leftNavigator:{
+
+  leftNavigator: {
     text: string;
-    lightmode:string
-   darkmode: string
+    lightmode: string
+    darkmode: string
+  };
+  createElement: {
+    text: string;
+    lightmode: string
+    darkmode: string
   };
   items?: {
     text: string;
     avatarUrl: string
   }[];
-  rightNavigator:{
+  rightNavigator: {
     text: string;
-    lightmode:string
+    lightmode: string
     darkmode: string
   }
 }
 export interface ControlledStoryProps extends StoryProps {
-  onclick: (value: boolean) => void;
+  onclick: () => void;
+  nextClick: () => void;
 }

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Story } from '@omegup-school/ui-molecules';
+import { useRef } from 'react';
 
 
 
@@ -17,56 +18,23 @@ type Story = StoryObj<typeof Story>;
 
 export const Primary: Story = {
   args: {
-    leftNavigator: {
+    createElement: {
       darkmode: 'components\assets\images\avatars\Ellipse47.png',
       lightmode: 'components\assets\images\avatars\Ellipse47.png',
       text: 'Créer une story',
     },
+    leftNavigator: {
+      darkmode: 'components\assets\images\avatars\Ellipse47.png',
+      lightmode: 'components\assets\images\avatars\Ellipse47.png',
+      text: 'précedent',
+    },
     items:
-      [{
+      [...Array(20).fill('').map((_, i) => ({
         avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team1',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
-      {
-        avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
-        text: 'Team2',
-      },
+        text: `team ${i}`,
+      }))
+
+
       ]
     ,
     rightNavigator: {

@@ -17,19 +17,38 @@ export const useStoryContainerStyles = createUseStyles({
   },
   leftNavigator: {
     display: "flex",
-    alignItems: "start"
+    alignItems: "start",
+    cursor: "pointer"
 
   },
+  createElement:{
+    display: "flex",
+    alignItems: "start",
+    cursor: "pointer"
+  },
   rightNavigator: {
-    alignItems: "end"
+    alignItems: "end",
+    cursor: "pointer"
+
   },
   childrenList: {
-    // transform:(spacing)=>`left :${60}`,
-    display: 'flex',
+     display: 'flex',
     flex: 1,
     overflow: 'hidden',
     scrollSnapType: "x mandatory",
+    transition:" transform 0.3s ease-in-out",
 
     gap: ({ gap }: Partial<StoryContainerProps>) => gap ? spacing[gap] : 0,
-  }
+    whiteSpace: "nowrap", 
+  
+  },
+  "*": { WebkitBoxSizing: "border-box", boxSizing: "border-box" },
+  body: { fontFamily: "sans-serif" },
+
+
+
+    
+  
+ 
+
 })

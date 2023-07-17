@@ -7,5 +7,5 @@ export interface StoryElementNavigatorProps {
   darkMode: string
 }
 export interface ControlledStoryElementNavigatorProps extends StoryElementNavigatorProps {
-  onclick: (value: boolean) => void;
+  onclick: () => void;
 }

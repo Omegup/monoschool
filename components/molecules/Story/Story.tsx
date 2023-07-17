@@ -1,5 +1,5 @@
 import { AvatarImage, Avatar, Container, Text, StoryContainer } from "@omegup-school/ui-atoms";
-import { forwardRef } from "react";
+import { forwardRef, useRef, useState } from "react";
 import { ControlledStoryProps, StoryProps } from "./Story.types";
 import * as avatars from '@omegup-school/ui-assets/images';
 import { Icon } from '@omegup-school/ui-assets/icons/Icon';
@@ -15,17 +15,25 @@ export const Story = forwardRef((
   ref: React.Ref<HTMLDivElement>
 ) => {
 
-  const { leftNavigator, rightNavigator, items } = props
+  const { leftNavigator, rightNavigator, items, createElement } = props
 
   return (
-
     <StoryContainer
       direction="row"
       display="inline-flex"
       alignItems="flex-start"
       gap="s6"
-      leftNavigator={
+      elementWidth={91}
+      createElement={
         <StoryElementCreate
+          darkMode={leftNavigator.darkmode}
+          lightMode={leftNavigator.lightmode}
+          text={leftNavigator.text}
+          onclick={() => { }}
+          ref={ref} />
+      }
+      leftNavigator={
+        <StoryElementNavigator
           darkMode={leftNavigator.darkmode}
           lightMode={leftNavigator.lightmode}
           text={leftNavigator.text}
@@ -43,7 +51,7 @@ export const Story = forwardRef((
         )
       }
       rightNavigator={
-        <StoryElementNavigator 
+        <StoryElementNavigator
           darkMode={rightNavigator.darkmode}
           lightMode={rightNavigator.lightmode}
           text={rightNavigator.text}

@@ -14,8 +14,10 @@ export interface StoryElementContainerProps {
   text?: ReactNode;
   size?: keyof typeof widths.avatar;
 
+
  
 }
 export interface ControlledStoryElementContainerProps extends StoryElementContainerProps {
-  onClick: () => void;
+  onClick: () => void; 
+  onMouseDown?: (direction: 'prev' | 'next') => {};
 }

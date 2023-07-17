@@ -11,10 +11,10 @@ export const StoryElementCreate = forwardRef((
   props: ControlledStoryElementCreateProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
-  const { text, lightMode, darkMode } = props
+  const { text, lightMode, darkMode,onclick } = props
   return (
     <StoryElementNavigatorContainer
-           onClick={() => { }}
+      onClick={onclick}
       ref={ref}
       direction="column"
       justifyContent="center"

@@ -7,5 +7,5 @@ export interface StoryElementCreateProps {
   darkMode: string
 }
 export interface ControlledStoryElementCreateProps extends StoryElementCreateProps {
-  onclick: (value: boolean) => void;
+  onclick: () => void;
 }

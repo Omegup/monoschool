@@ -11,18 +11,17 @@ export const StoryElementNavigator = forwardRef((
   props: ControlledStoryElementNavigatorProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
-  const { text, lightMode,darkMode } = props
+  const { text, lightMode,darkMode ,onclick} = props
   return (
     <StoryElementNavigatorContainer
       size={"xlarge"}
-      onClick={() => { }}
+      onClick={onclick}
       ref={ref}
       gap="s6"
       direction="column"
       justifyContent="center"
       alignItems="center"
       width="70"
-      
       iconlight={
         <Icon name="ArrowCircle" width="70px" height="70px" />
       }
