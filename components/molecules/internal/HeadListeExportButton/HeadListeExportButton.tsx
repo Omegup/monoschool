@@ -1,5 +1,3 @@
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable react/display-name */
 import { forwardRef } from 'react';
 import { ControlledHeadListeExportButtonProps } from './HeadListeExportButton.types';
 import {  NakedButton } from '@omegup-school/ui-atoms';
