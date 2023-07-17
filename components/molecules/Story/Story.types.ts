@@ -1,26 +1,28 @@
 import { ReactNode } from "react";
 import * as avatars from '@omegup-school/ui-assets/images';
+import * as icons from '@omegup-school/ui-assets/icons';
+
 
 export interface StoryProps {
 
   leftNavigator: {
     text: string;
-    lightmode: string
-    darkmode: string
+    lightMode: keyof typeof icons;
+    darkMode: keyof typeof icons;
   };
   createElement: {
     text: string;
-    lightmode: string
-    darkmode: string
+    lightMode: keyof typeof icons;
+    darkMode: keyof typeof icons;
   };
   items?: {
     text: string;
-    avatarUrl: string
+    avatarUrl: keyof typeof avatars;
   }[];
   rightNavigator: {
     text: string;
-    lightmode: string
-    darkmode: string
+    lightMode: keyof typeof icons;
+    darkMode: keyof typeof icons;
   }
 }
 export interface ControlledStoryProps extends StoryProps {

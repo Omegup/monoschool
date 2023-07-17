@@ -26,16 +26,16 @@ export const Story = forwardRef((
       elementWidth={91}
       createElement={
         <StoryElementCreate
-          darkMode={leftNavigator.darkmode}
-          lightMode={leftNavigator.lightmode}
-          text={leftNavigator.text}
+          darkMode={createElement.darkMode}
+          lightMode={createElement.lightMode}
+          text={createElement.text}
           onclick={() => { }}
           ref={ref} />
       }
       leftNavigator={
         <StoryElementNavigator
-          darkMode={leftNavigator.darkmode}
-          lightMode={leftNavigator.lightmode}
+          darkMode={leftNavigator.darkMode}
+          lightMode={leftNavigator.lightMode}
           text={leftNavigator.text}
           onclick={() => { }}
           ref={ref} />
@@ -52,8 +52,8 @@ export const Story = forwardRef((
       }
       rightNavigator={
         <StoryElementNavigator
-          darkMode={rightNavigator.darkmode}
-          lightMode={rightNavigator.lightmode}
+          darkMode={rightNavigator.darkMode}
+          lightMode={rightNavigator.lightMode}
           text={rightNavigator.text}
           onclick={() => { }}
           ref={ref} />}

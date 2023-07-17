@@ -11,7 +11,7 @@ export const StoryElementCreate = forwardRef((
   props: ControlledStoryElementCreateProps,
   ref: React.Ref<HTMLDivElement>
 ) => {
-  const { text, lightMode, darkMode,onclick } = props
+  const { text, lightMode, darkMode,onclick ,size} = props
   return (
     <StoryElementNavigatorContainer
       onClick={onclick}
@@ -20,10 +20,10 @@ export const StoryElementCreate = forwardRef((
       justifyContent="center"
       alignItems="center"
       iconlight={
-        <Icon name="AddCircle" width="70px" height="70px" />
+        <Icon name={lightMode} width={size??"70px"} height={size??"70px"}/>
       }
       icondark={
-        <Icon name="AddCircleDark" width="70px" height="70px" />
+        <Icon name={darkMode}  width={size??"70px"} height={size??"70px"}/>
       }
       text={<Text text={text} ref={ref} variant="paragraph_xSmall_semiBold" />}
     />

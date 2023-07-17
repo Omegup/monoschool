@@ -23,10 +23,12 @@ export const StoryElement = forwardRef((
       direction="column"
       justifyContent="center"
       alignItems="center"
-      
-      avatar={
-        <Icon name="Tick" width="70" />
-      }
+      avatar={<Avatar
+          children={<AvatarImage src={avatars[avatarUrl]} />}
+          size="xlarge"
+          onClick={() => { }}
+          ref={ref}
+        /> }
       text={<Text text={text ?? "Success"} ref={ref} variant="paragraph_medium_medium" />}
     />
 

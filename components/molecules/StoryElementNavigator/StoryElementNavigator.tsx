@@ -21,12 +21,12 @@ export const StoryElementNavigator = forwardRef((
       direction="column"
       justifyContent="center"
       alignItems="center"
-      width="70"
+      width="70px"
       iconlight={
-        <Icon name="ArrowCircle" width="70px" height="70px" />
+        <Icon name={lightMode} width="70px" height="70px"/>
       }
       icondark={
-        <Icon name="ArrowCircleDark" width="70px" height="70px"/>
+        <Icon name={darkMode} width="70px" height="70px"/>
       }
       text={<Text text={text} ref={ref} variant="paragraph_xSmall_semiBold" />}
     />

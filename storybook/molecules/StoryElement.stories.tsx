@@ -17,7 +17,7 @@ type Story = StoryObj<typeof StoryElement>;
 
 export const Primary: Story = {
    args: {
-    avatarUrl: 'components\assets\images\avatars\Ellipse47.png',
+    avatarUrl: 'avatarJenna',
     text: 'Team1',
   },
 };

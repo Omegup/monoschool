@@ -31,15 +31,21 @@ export const StoryContainer = forwardRef((
       setCounter(counter+1)
     }
   };
-console.log({counter})
+
   return (
     <div className={classes.StoryContainer} ref={ref} data-flickity-options='{ "wrapAround": true }'>
+      
       <div onClick={() => { }} className={classes.createElement}>
-        {createElement}</div>
+        {createElement}
+        </div>
       {(counter > 0) && <div onClick={handlePrevClick} className={classes.rightNavigator}>
         {leftNavigator}
-      </div>}
-      <div ref={listRef} className={classes.childrenList}  > {children}</div>
+      </div>
+      }
+      <div ref={listRef} className={classes.childrenList}  >
+         {children}
+         </div>
+      
       <div onClick={handleNextClick} className={classes.rightNavigator}>
         {rightNavigator}
       </div>
