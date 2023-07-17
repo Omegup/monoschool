@@ -32,7 +32,6 @@ export const useStoryElementContainerStyles = createUseStyles({
   }
   ,
   avatar: {
-
     display: 'flex',
     borderRadius: '50%',
     overflow: 'hidden',
