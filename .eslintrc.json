@@ -40,6 +40,8 @@
         ]
         ,
         "jsx-expressions/strict-logical-expressions": "error"
+        ,
+        "react/react-in-jsx-scope": "off"
       
     }
 }
