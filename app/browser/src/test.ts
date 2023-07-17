@@ -9,3 +9,6 @@ let num = 0;
 // Includes types that may be a string or number
 let thisOrThat: Record<any, any> | string | number;
 <App>{thisOrThat && <Foo />}</App>;
+
+
+tessssssssssssssst
