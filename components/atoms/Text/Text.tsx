@@ -5,13 +5,23 @@ import { joinClassNames } from '@omegup-school/ui-configs/typography';
 
 export const Text = forwardRef(
   (props: TextProps, ref?: React.Ref<HTMLSpanElement>) => {
-    const { text, variant, color = 'dark_default' } = props;
-    const classes = useTextStyles();
-    console.log({ classes });
+    const {
+      text,
+      variant,
+      color = 'dark_default',
+      ellipsis,
+      lineHeight,
+    } = props;
+    const classes = useTextStyles({ ellipsis, lineHeight });
     return (
       <span
         ref={ref}
-        className={joinClassNames(classes[variant], classes[color])}
+        className={joinClassNames(
+          classes.textStyle,
+          classes[variant],
+          classes[color],
+          ellipsis ? classes.ellipsisText : ''
+        )}
       >
         {text}
       </span>

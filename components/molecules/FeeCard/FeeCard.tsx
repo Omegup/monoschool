@@ -53,9 +53,12 @@ export const FeeCard = forwardRef(
             </Container>
             <CardHeaderDoubleText subText={feeName} text={'Description'} />
           </Container>
-          <IconContainer paddingInline="s5" rotation={90}>
-            <More color={colorsStyles['dark_default']} />
-          </IconContainer>
+          <IconContainer
+            paddingInline="s5"
+            rotation={90}
+            color="dark_default"
+            icon="More"
+          ></IconContainer>
         </Container>
         <CardIconedDetail
           icon={<Money color={colorsStyles['success_500']} />}

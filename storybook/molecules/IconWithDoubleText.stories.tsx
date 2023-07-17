@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CardIconedDetail } from '@omegup-school/ui-molecules';
 import * as icons from '@omegup-school/ui-assets/icons';
 import { IconWithDoubleTextProps } from '@omegup-school/ui-molecules/internal/CardIconedDetail/IconWithDoubleText.types';
-import { Icon } from './Icon';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
 
 const Demo = ({
   icon,

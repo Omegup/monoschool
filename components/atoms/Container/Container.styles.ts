@@ -30,5 +30,7 @@ export const useContainerStyles = createUseStyles({
     height: ({ height }: Partial<ContainerProps>) => height || '',
     maxWidth: ({ maxWidth }: Partial<ContainerProps>) => maxWidth || '',
     maxHeight: ({ maxHeight }: Partial<ContainerProps>) => maxHeight || '',
+    boxSizing: ({ boxSizing }: Partial<ContainerProps>) => boxSizing || '',
+    textAlign: ({ textAlign }: Partial<ContainerProps>) => textAlign || 'start',
   },
 });

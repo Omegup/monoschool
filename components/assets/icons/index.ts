@@ -10,3 +10,6 @@ export * from './EmptyWalletTime';
 export * from './Money';
 export * from './RepeateMusic';
 export * from './People';
+export * from './CalendarCircle';
+export * from './Map';
+export * from './MenuBoard';

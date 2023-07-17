@@ -1,9 +1,9 @@
+import * as icons from '@omegup-school/ui-assets/icons';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import { spacing, widths } from '@omegup-school/ui-configs/sizes';
-import { MouseEvent, ReactNode } from 'react';
-
+import { MouseEvent } from 'react';
 export interface IconContainerProps {
-  children: ReactNode;
+  icon?: keyof typeof icons;
   rotation?: number;
   paddingInline?: keyof typeof spacing;
   paddingBlock?: keyof typeof spacing;

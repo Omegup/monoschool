@@ -18,6 +18,8 @@ export interface ContainerProps {
   width?: number | string;
   maxWidth?: number | string;
   maxHeight?: number | string;
+  boxSizing?: 'border-box' | 'content-box';
+  textAlign?: 'center' | 'start' | 'end';
 }
 export interface ControlledContainerProps extends ContainerProps {
   children: ReactNode;

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { CardIconedinfo } from '@omegup-school/ui-molecules';
 import * as icons from '@omegup-school/ui-assets/icons';
-import { Icon } from './Icon';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
 import { CardIconedinfoProps } from '@omegup-school/ui-molecules/internal/CardIconedinfo/CardIconedinfo.types';
 
 const Demo = ({
