@@ -21,6 +21,6 @@ export interface NakedButtonProps {
 }
 
 export interface ControlledNakedButtonProps extends NakedButtonProps {
-  text: string;
+  text?: string;
   onClick?: (event: MouseEvent<HTMLDivElement>) => void;
 }

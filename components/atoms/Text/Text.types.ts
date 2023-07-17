@@ -3,6 +3,6 @@ import type { colorsStyles } from '@omegup-school/ui-configs/colors';
 
 export interface TextProps {
   variant: keyof typeof typoStyles;
-  text: string|number;
+  text: string;
   color?: keyof typeof colorsStyles;
 }

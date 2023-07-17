@@ -23,7 +23,7 @@ export const NakedButton = forwardRef(
     return (
       <div ref={ref} className={classes.buttonContainer} {...{ onClick }}>
         {startIcon}
-        <button
+        {text !== undefined ?<button
           {...{ disabled }}
           className={joinClassNames(
             classes.button,
@@ -32,7 +32,7 @@ export const NakedButton = forwardRef(
           )}
         >
           {text}
-        </button>
+        </button>:<></>}
         {endIcon}
       </div>
     );

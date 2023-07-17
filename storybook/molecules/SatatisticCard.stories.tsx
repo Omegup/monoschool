@@ -3,16 +3,16 @@ import { StatisticCard } from '@omegup-school/ui-molecules';
 
 import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
-import { ControlledItemStatisticCardProps } from '@omegup-school/ui-molecules/StatisticCard/StatisticCard.types';
+import { ControlledStatisticCardProps } from '@omegup-school/ui-molecules/StatisticCard/StatisticCard.types';
 
 const Demo = ({
   icon,
   ...restProps
-}: Omit<ControlledItemStatisticCardProps, 'icon'> & { icon: keyof typeof icons }) => {
+}: Omit<ControlledStatisticCardProps, 'icon'> & { icon: keyof typeof icons }) => {
   return <StatisticCard   {...restProps} />;
 };
 const meta = {
-  title: 'Atom/SatatisticCard',
+  title: 'Molecules/SatatisticCard',
   component: StatisticCard,
   tags: ['autodocs'],
   argTypes: {

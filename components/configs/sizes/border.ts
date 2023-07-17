@@ -3,6 +3,7 @@ export const borders = {
   r4: 6,
   r5: 10,
   r6: 47,
+  r7: 60,
   b1: 0.5,
   b2: 1,
   b3: 1.5,
