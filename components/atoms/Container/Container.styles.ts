@@ -11,5 +11,7 @@ export const useContainerStyles = createUseStyles({
     gap: ({ gap }: Partial<ContainerProps>) => gap ? spacing[gap] : 0,
     alignItems: ({ alignItems }: Partial<ContainerProps>) => alignItems || "start",
     justifyContent: ({ justifyContent }: Partial<ContainerProps>) => justifyContent || "start",
+    width:({ width }: Partial<ContainerProps>) => width || "auto",
+    background:({ bg }: Partial<ContainerProps>) => bg || "",
   }
 })
