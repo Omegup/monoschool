@@ -1,8 +1,9 @@
 export type Position = 
-  "bottom-center" | "bottom-left" | "bottom-right"  | 
-  "right-center"  | "right-top"   | "right-bottom"  | 
-  "left-center"   | "left-top"    | "left-bottom"   | 
-  "top-center"    | "top-left"    | "top-right";
+  'bottom-center' | 'bottom-left' | 'bottom-right'  | 
+  'right-center'  | 'right-top'   | 'right-bottom'  | 
+  'left-center'   | 'left-top'    | 'left-bottom'   | 
+  'top-center'    | 'top-left'    | 'top-right' |
+  'center';
 
 export type PopoverProps = {
   children: React.ReactNode
@@ -10,7 +11,7 @@ export type PopoverProps = {
   backdrop?: boolean
 };
 
-export type Rect = Pick<DOMRect, "left" | "top" | "height" | "width">
+export type Rect = Pick<DOMRect, 'left' | 'top' | 'height' | 'width'>
 
 export type PopoverContextType = {
   isShow: boolean

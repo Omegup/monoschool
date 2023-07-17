@@ -5,7 +5,7 @@ import {
 } from "react"
 import { PopoverContext } from "../contexts/PopoverContext"
 import { TriggerOn, TriggerProps } from "./Trigger.types"
-import { Jumper } from "@omegup-school/ui-molecules/Popover"
+import { Jumper } from "@omegup-school/ui-atoms"
 
 export const Trigger = ({ jump, showOn, closeOn, children }: TriggerProps) => {
   const { setIsShow, setTriggerRect, isShow, triggerRect } = useContext(PopoverContext)
@@ -29,7 +29,6 @@ export const Trigger = ({ jump, showOn, closeOn, children }: TriggerProps) => {
     [TriggerOn[showOn]]: show,
     ...closeOn ? { [TriggerOn[closeOn]]: dismiss } : {},
     ref,
-
   })
 
   return jump ? <Jumper>{childrenToTriggerPopover}</Jumper> : childrenToTriggerPopover
