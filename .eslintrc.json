@@ -17,7 +17,7 @@
     "plugins": [
         "@typescript-eslint",
         "react",
-        "jsx-expressions"
+        "jsx-expressions"   
     ],
     "settings": {
         "react": {
