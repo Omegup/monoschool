@@ -5,7 +5,7 @@ export interface ContainerProps {
   paddingInline?: keyof typeof spacing;
   paddingBlock?: keyof typeof spacing;
   gap?: keyof typeof spacing;
-  direction?: 'column' | 'row' | 'row-reverse' | 'column-reverse';
+  direction?: 'column' | 'row';
   alignItems?: 'center' | 'start' | 'end';
   justifyContent?: 'center' | 'start' | 'end';
 }

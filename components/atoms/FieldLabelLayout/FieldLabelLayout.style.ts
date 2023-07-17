@@ -5,11 +5,9 @@ import { createUseStyles } from 'react-jss';
 export const useFieldLabelLayoutStyles = createUseStyles({
   container: {
     width: '100%',
-    '&>div': {
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
   },
   label: {},
   input: {},
@@ -17,7 +15,7 @@ export const useFieldLabelLayoutStyles = createUseStyles({
     gap: spacing.s4,
   },
   condensed: {
-    '&> $label': {
+    '& $label': {
       position: 'absolute',
       background: colors.background.default,
       insetBlockStart: -heights.lineHieght.small / 2,

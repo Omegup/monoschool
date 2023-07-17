@@ -5,7 +5,10 @@ import { TextProps } from '@omegup-school/ui-atoms/Text/Text.types';
 import { ContainerProps } from '@omegup-school/ui-atoms/Container/Container.types';
 
 export const FieldLabel = forwardRef(
-  (props: FieldLabelProps, ref: React.Ref<HTMLDivElement>) => {
+  (
+    props: FieldLabelProps,
+    ref: React.Ref<HTMLDivElement>
+  ) => {
     const { label, size, required = false, color = 'dark_default' } = props;
     const variant = (
       {

@@ -1,5 +1,4 @@
 import {
-  NakedDropDown,
   NakedInput,
   NakedTextArea,
 } from '@omegup-school/ui-atoms';
@@ -97,22 +96,6 @@ const Demo = ({
         borderColor={FIELD_COLORS[props.color]}
       />
     ),
-    // dropDown: (
-    //   <NakedDropDown
-    //     options={[
-    //       { id: '1', label: 'opt1' },
-    //       { id: '2', label: 'opt2' },
-    //       { id: '3', label: 'opt3' },
-    //     ]}
-    //     disabled={props.disabled}
-    //     onChange={(e) => {
-    //       setText(e.target.value);
-    //     }}
-    //     value={text}
-    //     border="s10"
-    //     borderColor={FIELD_COLORS[props.color]}
-    //   />
-    // ),
   };
   return (
     <div style={{ width: 350 }}>

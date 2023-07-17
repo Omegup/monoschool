@@ -32,13 +32,13 @@ export const useNakedInputStyles = createUseStyles({
       flex: 1,
     },
     '&:has(input:focus)': {
-      border: [spacing.s1, 'solid', colorsStyles['blue_700']],
+      border: [borders.b4, 'solid', colorsStyles['blue_700']],
       borderRadius: borders.r5,
       '&>input': {},
     },
   },
   filledInput: {
-    border: [spacing.s1, 'solid', colorsStyles['dark_overline']],
+    border: [borders.b4, 'solid', colorsStyles['dark_overline']],
     '&>input': {},
   },
   disabled: { backgroundColor: colorsStyles['background_default'] },

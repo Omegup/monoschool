@@ -12,11 +12,12 @@ export const FieldLabelLayout = forwardRef(
     const classes = useFieldLabelLayoutStyles();
 
     return (
-      <div className={classes.container} ref={ref}>
-        <div className={joinClassNames(classes[variant])}>
-          <span className={classes.label}>{label}</span>
-          <div className={classes.input}>{input}</div>
-        </div>
+      <div
+        className={joinClassNames(classes.container, classes[variant])}
+        ref={ref}
+      >
+        <span className={classes.label}>{label}</span>
+        <div className={classes.input}>{input}</div>
       </div>
     );
   }

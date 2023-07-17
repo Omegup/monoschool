@@ -39,7 +39,7 @@ export const useNakedTextAreaStyles = createUseStyles({
       '&::-webkit-scrollbar': { display: 'none' },
     },
     '&:has(textarea:focus)': {
-      border: [spacing.s1, 'solid', colorsStyles['blue_700']],
+      border: [borders.b4, 'solid', colorsStyles['blue_700']],
     },
   },
   startIcon: {
@@ -55,7 +55,7 @@ export const useNakedTextAreaStyles = createUseStyles({
     marginBlockStart: spacing.s3,
   },
   filledInput: {
-    border: [spacing.s1, 'solid', colorsStyles['dark_overline']],
+    border: [borders.b4, 'solid', colorsStyles['dark_overline']],
   },
   disabled: { backgroundColor: colorsStyles['background_default'] },
   ...styles,
