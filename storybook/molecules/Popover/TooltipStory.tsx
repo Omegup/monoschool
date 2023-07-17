@@ -1,8 +1,8 @@
 
 import { Tooltip } from '@omegup-school/ui-atoms'
 import { TooltipProps } from '@omegup-school/ui-atoms/Tooltip/Tooltip.types'
-import { Popover } from '@omegup-school/ui-cells'
-import { Position } from '@omegup-school/ui-cells/Popover/Popover.types'
+import { Popover } from '@omegup-school/ui-molecules'
+import { Position } from '@omegup-school/ui-molecules/Popover/Popover.types'
 
 export const TooltipStory = ({ testLabel, size, variant, position, label }: { testLabel: string } & TooltipProps) => {
 
@@ -17,7 +17,6 @@ export const TooltipStory = ({ testLabel, size, variant, position, label }: { te
     <Popover preferredPosition={preferredPosition[position]}>
       <Popover.Trigger showOn='mouseEnter' closeOn='mouseLeave' >
         <button>{testLabel}</button>
-
       </Popover.Trigger>
       <Popover.Content>
         <Tooltip {...{ size, variant, position, label }} />

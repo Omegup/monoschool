@@ -9,3 +9,4 @@ export * from './SignIn';
 export * from './TabSearch';
 export * from './Tag';
 export * from './Layout';
+export * from './Popover';
