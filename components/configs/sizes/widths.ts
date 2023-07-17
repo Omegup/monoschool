@@ -15,6 +15,11 @@ export const widths = {
     medium: '16.67px',
     small: '13.33px',
   },
+  radio: {
+    large: '24px',
+    medium: '20px',
+    small: '16px',
+  },
   avatar: {
     small: '20px',
     medium: '24px',

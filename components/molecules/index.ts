@@ -5,6 +5,7 @@ export * from './DoubleText';
 export * from './TextWithIcon';
 export * from './IconWithDoubleText';
 export * from './Checkbox';
+export * from './Radio';
 export * from './SignIn';
 export * from './TabSearch';
 export * from './Tag';
