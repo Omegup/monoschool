@@ -5,7 +5,7 @@ export * from './Select';
 export * from './Text';
 export * from './Container';
 export * from './Tooltip';
-export * from './SearchBar';
+export * from './SearchBarContainer';
 export * from './NakedCheckbox'
 export * from './contexts';
 export * from './FieldLabelLayout';
