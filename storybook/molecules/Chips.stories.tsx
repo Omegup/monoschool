@@ -1,4 +1,4 @@
-/* eslint-disable react/react-in-jsx-scope */
+import * as avatars from '@omegup-school/ui-assets/images';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Chips } from '@omegup-school/ui-molecules';
 import { Avatar, AvatarImage } from '@omegup-school/ui-atoms';
@@ -21,19 +21,19 @@ export const Primary: Story = {
       {
         name: 'Ala Bouziri',
         avatar: <Avatar size='xsmall'>
-          <AvatarImage src='https://avatars.githubusercontent.com/u/1800191?v=4' />
+          <AvatarImage src={avatars.avatarJoey} />
         </Avatar>,
       },
       {
         name: 'Toukbari',
         avatar: <Avatar size='xsmall'>
-          <AvatarImage  src='https://avatars.githubusercontent.com/u/1800191?v=4' />
+          <AvatarImage  src={avatars.avatarCamela} />
         </Avatar>,
       },
       {
         name: 'Yaakoubi ben yagoub',
         avatar: <Avatar size='xsmall'>
-          <AvatarImage src='https://avatars.githubusercontent.com/u/1800191?v=4' />
+          <AvatarImage src={avatars.avatarJenna} />
         </Avatar>,
       }
     ],
