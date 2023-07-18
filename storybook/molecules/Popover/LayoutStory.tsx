@@ -1,6 +1,7 @@
 import { Layout, Popover } from "@omegup-school/ui-molecules"
 
-export const LayoutStory = ({ backdrop }: {backdrop: boolean}) => <Layout navBar={<NavBarStory backdrop={backdrop} /> } sideBar={<>SideBar</>}> </Layout>
+export const LayoutStory = ({ backdrop }: {backdrop: boolean}) => <NavBarStory backdrop={backdrop} /> 
+// export const LayoutStory = ({ backdrop }: {backdrop: boolean}) => <Layout navBar={<NavBarStory backdrop={backdrop} /> } sideBar={<>SideBar</>}> </Layout>
 
 const NavBarStory = ({ backdrop }: {backdrop: boolean}) => {
 
@@ -13,7 +14,7 @@ const NavBarStory = ({ backdrop }: {backdrop: boolean}) => {
         <Popover.Content>
           <ul>
             <li>
-              <Popover preferredPosition="right-center">
+              <Popover preferredPosition="right-top">
                 <Popover.Trigger showOn='click'>
                   <nav>Students</nav>
                 </Popover.Trigger>
@@ -31,6 +32,7 @@ const NavBarStory = ({ backdrop }: {backdrop: boolean}) => {
           </ul>
         </Popover.Content>
       </Popover>
+      <div style={{height: 300}}></div>
     </>
   )
 }
