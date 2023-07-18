@@ -16,3 +16,7 @@ export * from './Tab';
 export * from './TabContainer';
 export * from './TabBadge';
 export * from './Avatar';
+export * from './Backdrop';
+export * from './Dialog';
+export * from './Jumper';
+export * from './Footer';
