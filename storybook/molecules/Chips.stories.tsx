@@ -20,19 +20,19 @@ export const Primary: Story = {
     persons: [
       {
         name: 'Ala Bouziri',
-        avatar: <Avatar size='small'>
+        avatar: <Avatar size='xsmall'>
           <AvatarImage src='https://avatars.githubusercontent.com/u/1800191?v=4' />
         </Avatar>,
       },
       {
         name: 'Toukbari',
-        avatar: <Avatar size='small'>
-          <AvatarImage src='https://avatars.githubusercontent.com/u/1800191?v=4' />
+        avatar: <Avatar size='xsmall'>
+          <AvatarImage  src='https://avatars.githubusercontent.com/u/1800191?v=4' />
         </Avatar>,
       },
       {
         name: 'Yaakoubi ben yagoub',
-        avatar: <Avatar size='small'>
+        avatar: <Avatar size='xsmall'>
           <AvatarImage src='https://avatars.githubusercontent.com/u/1800191?v=4' />
         </Avatar>,
       }

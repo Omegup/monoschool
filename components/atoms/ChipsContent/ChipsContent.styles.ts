@@ -21,7 +21,7 @@ export const useStyles = createUseStyles({
     display: 'flex',
     borderRadius: '50%',
     cursor: 'pointer',
-    margin: `${spacing.s3}px  ${spacing.s3}px ${spacing.s2}px ${spacing.s3}px`,
+    margin: spacing.s3,
 
     '&:hover': {
       backgroundColor: colors.blue[500],
@@ -36,7 +36,7 @@ export const useStyles = createUseStyles({
     }
   },
   label: {
-    margin: `${spacing.s3}px ${spacing.s3}px ${spacing.s3}px ${spacing.s2}px`,
+    margin: `${spacing.s3}px 0 ${spacing.s3}px ${spacing.s2}px`,
     backgroundColor: colors.light[100],
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,

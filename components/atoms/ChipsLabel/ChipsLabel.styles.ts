@@ -12,6 +12,6 @@ export const useStyles = createUseStyles({
     fontSize: typography.paragraph.xSmall.regular.fontSize,
     fontWeight: typography.paragraph.xSmall.regular.fontWeight,
     color: colors.light[100],
-    borderRadius: `${borders.b1}px 0 0 ${borders.b1}px`,
+    borderRadius: `${borders.b5}px 0 0 ${borders.b5}px`,
   },
 });
