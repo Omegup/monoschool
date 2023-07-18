@@ -23,6 +23,7 @@ export const Story = forwardRef((
       display="inline-flex"
       alignItems="flex-start"
       gap="s6"
+      paddingBlock="s6"
       elementWidth={91}
       createElement={
         <StoryElementCreate

@@ -19,6 +19,7 @@ export const StoryElementCreate = forwardRef((
       direction="column"
       justifyContent="center"
       alignItems="center"
+      gap="s6"
       iconlight={
         <Icon name={lightMode} width={size??"70px"} height={size??"70px"}/>
       }

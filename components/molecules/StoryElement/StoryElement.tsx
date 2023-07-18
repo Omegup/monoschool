@@ -19,7 +19,7 @@ export const StoryElement = forwardRef((
       size={"xlarge"}
       onClick={() => { }}
       ref={ref}
-      gap="s6"
+      gap="s5"
       direction="column"
       justifyContent="center"
       alignItems="center"

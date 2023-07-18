@@ -24,12 +24,12 @@ export const Primary: Story = {
     createElement: {
       darkMode: 'AddCircleDark',
       lightMode: 'AddCircle',
-      text: 'Créer une story',
+      text: 'Créer',
     },
     leftNavigator: {
       darkMode: 'ArrowCirclePrevDark',
       lightMode: 'ArrowCirclePrev',
-      text: 'précedent',
+      text: 'Précedent',
     },
     items:
       [...Array(20).fill('').map((_, i) => ({
