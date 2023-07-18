@@ -67,6 +67,11 @@ export const useSearchBarStyles = createUseStyles({
     },
   },
   filterSearch: {
+    '&& .inputContainer':{
+      background:'red',
+    },
+   
+
     '& $container ': {
       gap: spacing.s2,
 

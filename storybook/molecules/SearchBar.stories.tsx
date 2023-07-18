@@ -8,29 +8,29 @@ import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
 
 const Demo = ({
-  firstIcon,
+  startIcon,
   value,
   clearIcon,
   displayClearIcon,
   placeholder,
   variant,
   ...restProps
-}: SearchBarProps & {
+}:Omit< SearchBarProps,'firstIcon'|'clearIcon'> & {
   variant: 'navBar' | 'sideBar' | 'filterSearch';
   placeholder: string;
-  firstIcon: keyof typeof icons;
+  startIcon: keyof typeof icons;
   clearIcon: keyof typeof icons;
   displayClearIcon: true;
   value: string;
 }) => {
-  return <SearchBar variant={variant} {...restProps} />;
+  return <SearchBar placeholder={placeholder} startIcon={<Icon name={startIcon} />} clearIcon={<Icon name={clearIcon} />} variant={variant} {...restProps} />;
 };
 const meta = {
   title: 'Atom/SearchBar',
   component: Demo,
   tags: ['autodocs'],
   argTypes: {
-    firstIcon: {
+    startIcon: {
       control: 'select',
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
@@ -52,7 +52,7 @@ export const Primary: Story = {
   render: Demo,
   args: {
     variant: 'navBar',
-    firstIcon: 'SearchStatus',
+    startIcon: 'SearchStatus',
     clearIcon: 'Close',
     displayClearIcon: true,
     value: '',
