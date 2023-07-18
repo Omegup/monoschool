@@ -21,5 +21,6 @@ export const widths = {
     medium: '24px',
     semiLarge: '35px',
     large: '42px',
+    xlarge:'70px'
   },
 };
