@@ -9,7 +9,6 @@ export * from './contexts';
 export * from './FieldLabelLayout';
 export * from './NakedInput';
 export * from './NakedTextArea';
-export * from './NakedDropDown';
 export * from './NakedButton';
 export * from './IconContainer';
 export * from './TagToggle';

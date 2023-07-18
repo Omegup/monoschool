@@ -2,7 +2,8 @@ import { forwardRef } from 'react';
 import { ControlleNakedInputProps } from './NakedInput.type';
 import { useNakedInputStyles } from './NakedInput.style';
 import { styles } from '../common/styles';
-import { FIELD_COLORS } from '@omegup-school/ui-configs/colors';
+import { joinClassNames } from '@omegup-school/ui-configs/typography';
+import { FIELD_COLORS } from '../constants/FieldColors.cnst';
 
 export const NakedInput = forwardRef(
   (props: ControlleNakedInputProps, ref: React.Ref<HTMLDivElement>) => {
@@ -29,13 +30,14 @@ export const NakedInput = forwardRef(
       ...styles,
     });
     return (
-      <div ref={ref} className={`${classes.inputContainer} `}>
+      <div ref={ref} className={classes.inputContainer}>
         {startIcon}
         <input
           {...{ onChange, value, disabled, placeholder }}
-          className={`${classes[textVariant]} ${
+          className={joinClassNames(
+            classes[textVariant],
             disabled ? classes.disabled : ''
-          }`}
+          )}
         />
         {endIcon}
       </div>

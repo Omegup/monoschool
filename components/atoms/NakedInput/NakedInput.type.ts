@@ -3,6 +3,7 @@ import { borders } from '@omegup-school/ui-configs/sizes';
 import { typoStyles } from '@omegup-school/ui-configs/typography';
 import { ReactNode } from 'react';
 
+// @wissem we shouldn't create unnecessary variants
 export interface NakedInputProps {
   startIcon?: ReactNode;
   endIcon?: ReactNode;

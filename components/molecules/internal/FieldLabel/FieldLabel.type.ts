@@ -1,8 +1,8 @@
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { TextProps } from '@omegup-school/ui-atoms/Text/Text.types';
 
 export interface FieldLabelProps {
   label: string;
   required?: boolean; // default false, optional prop to indicate if field is mandatory,
   size: 'medium' | 'xSmall';
-  color?: keyof typeof colorsStyles;
+  color?: TextProps['color'];
 }

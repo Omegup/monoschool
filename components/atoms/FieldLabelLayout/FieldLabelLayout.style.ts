@@ -1,30 +1,26 @@
 import { colors, colorsStyles } from '@omegup-school/ui-configs/colors';
+import { heights, spacing } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 
 export const useFieldLabelLayoutStyles = createUseStyles({
   container: {
     width: '100%',
-    '&>div': {
-      display: 'flex',
-      flexDirection: 'column',
-      position: 'relative',
-    },
+    display: 'flex',
+    flexDirection: 'column',
+    position: 'relative',
   },
+  label: {},
+  input: {},
   spaced: {
-    gap: 8,
+    gap: spacing.s4,
   },
   condensed: {
-    '&>div:first-child': {
+    '& $label': {
       position: 'absolute',
       background: colors.background.default,
-      insetBlockStart: -9,
-      insetInlineStart: 16,
+      insetBlockStart: -heights.lineHieght.small / 2,
+      insetInlineStart: spacing.s8,
       zIndex: 1,
-    },
-    '&:has(input:focus)': {
-      '&>div>div:first-child': {
-        color: colorsStyles['blue_700'],
-      },
     },
   },
 });

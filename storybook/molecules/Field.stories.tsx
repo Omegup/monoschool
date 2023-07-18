@@ -1,15 +1,15 @@
 import {
-  NakedDropDown,
   NakedInput,
   NakedTextArea,
 } from '@omegup-school/ui-atoms';
 import { Field } from '@omegup-school/ui-molecules/internal/Field';
-import { FIELD_COLORS, colorsStyles } from '@omegup-school/ui-configs/colors';
+import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import { FieldProps } from '@omegup-school/ui-molecules/internal/Field/Field.type';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import { Icon } from './Icon';
 import * as icons from '@omegup-school/ui-assets/icons';
+import { FIELD_COLORS } from '@omegup-school/ui-atoms/constants/FieldColors.cnst';
 
 const Demo = ({
   input,
@@ -96,22 +96,6 @@ const Demo = ({
         borderColor={FIELD_COLORS[props.color]}
       />
     ),
-    // dropDown: (
-    //   <NakedDropDown
-    //     options={[
-    //       { id: '1', label: 'opt1' },
-    //       { id: '2', label: 'opt2' },
-    //       { id: '3', label: 'opt3' },
-    //     ]}
-    //     disabled={props.disabled}
-    //     onChange={(e) => {
-    //       setText(e.target.value);
-    //     }}
-    //     value={text}
-    //     border="s10"
-    //     borderColor={FIELD_COLORS[props.color]}
-    //   />
-    // ),
   };
   return (
     <div style={{ width: 350 }}>

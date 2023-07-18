@@ -5,6 +5,9 @@ import { IconContainerProps } from './IconContainer.type';
 export const useIconContainerStyles = createUseStyles({
   mainContainer: {
     cursor: 'pointer',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     paddingBlock: ({ paddingBlock }: Partial<IconContainerProps>) =>
       paddingBlock ? spacing[paddingBlock] : 0,
     paddingInline: ({ paddingInline }: Partial<IconContainerProps>) =>
