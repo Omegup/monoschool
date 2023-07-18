@@ -8,6 +8,7 @@ import { SignInPresenter } from '@omegup-school/user-presenter/SignInPresenter';
 import { SignInUser } from '@omegup-school/user-usecases/signInUser';
 import { memo } from 'react';
 import { External } from './External';
+import { TranslationService } from '@omegup-school/translate-service';
 
 const FacadeProvider = ({
   children,
@@ -18,6 +19,9 @@ const FacadeProvider = ({
 }) => {
   const external = useExternal();
   const navService = new NavigationService(external.navigation);
+  console.log({ navService });
+  const translationService = new TranslationService(external.translation);
+  console.log({ translationService });
   const authService = new AuthService(navService);
   const userGateway = new UserAPIAdapter();
   const signInUser = new SignInUser(userGateway);
@@ -28,6 +32,7 @@ const FacadeProvider = ({
     signInPresenter: (handleError) => new SignInPresenter(handleError),
     userController,
     userGateway,
+    translationService,
   };
   return (
     <FacadeContext.Provider value={value}>{children}</FacadeContext.Provider>
