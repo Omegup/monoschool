@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface TextWithIconProps {
+export interface CardIconedinfoProps {
   text: string;
   icon: ReactNode;
 }
