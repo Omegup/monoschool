@@ -1,6 +1,6 @@
 
 export type SearchBarProps = {
-  variant: 'shadow' | 'default';
+  variant: 'FilterSearchBar' | 'NavSearchBar';
   startIcon: JSX.Element;
   clearIcon: JSX.Element;
   placeholder: string;

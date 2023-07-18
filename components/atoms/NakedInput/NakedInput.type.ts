@@ -11,6 +11,8 @@ export interface NakedInputProps {
   border?: keyof typeof borders;
   disabled?: boolean;
   textVariant?: keyof typeof typoStyles;
+  color?: keyof typeof colorsStyles;
+  colorPlaceholder?: keyof typeof colorsStyles;
   placeholder?: string;
   variant:"shadow"|"default"
 }
@@ -18,4 +20,5 @@ export interface NakedInputProps {
 export interface ControlleNakedInputProps extends NakedInputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onClickEndIcon:(event:MouseEvent<HTMLSpanElement>)=>void
 }

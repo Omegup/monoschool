@@ -4,6 +4,7 @@ import {
 } from '@omegup-school/ui-atoms';
 import { forwardRef } from 'react';
 import { ControllerSearchBarProps } from './SearchBar.type';
+import { NakedInputProps } from '@omegup-school/ui-atoms/NakedInput/NakedInput.type';
 
 export const SearchBar = forwardRef(
   (props: ControllerSearchBarProps, ref: React.Ref<HTMLDivElement>) => {
@@ -18,11 +19,12 @@ export const SearchBar = forwardRef(
       onClear,
       displayClearIcon,
     } = props;
-
-    const borderColor={FilterSearchBar:"background_overlay",NavSearchBar:"grey_500"} satisfies [k in "FilterSearchBar"|"FilterSearchBar"]:keyof typeof colorsStyles;
+    const colorInput={colorPlaceholder:"grey_400",inputColor:'grey_500'} satisfies {[k in "colorPlaceholder"|"inputColor"]:NakedInputProps['color']}
+    const borderColor={FilterSearchBar:"background_overlay",NavSearchBar:'grey_500'} satisfies {[k in "FilterSearchBar"|"NavSearchBar"]:NakedInputProps['borderColor']}
+    const textVariant={FilterSearchBar:"paragraph_xSmall_regular",NavSearchBar:'paragraph_medium_semiBold'} satisfies {[k in "FilterSearchBar"|"NavSearchBar"]:NakedInputProps['textVariant']}
+    const NakedInputVariant={FilterSearchBar:"shadow",NavSearchBar:'default'} satisfies {[k in "FilterSearchBar"|"NavSearchBar"]:NakedInputProps['variant']}
     return (
-      <Container {...ref}>
-        
+      <Container {...ref}>          
           <NakedInput
             {...(displayClearIcon
               ? {
@@ -35,12 +37,16 @@ export const SearchBar = forwardRef(
                 }
               : {})}
             placeholder={placeholder}
+
             disabled={disabled}
             onChange={onChange}
             value={value}
             border="b2"
-            borderColor="grey_500"
-            variant={variant}
+            borderColor={borderColor[variant]}
+            color={colorInput.inputColor}
+            colorPlaceholder={colorInput.colorPlaceholder}
+            variant={NakedInputVariant[variant]}
+            textVariant={textVariant[variant]}
           />
         
       </Container>

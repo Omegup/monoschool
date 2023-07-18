@@ -6,6 +6,7 @@ import {
 } from '@omegup-school/ui-molecules/internal/SearchBar';
 import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
+import { colorsStyles } from '@omegup-school/ui-configs/colors';
 
 const Demo = ({
   startIcon,
@@ -16,14 +17,14 @@ const Demo = ({
   variant,
   ...restProps
 }:Omit< SearchBarProps,'firstIcon'|'clearIcon'> & {
-  variant: 'default' | 'shadow';
+  variant: 'NavSearchBar' | 'FilterSearchBar';
   placeholder: string;
   startIcon: keyof typeof icons;
   clearIcon: keyof typeof icons;
-  displayClearIcon: true;
+  displayClearIcon: boolean;
   value: string;
 }) => {
-  return <SearchBar placeholder={placeholder} startIcon={<Icon name={startIcon} />} clearIcon={<Icon name={clearIcon} />} variant={variant} {...restProps} />;
+  return <SearchBar placeholder={placeholder}  displayClearIcon={displayClearIcon} startIcon={<Icon name={startIcon} color={colorsStyles['grey_500']}/>} clearIcon={<Icon name={clearIcon} color={colorsStyles['grey_500']} />} variant={variant} {...restProps} />;
 };
 const meta = {
   title: 'Atom/SearchBar',
@@ -40,7 +41,7 @@ const meta = {
     },
     variant: {
       control: 'select',
-      options: ['default', 'shadow'],
+      options: ['NavSearchBar', 'FilterSearchBar'],
     },
   },
 } satisfies Meta<typeof Demo>;
@@ -51,7 +52,7 @@ type Story = StoryObj<typeof Demo>;
 export const Primary: Story = {
   render: Demo,
   args: {
-    variant: 'default',
+    variant: 'FilterSearchBar',
     startIcon: 'SearchStatus',
     clearIcon: 'Close',
     displayClearIcon: true,
