@@ -7,21 +7,21 @@ export const useDisplaySwitcherOnHoverEffectStyle = createUseStyles({
       width || '',
     height: ({ height }: Partial<DisplaySwitcherOnHoverEffectProps>) =>
       height || '',
+    position: 'relative',
     '&:hover ': {
-      '& $unhovered': { display: 'none' },
-      '& $hovered': { display: 'flex' },
+      '& $hovered': { opacity: 1 },
     },
   },
   unhovered: {
     width: '100%',
     height: '100%',
-    display: 'flex',
-    transition: 'display 1s',
   },
   hovered: {
+    opacity: 0,
+    transition: 'opacity 1s',
+    position: 'absolute',
+    inset: 0,
     width: '100%',
     height: '100%',
-    display: 'none',
-    transition: 'display 1s',
   },
 });

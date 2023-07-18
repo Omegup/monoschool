@@ -8,7 +8,7 @@ export interface DashboardDetailedCardProps {
   footerTitle: string;
   date: string;
   address: string;
-  hoverIcon?: IconContainerProps['icon'];
+  hoverIcon?: IconContainerProps['name'];
   hoverText?: string;
   hovrable?: boolean;
 }

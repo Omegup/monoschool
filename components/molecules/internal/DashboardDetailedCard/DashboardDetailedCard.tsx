@@ -101,7 +101,7 @@ export const DashboardDetailedCard = forwardRef(
                 alignItems="center"
               >
                 <IconContainer
-                  icon="CalendarCircle"
+                  name="CalendarCircle"
                   color={variants[variant].description}
                 />
                 <Text
@@ -117,7 +117,7 @@ export const DashboardDetailedCard = forwardRef(
                 alignItems="center"
               >
                 <IconContainer
-                  icon="Map"
+                  name="Map"
                   color={variants[variant].description}
                 />
                 <Text
@@ -149,7 +149,7 @@ export const DashboardDetailedCard = forwardRef(
           >
             <IconContainer
               color={variants[variant].subTitle}
-              icon={hoverIcon}
+              name={hoverIcon}
               width="largeSvg"
               height="largeSvg"
             />
