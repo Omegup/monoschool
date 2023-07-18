@@ -11,7 +11,9 @@ const useExternal = (): External => {
 function App() {
 
 
-  
+  let str = '';
+
+
 
 
   return (
@@ -20,9 +22,16 @@ function App() {
         <Routes>
           <Route path="" element={<SignInView />}></Route>
           <Route path="/dashboard" element={<div>dashboard</div>}></Route>
+          <App>{str && <Foo />}</App>;
+
+
+
         </Routes>
       </FacadeProvider>
     </BrowserRouter>
+
+
+
   );
 }
 
