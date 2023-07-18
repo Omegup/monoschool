@@ -5,7 +5,7 @@ import { TextProps } from './Text.types';
 import { heights } from '@omegup-school/ui-configs/sizes';
 const keys = Object.keys(colorsStyles) as (keyof typeof colorsStyles)[];
 const colors = () => {
-  let obj: { [k in keyof typeof colorsStyles]: { color: string } } = {}! as {
+  let obj: { [k in keyof typeof colorsStyles]: { color: string } } = {} as {
     [k in keyof typeof colorsStyles]: { color: string };
   };
   keys.forEach((k) => (obj[k] = { color: colorsStyles[k] }));

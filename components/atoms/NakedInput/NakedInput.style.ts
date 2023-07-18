@@ -1,5 +1,10 @@
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
-import { borders, spacing } from '@omegup-school/ui-configs/sizes';
+import {
+  borders,
+  heights,
+  opacities,
+  spacing,
+} from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { NakedInputProps } from './NakedInput.type';
@@ -7,11 +12,12 @@ import { NakedInputProps } from './NakedInput.type';
 export const useNakedInputStyles = createUseStyles({
   inputContainer: {
     display: 'flex',
-    paddingInline: spacing['s8'],
-    paddingBlock: spacing['s6'],
-    borderRadius: borders['r5'],
-    gap: spacing['s2'],
-    opacity: ({ disabled }: Partial<NakedInputProps>) => (disabled ? 0.5 : 0.8),
+    paddingInline: spacing.s8,
+    paddingBlock: spacing.s6,
+    borderRadius: borders.r5,
+    gap: spacing.s2,
+    opacity: ({ disabled }: Partial<NakedInputProps>) =>
+      disabled ? opacities.o1 : opacities.o2,
     border: ({ border, borderColor }: Partial<NakedInputProps>) =>
       borderColor
         ? `${border ? borders[border] : 0}px solid ${colorsStyles[borderColor]}`
@@ -21,18 +27,18 @@ export const useNakedInputStyles = createUseStyles({
       padding: 0,
       outline: 'none',
       border: 'none',
-      height: 24,
-      maxHeight: 24,
+      height: heights.input.medium,
+      maxHeight: heights.input.medium,
       flex: 1,
     },
     '&:has(input:focus)': {
-      border: `${spacing.s1}px solid ${colorsStyles['blue_700']}`,
-      borderRadius: borders['r5'],
+      border: [borders.b4, 'solid', colorsStyles['blue_700']],
+      borderRadius: borders.r5,
       '&>input': {},
     },
   },
   filledInput: {
-    border: `${spacing.s1}px solid ${colorsStyles['dark_overline']}`,
+    border: [borders.b4, 'solid', colorsStyles['dark_overline']],
     '&>input': {},
   },
   disabled: { backgroundColor: colorsStyles['background_default'] },

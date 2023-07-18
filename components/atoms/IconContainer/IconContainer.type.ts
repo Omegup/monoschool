@@ -1,9 +1,11 @@
-import * as icons from '@omegup-school/ui-assets/icons';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import { spacing, widths } from '@omegup-school/ui-configs/sizes';
 import { MouseEvent } from 'react';
+import * as icons from '@omegup-school/ui-assets/icons';
+
+// @wissem atoms don't export implementation details: deg, paddingBlock, paddingInline, width and height => size
 export interface IconContainerProps {
-  icon?: keyof typeof icons;
+  name: keyof typeof icons;
   rotation?: number;
   paddingInline?: keyof typeof spacing;
   paddingBlock?: keyof typeof spacing;

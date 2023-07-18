@@ -1,4 +1,4 @@
-import { colorsStyles } from "./colors";
+import { NakedInputProps } from '../NakedInput/NakedInput.type';
 
 export const FIELD_COLORS: {
   [k in
@@ -6,7 +6,7 @@ export const FIELD_COLORS: {
     | 'info'
     | 'success'
     | 'warning'
-    | 'default']: keyof typeof colorsStyles;
+    | 'default']: NakedInputProps['borderColor'];
 } = {
   error: 'danger_700',
   default: 'grey_500',

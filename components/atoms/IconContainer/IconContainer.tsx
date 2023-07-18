@@ -1,40 +1,40 @@
 import { forwardRef } from 'react';
 import { useIconContainerStyles } from './IconContainer.style';
 import { ControlledIconContainerProps } from './IconContainer.type';
-import { Icon } from '../Icon';
-import { widths } from '@omegup-school/ui-configs/sizes';
+import * as icons from '@omegup-school/ui-assets/icons';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const IconContainer = forwardRef(
   (props: ControlledIconContainerProps, ref: React.Ref<HTMLDivElement>) => {
     const {
-      icon,
+      name,
       rotation,
       onClick,
       paddingBlock,
       paddingInline,
+      color = 'headline_500',
       height = 'svg',
       width = 'svg',
-      color = 'dark_default',
     } = props;
     const classes = useIconContainerStyles({
       rotation,
       paddingBlock,
       paddingInline,
+      color,
+      height,
+      width,
     });
-
+    const Icon = icons[name];
     return (
       <div ref={ref} className={classes.mainContainer} {...{ onClick }}>
-        {icon !== undefined ? (
-          <Icon
-            name={icon}
-            color={colorsStyles[color]}
-            height={widths.icon[height]}
-            width={widths.icon[width]}
-          />
-        ) : (
-          <></>
-        )}
+        <Icon
+          {...{
+            color: colorsStyles[color],
+            width: widths.icon[width],
+            height: widths.icon[height],
+          }}
+        />
       </div>
     );
   }
