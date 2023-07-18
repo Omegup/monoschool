@@ -17,8 +17,14 @@ export const NakedInput = forwardRef(
       disabled = false,
       textVariant = 'paragraph_medium_semiBold',
       placeholder = '',
+      variant,
+      color,
+      colorPlaceholder,
+      onClickEndIcon,
     } = props;
     const classes = useNakedInputStyles({
+      color,
+      colorPlaceholder,
       border,
       disabled,
       ...(!disabled
@@ -30,7 +36,10 @@ export const NakedInput = forwardRef(
       ...styles,
     });
     return (
-      <div ref={ref} className={classes.inputContainer}>
+      <div
+        ref={ref}
+        className={joinClassNames(classes.inputContainer, classes[variant])}
+      >
         {startIcon}
         <input
           {...{ onChange, value, disabled, placeholder }}
@@ -39,7 +48,7 @@ export const NakedInput = forwardRef(
             disabled ? classes.disabled : ''
           )}
         />
-        {endIcon}
+        <span onClick={onClickEndIcon} className={classes.endIcon}>{endIcon}</span>
       </div>
     );
   }

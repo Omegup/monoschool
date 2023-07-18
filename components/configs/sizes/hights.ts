@@ -1,6 +1,7 @@
 export const heights = {
   input: {
     medium: 24,
+    small:18,
   },
   dropDown: {
     medium: 24,

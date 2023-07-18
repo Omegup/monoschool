@@ -11,6 +11,11 @@ export const widths = {
     medium: '24px',
     large: '28px',
   },
+  searchBar:{
+    small: '16px',
+    medium: '24px',
+    large: '28px',
+  },
   nakedCheckbox: {
     large: '20px',
     medium: '16.67px',
