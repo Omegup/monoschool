@@ -12,7 +12,7 @@ export interface StoryElementNavigatorContainerProps {
   width?: string
   iconlight?: ReactNode;
   icondark?: ReactNode;
-  text?: ReactNode;
+  text?: string;
   size?: keyof typeof widths.avatar;
  }
 export interface ControlledStoryElementNavigatorContainerProps extends StoryElementNavigatorContainerProps {

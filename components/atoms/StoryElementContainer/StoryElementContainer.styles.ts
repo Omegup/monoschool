@@ -3,6 +3,7 @@ import { spacing } from "@omegup-school/ui-configs/sizes";
 import { Avatar } from "@omegup-school/ui-assets";
 import { colors } from "@omegup-school/ui-configs/colors";
 import { StoryElementContainerProps } from "./StoryElementContainer.types";
+import { styles } from '../common/styles';
 
 export const useStoryElementContainerStyles = createUseStyles({
   container: {
@@ -13,11 +14,13 @@ export const useStoryElementContainerStyles = createUseStyles({
     gap: ({ gap }: Partial<StoryElementContainerProps>) => gap ? spacing[gap] : 0,
     alignItems: ({ alignItems }: Partial<StoryElementContainerProps>) => alignItems || "start",
     justifyContent: ({ justifyContent }: Partial<StoryElementContainerProps>) => justifyContent || "start",
+    '&> $text': {
+      textAlign: "center"
 
+    },
 
     '&:hover ': {
       '&> $avatar': {
-
         borderRadius: "70px",
         border: "5px solid ",
         borderColor: colors.blue[500],
@@ -26,7 +29,6 @@ export const useStoryElementContainerStyles = createUseStyles({
       '&> $text': {
         color: colors.dark["default"],
         textAlign: "center"
-
       }
     }
   }
@@ -42,7 +44,9 @@ export const useStoryElementContainerStyles = createUseStyles({
 
   },
   text: {
-    color: colors.grey[500],
-    textAlign: "center"
-  }
+    textAlign: "center",
+    color: colors.grey[500]
+  },
+  ...styles,
+  ...colors
 })

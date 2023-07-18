@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { ControlledStoryElementNavigatorContainerProps } from "./StoryElementNavigatorContainer.types";
 import { useStoryElementNavigatorContainerStyles } from "./StoryElementNavigatorContainer.styles";
+import { joinClassNames } from "@omegup-school/ui-configs/typography";
 export const StoryElementNavigatorContainer = forwardRef((
   props: ControlledStoryElementNavigatorContainerProps,
   ref: React.Ref<HTMLDivElement>
@@ -15,9 +16,9 @@ export const StoryElementNavigatorContainer = forwardRef((
       <div className={classes.icondark}>
         {icondark}
       </div>
-      <div className={classes.text}>
+      <span className={joinClassNames(classes["paragraph_xSmall_semiBold"], classes.text)}>
         {text}
-      </div>
+      </span>
     </div>
   )
 })

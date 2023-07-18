@@ -3,6 +3,7 @@ import { StoryElementNavigatorContainerProps } from "./StoryElementNavigatorCont
 import { spacing } from "@omegup-school/ui-configs/sizes";
 import { Avatar } from "@omegup-school/ui-assets";
 import { colors } from "@omegup-school/ui-configs/colors";
+import { styles } from "../common/styles";
 
 export const useStoryElementNavigatorContainerStyles = createUseStyles({
   container: {
@@ -45,5 +46,7 @@ export const useStoryElementNavigatorContainerStyles = createUseStyles({
   text: {
     color: colors.grey[500],
     textAlign: "center"
-  }
-})
+  },
+  ...styles,
+  ...colors
+}) 

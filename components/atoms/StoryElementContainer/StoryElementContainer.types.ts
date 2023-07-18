@@ -11,7 +11,7 @@ export interface StoryElementContainerProps {
   display?: 'flex' | 'inline-flex'
   width?: string
   avatar?: ReactNode;
-  text?: ReactNode;
+  text?: string;
   size?: keyof typeof widths.avatar;
 
 

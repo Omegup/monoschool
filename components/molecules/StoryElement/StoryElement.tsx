@@ -5,7 +5,7 @@ import * as avatars from '@omegup-school/ui-assets/images';
 import { Icon } from '@omegup-school/ui-assets/icons/Icon';
 import * as icons from '@omegup-school/ui-assets/icons';
 
-
+ 
 
 export const StoryElement = forwardRef((
   props: ControlledStoryElementProps,
@@ -29,7 +29,7 @@ export const StoryElement = forwardRef((
           onClick={() => { }}
           ref={ref}
         /> }
-      text={<Text text={text ?? "Success"} ref={ref} variant="paragraph_medium_medium" />}
+      text={text}
     />
 
   )

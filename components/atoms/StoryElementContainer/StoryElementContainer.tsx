@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
 import { ControlledStoryElementContainerProps } from "./StoryElementContainer.types";
 import { useStoryElementContainerStyles } from "./StoryElementContainer.styles";
+import { joinClassNames } from "@omegup-school/ui-configs/typography";
 
 export const StoryElementContainer = forwardRef((
   props: ControlledStoryElementContainerProps,
@@ -13,9 +14,9 @@ export const StoryElementContainer = forwardRef((
       <div className={classes.avatar}>
         {avatar}
       </div>
-      <div className={classes.text}>
+      <span className={joinClassNames(classes["paragraph_medium_medium"],classes.text)}>
         {text}
-      </div>
+      </span>
 
     </div>
   )

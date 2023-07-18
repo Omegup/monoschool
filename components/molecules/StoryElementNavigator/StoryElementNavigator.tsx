@@ -28,7 +28,7 @@ export const StoryElementNavigator = forwardRef((
       icondark={
         <Icon name={darkMode} width="70px" height="70px"/>
       }
-      text={<Text text={text} ref={ref} variant="paragraph_xSmall_semiBold" />}
+      text={text}
     />
 
   )
