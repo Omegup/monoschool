@@ -51,15 +51,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    description:
-      "Viens jouer. Amusez vous. Découvre la musique en t'amusant. Viens jouer.  Viens jouer. Amusez vous. Découvre la musique en t'amusant. Viens jouer. ",
-    subTitle: 'Lancement de Club',
-    title: 'Actualités',
-    variant: 'danger',
-    footerTitle: 'Détails',
-    address: 'Zarzis, Médenine, Tunisie',
-    date: '31/01/2023',
-    hoverIcon: 'CalendarCircle',
-    hoverText: 'Ajouter une actualité',
+   
   },
 };
