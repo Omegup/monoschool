@@ -12,3 +12,5 @@ export * from './TabContainer';
 export * from './TabBadge';
 export * from './Avatar';
 export * from './listSearchContent';
+export * from './DataTableDashboardLine';
+export * from './TopHeaderDataTable';
