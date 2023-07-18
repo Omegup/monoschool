@@ -20,6 +20,7 @@ export const NakedInput = forwardRef(
       variant,
       color,
       colorPlaceholder,
+      onClickEndIcon,
     } = props;
     const classes = useNakedInputStyles({
       color,
@@ -47,7 +48,7 @@ export const NakedInput = forwardRef(
             disabled ? classes.disabled : ''
           )}
         />
-        <span onClick={} className={classes.endIcon}>{endIcon}</span>
+        <span onClick={onClickEndIcon} className={classes.endIcon}>{endIcon}</span>
       </div>
     );
   }

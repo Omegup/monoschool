@@ -74,6 +74,6 @@ export const useNakedInputStyles = createUseStyles({
     },
   },
   default: {},
-  endIcon: { display: 'flex', alignItems: 'center' },
+  endIcon: { display: 'flex', alignItems: 'center',cursor:'pointer' },
   ...styles,
 });

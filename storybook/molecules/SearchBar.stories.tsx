@@ -1,30 +1,30 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import {
+  ControllerSearchBarProps,
   SearchBar,
   SearchBarProps,
 } from '@omegup-school/ui-molecules/internal/SearchBar';
 import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { ChangeEvent } from 'react';
 
 const Demo = ({
   startIcon,
-  value,
   clearIcon,
-  displayClearIcon,
-  placeholder,
-  variant,
   ...restProps
-}:Omit< SearchBarProps,'firstIcon'|'clearIcon'> & {
-  variant: 'NavSearchBar' | 'FilterSearchBar';
-  placeholder: string;
+}: Omit<ControllerSearchBarProps, 'firstIcon' | 'clearIcon'> & {
   startIcon: keyof typeof icons;
   clearIcon: keyof typeof icons;
-  displayClearIcon: boolean;
-  value: string;
 }) => {
-  return <SearchBar placeholder={placeholder}  displayClearIcon={displayClearIcon} startIcon={<Icon name={startIcon} color={colorsStyles['grey_500']}/>} clearIcon={<Icon name={clearIcon} color={colorsStyles['grey_500']} />} variant={variant} {...restProps} />;
+  return (
+    <SearchBar
+      startIcon={<Icon name={startIcon} color={colorsStyles['grey_500']} />}
+      clearIcon={<Icon name={clearIcon} color={colorsStyles['grey_500']} />}
+      {...restProps}
+    />
+  );
 };
 const meta = {
   title: 'Atom/SearchBar',
@@ -56,7 +56,8 @@ export const Primary: Story = {
     startIcon: 'SearchStatus',
     clearIcon: 'Close',
     displayClearIcon: true,
-    value: '',
+    value: 'hk',
     placeholder: 'Recherche',
+    disabled: false,
   },
 };

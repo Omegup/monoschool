@@ -1,7 +1,7 @@
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import { borders } from '@omegup-school/ui-configs/sizes';
 import { typoStyles } from '@omegup-school/ui-configs/typography';
-import { ReactNode } from 'react';
+import { ReactNode,MouseEvent,ChangeEvent} from 'react';
 
 // @wissem we shouldn't create unnecessary variants
 export interface NakedInputProps {
@@ -19,6 +19,6 @@ export interface NakedInputProps {
 
 export interface ControlleNakedInputProps extends NakedInputProps {
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  onClickEndIcon:(event:MouseEvent<HTMLSpanElement>)=>void
+  onChange: (e:ChangeEvent<HTMLInputElement>) => void;
+  onClickEndIcon?: (e:MouseEvent<HTMLSpanElement>) => void ;
 }

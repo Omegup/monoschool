@@ -1,3 +1,4 @@
+import { ChangeEvent } from "react";
 
 export type SearchBarProps = {
   variant: 'FilterSearchBar' | 'NavSearchBar';
@@ -9,6 +10,6 @@ export type SearchBarProps = {
 };
 export interface ControllerSearchBarProps extends SearchBarProps {
   value: string;
-  onChange: (value: string) => void;
-  onClear: () => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
+  onClear: (e:React.MouseEvent<HTMLSpanElement>) => void ;
 }
