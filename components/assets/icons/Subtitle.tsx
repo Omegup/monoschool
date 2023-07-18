@@ -2,7 +2,7 @@ import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const Subtitle = ({
   width = widths.icon.svg,
-  height = width,
+  height = widths.icon.svg,
   color = 'currentColor',
 }: {
   color?: string;
@@ -11,8 +11,6 @@ export const Subtitle = ({
 }) => (
   <svg
     {...{ width, height }}
-    width="24"
-    height="24"
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
