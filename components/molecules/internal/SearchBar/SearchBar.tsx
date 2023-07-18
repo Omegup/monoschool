@@ -58,7 +58,7 @@ export const SearchBar = forwardRef(
             : {})}
           placeholder={placeholder}
           disabled={disabled}
-          onChange={(e)=>console.log(e.target.value)}
+          onChange={onChange}
           value={value}
           border="b2"
           borderColor={borderColor[variant]}
@@ -66,7 +66,7 @@ export const SearchBar = forwardRef(
           colorPlaceholder={colorInput.colorPlaceholder}
           variant={NakedInputVariant[variant]}
           textVariant={textVariant[variant]}
-          onClickEndIcon={(e)=>console.log("sddf")}
+          onClickEndIcon={(e)=>onClear}
         />
       </Container>
     );

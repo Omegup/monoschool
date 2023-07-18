@@ -1,14 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
+import * as icons from '@omegup-school/ui-assets/icons';
+import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import {
   ControllerSearchBarProps,
-  SearchBar,
-  SearchBarProps,
+  SearchBar
 } from '@omegup-school/ui-molecules/internal/SearchBar';
-import * as icons from '@omegup-school/ui-assets/icons';
 import { Icon } from './Icon';
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
-import { ChangeEvent } from 'react';
 
 const Demo = ({
   startIcon,
