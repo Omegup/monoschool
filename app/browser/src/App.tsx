@@ -9,16 +9,33 @@ const useExternal = (): External => {
   return { navigation: { navigate } };
 };
 function App() {
+
+
+  let str = '';
+
+
+
+
   return (
     <BrowserRouter>
       <FacadeProvider useExternal={useExternal}>
         <Routes>
           <Route path="" element={<SignInView />}></Route>
           <Route path="/dashboard" element={<div>dashboard</div>}></Route>
+          <App>{str && <Foo />}</App>;
+
+
+
         </Routes>
       </FacadeProvider>
     </BrowserRouter>
+
+
+
   );
 }
+
+
+
 
 export default App;
