@@ -25,18 +25,26 @@ export const typography = makeTypo({
       },
     },
     medium: {
-      semiBold: {
-        fontWeight: '600',
-        fontSize: 16,
-      },
       regular: {
         fontWeight: '400',
+        fontSize: 16,
+      },
+      medium: {
+        fontWeight: '500',
+        fontSize: 16,
+      },
+      semiBold: {
+        fontWeight: '600',
         fontSize: 16,
       },
     },
     xSmall: {
       regular: {
         fontWeight: '400',
+        fontSize: 12,
+      },
+      medium: {
+        fontWeight: '500',
         fontSize: 12,
       },
       semiBold: {

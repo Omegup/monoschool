@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TextWithIcon } from '@omegup-school/ui-molecules';
-import { TextWithIconProps } from '@omegup-school/ui-molecules/TextWithIcon/TextWithIcon.types';
+import { CardIconedinfo } from '@omegup-school/ui-molecules';
 import * as icons from '@omegup-school/ui-assets/icons';
-import { Icon } from './Icon';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
+import { CardIconedinfoProps } from '@omegup-school/ui-molecules/internal/CardIconedinfo/CardIconedinfo.types';
 
 const Demo = ({
   icon,
   ...restProps
-}: Omit<TextWithIconProps, 'icon'> & { icon: keyof typeof icons }) => {
-  return <TextWithIcon icon={<Icon name={icon} />} {...restProps} />;
+}: Omit<CardIconedinfoProps, 'icon'> & { icon: keyof typeof icons }) => {
+  return <CardIconedinfo icon={<Icon name={icon} />} {...restProps} />;
 };
 const meta = {
   title: 'Atom/TextWithIcon',
-  component: TextWithIcon,
+  component: CardIconedinfo,
   tags: ['autodocs'],
   argTypes: {
     icon: {
@@ -20,7 +20,7 @@ const meta = {
       options: Object.keys(icons) as (keyof typeof icons)[],
     },
   },
-} satisfies Meta<typeof TextWithIcon>;
+} satisfies Meta<typeof CardIconedinfo>;
 
 export default meta;
 type Story = StoryObj<typeof Demo>;
