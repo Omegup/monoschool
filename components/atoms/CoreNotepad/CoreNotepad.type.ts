@@ -14,4 +14,5 @@ export interface ControlleCoreNotepadProps extends CoreNotepadProps {
   rows?: number;
   value: string;
   onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onBlure:(e: React.ChangeEvent<HTMLTextAreaElement>)=>void;
 }
