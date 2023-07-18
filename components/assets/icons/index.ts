@@ -1,6 +1,7 @@
+export * from './Info';
 export * from './Logo';
+export * from './Phone';
 export * from './Square';
-export * from './Tick';
 export * from './Subtitle';
 export * from './Avatar'
 export * from './AddCircleDark'
@@ -9,4 +10,4 @@ export * from './ArrowCircleNext'
 export * from './ArrowCircleNextDark'
 export * from './ArrowCirclePrev'
 export * from './ArrowCirclePrevDark'
- 
+export * from './Tick';
