@@ -16,7 +16,7 @@ const Demo = ({
   variant,
   ...restProps
 }:Omit< SearchBarProps,'firstIcon'|'clearIcon'> & {
-  variant: 'navBar' | 'sideBar' | 'filterSearch';
+  variant: 'default' | 'shadow';
   placeholder: string;
   startIcon: keyof typeof icons;
   clearIcon: keyof typeof icons;
@@ -40,7 +40,7 @@ const meta = {
     },
     variant: {
       control: 'select',
-      options: ['navBar', 'sideBar', 'filterSearch'],
+      options: ['default', 'shadow'],
     },
   },
 } satisfies Meta<typeof Demo>;
@@ -51,7 +51,7 @@ type Story = StoryObj<typeof Demo>;
 export const Primary: Story = {
   render: Demo,
   args: {
-    variant: 'navBar',
+    variant: 'default',
     startIcon: 'SearchStatus',
     clearIcon: 'Close',
     displayClearIcon: true,

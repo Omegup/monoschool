@@ -1,7 +1,6 @@
 import {
   Container,
   NakedInput,
-  FilterSearchBar,
 } from '@omegup-school/ui-atoms';
 import { forwardRef } from 'react';
 import { ControllerSearchBarProps } from './SearchBar.type';
@@ -19,11 +18,13 @@ export const SearchBar = forwardRef(
       onClear,
       displayClearIcon,
     } = props;
+
+    const borderColor={FilterSearchBar:"background_overlay",NavSearchBar:"grey_500"} satisfies [k in "FilterSearchBar"|"FilterSearchBar"]:keyof typeof colorsStyles;
     return (
       <Container {...ref}>
-        {variant !== 'filterSearch' ? (
+        
           <NakedInput
-            {...(clearIcon
+            {...(displayClearIcon
               ? {
                   endIcon: clearIcon,
                 }
@@ -39,18 +40,9 @@ export const SearchBar = forwardRef(
             value={value}
             border="b2"
             borderColor="grey_500"
+            variant={variant}
           />
-        ) : (
-          <FilterSearchBar
-            value={value}
-            onChange={onChange}
-            onClear={onClear}
-            displayClearIcon={displayClearIcon}
-            placeholder={placeholder}
-            startIcon={startIcon}
-            clearIcon={clearIcon}
-          />
-        )}
+        
       </Container>
     );
   }

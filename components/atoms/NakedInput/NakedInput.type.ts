@@ -12,6 +12,7 @@ export interface NakedInputProps {
   disabled?: boolean;
   textVariant?: keyof typeof typoStyles;
   placeholder?: string;
+  variant:"shadow"|"default"
 }
 
 export interface ControlleNakedInputProps extends NakedInputProps {

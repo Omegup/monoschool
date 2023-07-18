@@ -1,13 +1,15 @@
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { colors, colorsStyles } from '@omegup-school/ui-configs/colors';
 import {
   borders,
   heights,
   opacities,
   spacing,
+  widths,
 } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 import { styles } from '../common/styles';
 import { NakedInputProps } from './NakedInput.type';
+import { shadowXSmall } from '@omegup-school/ui-configs/effects/shadow';
 
 export const useNakedInputStyles = createUseStyles({
   inputContainer: {
@@ -42,5 +44,33 @@ export const useNakedInputStyles = createUseStyles({
     '&>input': {},
   },
   disabled: { backgroundColor: colorsStyles['background_default'] },
+  shadow:{
+    boxShadow: shadowXSmall,
+    padding: spacing.s4,
+    borderRadius: borders.r5,
+    gap: spacing.s2,
+    border: [borders.b2, 'solid', colors.background.overlay],
+    '& $input': {
+      '&::placeholder': {
+        color: colors.grey[400],
+      },
+      
+    },
+    '& $svg':{
+      color:colors.grey[400],
+      width:widths.searchBar.small,
+      height:widths.searchBar.small,
+     },
+    '&:has(input:focus)': {
+      '& $input::placeholder': {
+        color: colors.grey[500],
+      },
+      '& $svg':{
+       color:colors.grey[500]
+      },
+      border: [borders.b2, 'solid', colors.background.overlay],
+    },
+  },
+  default:{},
   ...styles,
 });
