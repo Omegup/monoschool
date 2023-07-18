@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { CardIconedDetail } from '@omegup-school/ui-molecules';
 import * as icons from '@omegup-school/ui-assets/icons';
-import { IconWithDoubleTextProps } from '@omegup-school/ui-molecules/internal/CardIconedDetail/IconWithDoubleText.types';
+import { ControlledCardDoubleTextProps } from '@omegup-school/ui-molecules/internal/CardDoubleText/CardDoubleText.types';
 import { Icon } from './Icon';
 
 const Demo = ({
   icon,
   ...restProps
-}: Omit<IconWithDoubleTextProps, 'icon'> & { icon: keyof typeof icons }) => {
+}: Omit<ControlledCardDoubleTextProps, 'icon'> & { icon: keyof typeof icons }) => {
   return <CardIconedDetail icon={<Icon name={icon} />} {...restProps} />;
 };
 
