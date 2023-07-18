@@ -25,7 +25,7 @@ const Demo = ({
   );
 };
 const meta = {
-  title: 'Atom/SearchBar',
+  title: 'Molecules/SearchBar',
   component: Demo,
   tags: ['autodocs'],
   argTypes: {
