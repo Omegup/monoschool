@@ -6,14 +6,14 @@ export const TimelineTooltip = ({
   toolTipBoxIsOpened,
 }: ControlledTimeLineToolTipProps) => {
 
-  const { toolTipBox, tooltipIcon } = useTimelineTooltipStyles();
+  const { toolTipBox } = useTimelineTooltipStyles();
 
-  return toolTipBoxIsOpened && selectedEvent !== undefined && (
+  return toolTipBoxIsOpened && (
     <span className={toolTipBox}>
-      {selectedEvent.tooltipIcon}
+      {selectedEvent?.tooltipIcon}
       <span>
-        <div>{selectedEvent.period}</div>
-        <p>{selectedEvent.name}</p>
+        <div>{selectedEvent?.period}</div>
+        <p>{selectedEvent?.name}</p>
       </span>
     </span>
   )

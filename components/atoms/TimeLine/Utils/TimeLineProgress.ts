@@ -17,7 +17,6 @@ export const timeLineProgress = (toDay: Date, startDate : Date , endDate : Date)
     else{
         //reminder : the Date().getMonth() is zero based because it return values from  0 to 11
         monthsProgress = ( toDay.getMonth() >= startDate.getMonth() ) ? toDay.getMonth() - startDate.getMonth() : toDay.getMonth() + 11 - startDate.getMonth() +1;
-        console.log(toDay.getMonth() + 11 - startDate.getMonth())
         for (let monthIndex = startDate.getMonth() ; monthIndex <= 11; monthIndex++) {
                 existMonthsIndexes.push({monthIndex});
         }
@@ -29,7 +28,6 @@ export const timeLineProgress = (toDay: Date, startDate : Date , endDate : Date)
     const lastDayOfTheCurrentMonth = new Date(toDay.getFullYear(), toDay.getMonth() + 1, 0);
     const numbersOfDays = lastDayOfTheCurrentMonth.getDate()
     const daysProgress = toDay.getDate() / numbersOfDays 
-    console.log({numbersOfDays , daysProgress , "prod" : toDay.getDate() , "pro" : toDay.getDate() / numbersOfDays})
     return{monthsProgress , daysProgress , existMonthsIndexes} 
 }
 

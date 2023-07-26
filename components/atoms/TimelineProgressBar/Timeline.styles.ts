@@ -1,39 +1,38 @@
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders } from '@omegup-school/ui-configs/sizes';
 import { createUseStyles } from 'react-jss';
 
 export const useTimelineProgressBarStyles = createUseStyles(
   ({
-    progress,
-    totalProgressUnits,
+    progressWidth,
     containerStateSelector,
     isShowingChildrenOnHover,
   }: {
-    progress: number;
-    totalProgressUnits: number;
+    progressWidth: number;
     containerStateSelector: string;
     isShowingChildrenOnHover?: boolean;
   }) => ({
     root: {
       width: '93%',
       height: '24%',
-      backgroundColor: '#094067',
-      borderRadius: 10,
+      backgroundColor: colors.headline[500],
+      borderRadius: borders.r5,
       position: 'relative',
     },
     progressBar: {
       position: 'absolute',
-      borderRadius: 10,
+      borderRadius: borders.r5,
       height: '100%',
-      backgroundColor: '#3DA9FC',
+      backgroundColor: colors.blue[500],
       zIndex: 10,
-      width: `${(progress * 100) / totalProgressUnits}%`,
+      width: `${progressWidth}%`,
       ...(isShowingChildrenOnHover
         ? {
-            [`${containerStateSelector}:not(:hover) & > *`]: {
+            [`.${containerStateSelector}:not(:hover) &> *`]: {
               opacity: 0,
             },
           }
-        : {
-          }),
+        : {}),
     },
   })
 );

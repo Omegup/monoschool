@@ -2,7 +2,6 @@ import {
   ControlledProgressBarUnitProps,
   ProgressBarUnitProps,
 } from '@omegup-school/ui-atoms/ProgressBarUnit';
-import { TimeLineToolTipProps } from '@omegup-school/ui-atoms/TimeLine/Components/Tooltip';
 import {
   ControlledTimelineContainerProps,
   TimelineContainerProps,
@@ -11,6 +10,7 @@ import {
   ControlledTimelineProgressBarProps,
   TimelineProgressBarProps,
 } from '@omegup-school/ui-atoms/TimelineProgressBar';
+import { TimeLineToolTipProps } from '@omegup-school/ui-atoms/TimelineTooltip';
 
 export type ProgressBarUnit = {
   leftPercentage: number;

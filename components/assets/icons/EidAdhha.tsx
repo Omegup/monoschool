@@ -1,9 +1,15 @@
-import React from "react"
+import { widths } from "@omegup-school/ui-configs/sizes";
 
-export const EidAdhha = ({ className }: { className?: string }) =>
-<svg {...{ className }} xmlns="http://www.w3.org/2000/svg" width="25" height="26" fill="none" viewBox="0 0 25 26">
-  <g clip-path="url(#a)">
-    <g clip-path="url(#b)">
+export const EidAdhha = ({
+  width = widths.icon.svg,
+  height = width,
+}: {
+  width?: string;
+  height?: string;
+}) => <svg {...{ height, width }} 
+xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 26">
+  <g clipPath="url(#a)">
+    <g clipPath="url(#b)">
       <path fill="#EAB67D" d="M16.997 16.005h3.414v6.105h-3.414v-6.105Z"/>
       <path fill="#1A1A1A" d="M19.958 16.39v5.334H17.45V16.39h2.507Zm.907-.77h-4.321v6.875h4.32V15.62Z"/>
       <path fill="#F7D5A9" d="M18.423 16.005h3.414v6.105h-3.414v-6.105Z"/>

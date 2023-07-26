@@ -12,6 +12,11 @@ export const ToolTip = ({
   toolTipBoxIsOpened,
 }: TimeLineToolTipProps) => {
   const displayDate = (date: Date) => {
+    const padDate = (n: number) => n < 10 ? `0${n}` : n;
+    return `${(date.getDate())}/0${date.getMonth() + 1}/${date.getFullYear()}`
+
+    
+
     if (date.getMonth() < 10) {
       if (date.getDate() < 10) {
         return `0${date.getDate()}/0${date.getMonth() + 1}/${date.getFullYear()}`

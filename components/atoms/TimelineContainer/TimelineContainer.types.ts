@@ -1,8 +1,8 @@
 export interface TimelineContainerProps {
   children: React.ReactNode;
-  startDate: Date;
-  endDate: Date;
-  progressDate: Date;
+  startDate: string;
+  endDate: string;
+  progressDate: string;
   progressDateTitle: string;
 }
 

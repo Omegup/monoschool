@@ -7,18 +7,18 @@ export const TimelineContainer = forwardRef(({ children, startDate, endDate, pro
 
   const { main, top, bottom } = useTimelineContainerStyles()
   return (
-    <ContainerStateContext.Provider value={main}>
-      <div className={main} {...{ ref }} >
+    <div className={main} {...{ ref }} >
+      <ContainerStateContext.Provider value={main}>
         <div className={top} {...{ onClick }}>
           <h3>{progressDateTitle}</h3>
-          <p>{`${progressDate.getDate()}/${progressDate.getMonth() + 1}/${progressDate.getFullYear()}`}</p>
+          <p>{progressDate}</p>
         </div>
         {children}
         <div className={bottom} {...{ onClick }}>
-          <p>{`${startDate.getDate()}/${startDate.getMonth() + 1}/${startDate.getFullYear()}`}</p>
-          <p>{`${endDate.getDate()}/${endDate.getMonth() + 1}/${endDate.getFullYear()}`}</p>
+          <p>{startDate}</p>
+          <p>{endDate}</p>
         </div>
-      </div>
-    </ContainerStateContext.Provider>
+      </ContainerStateContext.Provider>
+    </div>
   )
 })

@@ -1,7 +1,13 @@
-import React from "react"
+import { widths } from "@omegup-school/ui-configs/sizes";
 
-export const HappyEidAlAdha = ({ className }: { className?: string }) =><svg 
- {...{ className }} xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 50 50">
+export const HappyEidAlAdha = ({
+  width = widths.icon.svg,
+  height = width,
+}: {
+  width?: string;
+  height?: string;
+}) => <svg
+  {...{ height, width }} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
   <path fill="#62BA85" d="M43.105 34.234s-1.722-1.329-2.977-.75c-1.255.578 1.492 1.62 2.977.75Zm.135 0s1.722-1.329 2.977-.75c1.255.578-1.49 1.62-2.977.75Z"/>
   <path fill="#000" d="M42.515 35.608a.097.097 0 0 1-.087-.05.098.098 0 0 1 .005-.101c1.35-2.082.879-3.677.873-3.692a.097.097 0 1 1 .186-.058c.02.068.503 1.698-.895 3.856a.1.1 0 0 1-.082.045Z"/>
   <path fill="#094067" d="M41.297 33.044s-3.571-.89-3.25-2.842c.323-1.952 3.25 0 3.25 0s-.933-2.112.836-2.595c1.768-.482 1.77 2.381 1.77 2.381s1.029-2.789 2.44-2.134c1.413.654.258 3.035-.836 4.322-1.094 1.287-4.21.868-4.21.868Z"/>

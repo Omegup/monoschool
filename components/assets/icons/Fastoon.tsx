@@ -1,8 +1,14 @@
-import React from "react"
+import { widths } from "@omegup-school/ui-configs/sizes";
 
-export const Fastonn = ({ className }: { className?: string }) =>
-<svg {...{ className }}
- xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 50 50">
+export const Fastonn = ({
+  width = widths.icon.svg,
+  height = width,
+}: {
+  width?: string;
+  height?: string;
+}) => <svg
+  {...{ height, width }}
+ xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50">
   <path fill="#E0E0E2" d="M35.156 14.844H14.844v21.875h20.312V14.844Z"/>
   <path fill="#FDD402" d="m43.375 27.986 1.286-2.524 1.127 2.6 2.684.497-2.014 1.933.375 2.833-2.372-1.408-2.455 1.253.549-2.801-1.89-2.058 2.71-.325Z"/>
   <path fill="#2C2B2D" d="M46.832 34.106a.784.784 0 0 1-.398-.11l-2.002-1.187-2.07 1.058a.781.781 0 0 1-1.123-.846l.473-2.415-1.623-1.766a.781.781 0 0 1 .482-1.305l2.296-.275 1.097-2.153a.78.78 0 0 1 1.413.044l.962 2.22 2.275.42a.78.78 0 0 1 .4 1.333l-1.73 1.659.322 2.44a.78.78 0 0 1-.774.883Zm-2.372-2.97a.78.78 0 0 1 .398.11l.99.586-.164-1.237a.78.78 0 0 1 .233-.666l.916-.878-1.187-.22a.782.782 0 0 1-.575-.457l-.468-1.079-.532 1.046a.783.783 0 0 1-.603.421l-1.198.143.86.935a.784.784 0 0 1 .191.68l-.24 1.224 1.024-.522a.782.782 0 0 1 .355-.086Z"/>

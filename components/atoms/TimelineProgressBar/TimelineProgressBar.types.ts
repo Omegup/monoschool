@@ -5,6 +5,5 @@ export interface TimelineProgressBarProps {
 }
 
 export interface ControlledTimelineProgressBarProps extends TimelineProgressBarProps {
-  progress: number;
-  totalProgressUnits: number;
+  progressWidth: number;
 }

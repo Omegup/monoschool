@@ -2,20 +2,21 @@ import { ProgressBarUnit, TimelineContainer, TimeLineProgressBar, TimelineToolti
 import { ControlledTimelineProps } from "./Timeline.types";
 
 export const Timeline = ({
-  onClick,
   startDate,
   endDate,
   progressDate,
   progressDateTitle,
-  progress,
+  progressWidth,
   toolTipBoxIsOpened,
-  toolTipIcons,
   totalProgressUnits,
   selectedEvent,
-  progressBarUnits }: ControlledTimelineProps) => <TimelineContainer  {...{ progressDateTitle, progressDate, startDate, endDate, onClick }}>
-    <TimelineTooltip {...{ toolTipBoxIsOpened, selectedEvent, toolTipIcons }} />
-    <TimeLineProgressBar  {...{ totalProgressUnits, progress }} >
-      {progressBarUnits.map(({
+  isShowingChildrenOnHover,
+  progressBarUnits,
+  onClick,
+}: ControlledTimelineProps) => <TimelineContainer  {...{ progressDateTitle, progressDate, startDate, endDate, onClick }}>
+    <TimelineTooltip {...{ toolTipBoxIsOpened, selectedEvent }} />
+    <TimeLineProgressBar {...{ progressWidth, isShowingChildrenOnHover }} >
+      {progressBarUnits?.map(({
         unitIndex,
         leftPercentage,
         children,
@@ -25,4 +26,14 @@ export const Timeline = ({
         </ProgressBarUnit>)}
     </TimeLineProgressBar>
   </TimelineContainer>
+
+
+
+
+
+
+
+
+
+
 

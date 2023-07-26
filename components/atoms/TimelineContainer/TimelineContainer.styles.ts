@@ -1,30 +1,30 @@
 import { colors } from '@omegup-school/ui-configs/colors';
+import { borders } from '@omegup-school/ui-configs/sizes';
+import { typography } from '@omegup-school/ui-configs/typography/typography.cnst';
 import { createUseStyles } from 'react-jss';
 
 export const useTimelineContainerStyles = createUseStyles({
   main: {
     position: 'relative',
+    margin: '25vh',
     backgroundColor: colors.lightblue[500],
     height: 123,
     width: 640,
-    borderRadius: 10,
+    borderRadius: borders.r5,
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'column',
     paddingBlock: 10,
     paddingInline: 0,
-    fontFamily: 'Poppins',
     '& *': {
       margin: 0,
       padding: 0,
       boxSizing: 'border-box',
-      fontSize: 14,
-      fontWeight: 400,
+      ...typography.paragraph.small.regular , 
     },
     '& h3': {
-      fontSize: 16,
-      fontWeight: 500,
+        ...typography.paragraph.medium.medium , 
     },
   },
   top: {
