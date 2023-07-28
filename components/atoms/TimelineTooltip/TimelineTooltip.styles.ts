@@ -5,6 +5,7 @@ import { createUseStyles } from 'react-jss';
 export const useTimelineTooltipStyles = createUseStyles({
   toolTipBox: {
     position: 'absolute',
+    minWidth: 200,
     top: 0,
     right: 0,
     backgroundColor: colors.blue['500'],

@@ -1,32 +1,23 @@
-import {
-  ControlledProgressBarUnitProps,
-  ProgressBarUnitProps,
-} from '@omegup-school/ui-atoms/ProgressBarUnit';
-import {
-  ControlledTimelineContainerProps,
-  TimelineContainerProps,
-} from '@omegup-school/ui-atoms/TimelineContainer';
-import {
-  ControlledTimelineProgressBarProps,
-  TimelineProgressBarProps,
-} from '@omegup-school/ui-atoms/TimelineProgressBar';
-import { TimeLineToolTipProps } from '@omegup-school/ui-atoms/TimelineTooltip';
+import { TimeLineToolTipProps, TimelineProgressBarProps } from '@omegup-school/ui-atoms';
+import { TimelineContainerProps } from '@omegup-school/ui-atoms/TimelineContainer';
 
-export type ProgressBarUnit = {
-  leftPercentage: number;
-  unitIndex: number;
-  children: React.ReactNode;
-};
-export type TimelineProps = TimelineContainerProps &
-  TimelineProgressBarProps &
-  ProgressBarUnitProps &
-  TimeLineToolTipProps;
-export type ControlledTimelineProps = Omit<
-  ControlledTimelineContainerProps &
-    ControlledTimelineProgressBarProps &
-    ControlledProgressBarUnitProps &
-    TimeLineToolTipProps & {
-      progressBarUnits: ProgressBarUnit[];
-    },
-  'children' | 'unitIndex' | 'leftPercentage'
+type TimelineContainerParentProps = Omit<TimelineContainerProps, 'children'>;
+type TimelineProgressBarParentProps = Pick<
+  TimelineProgressBarProps,
+  'isShowingChildrenOnHover'
 >;
+
+export type TimelineProps = TimelineContainerParentProps &
+  TimelineProgressBarParentProps;
+export interface TimelineProgressBarElement {
+  elementRender: JSX.Element;
+  elementPercentagePosition: number;
+  elementPercentageWidth: number;
+  onClick: () => void;
+}
+export interface ControlledTimelineProps extends TimelineProps {
+  tooltipDataDisplay: TimeLineToolTipProps | null;
+  progressBarElements: TimelineProgressBarElement[];
+  progressPercentage: number;
+  onTimelineContainerClick: () => void;
+}

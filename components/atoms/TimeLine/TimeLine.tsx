@@ -4,7 +4,7 @@ import { timeLineIcons, toolTipIcons } from './Assets';
 import { ToolTip } from './Components';
 import { useStyles } from "./Styles/TimeLine.style";
 import { handleEventsMapping, timeLineProgress } from './Utils';
-import { ProgressBarUnit } from '../ProgressBarUnit';
+import { ProgressBarUnit } from '../ProgressBarElement';
 import { TimelineContainer } from '../TimelineContainer';
 import { TimeLineToolTipEvent, TimelineTooltip } from '../TimelineTooltip';
 //To do Remove the  default values of startDate and endDate and events 
@@ -133,17 +133,7 @@ export const Timeline = ({
 
   return (
     <TimelineContainer onClick={closeToolTipBox} {...{ progressDateTitle, progressDate, startDate, endDate, }}>
-      <TimelineTooltip {...{ toolTipBoxIsOpened, selectedEvent }} />
-      <TimeLineProgressBar  {...{ progressWidth }} >
-        {progressBarUnits.map(({
-          unitIndex,
-          leftPercentage,
-          children,
-        }) =>
-          <ProgressBarUnit  {...{ unitIndex, leftPercentage, totalProgressUnits }} >
-            {children}
-          </ProgressBarUnit>)}
-      </TimeLineProgressBar>
+      <TimeLineProgressBar  {...{ progressWidth }} />
     </TimelineContainer>
   );
 };

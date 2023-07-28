@@ -2,18 +2,19 @@ import { useTimelineTooltipStyles } from "./TimelineTooltip.styles"
 import { ControlledTimeLineToolTipProps } from "./TimelineTooltip.types"
 
 export const TimelineTooltip = ({
-  selectedEvent,
-  toolTipBoxIsOpened,
+  tooltipIcon,
+  tooltipDescription,
+  tooltipTitle,
 }: ControlledTimeLineToolTipProps) => {
 
   const { toolTipBox } = useTimelineTooltipStyles();
 
-  return toolTipBoxIsOpened && (
+  return (
     <span className={toolTipBox}>
-      {selectedEvent?.tooltipIcon}
+      {tooltipIcon}
       <span>
-        <div>{selectedEvent?.period}</div>
-        <p>{selectedEvent?.name}</p>
+        <div>{tooltipTitle}</div>
+        <p>{tooltipDescription}</p>
       </span>
     </span>
   )
