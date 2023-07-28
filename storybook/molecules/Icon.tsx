@@ -7,5 +7,9 @@ export const Icon = ({ name, onClick, ...props }: {
   onClick?: () => void;
 }) => {
   const Icon = icons[name]
-  return <Icon {...props} />
+  return <span style={{
+    display: 'flex',
+  }} onClick={onClick}>
+    <Icon {...props} />
+  </span>
 }
