@@ -69,7 +69,7 @@ const TimelineCell = () => {
   const closeToolTipBox = () => setSelectedEvent(null);
   const { monthsProgress, daysProgress, existMonthsIndexes } = useMemo(() => timeLineProgress(progressDate, startDate, endDate), [startDate, endDate])
   let { mappedMonths } = useMemo(() => handleEventsMapping(events, existMonthsIndexes), [events, existMonthsIndexes])
-  const progressPercentage = monthsProgress + daysProgress;
+  const progressPercentage = (monthsProgress + daysProgress) * 100 / mappedMonths.length;
   const progressBarElements: TimelineProgressBarElement[] = useMemo(() => mappedMonths.map(({ leftPercentage, monthIndex, events }, key) => ({
     elementRender: <>
       {events.map((event, key) => <Icon onClick={() => setSelectedEvent(event)} name={event.progressBarIcon} height='22' width='22' color={'#BAE2FF'} />)}
@@ -87,8 +87,6 @@ const TimelineCell = () => {
 
   return <Timeline onTimelineContainerClick={closeToolTipBox} {...{ startDate: displayDate(startDate), endDate: displayDate(endDate), progressDate: displayDate(progressDate), progressBarElements, progressDateTitle, progressPercentage, selectedEvent, isShowingChildrenOnHover, tooltipDataDisplay }} />
 }
-
-
 
 const meta = {
   title: 'Molecules/TimeLine',
