@@ -1,6 +1,7 @@
+export * from './Info';
 export * from './Logo';
+export * from './Phone';
 export * from './Square';
-export * from './Tick';
 export * from './Subtitle';
 export * from './Calendar';
 export * from './Checkmark';
@@ -12,5 +13,4 @@ export * from './Fastoon';
 export * from './HappyEidAlAdha';
 export * from './Holiday';
 export * from './Ramadhan';
-
-
+export * from './Tick';
