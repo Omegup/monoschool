@@ -9,4 +9,6 @@ export interface TimelineContainerProps {
 export interface ControlledTimelineContainerProps
   extends TimelineContainerProps {
   onClick: () => void;
+  onMouseOver: () => void;
+  onMouseLeave: () => void;
 }

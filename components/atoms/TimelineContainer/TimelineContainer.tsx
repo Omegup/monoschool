@@ -3,11 +3,11 @@ import { useTimelineContainerStyles } from "./TimelineContainer.styles"
 import { ControlledTimelineContainerProps } from "./TimelineContainer.types"
 import { ContainerStateContext } from "../contexts/pointer"
 
-export const TimelineContainer = forwardRef(({ children, startDate, endDate, progressDate, progressDateTitle, onClick }: ControlledTimelineContainerProps, ref: React.Ref<HTMLInputElement>) => {
+export const TimelineContainer = forwardRef(({ children, startDate, endDate, progressDate, progressDateTitle, onClick, onMouseOver, onMouseLeave }: ControlledTimelineContainerProps, ref: React.Ref<HTMLInputElement>) => {
 
   const { main, top, bottom } = useTimelineContainerStyles()
   return (
-    <div className={main} {...{ ref }} >
+    <div className={main} {...{ ref }} {...{ onMouseOver, onMouseLeave }}>
       <ContainerStateContext.Provider value={main}>
         <div className={top} {...{ onClick }}>
           <h3>{progressDateTitle}</h3>

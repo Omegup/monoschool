@@ -1,14 +1,12 @@
 import { forwardRef } from "react";
-import { useTimelineProgressBarStyles } from "./Timeline.styles";
+import { useTimelineProgressBarStyles } from "./TimelineProgressBar.styles";
 import { ControlledTimelineProgressBarProps } from "./TimelineProgressBar.types";
-import { useContainerStateSelector } from "../contexts/pointer";
 
-export const TimeLineProgressBar = forwardRef(({ progressWidth, isShowingChildrenOnHover, children }: ControlledTimelineProgressBarProps, ref: React.Ref<HTMLDivElement>) => {
-  const containerStateSelector = useContainerStateSelector();
-  const { root, progressBar } = useTimelineProgressBarStyles({ theme: { progressWidth, containerStateSelector, isShowingChildrenOnHover } });
+export const TimeLineProgressBar = forwardRef(({ progressWidth, showProgressBarElements, children }: ControlledTimelineProgressBarProps, ref: React.Ref<HTMLDivElement>) => {
+  const { root, progressBar } = useTimelineProgressBarStyles({ theme: { progressWidth } });
   return (
     <div className={root} {...{ ref }} >
-      {children}
+      {showProgressBarElements && children}
       <div className={progressBar} />
     </div>
   )

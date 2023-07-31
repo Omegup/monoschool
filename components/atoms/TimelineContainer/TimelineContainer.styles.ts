@@ -6,9 +6,8 @@ import { createUseStyles } from 'react-jss';
 export const useTimelineContainerStyles = createUseStyles({
   main: {
     position: 'relative',
-    margin: '25vh',
     backgroundColor: colors.lightblue[500],
-    height: 123,
+    height: 106,
     width: 640,
     borderRadius: borders.r5,
     display: 'flex',

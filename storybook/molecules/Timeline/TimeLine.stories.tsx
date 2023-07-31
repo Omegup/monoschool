@@ -1,22 +1,11 @@
 import { TimeLineToolTipProps } from '@omegup-school/ui-atoms';
-import { Timeline, ControlledTimelineProps, TimelineProgressBarElement } from '@omegup-school/ui-molecules';
+import { Timeline, TimelineProgressBarElement } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';
-import { useMemo, useState } from 'react';
-import { Icon } from './Icon';
-import * as Icons from '@omegup-school/ui-assets/icons';
-import { handleEventsMapping, timeLineProgress } from '@omegup-school/ui-atoms/TimeLine/Utils';
-import { TimelineEvent } from '@omegup-school/ui-atoms/TimeLine/Utils/HandleEventsMapping';
+import { useEffect, useMemo, useState } from 'react';
+import { Icon } from '../Icon';
+import { TimelineEvent, displayDate, displayPeriod, handleEventsMapping, timeLineProgress } from './Timeline.assets';
 
-
-const pad = (n: number) => n < 10 ? `0${n}` : n;
-
-const displayDate = (date: Date) => `${pad(date.getDate())}/${pad(date.getMonth() + 1)}/${date.getFullYear()}`
-
-const displayPeriod = (startDate: Date, endDate?: Date) => `${displayDate(startDate)} ${endDate ? "au" : ""} ${endDate ? displayDate(endDate) : ""}`
-
-
-
-const TimelineCell = () => {
+const TimelineCell = ({ isShowingChildrenOnHover }: { isShowingChildrenOnHover?: boolean }) => {
   const events: TimelineEvent[] = useMemo(() => [
     {
       name: "Vacances de la seconde moitié du deuxieme semestre",
@@ -64,8 +53,8 @@ const TimelineCell = () => {
   const endDate = useMemo(() => new Date('2024-06-30'), [])
   const progressDate = useMemo(() => new Date('2024-1-15'), [])
   const progressDateTitle = useMemo(() => 'Aujourd\'hui', [])
-  const isShowingChildrenOnHover = useMemo(() => true, [])
   const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
+  const [showProgressBarElements, setShowProgressBarElements] = useState<boolean>(true);
   const closeToolTipBox = () => setSelectedEvent(null);
   const { monthsProgress, daysProgress, existMonthsIndexes } = useMemo(() => timeLineProgress(progressDate, startDate, endDate), [startDate, endDate])
   let { mappedMonths } = useMemo(() => handleEventsMapping(events, existMonthsIndexes), [events, existMonthsIndexes])
@@ -82,10 +71,30 @@ const TimelineCell = () => {
   const tooltipDataDisplay = useMemo(() => selectedEvent ? {
     tooltipTitle: selectedEvent.name,
     tooltipDescription: displayPeriod(selectedEvent.startDate, selectedEvent.endDate),
-    tooltipIcon: <Icon name={selectedEvent.tooltipIcon} />
+    tooltipIcon: <Icon height='35' width='35' name={selectedEvent.tooltipIcon} />
   } satisfies TimeLineToolTipProps : null, [selectedEvent])
 
-  return <Timeline onTimelineContainerClick={closeToolTipBox} {...{ startDate: displayDate(startDate), endDate: displayDate(endDate), progressDate: displayDate(progressDate), progressBarElements, progressDateTitle, progressPercentage, selectedEvent, isShowingChildrenOnHover, tooltipDataDisplay }} />
+  useEffect(() => setShowProgressBarElements(!isShowingChildrenOnHover ?? true), [isShowingChildrenOnHover])
+
+  return <Timeline
+    onTimelineContainerClick={closeToolTipBox}
+    onTimelineContainerMouseLeave={() => {
+      isShowingChildrenOnHover && setShowProgressBarElements(false)
+      closeToolTipBox()
+    }}
+    onTimelineContainerMouseOver={() => isShowingChildrenOnHover && setShowProgressBarElements(true)}
+    {...{
+      startDate: displayDate(startDate),
+      endDate: displayDate(endDate),
+      progressDate: displayDate(progressDate),
+      progressBarElements,
+      progressDateTitle,
+      progressPercentage,
+      selectedEvent,
+      isShowingChildrenOnHover,
+      tooltipDataDisplay,
+      showProgressBarElements
+    }} />
 }
 
 const meta = {
@@ -101,5 +110,6 @@ type Story = StoryObj<typeof TimelineCell>;
 
 export const Primary: Story = {
   args: {
+    isShowingChildrenOnHover: false,
   },
 };

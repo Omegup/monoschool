@@ -9,17 +9,21 @@ export const Timeline = ({
   progressBarElements,
   tooltipDataDisplay,
   progressPercentage,
-  isShowingChildrenOnHover,
+  showProgressBarElements,
   onTimelineContainerClick,
-}: ControlledTimelineProps) => <TimelineContainer  {...{ progressDateTitle, progressDate, startDate, endDate, onClick: onTimelineContainerClick }}>
+  onTimelineContainerMouseOver,
+  onTimelineContainerMouseLeave,
+}: ControlledTimelineProps) =>
+  <TimelineContainer  {...{ progressDateTitle, progressDate, startDate, endDate, onClick: onTimelineContainerClick, onMouseOver: onTimelineContainerMouseOver, onMouseLeave: onTimelineContainerMouseLeave }}>
     {tooltipDataDisplay && <TimelineTooltip {...tooltipDataDisplay} />}
-    <TimeLineProgressBar {...{ progressWidth: progressPercentage, isShowingChildrenOnHover }} >
+    <TimeLineProgressBar  {...{ progressWidth: progressPercentage, showProgressBarElements }} >
       {progressBarElements?.map(({ elementPercentagePosition, elementRender, elementPercentageWidth, onClick }, key) =>
         <ProgressBarElement {...{ key, leftPercentage: elementPercentagePosition, width: elementPercentageWidth, onClick }} >
           {elementRender}
         </ProgressBarElement>)}
     </TimeLineProgressBar>
   </TimelineContainer>
+
 
 
 

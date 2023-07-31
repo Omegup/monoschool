@@ -5,11 +5,10 @@ import { createUseStyles } from 'react-jss';
 export const useTimelineTooltipStyles = createUseStyles({
   toolTipBox: {
     position: 'absolute',
-    minWidth: 200,
     top: 0,
     right: 0,
     backgroundColor: colors.blue['500'],
-    height: '45%',
+    height: 42,
     borderBottomLeftRadius: 10,
     borderTopRightRadius: 10,
     display: 'flex',
@@ -19,8 +18,8 @@ export const useTimelineTooltipStyles = createUseStyles({
     letterSpacing: '0em',
     textAlign: 'left',
     color: colors.background.default,
-    padding: 10,
-    gap: 10,
+    padding: 5,
+    gap: 5,
     '& *': {
       margin: 0,
       padding: 0,

@@ -1,6 +1,6 @@
 
 export interface TimelineProgressBarProps {
-  isShowingChildrenOnHover?: boolean;
+  showProgressBarElements: boolean;
   children: React.ReactNode;
 }
 
