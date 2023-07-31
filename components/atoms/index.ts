@@ -16,7 +16,6 @@ export * from './Tab';
 export * from './TabContainer';
 export * from './TabBadge';
 export * from './Avatar';
-export * from './TimeLine';
 export * from './TimelineContainer';
 export * from './TimelineProgressBar';
 export * from './ProgressBarElement';
