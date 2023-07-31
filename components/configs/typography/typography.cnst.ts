@@ -29,6 +29,10 @@ export const typography = makeTypo({
         fontWeight: '600',
         fontSize: 16,
       },
+      medium: {
+        fontSize: 16,
+        fontWeight: '500',
+      },
       regular: {
         fontWeight: '400',
         fontSize: 16,

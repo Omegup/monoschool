@@ -1,4 +1,8 @@
 export const widths = {
+  timeline: {
+    height: '600px',
+    width: '160px',
+  },
   icon: {
     svg: '24',
     smallSvg:'16'
