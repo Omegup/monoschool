@@ -1,4 +1,5 @@
 import { colors } from '@omegup-school/ui-configs/colors';
+import { getToken } from '@omegup-school/ui-configs/variables';
 import {
   CheckboxStateTheme,
   CheckboxTheme,
@@ -10,18 +11,20 @@ const COMMON_CHECKBOX_CONTAINER_INITIAL_STYLES: CheckboxStateTheme = {
   tickColor: 'transparent',
 };
 
+const primaryBlue = getToken('color-input-primary');
+
 export const CHECKBOX_THEME: CheckboxTheme = {
   solid: {
     checked: {
       normal: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
       },
       disabled: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
         checkboxOpacity: 0.4,
       },
       focused: {
@@ -33,9 +36,9 @@ export const CHECKBOX_THEME: CheckboxTheme = {
       },
       focusedAndHovered: {
         checkboxOutlineColor: colors.blue[900],
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
       },
       pressed: {
         checkboxBorderColor: colors.blue[700],
@@ -68,12 +71,12 @@ export const CHECKBOX_THEME: CheckboxTheme = {
   border: {
     checked: {
       normal: {
-        checkboxBorderColor: colors.blue[500],
-        tickColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
+        tickColor: primaryBlue,
       },
       disabled: {
-        checkboxBorderColor: colors.blue[500],
-        tickColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
+        tickColor: primaryBlue,
         checkboxOpacity: 0.4,
       },
       focused: {
@@ -81,18 +84,18 @@ export const CHECKBOX_THEME: CheckboxTheme = {
       },
       hovered: {
         checkboxOutlineColor: colors.light[400],
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         checkboxBackgroundColor: colors.light[400],
-        tickColor: colors.blue[500],
+        tickColor: primaryBlue,
       },
       focusedAndHovered: {
         checkboxOutlineColor: colors.pink[500],
       },
       pressed: {
         checkboxOutlineColor: colors.light[500],
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         checkboxBackgroundColor: colors.light[500],
-        tickColor: colors.blue[500],
+        tickColor: primaryBlue,
       },
     },
     unchecked: {
@@ -124,14 +127,14 @@ export const CHECKBOX_THEME: CheckboxTheme = {
   scale: {
     checked: {
       normal: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
       },
       disabled: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
         checkboxOpacity: 0.4,
       },
       focused: {
@@ -162,19 +165,19 @@ export const CHECKBOX_THEME: CheckboxTheme = {
   cell: {
     checked: {
       normal: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
       },
       disabled: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.background.default,
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
         checkboxOpacity: 0.4,
       },
       focused: {
         checkboxOutlineColor: colors.light[500],
-        checkboxBackgroundColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
       },
       hovered: {
         checkboxBorderColor: colors.blue[700],
@@ -182,13 +185,13 @@ export const CHECKBOX_THEME: CheckboxTheme = {
       },
       focusedAndHovered: {
         checkboxOutlineColor: colors.light[500],
-        checkboxBackgroundColor: colors.blue[500],
-        checkboxBorderColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
+        checkboxBorderColor: primaryBlue,
       },
       pressed: {
         checkboxOutlineColor: colors.light[500],
-        checkboxBackgroundColor: colors.blue[500],
-        checkboxBorderColor: colors.blue[500],
+        checkboxBackgroundColor: primaryBlue,
+        checkboxBorderColor: primaryBlue,
       },
     },
     unchecked: {
@@ -219,18 +222,18 @@ export const CHECKBOX_THEME: CheckboxTheme = {
     checked: {
       normal: {
         checkboxBorderColor: colors.light[500],
-        tickColor: colors.blue[500],
+        tickColor: primaryBlue,
         checkboxBackgroundColor: colors.light[500],
       },
       disabled: {
         checkboxBorderColor: colors.light[500],
-        tickColor: colors.blue[500],
+        tickColor: primaryBlue,
         checkboxBackgroundColor: colors.light[500],
         checkboxOpacity: 0.4,
       },
       focused: {
         checkboxBorderColor: colors.light[500],
-        tickColor: colors.blue[500],
+        tickColor: primaryBlue,
         checkboxBackgroundColor: colors.light[500],
       },
       hovered: {
@@ -260,23 +263,23 @@ export const CHECKBOX_THEME: CheckboxTheme = {
         checkboxOpacity: 0.4,
       },
       focused: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: 'transparent',
         checkboxBackgroundColor: 'transparent',
       },
       hovered: {
-        checkboxBorderColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
         tickColor: colors.blue[400],
         checkboxBackgroundColor: colors.light[500],
       },
       focusedAndHovered: {
-        checkboxBorderColor: colors.blue[500],
-        tickColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
+        tickColor: primaryBlue,
         checkboxBackgroundColor: colors.light[500],
       },
       pressed: {
-        checkboxBorderColor: colors.blue[500],
-        tickColor: colors.blue[500],
+        checkboxBorderColor: primaryBlue,
+        tickColor: primaryBlue,
       },
     },
   },
