@@ -15,9 +15,9 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     items: [
-      { icon: <GridFive />, label: 'Classes', number: 90, onClick: () => {} },
-      { icon: <Teacher />, label: 'Prof', number: 120, onClick: () => {} },
-      { icon: <BriefCase />, label: 'Eleves', number: 1700, onClick: () => {} },
+      { icon: <GridFive />, label: 'Classes', number: 90, variant: 'blue', onClick: () => { } },
+      { icon: <Teacher />, label: 'Prof', number: 120, variant: 'headLine', onClick: () => { } },
+      { icon: <BriefCase />, label: 'Eleves', number: 1700, variant: 'light', onClick: () => { } },
     ],
   },
 };

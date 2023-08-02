@@ -9,6 +9,7 @@ export const useCardNumberDashboardStyles = createUseStyles({
     paddingBlockStart: spacing.s9,
     paddingBlockEnd: spacing.s3,
     width:"100%",
+    maxHeight : 118,
     justifyContent: 'center',
     alignItems: 'center',
     gap: spacing.s3,
@@ -19,6 +20,7 @@ export const useCardNumberDashboardStyles = createUseStyles({
     transition: 'border-bottom-color 800ms ease',
     borderBottom: [borders.b11,"solid","transparent"],
     boxShadow:shadowSmall,
+    boxSizing:"border-box",
   },
   blue: {
     backgroundColor: colors.blue[500],

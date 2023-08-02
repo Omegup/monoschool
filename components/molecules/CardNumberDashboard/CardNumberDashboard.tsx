@@ -3,31 +3,30 @@ import {
   ItemCardNumberDashboard,
   Text,
 } from '@omegup-school/ui-atoms';
-import { ControlledCardNumberDashboardProps } from './CardNumberDashboard.types';
 import { forwardRef } from 'react';
+import { ControlledCardNumberDashboardProps } from './CardNumberDashboard.types';
 
 export const CardNumberDashboard = forwardRef(({
   items,
-}: ControlledCardNumberDashboardProps,ref: React.Ref<HTMLDivElement>) => {
-  const variant: ['blue', 'headLine', 'light'] = ['blue', 'headLine', 'light'];
+}: ControlledCardNumberDashboardProps, ref: React.Ref<HTMLDivElement>) => {
   return (
     <Container
       ref={ref}
       alignItems={'start'}
-      justifyContent={'space-between'}
-      width={'640px'}
       gap={'s8'}
     >
-      {items.map((item, index) => (
+      {items.map(({ onClick, variant, number, icon, label }, index) => (
         <ItemCardNumberDashboard
-          onClick={item.onClick}
-          variant={variant[index]}
+          {...{
+            onClick,
+            variant
+          }}
           TextNumber={
-            <Text variant={'display_large_bold'} text={item.number} />
+            <Text variant={'display_large_bold'} text={number.toString()} />
           }
         >
-          {item.icon}
-          <Text variant={'paragraph_medium_medium'} text={item.label} />
+          {icon}
+          <Text variant={'paragraph_medium_medium'} text={label} />
         </ItemCardNumberDashboard>
       ))}
     </Container>

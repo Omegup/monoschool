@@ -23,7 +23,6 @@ export const ItemCardNumberDashboard = forwardRef(({
     <div className={classes.childrenContainer}>
       {children}
     </div>
-    <span className={classes.bottomLine}></span>
   </div>
   );
 });

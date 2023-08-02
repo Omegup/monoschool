@@ -5,13 +5,13 @@ import { joinClassNames } from '@omegup-school/ui-configs/typography';
 
 export const Text = forwardRef(
   (props: TextProps, ref?: React.Ref<HTMLSpanElement>) => {
-    const { text, variant, color = 'dark_default' } = props;
+    const { text, variant, color } = props;
     const classes = useTextStyles();
 
     return (
       <span
         ref={ref}
-        className={joinClassNames(classes[variant], classes[color])}
+        className={joinClassNames(classes[variant], color && classes[color])}
       >
         {text}
       </span>
