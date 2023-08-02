@@ -52,4 +52,5 @@ jss
 
 export const styles = makeStyles({
   ...typoStyles,
+
 });

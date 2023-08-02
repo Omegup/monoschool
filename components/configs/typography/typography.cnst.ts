@@ -43,6 +43,10 @@ export const typography = makeTypo({
         fontWeight: '600',
         fontSize: 12,
       },
+      bold: {
+        fontWeight: '700',
+        fontSize: 12,
+      },
     },
     overline: {
       small: {
@@ -57,6 +61,10 @@ export const typography = makeTypo({
       },
       semiBold: {
         fontWeight: '600',
+        fontSize: 12,
+      },
+      bold: {
+        fontWeight: '700',
         fontSize: 12,
       },
     },
@@ -81,4 +89,5 @@ export const typography = makeTypo({
       },
     },
   },
+  
 });
