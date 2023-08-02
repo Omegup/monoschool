@@ -8,17 +8,17 @@ import { ChildMenu, Container, Text } from '@omegup-school/ui-atoms';
 export const SubMenu = forwardRef(
   (props: ControlledSubMenuProps,
     ref: React.Ref<HTMLDivElement>) => {
-    const { title, items, onClick, viewMode, isCollopsed } = props;
+    const { title, items, onClick, viewMode, isCollapsed } = props;
 
     return (
       <Container
-        ref={ref}
+        {...{ onClick, ref }}
         direction="column"
         justifyContent="start"
         gap='s2'
         alignItems='start'
       >
-        {viewMode !== 'mobile' && !isCollopsed &&
+        {viewMode !== 'mobile' && !isCollapsed &&
           <Container
             ref={ref}
             paddingInline='s5'
@@ -26,25 +26,11 @@ export const SubMenu = forwardRef(
           >
             <Text text={title} ref={ref}
               variant="paragraph_xSmall_bold"
-              letterSpacing='0.12px'
-              lineHeigt='normal'
-              textTransform='uppercase'
-              color="#B9CAD7" />
-              {/* // TO DO  fix colors after merge */}
-       </Container> }
-          
+              color="grey_300" />
+          </Container>}
         {
-          items.map((ch, index) =>
-            <ChildMenu
-              key={index}
-              onClick={(e) => { ch.selected = true }}
-              onBlur={() => { }}
-              size={'medium'}
-              icon={ch.icon}
-              label={ch.label}
-              selected={ch.selected}
-              isCollopsed={isCollopsed}
-            />
+          items.map(({ isSelected, label, icon, onClick, onBlur, size }, key) =>
+            <ChildMenu {...{ onClick, onBlur, key, size, icon, label, isSelected, isCollapsed }} />
           )}
       </Container>
 

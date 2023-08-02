@@ -22,7 +22,7 @@ export const Primary: Story = {
     icon: <UserTick width='24' height='24' />,
     label: "Présence des enseigants",
     selected: true,
-    isCollopsed: false,
+    isCollapsed: false,
     size: 'medium',
     // style: 'border',
     viewMode: 'default'

@@ -1,16 +1,17 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
+export type ChildMenuSize = 'large' | 'medium' | 'small';
+
+export type ChildMenuViewMode = 'mobile' | 'default';
 export interface ChildMenuProps {
-  size: 'large' | 'medium' | 'small';
-  icon?:ReactNode ,
-  label: string,
-  selected?: boolean,
-  isCollopsed?:boolean,
-  viewMode?:'mobile'|'default',
-  alignSelf?: 'stretch'|'end'|'center'
+  size: ChildMenuSize;
+  icon?: ReactNode;
+  label: string;
+  isSelected?: boolean;
+  isCollapsed?: boolean;
+  viewMode?: ChildMenuViewMode;
 }
 export interface ControlledChildMenuProps extends ChildMenuProps {
-  onClick: (value: boolean) => void;
-  onBlur: () => void;
+  onClick: () => void;
+  onBlur?: () => void;
 }
- 

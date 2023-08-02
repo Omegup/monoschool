@@ -1,11 +1,12 @@
-import { ChildMenuProps } from "@omegup-school/ui-atoms/ChildMenu/ChildMenu.types";
+import { ControlledChildMenuProps } from '@omegup-school/ui-atoms/ChildMenu/ChildMenu.types';
 
+export type SubMenuViewMode = 'mobile' | 'default';
 export interface SubMenuProps {
-  isCollopsed?:boolean;
+  isCollapsed?: boolean;
   title: string;
-   viewMode?:'mobile'|'default';
-  items: ChildMenuProps[]
+  viewMode?: SubMenuViewMode;
+  items: ControlledChildMenuProps[];
 }
 export interface ControlledSubMenuProps extends SubMenuProps {
-  onClick: (value: boolean) => void;
- }
+  onClick: () => void;
+}

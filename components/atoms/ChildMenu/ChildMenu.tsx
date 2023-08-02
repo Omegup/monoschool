@@ -1,30 +1,28 @@
 import { joinClassNames } from '@omegup-school/ui-configs/typography';
-import { Button } from '../Button';
-import { useChildMenutStyles } from './ChildMenu.styles';
+import { forwardRef } from 'react';
+import { useChildMenuStyles } from './ChildMenu.styles';
 import { ControlledChildMenuProps } from './ChildMenu.types';
-import { Children, forwardRef } from 'react';
- 
+
 export const ChildMenu = forwardRef(
   (props: ControlledChildMenuProps,
     ref: React.Ref<HTMLDivElement>) => {
-    const { size, icon, isCollopsed,  label, onClick, onBlur, selected, viewMode } = props;
-    const classes = useChildMenutStyles();
-    const selectedClasse = classes[selected ? 'selected' : 'notSelected'];
-    const collopsedCalsse = classes[isCollopsed ? 'collopsed' : 'container'];
+    const { size, icon, isCollapsed, label, onClick, onBlur, isSelected, viewMode } = props;
+    const classes = useChildMenuStyles();
+    const selectedClass = classes[isSelected ? 'selected' : 'notSelected'];
+    const collapsedClass = classes[isCollapsed ? 'collapsed' : 'container'];
     const vieModeClassContainer = classes[viewMode == 'mobile' ? 'mobile' : 'container']
     const vieModeClassLabel = classes[viewMode == 'mobile' ? 'mobileLabel' : 'label']
     const vieModeClassIcon = classes[viewMode == 'mobile' ? 'mobileIcon' : 'icon']
     return (
-      <div ref={ref} className={joinClassNames(vieModeClassContainer,selectedClasse,classes[size],collopsedCalsse) }>
+      <div {...{ onBlur, onClick, ref }} className={joinClassNames(vieModeClassContainer, selectedClass, classes[size], collapsedClass)}>
         <div className={`${vieModeClassIcon} `} >
           {icon}
         </div>
-        {!isCollopsed &&
+        {!isCollapsed &&
           <div className={`${vieModeClassLabel} `}>
             <label >
               {label}
             </label>
-            {/* <Button label={label} /> */}
           </div>
         }
       </div>

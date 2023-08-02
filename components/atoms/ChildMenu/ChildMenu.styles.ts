@@ -11,7 +11,7 @@ type Sizes = readonly [
 ];
 
 
-export const useChildMenutStyles = createUseStyles({
+export const useChildMenuStyles = createUseStyles({
   solid: {},
   border: {},
   flat: {},
@@ -112,7 +112,7 @@ export const useChildMenutStyles = createUseStyles({
       },
     },
   },
-  collopsed:{
+  collapsed:{
   width:'fit-content'
 }
   
