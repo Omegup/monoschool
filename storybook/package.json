@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "scripts": {
     "storybook": "storybook dev -p 6006",
+    "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@omegup-school/ui-assets": "workspace:*",
+    "@omegup-school/ui-atoms": "workspace:*",
+    "@omegup-school/ui-cells": "workspace:*",
     "@omegup-school/ui-molecules": "workspace:*",
     "@omegup-school/ui-assets": "workspace:*",
+    "@omegup-school/ui-configs": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.44.3"
