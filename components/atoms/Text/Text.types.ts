@@ -1,7 +1,8 @@
-import type { typoStyles } from "@omegup-school/ui-configs/typography";
+import type { typoStyles } from '@omegup-school/ui-configs/typography';
+import type { colorsStyles } from '@omegup-school/ui-configs/colors';
 
-export type Weight = 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900;
 export interface TextProps {
   variant: keyof typeof typoStyles;
-  text: string|number;
+  text: string;
+  color?: keyof typeof colorsStyles;
 }
