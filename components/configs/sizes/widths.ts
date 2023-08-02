@@ -22,4 +22,8 @@ export const widths = {
     semiLarge: '35px',
     large: '42px',
   },
+  itemCardNumberDashboard: {
+    default:"203px",
+    icon:"24px",
+  },
 };

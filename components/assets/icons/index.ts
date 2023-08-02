@@ -3,4 +3,7 @@ export * from './Logo';
 export * from './Phone';
 export * from './Square';
 export * from './Subtitle';
+export * from './GridFive';
+export * from './Teacher';
+export * from './BriefCase';
 export * from './Tick';
