@@ -17,8 +17,6 @@ export const SubMenu = forwardRef(
         justifyContent="start"
         gap='s2'
         alignItems='start'
-        width='fit-content'
-
       >
         {viewMode !== 'mobile' && !isCollopsed &&
           <Container
