@@ -33,6 +33,10 @@ export const typography = makeTypo({
         fontWeight: '400',
         fontSize: 16,
       },
+      medium:{
+        fontWeight: '500',
+        fontSize: 16,
+      }
     },
     xSmall: {
       regular: {
@@ -89,5 +93,12 @@ export const typography = makeTypo({
       },
     },
   },
-  
+  display: {
+    large:{
+      bold:{
+        fontWeight: '700',
+        fontSize: 52,
+      }
+    }
+  }
 });
