@@ -43,7 +43,7 @@ Object.entries(weights).forEach(([weightName, fontWeight]) =>
 jss
   .createStyleSheet({
     '@global': {
-      'body, input': {
+      'body, input, textarea': {
         fontFamily: 'Poppins',
       },
     },
