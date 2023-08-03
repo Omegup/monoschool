@@ -3,7 +3,7 @@ import { ContainerStateContext } from '../contexts/pointer';
 import { useStyles } from './TabContainer.styles';
 import { TabSearchProps } from './TabContainer.types';
 
-export const TabContainer = ({ selected, children }: TabSearchProps) => {
+export const TabContainer = ({ selected, children, onClick }: TabSearchProps) => {
   const classes = useStyles();
   return (
     <div
@@ -11,6 +11,7 @@ export const TabContainer = ({ selected, children }: TabSearchProps) => {
         classes.topSearchContainer,
         selected && classes.selected
       )}
+      {...{ onClick }}
     >
       <div className={`${classes.tabSearch}`}>
         <ContainerStateContext.Provider value={classes.topSearchContainer}>

@@ -32,16 +32,16 @@ export const ArrowDownSquare = ({
           <path
             d="M8.5 21H14.5C19.5 21 21.5 19 21.5 14V8C21.5 3 19.5 1 14.5 1H8.5C3.5 1 1.5 3 1.5 8V14C1.5 19 3.5 21 8.5 21Z"
             stroke={color}
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
           <path
             d="M7.96997 9.6399L11.5 13.1599L15.03 9.6399"
             stroke={color}
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           />
         </>
       )}

@@ -23,10 +23,10 @@ export const ArrowUpSecond = ({
         <>
           <path d="M17.4201 8.0499L10.9001 1.52989C10.1301 0.759893 8.8701 0.759893 8.1001 1.52989L1.58008 8.0499"
             stroke={color}
-            stroke-width="1.5"
-            stroke-miterlimit="10"
-            stroke-linecap="round"
-            stroke-linejoin="round" />
+            strokeWidth="1.5"
+            strokeMiterlimit="10"
+            strokeLinecap="round"
+            strokeLinejoin="round" />
         </>
       )}
     </svg>
