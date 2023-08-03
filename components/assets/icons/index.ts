@@ -7,15 +7,14 @@ export * from './UserTick';
 export * from './WifiSquare';
 export * from './ClipboardTick';
 export * from './Subtitle';
+export * from './Vector';
 export * from './GridFive';
 export * from './Teacher';
 export * from './BriefCase';
-export * from './Tick';
 export * from './Home';
 export * from './Message'
 export * from './Notification'
 export * from './Profile'
-export * from './Vector';
 export * from './ArrowDownSquare'
 export * from './ArrowLeftSquare'
 export * from './ArrowRightSquare'

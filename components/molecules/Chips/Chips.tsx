@@ -1,44 +1,24 @@
-import React from 'react'
-import { ChipsProp } from './Chips.types'
-import { useStyles } from './Chips.styles'
-import { Vector } from '@omegup-school/ui-assets';
-import { colors } from '@omegup-school/ui-atoms/colors';
+/* eslint-disable max-params */
+import { ChipsContainer, ChipsContent, ChipsLabel, Container } from '@omegup-school/ui-atoms';
+import { ChipsProp } from './Chips.types';
 
-export const Chips = ({ person, onCancel }: ChipsProp) => {
-
-  const labels = [
-    {
-      label: 'Ala Bouziri',
-    },
-    {
-      label: 'Toukbari',
-    }
-  ];
-
-  const classes = useStyles();
-
+export const Chips = ({ persons, label, onCancel }: ChipsProp) => {
   return (
-    <div className={classes.chipContainer}>
-      <span className={classes.parent}>Parents</span>
-      <div className={classes.labelContainer}>
-        {person.map(({ label }, index, { length }) => {
-          return (
-            <>
-              <div className={classes.avatar}>
-              </div>
-              <span key={index} className={classes.label}>{label}</span>
-              {
-                index + 1 < length
-                  ? <span className={classes.labelSeparator} key={index}>/</span>
-                  : <div className={classes.cancelIcon} onClick={() => onCancel()}>
-                    <Vector width='6.58' height='6.58' />
-                  </div>
-              }
-            </>
-          )
-        })}
-      </div>
-
-    </div >
-  )
-}
+    <Container >
+      <ChipsContainer>
+        <ChipsLabel label={label} />
+        <Container paddingInline='s2'>
+          {persons.map(({ avatar, name }, index, { length }) =>
+            <ChipsContent
+              key={index}
+              avatar={avatar}
+              onCancel={() => onCancel(index)}
+              isLastIndex={index + 1 >= length}
+              name={name}
+            />
+          )}
+        </Container >
+      </ChipsContainer>
+    </Container>
+  );
+};

@@ -1,4 +1,5 @@
 export interface ChipsProp {
-  person: { label: string, avatar?: string }[];
-  onCancel: () => void;
+  label: string;
+  persons: {name : string, avatar : JSX.Element}[];
+  onCancel: (index: number) => void;
 }

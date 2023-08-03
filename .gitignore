@@ -38,3 +38,6 @@ testem.log
 .DS_Store
 Thumbs.db
 /storybook/storybook-static
+
+# megalint report
+/megalinter-reports

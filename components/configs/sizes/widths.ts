@@ -17,6 +17,7 @@ export const widths = {
     small: '13.33px',
   },
   avatar: {
+    xsmall: '18px',
     small: '20px',
     medium: '24px',
     semiLarge: '35px',

@@ -1,5 +1,7 @@
+import * as avatars from '@omegup-school/ui-assets/images';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Chips } from '@omegup-school/ui-molecules';
+import { Avatar, AvatarImage } from '@omegup-school/ui-atoms';
 
 const meta = {
   title: 'Atom/Chips',
@@ -14,14 +16,27 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    person: [
+    label: 'Parent',
+    persons: [
       {
-        label: 'Ala Bouziri',
+        name: 'Ala Bouziri',
+        avatar: <Avatar size='xsmall'>
+          <AvatarImage src={avatars.avatarJoey} />
+        </Avatar>,
       },
       {
-        label: 'Toukbari',
+        name: 'Toukbari',
+        avatar: <Avatar size='xsmall'>
+          <AvatarImage  src={avatars.avatarCamela} />
+        </Avatar>,
+      },
+      {
+        name: 'Yaakoubi ben yagoub',
+        avatar: <Avatar size='xsmall'>
+          <AvatarImage src={avatars.avatarJenna} />
+        </Avatar>,
       }
     ],
-    onCancel: () => { console.log('clicked') }
+    onCancel: (index) => { console.log(index + ' is canceled'); }
   },
 };
