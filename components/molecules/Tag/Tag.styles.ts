@@ -1,4 +1,5 @@
-import { typography } from "@omegup-school/ui-atoms/typography";
+import { typoStyles } from "@omegup-school/ui-configs/typography";
+
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
@@ -14,8 +15,7 @@ export const useStyles = createUseStyles({
   }),
 
   tagText: ({ color }: { color: { primary: string, backgroundColor: string } }) => ({
-    fontSize: typography.paragraph.xSmall.regular.fontSize,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
     color: color.primary,
     paddingRight: '8px',
   }),

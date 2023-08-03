@@ -1,5 +1,6 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { typography } from "@omegup-school/ui-atoms/typography";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { typoStyles } from "@omegup-school/ui-configs/typography";
+
 import { createUseStyles } from "react-jss";
 
 export const useNavbarStyle = createUseStyles({

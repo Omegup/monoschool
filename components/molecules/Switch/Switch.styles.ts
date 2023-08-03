@@ -1,5 +1,5 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { shadowMedium } from "@omegup-school/ui-atoms/effects/shadow";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { shadowMedium } from "@omegup-school/ui-configs/effects/shadow";
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({

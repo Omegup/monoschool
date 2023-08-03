@@ -1,5 +1,4 @@
-import React from 'react'
-import { widths } from '@omegup-school/ui-atoms/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const Message = ({
   width = widths.icon.svg,

@@ -1,6 +1,7 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { typography } from "@omegup-school/ui-atoms/typography";
-import { createUseStyles } from "react-jss";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { typoStyles } from '@omegup-school/ui-configs/typography';
+
+import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
   containerSearch: {
@@ -26,13 +27,11 @@ export const useStyles = createUseStyles({
   },
   nameSearch: {
     margin: 0,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
-    fontSize: typography.paragraph.xSmall.regular.fontSize,
+    ...typoStyles.paragraph_xSmall_regular,
   },
   descriptionSearch: {
     margin: 0,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
-    fontSize: typography.paragraph.xSmall.regular.fontSize,    
-    color : colors.grey[500]
+    ...typoStyles.paragraph_xSmall_regular,
+    color: colors.grey[500],
   },
 });

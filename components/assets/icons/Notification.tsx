@@ -1,5 +1,5 @@
 import React from 'react'
-import { widths } from '@omegup-school/ui-atoms/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const Notification = ({
   width = widths.icon.svg,

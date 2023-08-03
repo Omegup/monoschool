@@ -1,6 +1,7 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { shadowXSmall } from "@omegup-school/ui-atoms/effects/shadow";
-import { typography } from "@omegup-school/ui-atoms/typography";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { shadowXSmall } from '@omegup-school/ui-configs/effects/shadow';
+import { typoStyles } from "@omegup-school/ui-configs/typography";
+
 import { createUseStyles } from "react-jss";
 
 export const useStyles = createUseStyles({
@@ -53,8 +54,7 @@ export const useStyles = createUseStyles({
     backgroundColor: colors.blue[500],
     padding: '5px',
     height: '100%',
-    fontSize: typography.paragraph.xSmall.regular.fontSize,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
     color: colors.light[100],
     borderRadius: '5px'
   },
@@ -71,16 +71,12 @@ export const useStyles = createUseStyles({
   label: {
     padding: '5px',
     backgroundColor: colors.light[100],
-    fontSize: typography.paragraph.xSmall.regular.fontSize,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
   },
 
   labelSeparator: {
     padding: '5px 7px 5px 5px',
     backgroundColor: colors.light[100],
-    fontSize: typography.paragraph.xSmall.regular.fontSize,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
   },
-  
-
 })

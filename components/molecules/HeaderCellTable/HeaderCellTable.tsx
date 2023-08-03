@@ -1,8 +1,7 @@
-import React from 'react'
-import { HeaderCellTableProps } from './HeaderCellTable.types'
-import { useStyles } from './HeaderCellTable.styles';
 import { ArrowDownSecond, ArrowUpSecond } from '@omegup-school/ui-assets';
-import { colors } from '@omegup-school/ui-atoms/colors';
+import { useStyles } from './HeaderCellTable.styles';
+import { HeaderCellTableProps } from './HeaderCellTable.types';
+import { colors } from '@omegup-school/ui-configs/colors';
 
 export const HeaderCellTable = ({ label, isSortable: isSortable = false, sortType, onSort }: HeaderCellTableProps) => {
   const sortMap = {
@@ -11,7 +10,7 @@ export const HeaderCellTable = ({ label, isSortable: isSortable = false, sortTyp
     desc: null,
   } as const;
   const classes = useStyles();
-  
+
   return (
     <div className={classes.cellContainer} onClick={() => onSort(sortMap[`${sortType}`])}>
       <div className={classes.cellLabel}>{label}</div>

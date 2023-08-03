@@ -1,7 +1,8 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { borders } from "@omegup-school/ui-atoms/sizes";
-import { typography } from "@omegup-school/ui-atoms/typography";
-import { createUseStyles } from "react-jss";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { borders } from '@omegup-school/ui-configs/sizes';
+import { typoStyles } from '@omegup-school/ui-configs/typography';
+
+import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
   tabs: {
@@ -9,9 +10,9 @@ export const useStyles = createUseStyles({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '100%'
+    width: '100%',
   },
-  tabsContainer:{
+  tabsContainer: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -32,12 +33,11 @@ export const useStyles = createUseStyles({
     },
 
     '&:hover': {
-      '&>tabLabel' : {
-        fontSize: typography.paragraph.medium.semiBold.fontSize,
-        fontWeight: typography.paragraph.medium.semiBold.fontWeight,
-        color : colors.grey[500]
-      }
-    }
+      '&>tabLabel': {
+        ...typoStyles.paragraph_medium_semiBold,
+        color: colors.grey[500],
+      },
+    },
   },
   tabSelected: {
     display: 'flex',
@@ -47,7 +47,7 @@ export const useStyles = createUseStyles({
     padding: '10px 20px',
     width: 'fit-content',
     cursor: 'default',
-    borderRadius : borders.r5,
+    borderRadius: borders.r5,
     borderBottom: `5px solid ${colors.blue[500]}`,
 
     '&>svg>path': {
@@ -55,18 +55,16 @@ export const useStyles = createUseStyles({
       height: '20px',
     },
 
-    '&>$tabLabel' : {
-      fontSize: typography.paragraph.medium.semiBold.fontSize,
-      fontWeight: typography.paragraph.medium.semiBold.fontWeight,
-      color : colors.dark.default
-    }
+    '&>$tabLabel': {
+      ...typoStyles.paragraph_medium_semiBold,
+      color: colors.dark.default,
+    },
   },
 
   tabLabel: {
-    fontSize: typography.paragraph.medium.regular.fontSize,
-    fontWeight: typography.paragraph.medium.regular.fontWeight,
-    color : colors.grey[500],
-    paddingLeft: '12px'
+    ...typoStyles.paragraph_medium_semiBold,
+    color: colors.grey[500],
+    paddingLeft: '12px',
   },
 
   tabsActionsContainer: {
@@ -78,8 +76,6 @@ export const useStyles = createUseStyles({
     '&>div>svg>path': {
       fill: colors.blue[500],
       stroke: colors.light[500],
-    }
-
+    },
   },
-
-})
+});

@@ -1,6 +1,6 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { typography } from "@omegup-school/ui-atoms/typography";
-import { createUseStyles } from "react-jss";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { typoStyles } from '@omegup-school/ui-configs/typography';
+import { createUseStyles } from 'react-jss';
 
 export const useStyles = createUseStyles({
   cellContainer: {
@@ -12,17 +12,15 @@ export const useStyles = createUseStyles({
       '& $iconContainerTop': {
         transform: 'translate(-50%, -65%)',
         opacity: 1,
-
       },
       '& $iconContainerDown': {
         transform: 'translate(-50%, -45%)',
         opacity: 1,
       },
-    }
+    },
   },
   cellLabel: {
-    fontSize: typography.paragraph.overline.small.fontSize,
-    fontWeight: typography.paragraph.overline.small.fontWeight,
+    ...typoStyles.paragraph_overline_small,
     textTransform: 'uppercase',
     color: colors.headline[500],
     marginRight: 13,
@@ -34,7 +32,6 @@ export const useStyles = createUseStyles({
     '& $iconContainerTop': {
       transform: 'translate(-50%, -65%)',
       opacity: 1,
-
     },
     '& $iconContainerDown': {
       transform: 'translate(-50%, -45%)',

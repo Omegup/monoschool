@@ -8,7 +8,6 @@ export * from './ListSearch';
 export * from './Tabs';
 export * from './HeaderCellTable';
 export * from './Radio';
-export * from '@omegup-school/ui-atoms/TagToggle'
 export * from './AvatarWithName';
 export * from './DoubleText';
 export * from './TextWithIcon';

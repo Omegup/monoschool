@@ -1,70 +1,66 @@
-import { colors } from "@omegup-school/ui-atoms/colors";
-import { typography } from "@omegup-school/ui-atoms/typography";
-import { create } from "jss";
-import { createUseStyles } from "react-jss";
+import { colors } from '@omegup-school/ui-configs/colors';
+import { typoStyles } from '@omegup-school/ui-configs/typography';
+import { createUseStyles } from 'react-jss';
 
 export const useRadioStyles = createUseStyles({
   small: {
-    fontSize: typography.paragraph.xSmall.regular.fontSize,
-    fontWeight: typography.paragraph.xSmall.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
     '& $radio': {
       width: 16,
       height: 16,
       '&:checked': {
         '&:after': {
           width: 7,
-          height: 7
-        }
+          height: 7,
+        },
       },
       '&:hover': {
         '&:after': {
           border: '8px solid ' + colors.grey[400],
-        }
-      }
+        },
+      },
     },
     '& $radioLabel': {
       paddingLeft: 6,
     },
   },
   medium: {
-    fontSize: typography.paragraph.medium.regular.fontSize,
-    fontWeight: typography.paragraph.medium.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
     '& $radio': {
       width: 20,
       height: 20,
       '&:checked': {
         '&:after': {
           width: 10,
-          height: 10
-        }
+          height: 10,
+        },
       },
       '&:hover': {
         '&:after': {
           border: '10px solid ' + colors.grey[400],
-        }
-      }
+        },
+      },
     },
     '& $radioLabel': {
       paddingLeft: 7,
-    }
+    },
   },
   large: {
-    fontSize: typography.paragraph.large.regular.fontSize,
-    fontWeight: typography.paragraph.large.regular.fontWeight,
+    ...typoStyles.paragraph_xSmall_regular,
     '& $radio': {
       width: 24,
       height: 24,
       '&:checked': {
         '&:after': {
           width: 15,
-          height: 15
-        }
+          height: 15,
+        },
       },
       '&:hover': {
         '&:after': {
           border: '12px solid ' + colors.grey[400],
-        }
-      }
+        },
+      },
     },
     '& $radioLabel': {
       paddingLeft: 8,
@@ -87,18 +83,14 @@ export const useRadioStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
   },
-  radio: {
-  },
-  radioLabel: {
-  },
-
+  radio: {},
+  radioLabel: {},
 
   borderRadio: {
     // accentColor: colors.blue[500],
     // '&:hover': {
     //   accentColor: colors.blue[600],
     // }
-
   },
   scaledRadio: {
     '&:checked': {
@@ -117,7 +109,7 @@ export const useRadioStyles = createUseStyles({
         '&:after': {
           border: '6px solid ' + colors.blue[600],
         },
-      }
+      },
     },
     '&:hover': {
       '&:after': {
@@ -129,7 +121,7 @@ export const useRadioStyles = createUseStyles({
         backgroundColor: colors.grey[400],
         display: 'inline-block',
         visibility: 'visible',
-      }
+      },
     },
     '&$disabled': {
       '&:after': {
