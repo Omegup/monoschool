@@ -19,3 +19,4 @@ export * from './TabContainer';
 export * from './TabBadge';
 export * from './Avatar';
 export * from './ItemCardNumberDashboard';
+export * from './listSearchContent';
