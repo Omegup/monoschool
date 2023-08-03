@@ -2,7 +2,7 @@ import { colors } from '@omegup-school/ui-configs/colors';
 import { useStyles } from './TagToggle.styles';
 import { TagToggleProps, TagType } from './TagToggle.types';
 
-export const TagToggle = ({type,label}: TagToggleProps) => {
+export const TagToggle = ({ type, label }: TagToggleProps) => {
 
   const getColor = (type: TagType): { primary: string, backgroundColor: string } => {
     if (type === 'info')

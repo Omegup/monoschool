@@ -1,3 +1,4 @@
+
 import { Container, TabBadge, TabContainer, TabLabel } from '@omegup-school/ui-atoms';
 import { TabSearchProps } from './TabSearch.types';
 
@@ -6,7 +7,6 @@ export const TabSearch = ({
   setSelectedIndex,
   tabProps,
 }: TabSearchProps) => {
-
   return (
     <Container>
       {
