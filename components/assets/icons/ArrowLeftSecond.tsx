@@ -1,4 +1,4 @@
-import { rotation, widths } from '@omegup-school/ui-configs/sizes';
+import { widths } from '@omegup-school/ui-configs/sizes';
 import { ArrowDownSecond } from './ArrowDownSecond';
 import { IconProps } from './Icons.types';
 
@@ -10,6 +10,6 @@ export const ArrowLeftSecond = ({
 }: IconProps) => {
   return (
     <ArrowDownSecond width={width}
-    height={height} bold={bold} color={color} rotation={rotation.left} />
+    height={height} bold={bold} color={color} />
   );
 };

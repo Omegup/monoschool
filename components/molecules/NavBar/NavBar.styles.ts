@@ -12,8 +12,7 @@ export const useNavbarStyle = createUseStyles({
   },
   navbarSearch: {},
   navbarLabel: {
-    fontSize: typography.paragraph.medium.regular.fontSize,
-    fontWeight: typography.paragraph.medium.regular.fontWeight,
+    ...typoStyles.paragraph_medium_regular,
     color: colors.grey[500],
   },
   navbarMenu: {

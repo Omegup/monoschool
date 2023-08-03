@@ -1,5 +1,4 @@
-import React from 'react'
-import { useNavbarStyle } from './NavBar.styles'
+import { useNavbarStyle } from './NavBar.styles';
 import { NavbarProps } from './NavBar.types';
 
 export const Navbar = ({ navItems, selectedIndex, onClick }: NavbarProps) => {
