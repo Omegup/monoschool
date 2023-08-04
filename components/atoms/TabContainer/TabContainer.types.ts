@@ -7,4 +7,5 @@ export interface TabSearchProps {
 export interface TabProps {
   label: string;
   badge?: number;
+  onClick: () => void;
 }
