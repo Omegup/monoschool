@@ -57,7 +57,7 @@ export const typography = makeTypo({
       },
       semiBold: {
         fontWeight: '600',
-        fontSize: 12,
+        fontSize: 18,
       },
     },
   },

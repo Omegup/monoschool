@@ -2,5 +2,12 @@ export * from './Info';
 export * from './Logo';
 export * from './Phone';
 export * from './Square';
-export * from './Subtitle';
 export * from './Tick';
+export * from './ArrowDownSquare'
+export * from './ArrowLeftSquare'
+export * from './ArrowRightSquare'
+export * from './ArrowUpSquare'
+export * from './GridFive'
+export * from './GridNine'
+export * from './GridSix'
+export * from './Subtitle';
