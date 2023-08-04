@@ -1,8 +1,8 @@
 import * as icons from '@omegup-school/ui-assets/icons';
 import { ItemCardNumberDashboard, Text } from '@omegup-school/ui-atoms';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
 import { ControlledItemCardNumberDashboardProps } from '@omegup-school/ui-atoms/ItemCardNumberDashboard/ItemCardNumberDashboard.types';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Icon } from './Icon';
 
 const Demo = ({
   icon,

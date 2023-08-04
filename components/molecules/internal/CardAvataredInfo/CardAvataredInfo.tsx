@@ -1,9 +1,9 @@
 import { forwardRef } from 'react';
-import { ControlledAvatarWithNameProps } from './AvatarWithName.types';
+import { ControlledCardAvataredInfoProps } from './CardAvataredInfo.types';
 import { Container, Text } from '@omegup-school/ui-atoms';
 
-export const AvatarWithName = forwardRef(
-  (props: ControlledAvatarWithNameProps, ref: React.Ref<HTMLDivElement>) => {
+export const CardAvataredInfo = forwardRef(
+  (props: ControlledCardAvataredInfoProps, ref: React.Ref<HTMLDivElement>) => {
     const { text, avatar } = props;
   return (
     <Container

@@ -33,3 +33,12 @@ export * from './ArrowCircleNext'
 export * from './ArrowCircleNextDark'
 export * from './ArrowCirclePrev'
 export * from './ArrowCirclePrevDark'
+export * from './More';
+export * from './DocumentText';
+export * from './EmptyWalletTime';
+export * from './Money';
+export * from './RepeateMusic';
+export * from './People';
+export * from './CalendarCircle';
+export * from './Map';
+export * from './MenuBoard';

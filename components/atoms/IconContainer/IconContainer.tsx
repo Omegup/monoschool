@@ -25,16 +25,20 @@ export const IconContainer = forwardRef(
       height,
       width,
     });
-    const Icon = icons[name];
+    const Icon = icons[name!];
     return (
       <div ref={ref} className={classes.mainContainer} {...{ onClick }}>
-        <Icon
-          {...{
-            color: colorsStyles[color],
-            width: widths.icon[width],
-            height: widths.icon[height],
-          }}
-        />
+        {name !== undefined ? (
+          <Icon
+            {...{
+              color: colorsStyles[color],
+              width: widths.icon[width],
+              height: widths.icon[height],
+            }}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     );
   }
