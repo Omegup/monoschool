@@ -6,7 +6,6 @@ export const Avatar = forwardRef(
   (props: AvatarProps, ref: React.Ref<HTMLDivElement>) => {
     const { children, onClick, ...styling } = props;
     const classes = useAvatarStyles(styling);
-
     return (
       <div ref={ref} {...{ onClick }} className={classes.mainContainer}>
         {children}

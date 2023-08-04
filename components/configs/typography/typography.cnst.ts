@@ -29,14 +29,14 @@ export const typography = makeTypo({
         fontWeight: '600',
         fontSize: 16,
       },
+      medium:{
+        fontWeight: '500',
+        fontSize: 16,
+      },
       regular: {
         fontWeight: '400',
         fontSize: 16,
       },
-      medium:{
-        fontWeight: '500',
-        fontSize: 16,
-      }
     },
     xSmall: {
       regular: {
