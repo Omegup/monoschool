@@ -19,3 +19,5 @@ export * from './NakedCheckbox';
 export * from './TabContainer';
 export * from './TabBadge';
 export * from './Avatar';
+export * from './Tab';
+export * from './TabLabel';
