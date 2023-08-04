@@ -12,7 +12,7 @@ export const GridSix = ({
       width={width}
       height={height}
       fill="none"
-      viewBox="0 0 25 24"
+      viewBox={bold ? "0 0 22 21" : "0 0 23 22"}
       xmlns="http://www.w3.org/2000/svg"
     >
       {bold ? (
@@ -36,30 +36,30 @@ export const GridSix = ({
           <path
             d="M8.5 21H14.5C19.5 21 21.5 19 21.5 14V8C21.5 3 19.5 1 14.5 1H8.5C3.5 1 1.5 3 1.5 8V14C1.5 19 3.5 21 8.5 21Z"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M9.5 1V21"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M9.5 7.5H21.5"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M9.5 14.5H21.5"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
         </>
       )}

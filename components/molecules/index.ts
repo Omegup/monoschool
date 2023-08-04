@@ -11,7 +11,6 @@ export * from './ListSearch';
 export * from './HeaderCellTable';
 export * from './NavBar';
 export * from './Radio';
-export * from './SignIn';
 export * from './Tabs';
 export * from './Chips';
 export * from './SubMenu';

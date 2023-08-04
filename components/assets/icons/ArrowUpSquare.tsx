@@ -1,5 +1,5 @@
 import { widths } from '@omegup-school/ui-configs/sizes';
-import { ArrowDownSquare } from './ArrowDownSquare';
+import { ArrowDownSquare} from './ArrowDownSquare';
 import { IconProps } from './Icons.types';
 
 export const ArrowUpSquare = ({
@@ -11,6 +11,6 @@ export const ArrowUpSquare = ({
 }: IconProps) => {
   return (
    <ArrowDownSquare  width={width}
-   height={height} bold={bold} color={color} />
+   height={height} bold={bold} color={color}/>
   );
 };

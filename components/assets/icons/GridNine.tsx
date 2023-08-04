@@ -11,7 +11,7 @@ export const GridNine = ({
     <svg
       width={width}
       height={height}
-      viewBox="0 0 25 24"
+      viewBox={bold ? "0 0 22 20" : "0 0 23 22"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -41,44 +41,44 @@ export const GridNine = ({
           <path
             d="M8.5 21H14.5C19.5 21 21.5 19 21.5 14V8C21.5 3 19.5 1 14.5 1H8.5C3.5 1 1.5 3 1.5 8V14C1.5 19 3.5 21 8.5 21Z"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M1.5 11H21.5"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M7.75 11V20.5"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M15.25 21V11"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M7.75 11V1"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
           <path
             d="M15.25 11V1.54004"
             stroke={color}
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
         </>
       )}
