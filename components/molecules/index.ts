@@ -5,3 +5,5 @@ export * from './IconWithDoubleText';
 export * from './Checkbox';
 export * from './SignIn';
 export * from './Tabs';
+export * from './TabSearch';
+export * from './Tag';
