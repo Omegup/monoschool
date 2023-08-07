@@ -1,9 +1,7 @@
-import { AvatarImage, Avatar, Container, Text, StoryElementContainer } from "@omegup-school/ui-atoms";
-import { forwardRef } from "react";
-import { ControlledStoryElementProps, StoryElementProps } from "./StoryElement.types";
 import * as avatars from '@omegup-school/ui-assets/images';
-import { Icon } from '@omegup-school/ui-assets/icons/Icon';
-import * as icons from '@omegup-school/ui-assets/icons';
+import { Avatar, AvatarImage, StoryElementContainer } from "@omegup-school/ui-atoms";
+import { forwardRef } from "react";
+import { ControlledStoryElementProps } from "./StoryElement.types";
 
  
 

@@ -1,4 +1,5 @@
-import { widths } from '@omegup-school/ui-atoms/sizes';
+import { widths } from import { widths } from '@omegup-school/ui-configs/sizes';
+;
 
 export const EllipseFortyEight = ({
   width = widths.avatar.svg,

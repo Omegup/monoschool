@@ -10,12 +10,12 @@ const Demo = ({
   number,
   variant,
   ...restProps
-}: ControlledItemCardNumberDashboardProps& {
+}: ControlledItemCardNumberDashboardProps & {
   icon: keyof typeof icons;
   label: string;
   number: string;
 }) => {
-  return (<div style={{display:'flex'}}>
+  return (<div style={{ display: 'flex' }}>
     <ItemCardNumberDashboard
       {...restProps}
       variant={variant}
@@ -28,7 +28,7 @@ const Demo = ({
 };
 const meta = {
   title: 'Atom/ItemCardNumberDashboard',
-  component: ItemCardNumberDashboard,
+  component: Demo,
   tags: ['autodocs'],
   argTypes: {
     icon: {
@@ -37,20 +37,19 @@ const meta = {
     },
     variant: {
       control: 'select',
-      options: ['light','blue','headLine'],
+      options: ['light', 'blue', 'headLine'],
     },
   },
-} satisfies Meta<typeof ItemCardNumberDashboard>;
+} satisfies Meta<typeof Demo>;
 
 export default meta;
 type Story = StoryObj<typeof Demo>;
 
 export const Primary: Story = {
-  render: Demo,
   args: {
     label: 'classes',
     icon: 'GridFive',
     number: '9',
-    variant:'blue',
+    variant: 'blue',
   },
 };
