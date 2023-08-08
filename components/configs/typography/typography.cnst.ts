@@ -36,7 +36,7 @@ export const typography = makeTypo({
       regular: {
         fontWeight: '400',
         fontSize: 16,
-      },
+      }, 
     },
     xSmall: {
       regular: {

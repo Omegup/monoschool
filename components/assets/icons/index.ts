@@ -42,3 +42,6 @@ export * from './People';
 export * from './CalendarCircle';
 export * from './Map';
 export * from './MenuBoard';
+export * from './VideoTime';
+export * from './ArrowCircleLeft';
+export * from './ArrowCircleRight';

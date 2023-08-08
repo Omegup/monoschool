@@ -32,3 +32,5 @@ export * from './StoryElementContainer';
 export * from './StoryElementNavigatorContainer';
 export * from './StoryContainer';
 export * from './DisplaySwitcherOnHoverEffect';
+export * from './DataTableDashboardLine';
+export * from './TopHeaderDataTable';

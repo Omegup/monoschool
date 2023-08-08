@@ -3,11 +3,9 @@ import { widths } from '@omegup-school/ui-configs/sizes';
 export const Avatar = ({
   width = widths.icon.svg,
   height = width,
-  color = 'currentColor',
 }: {
   width?: string;
   height?: string;
-  color?: string;
 }) => {
   return (
     <svg

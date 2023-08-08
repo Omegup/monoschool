@@ -1,4 +1,3 @@
-import React from 'react'
 import { widths } from '@omegup-school/ui-configs/sizes';
 
 export const Profile = ({

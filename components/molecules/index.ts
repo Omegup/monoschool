@@ -23,4 +23,4 @@ export * from './internal/CardDoubleText';
 export * from './internal/CardIconedDetail';
 export * from './internal/CardIconedinfo';
 export * from './internal/DashboardDetailedCard';
-
+export * from './DataTableDashboard';

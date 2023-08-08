@@ -1,5 +1,4 @@
-import { widths, rotation } from '@omegup-school/ui-configs/sizes';
-import { ArrowDownSecond } from './ArrowDownSecond';
+import { widths } from '@omegup-school/ui-configs/sizes';
 import { IconProps } from './Icons.types';
 
 export const ArrowUpSecond = ({
