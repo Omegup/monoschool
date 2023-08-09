@@ -3,7 +3,7 @@ import { ChildMenu } from '@omegup-school/ui-atoms';
 import { ClipboardTick, UserTick } from '@omegup-school/ui-assets';
 
 const meta = {
-  title: 'Atom/ChildMenu',
+  title: 'Molecules/ChildMenu',
   component: ChildMenu,
   tags: ['autodocs'],
   argTypes: {
@@ -21,7 +21,7 @@ export const Primary: Story = {
   args: {
     icon: <UserTick width='24' height='24' />,
     label: "Présence des enseigants",
-    selected: true,
+    isSelected: true,
     isCollapsed: false,
     size: 'medium',
     // style: 'border',

@@ -4,7 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 
 
 const meta = {
-  title: 'Atom/Story',
+  title: 'Molecules/Story',
   component: Story,
   tags: ['autodocs'],
   argTypes: {

@@ -29,7 +29,7 @@ const Demo = ({
   );
 };
 const meta = {
-  title: 'Atom/Avatar',
+  title: 'Molecules/Avatar',
   component: Avatar,
   tags: ['autodocs'],
   argTypes: {

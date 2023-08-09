@@ -4,7 +4,7 @@ import { StoryElement } from '@omegup-school/ui-molecules';
  
 
 const meta = {
-  title: 'Atom/StoryElement',
+  title: 'Molecules/StoryElement',
   component: StoryElement,
   tags: ['autodocs'],
   argTypes: {

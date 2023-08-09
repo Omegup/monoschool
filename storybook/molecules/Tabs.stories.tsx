@@ -3,7 +3,7 @@ import { Tabs } from '@omegup-school/ui-molecules';
 import { GridFive, GridNine, GridSix } from '@omegup-school/ui-assets';
 
 const meta = {
-  title: 'Atom/Tabs',
+  title: 'Molecules/Tabs',
   component: Tabs,
   tags: ['autodocs'],
   argTypes: {

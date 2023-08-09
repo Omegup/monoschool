@@ -2,7 +2,7 @@ import { DataTableDashboard } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Atom/DataTableDashboard',
+  title: 'Molecules/DataTableDashboard',
   component: DataTableDashboard,
   tags: ['autodocs'],
   argTypes: {

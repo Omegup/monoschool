@@ -22,7 +22,7 @@ const SubMenuDemo = ({ isCollapsed, title, viewMode }: { isCollapsed: boolean, t
 }
 
 const meta = {
-  title: 'Atom/SubMenu',
+  title: 'Molecules/SubMenu',
   component: SubMenuDemo,
   tags: ['autodocs'],
   argTypes: {

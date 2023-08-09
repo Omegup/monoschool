@@ -19,7 +19,7 @@ const TabSearchDemo = () => {
 };
 
 const meta = {
-  title: 'Atom/TabSearch',
+  title: 'Molecules/TabSearch',
   component: TabSearchDemo,
   tags: ['autodocs'],
   argTypes: {},

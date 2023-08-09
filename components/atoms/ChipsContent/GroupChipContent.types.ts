@@ -1,4 +1,4 @@
-export interface ChipsContentProps {
+export interface GroupChipContentProps {
   name: string;
   isLastIndex: boolean;
   onCancel: () => void;

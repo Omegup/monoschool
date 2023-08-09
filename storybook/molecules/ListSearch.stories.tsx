@@ -4,7 +4,7 @@ import { ListSearch } from '@omegup-school/ui-molecules';
 import { Avatar, AvatarImage } from '@omegup-school/ui-atoms';
 
 const meta = {
-  title: 'Atom/ListSearch',
+  title: 'Molecules/ListSearch',
   component: ListSearch,
   tags: ['autodocs'],
   argTypes: {

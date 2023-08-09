@@ -22,7 +22,7 @@ export * from './TabContainer';
 export * from './TabBadge';
 export * from './Avatar';
 export * from './Switch';
-export * from './ChipsContainer';
+export * from './GroupChipContainer';
 export * from './ChipsLabel';
 export * from './ChipsContent';
 export * from './ItemCardNumberDashboard';

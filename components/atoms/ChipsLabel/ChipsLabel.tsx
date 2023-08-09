@@ -1,7 +1,7 @@
 import { useStyles } from './ChipsLabel.styles';
-import { ChipsLabelProps } from './ChipsLabel.types';
+import { GroupChipLabelProps } from './ChipsLabel.types';
 
-export const ChipsLabel = ({ label }: ChipsLabelProps) => {
+export const GroupChipLabel = ({ label }: GroupChipLabelProps) => {
   const classes = useStyles();
   return (
     <span className={classes.label}>{label}</span>

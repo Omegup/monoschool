@@ -105,7 +105,7 @@ const Demo = ({
 };
 
 const meta = {
-  title: 'Atom/Field',
+  title: 'Molecules/Field',
   component: Field,
   tags: ['autodocs'],
   argTypes: {

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { CardDoubleText } from '@omegup-school/ui-molecules';
 
 const meta = {
-  title: 'Atom/CardDoubleText',
+  title: 'Molecules/CardDoubleText',
   component: CardDoubleText,
   tags: ['autodocs'],
   argTypes: {},

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { HeaderCellTable } from '@omegup-school/ui-molecules';
 
 const meta = {
-  title: 'Atom/HeaderCellTable',
+  title: 'Molecules/HeaderCellTable',
   component: HeaderCellTable,
   tags: ['autodocs'],
   argTypes: {

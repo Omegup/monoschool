@@ -11,7 +11,7 @@ const Demo = ({
   return <CardIconedinfo icon={<Icon name={icon} />} {...restProps} />;
 };
 const meta = {
-  title: 'Atom/TextWithIcon',
+  title: 'Molecules/TextWithIcon',
   component: CardIconedinfo,
   tags: ['autodocs'],
   argTypes: {

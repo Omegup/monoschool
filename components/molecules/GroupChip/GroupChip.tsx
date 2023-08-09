@@ -1,15 +1,15 @@
 /* eslint-disable max-params */
-import { ChipsContainer, ChipsContent, ChipsLabel, Container } from '@omegup-school/ui-atoms';
-import { ChipsProp } from './Chips.types';
+import { GroupChipContainer, GroupChipContent, GroupChipLabel, Container } from '@omegup-school/ui-atoms';
+import { GroupChipsProps } from './GroupChip.types';
 
-export const Chips = ({ persons, label, onCancel }: ChipsProp) => {
+export const GroupChip = ({ persons, label, onCancel }: GroupChipsProps) => {
   return (
     <Container >
-      <ChipsContainer>
-        <ChipsLabel label={label} />
+      <GroupChipContainer>
+        <GroupChipLabel label={label} />
         <Container paddingInline='s2'>
           {persons.map(({ avatar, name }, index, { length }) =>
-            <ChipsContent
+            <GroupChipContent
               key={index}
               avatar={avatar}
               onCancel={() => onCancel(index)}
@@ -18,7 +18,7 @@ export const Chips = ({ persons, label, onCancel }: ChipsProp) => {
             />
           )}
         </Container >
-      </ChipsContainer>
+      </GroupChipContainer>
     </Container>
   );
 };

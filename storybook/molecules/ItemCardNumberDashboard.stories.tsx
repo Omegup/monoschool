@@ -27,7 +27,7 @@ const Demo = ({
   );
 };
 const meta = {
-  title: 'Atom/ItemCardNumberDashboard',
+  title: 'Molecules/ItemCardNumberDashboard',
   component: Demo,
   tags: ['autodocs'],
   argTypes: {

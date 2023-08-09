@@ -2,7 +2,7 @@ import { Radio } from '@omegup-school/ui-molecules';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta = {
-  title: 'Atom/Radio',
+  title: 'Molecules/Radio',
   component: Radio,
   tags: ['autodocs'],
   argTypes: {

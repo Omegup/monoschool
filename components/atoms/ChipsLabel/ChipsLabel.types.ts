@@ -1,3 +1,3 @@
-export interface ChipsLabelProps {
+export interface GroupChipLabelProps {
   label: string;
 }

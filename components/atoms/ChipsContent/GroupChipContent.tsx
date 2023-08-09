@@ -1,9 +1,8 @@
-import React from 'react';
-import { ChipsContentProps } from './ChipsContent.types';
-import { useStyles } from './ChipsContent.styles';
 import { Vector } from '@omegup-school/ui-assets';
+import { useStyles } from './GroupChipContent.styles';
+import { GroupChipContentProps } from './GroupChipContent.types';
 
-export const ChipsContent = ({ name, avatar, isLastIndex, onCancel }: ChipsContentProps) => {
+export const GroupChipContent = ({ name, avatar, isLastIndex, onCancel }: GroupChipContentProps) => {
   const classes = useStyles();
 
   return (

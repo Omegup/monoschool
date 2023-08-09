@@ -4,7 +4,7 @@ import { Navbar } from '@omegup-school/ui-molecules';
 import { Home, Message, Notification, Profile } from '@omegup-school/ui-assets';
 
 const meta = {
-  title: 'Atom/NavBar',
+  title: 'Molecules/NavBar',
   component: Navbar,
   tags: ['autodocs'],
   argTypes: {

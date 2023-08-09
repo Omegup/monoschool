@@ -1,1 +1,1 @@
-export * from './ChipsContent';
+export * from './GroupChipContent';

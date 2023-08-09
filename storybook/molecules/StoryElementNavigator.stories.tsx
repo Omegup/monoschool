@@ -4,7 +4,7 @@ import { StoryElementNavigator } from '@omegup-school/ui-molecules';
  
 
 const meta = {
-  title: 'Atom/StoryElementNavigator',
+  title: 'Molecules/StoryElementNavigator',
   component: StoryElementNavigator,
   tags: ['autodocs'],
   argTypes: {

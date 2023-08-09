@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip } from '@omegup-school/ui-atoms';
 
 const meta = {
-  title: 'Atom/Tooltip',
+  title: 'Molecules/Tooltip',
   component: Tooltip,
   tags: ['autodocs'],
   argTypes: {

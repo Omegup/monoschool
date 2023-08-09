@@ -12,7 +12,7 @@ const Demo = ({
 };
 
 const meta = {
-  title: 'Atom/IconWithDoubleText',
+  title: 'Molecules/IconWithDoubleText',
   component: CardIconedDetail,
   tags: ['autodocs'],
   argTypes: {
