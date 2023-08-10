@@ -1,4 +1,3 @@
-export * from '@omegup-school/ui-atoms/TagToggle';
 export * from './CardNumberDashboard';
 export * from './Checkbox';
 export * from './GroupChip';
@@ -24,3 +23,4 @@ export * from './internal/CardIconedDetail';
 export * from './internal/CardIconedinfo';
 export * from './internal/DashboardDetailedCard';
 export * from './DataTableDashboard';
+export * from './Chips';

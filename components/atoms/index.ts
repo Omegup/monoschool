@@ -9,6 +9,8 @@ export * from './NakedCheckbox'
 export * from './Tab';
 export * from './TabsContainer';
 export * from './TabsArrow';
+export * from './ChipsContainer'
+export * from './ChipsButton'
 export * from './contexts';
 export * from './FieldLabelLayout';
 export * from './NakedInput';
