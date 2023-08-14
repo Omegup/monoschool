@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { Close, Add, Essential } from '@omegup-school/ui-assets';
-import { Chips, ControlledChipsProps } from '@omegup-school/ui-molecules';
 import * as icons from '@omegup-school/ui-assets/icons';
-import { Icon } from './Icon';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
+import { Chips, ControlledChipsProps } from '@omegup-school/ui-molecules';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const Demo = ({
   icon,ClearIcon,

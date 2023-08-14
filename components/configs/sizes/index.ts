@@ -3,3 +3,4 @@ export * from './spacing';
 export * from './border';
 export * from './heights';
 export * from './opacities';
+export * from './rotation';
