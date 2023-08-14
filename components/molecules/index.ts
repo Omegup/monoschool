@@ -14,6 +14,7 @@ export * from './StoryElementCreate';
 export * from './StoryElementNavigator';
 export * from './SubMenu';
 export * from './Switch';
+export * from './Select';
 export * from './TabSearch';
 export * from './Tabs';
 export * from './Tag';

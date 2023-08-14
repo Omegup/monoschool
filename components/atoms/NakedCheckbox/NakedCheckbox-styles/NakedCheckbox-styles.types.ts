@@ -3,7 +3,7 @@ import { InteractiveStates } from '../../common/InteractiveStyles';
 export type CheckboxStatus = 'checked' | 'unchecked';
 
 export type CheckboxVariant = 'solid' | 'border' | 'scale' | 'cell' | 'select';
-export type CheckboxSize = 'small' | 'medium' | 'large';
+export type CheckboxSize = 'small' | 'medium' | 'large' | 'xLarge';
 
 export type CheckboxStateTheme = {
   checkboxOutlineColor?: string;

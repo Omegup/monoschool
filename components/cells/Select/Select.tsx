@@ -1,7 +1,7 @@
 import {
-  SelectProps as SelectPropsMolecule,
   Select as SelectMolecule,
-} from '@omegup-school/ui-molecules/SignIn';
+} from '@omegup-school/ui-molecules/Select';
+import { SelectMoleculeProps } from '@omegup-school/ui-molecules/Select/Select.types';
 import {
   Control,
   FieldPathValue,
@@ -13,7 +13,7 @@ import {
 export interface SelectProps<
   TName extends Path<TFieldValues>,
   TFieldValues extends FieldValues
-> extends SelectPropsMolecule {
+> extends SelectMoleculeProps {
   name: TName;
   control: Control<TFieldValues>;
   _: FieldPathValue<TFieldValues, TName> extends boolean ? true : never;
@@ -26,7 +26,7 @@ export const Select = <
 >(
   props: SelectProps<TName, TFieldValues>
 ) => {
-  const { size, style, disabled, label, name, control } = props;
+  const { size, variant, disabled, label, name, control  } = props;
   const { field } = useController({ name, control });
-  return <SelectMolecule {...{ size, style, disabled, label, ...field }} />;
+  return <SelectMolecule {...{ size, variant, disabled, label, ...field }} />;
 };

@@ -39,6 +39,7 @@ export const widths = {
   },
   
   nakedCheckbox: {
+    xLarge : '23.33px', 
     large: '20px',
     medium: '16.67px',
     small: '13.33px',

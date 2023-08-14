@@ -38,6 +38,24 @@ export const typography = makeTypo({
         fontSize: 16,
       }, 
     },
+    large: {
+      regular: {
+        fontSize: 18,
+        fontWeight: '400',
+      },
+      medium: {
+        fontSize: 18,
+        fontWeight: '500',
+      },
+      semiBold: {
+        fontWeight: '600',
+        fontSize: 18,
+      },
+      bold: {
+        fontWeight: '700',
+        fontSize: 18,
+      },
+    },
     xSmall: {
       regular: {
         fontWeight: '400',
@@ -59,20 +77,6 @@ export const typography = makeTypo({
     overline: {
       small: {
         fontWeight: '500',
-        fontSize: 12,
-      },
-    },
-    large: {
-      regular: {
-        fontWeight: '400',
-        fontSize: 18,
-      },
-      semiBold: {
-        fontWeight: '600',
-        fontSize: 18,
-      },
-      bold: {
-        fontWeight: '700',
         fontSize: 12,
       },
     },
@@ -105,4 +109,4 @@ export const typography = makeTypo({
       },
     },
   },
-});
+} as const);
