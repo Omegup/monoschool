@@ -5,11 +5,12 @@ import { CheckboxSize, CheckboxVariant } from "./NakedCheckbox-styles/NakedCheck
 export interface NakedCheckboxProps {
   variant: CheckboxVariant;
   size: CheckboxSize;
-  disabled?: boolean;
 }
 
 export interface ControlledNakedCheckboxProps extends NakedCheckboxProps {
   checked: boolean;
+  disabled: boolean;
   onChange: (value: boolean) => void;
+  ref?: React.Ref<HTMLInputElement>;
   onBlur: () => void;
 }
