@@ -25,3 +25,4 @@ export * from './internal/CardIconedinfo';
 export * from './internal/DashboardDetailedCard';
 export * from './DataTableDashboard';
 export * from './Chips';
+export * from './Timeline';
