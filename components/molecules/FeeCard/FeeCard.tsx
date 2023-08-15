@@ -57,21 +57,21 @@ export const FeeCard = forwardRef(
             paddingInline="s5"
             rotation={90}
             color="dark_default"
-            icon="More"
-          ></IconContainer>
+            name="More"
+          />
         </Container>
         <CardIconedDetail
-          icon={<Money color={colorsStyles['success_500']} />}
+          icon={<Money color={colorsStyles.success_500} />}
           text="Coûts"
           subText={amount}
         />
         <CardIconedDetail
-          icon={<RepeateMusic color={colorsStyles['headline_500']} />}
+          icon={<RepeateMusic color={colorsStyles.headline_500} />}
           text="Occurrence"
           subText={type}
         />
         <CardIconedDetail
-          icon={<People color={colorsStyles['blue_600']} />}
+          icon={<People color={colorsStyles.blue_600} />}
           text="Inscrits"
           subText={recipientsNumber}
         />
@@ -81,11 +81,11 @@ export const FeeCard = forwardRef(
           justifyContent="space-between"
         >
           <CardIconedinfo
-            icon={<DocumentText color={colorsStyles['blue_500']} />}
+            icon={<DocumentText color={colorsStyles.blue_500} />}
             text={billableAmount}
           />
           <CardIconedinfo
-            icon={<EmptyWalletTime color={colorsStyles['grey_500']} />}
+            icon={<EmptyWalletTime color={colorsStyles.grey_500} />}
             text={estimatedBillableAmount}
           />
         </Container>

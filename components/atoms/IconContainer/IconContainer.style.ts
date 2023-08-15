@@ -4,6 +4,7 @@ import { IconContainerProps } from './IconContainer.type';
 
 export const useIconContainerStyles = createUseStyles({
   mainContainer: {
+    cursor: 'pointer',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',

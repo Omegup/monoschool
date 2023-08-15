@@ -39,8 +39,8 @@ export const useNakedInputStyles = createUseStyles({
       lineHeight ? `${heights.lineHieght[lineHeight]}px` : '',
   },
   filledInput: {
-    border: `${spacing.s1}px solid ${colorsStyles['dark_overline']}`,
+    border: [spacing.s1, 'solid', colorsStyles.dark_overline],
   },
-  disabled: { backgroundColor: colorsStyles['background_default'] },
+  disabled: { backgroundColor: colorsStyles.background_default },
   ...styles,
 });
