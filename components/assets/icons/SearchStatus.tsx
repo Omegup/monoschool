@@ -1,6 +1,4 @@
 import { widths } from '@omegup-school/ui-configs/sizes';
-import { IconProps } from './Icons.types';
-
 
 export const SearchStatus = ({
   width = widths.icon.svg,
