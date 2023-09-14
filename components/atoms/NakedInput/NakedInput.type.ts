@@ -17,7 +17,7 @@ export interface NakedInputProps {
   variant:"shadow"|"default"
 }
 
-export interface ControlleNakedInputProps extends NakedInputProps {
+export interface ControlledNakedInputProps extends NakedInputProps {
   value: string;
   onChange: (e:ChangeEvent<HTMLInputElement>) => void;
   onClickEndIcon?: (e:MouseEvent<HTMLSpanElement>) => void ;

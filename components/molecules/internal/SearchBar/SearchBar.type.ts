@@ -1,12 +1,14 @@
 import { ChangeEvent } from "react";
 
+export type SearchBarVariant = 'FilterSearchBar' | 'NavSearchBar' ;
+
 export type SearchBarProps = {
-  variant: 'FilterSearchBar' | 'NavSearchBar';
+  variant: SearchBarVariant;
   startIcon: JSX.Element;
   clearIcon: JSX.Element;
   placeholder: string;
-  disabled: boolean;
-  displayClearIcon:boolean;
+  disabled?: boolean;
+  displayClearIcon?:boolean;
 };
 export interface ControllerSearchBarProps extends SearchBarProps {
   value: string;

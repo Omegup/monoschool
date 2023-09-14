@@ -1,26 +1,40 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import * as icons from '@omegup-school/ui-assets/icons';
-import { colorsStyles } from '@omegup-school/ui-configs/colors';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
+import { colors } from '@omegup-school/ui-configs/colors';
 import {
-  ControllerSearchBarProps,
-  SearchBar
+  SearchBar,
+  SearchBarVariant
 } from '@omegup-school/ui-molecules/internal/SearchBar';
-import { Icon } from './Icon';
+import { ChangeEvent, useMemo, useState } from 'react';
 
 const Demo = ({
   startIcon,
   clearIcon,
-  ...restProps
-}: Omit<ControllerSearchBarProps, 'firstIcon' | 'clearIcon'> & {
+  variant,
+  displayClearIcon,
+  placeholder,
+}: {
   startIcon: keyof typeof icons;
   clearIcon: keyof typeof icons;
+  variant: SearchBarVariant;
+  displayClearIcon: boolean;
+  placeholder: string;
 }) => {
+
+  const [value, setValue] = useState<string>('');
+
   return (
     <SearchBar
-      startIcon={<Icon name={startIcon} color={colorsStyles['grey_500']} />}
-      clearIcon={<Icon name={clearIcon} color={colorsStyles['grey_500']} />}
-      {...restProps}
+      startIcon={<Icon name={startIcon} color={colors.grey[500]} />}
+      clearIcon={<Icon name={clearIcon} color={colors.grey[500]} />}
+      onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+      onClear={(e) => {
+        alert("when we pretend our day ");
+        setValue('')
+      }}
+      {...{ value, variant, displayClearIcon, placeholder }}
     />
   );
 };
@@ -41,6 +55,10 @@ const meta = {
       control: 'select',
       options: ['NavSearchBar', 'FilterSearchBar'],
     },
+    displayClearIcon: {
+      control: 'boolean',
+      options: [true, false],
+    },
   },
 } satisfies Meta<typeof Demo>;
 
@@ -48,14 +66,14 @@ export default meta;
 type Story = StoryObj<typeof Demo>;
 
 export const Primary: Story = {
-  render: Demo,
   args: {
-    variant: 'FilterSearchBar',
     startIcon: 'SearchStatus',
     clearIcon: 'Close',
+    variant: 'NavSearchBar',
     displayClearIcon: true,
-    value: 'hk',
-    placeholder: 'Recherche',
-    disabled: false,
+    placeholder: 'searching...',
   },
+
 };
+
+

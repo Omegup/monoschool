@@ -1,12 +1,12 @@
 import { forwardRef } from 'react';
-import { ControlleNakedInputProps } from './NakedInput.type';
+import { ControlledNakedInputProps } from './NakedInput.type';
 import { useNakedInputStyles } from './NakedInput.style';
 import { styles } from '../common/styles';
 import { joinClassNames } from '@omegup-school/ui-configs/typography';
 import { FIELD_COLORS } from '../constants/FieldColors.cnst';
 
 export const NakedInput = forwardRef(
-  (props: ControlleNakedInputProps, ref: React.Ref<HTMLDivElement>) => {
+  (props: ControlledNakedInputProps, ref: React.Ref<HTMLDivElement>) => {
     const {
       onChange,
       endIcon,
@@ -48,7 +48,7 @@ export const NakedInput = forwardRef(
             disabled ? classes.disabled : ''
           )}
         />
-        <span onClick={onClickEndIcon} className={classes.endIcon}>{endIcon}</span>
+        <span onClick={() => console.log("clicked")} className={classes.endIcon}>{endIcon}</span>
       </div>
     );
   }
