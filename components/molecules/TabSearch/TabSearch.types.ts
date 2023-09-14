@@ -1,10 +1,10 @@
-export interface TabSearchProps {
-  tabProps: TabProps[];
+export interface TabsSearchProps {
+  tabProps: TabSearchProps[];
   selectedIndex: number;
-  setSelectedIndex: (index: number) => void;
 }
 
-export interface TabProps {
+export interface TabSearchProps {
   label: string;
   badge?: number;
-}
+  onClick: () => void;
+} 

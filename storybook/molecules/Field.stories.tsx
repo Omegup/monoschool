@@ -1,13 +1,10 @@
-import {
-  NakedInput,
-  NakedTextArea,
-} from '@omegup-school/ui-atoms';
+import { NakedInput, NakedTextArea } from '@omegup-school/ui-atoms';
 import { Field } from '@omegup-school/ui-molecules/internal/Field';
 import { colorsStyles } from '@omegup-school/ui-configs/colors';
 import { FieldProps } from '@omegup-school/ui-molecules/internal/Field/Field.type';
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Icon } from './Icon';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
 import * as icons from '@omegup-school/ui-assets/icons';
 import { FIELD_COLORS } from '@omegup-school/ui-atoms/constants/FieldColors.cnst';
 
@@ -26,6 +23,7 @@ const Demo = ({
   const inputs = {
     input: (
       <NakedInput
+        variant={'default'}
         {...(endIcon
           ? {
               endIcon: (
@@ -105,7 +103,7 @@ const Demo = ({
 };
 
 const meta = {
-  title: 'Atom/Field',
+  title: 'Molecules/Field',
   component: Field,
   tags: ['autodocs'],
   argTypes: {

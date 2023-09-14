@@ -18,7 +18,7 @@ export class UserController implements IUserController {
       presenter.presentError(
         error instanceof Error
           ? error
-          : new Error('Unknow error occured', { cause: error })
+          : new Error('Unknow error occured', { cause: error  })
       );
     }
   }

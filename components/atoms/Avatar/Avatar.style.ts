@@ -14,6 +14,7 @@ export const useAvatarStyles = createUseStyles({
     alignItems: 'center',
     width: size,
     height: size,
+    
   },
 });
 export const useAvatarImageStyles = createUseStyles({

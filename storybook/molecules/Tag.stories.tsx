@@ -4,7 +4,7 @@ import { Tag } from '@omegup-school/ui-molecules';
 import { TagType } from '@omegup-school/ui-atoms/TagToggle/TagToggle.types';
 
 const meta = {
-  title: 'Atom/Tag',
+  title: 'Molecules/Tag',
   component: Tag,
   tags: ['autodocs'],
   argTypes: {

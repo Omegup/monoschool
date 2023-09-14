@@ -11,7 +11,7 @@ type SignInFormData = {
 function SignInView() {
   const { signInPresenter, userController } = useFacade();
 
-  const [error, setError] = useState<Error>();
+  const [_, setError] = useState<Error>();
 
   const onSubmit = async (data: SignInFormData) => {
     await userController.signIn(data, signInPresenter(setError));
@@ -19,5 +19,7 @@ function SignInView() {
 
   return <SignIn onSubmit={onSubmit} />;
 }
+
+
 
 export default SignInView;

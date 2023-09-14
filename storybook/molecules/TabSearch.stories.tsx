@@ -1,51 +1,34 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { TabSearch } from '@omegup-school/ui-molecules';
+import { TabSearchProps, TabsSearchProps } from '@omegup-school/ui-molecules/TabSearch/TabSearch.types';
+import type { Meta, StoryObj } from '@storybook/react';
+import { useState } from 'react';
+
+const TabSearchDemo = () => {
+
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+
+  const tabProps: TabSearchProps[] = [{ label: 'Tous', badge: 20, onClick: () => setSelectedIndex(0), },
+  { label: 'Apprenant', badge: 12, onClick: () => setSelectedIndex(1) },
+  { label: 'Parents', badge: 3, onClick: () => setSelectedIndex(2) },
+  { label: 'Professeur', onClick: () => setSelectedIndex(3) },
+  ];
+
+  const props: TabsSearchProps = { selectedIndex, tabProps };
+
+  return <TabSearch {...props} />;
+};
 
 const meta = {
-  title: 'Atom/TabSearch',
-  component: TabSearch,
+  title: 'Molecules/TabSearch',
+  component: TabSearchDemo,
   tags: ['autodocs'],
-  argTypes: {
-    tabProps: {
-      label: {
-        control: {
-          control: {
-            type: 'object',
-          },
-          table: {
-            type: {
-              summary: 'BadgeProps[]',
-            },
-          },
-        },
-      },
-      badge: {
-        control: {
-          type: 'object',
-        },
-        table: {
-          type: {
-            summary: 'BadgeProps[]',
-          },
-        },
-      },
-    }
-  },
-} satisfies Meta<typeof TabSearch>;
+  argTypes: {},
+} satisfies Meta<typeof TabSearchDemo>;
 
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {
-    selectedIndex: 0,
-    tabProps: [
-      { label: 'Tous', badge: 20 },
-      { label: 'Apprenant', badge: 12 },
-      { label: 'Parents', badge: 3 },
-      { label: 'Professeur' },
-    ],
-  },
+  args: {},
 };

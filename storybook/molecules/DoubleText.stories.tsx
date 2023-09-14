@@ -1,14 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { DoubleText } from '@omegup-school/ui-molecules';
+import { CardDoubleText } from '@omegup-school/ui-molecules';
 
 const meta = {
-  title: 'Atom/DoubleText',
-  component: DoubleText,
+  title: 'Molecules/CardDoubleText',
+  component: CardDoubleText,
   tags: ['autodocs'],
-  argTypes: {
-
-  },
-} satisfies Meta<typeof DoubleText>;
+  argTypes: {},
+} satisfies Meta<typeof CardDoubleText>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -16,6 +14,6 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     text: 'Text Description',
-    subText: 'Subtext Description'
+    subText: 'Subtext Description',
   },
 };

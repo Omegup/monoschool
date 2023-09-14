@@ -29,18 +29,30 @@ export const typography = makeTypo({
         fontWeight: '600',
         fontSize: 16,
       },
+      medium: {
+        fontWeight: '500',
+        fontSize: 16,
+      },
       regular: {
         fontWeight: '400',
         fontSize: 16,
-      },
+      }, 
     },
     xSmall: {
       regular: {
         fontWeight: '400',
         fontSize: 12,
       },
+      medium: {
+        fontWeight: '500',
+        fontSize: 12,
+      },
       semiBold: {
         fontWeight: '600',
+        fontSize: 12,
+      },
+      bold: {
+        fontWeight: '700',
         fontSize: 12,
       },
     },
@@ -57,6 +69,10 @@ export const typography = makeTypo({
       },
       semiBold: {
         fontWeight: '600',
+        fontSize: 18,
+      },
+      bold: {
+        fontWeight: '700',
         fontSize: 12,
       },
     },
@@ -78,6 +94,14 @@ export const typography = makeTypo({
       bold: {
         fontWeight: '700',
         fontSize: 24,
+      },
+    },
+  },
+  display: {
+    large: {
+      bold: {
+        fontWeight: '700',
+        fontSize: 52,
       },
     },
   },

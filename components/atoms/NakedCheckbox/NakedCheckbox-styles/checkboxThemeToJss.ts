@@ -1,6 +1,5 @@
 import { JssStyle } from 'jss';
-import { INTERACTION_MAP } from './InteractiveStyles';
-import { Interaction, InteractionMap } from './InteractiveStyles.types';
+import { INTERACTION_MAP,Interaction, InteractionMap } from '../../common/InteractiveStyles';
 import {
   CheckboxStateTheme,
   CheckboxStatus,

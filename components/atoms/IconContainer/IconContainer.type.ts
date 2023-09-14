@@ -5,7 +5,7 @@ import * as icons from '@omegup-school/ui-assets/icons';
 
 // @wissem atoms don't export implementation details: deg, paddingBlock, paddingInline, width and height => size
 export interface IconContainerProps {
-  name: keyof typeof icons;
+  name: undefined | keyof typeof icons;
   rotation?: number;
   paddingInline?: keyof typeof spacing;
   paddingBlock?: keyof typeof spacing;

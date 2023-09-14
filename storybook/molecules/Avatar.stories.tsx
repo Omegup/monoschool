@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Avatar, AvatarImage } from '@omegup-school/ui-atoms';
 import * as icons from '@omegup-school/ui-assets/icons';
 import * as avatars from '@omegup-school/ui-assets/images';
-import { Icon } from './Icon';
+import { Icon } from '@omegup-school/ui-atoms/Icon';
 import { AvatarProps } from '@omegup-school/ui-atoms/Avatar/Avatar.type';
 
 const Demo = ({
@@ -29,7 +29,7 @@ const Demo = ({
   );
 };
 const meta = {
-  title: 'Atom/Avatar',
+  title: 'Molecules/Avatar',
   component: Avatar,
   tags: ['autodocs'],
   argTypes: {
