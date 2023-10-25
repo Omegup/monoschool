@@ -11,7 +11,7 @@ export * from './NakedInput';
 export * from './NakedTextArea';
 export * from './IconContainer';
 export * from './TagToggle';
-export * from './NakedCheckbox';
+export * from './CoreSelectableOption';
 export * from './Tab';
 export * from './TabContainer';
 export * from './TabBadge';

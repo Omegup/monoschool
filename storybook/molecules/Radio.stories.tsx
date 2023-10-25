@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { Checkbox } from '@omegup-school/ui-molecules/Checkbox';
+import { Radio } from '@omegup-school/ui-molecules';
 import { SelectableOptionSize, SelectableOptionVariant } from '@omegup-school/ui-atoms/CoreSelectableOption/CoreSelectableOption-styles/CoreSelectableOption-styles.types';
 
 const meta = {
-  title: 'Molecules/CheckBox',
-  component: Checkbox,
+  title: 'Molecules/Radio',
+  component: Radio,
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -26,7 +26,7 @@ const meta = {
     checked: { control: 'boolean' },
     label: { control: 'text' },
   },
-} satisfies Meta<Partial<typeof Checkbox>>;
+} satisfies Meta<Partial<typeof Radio>>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -38,8 +38,7 @@ const states = {
 
 export const Solid: Story = {
   args: {
-    
-    label: 'CheckBox',
+    label: 'Radio',
     size: 'medium',
     variant: 'solid',
     ...states,
@@ -47,8 +46,7 @@ export const Solid: Story = {
 };
 export const Border: Story = {
   args: {
-    
-    label: 'CheckBox',
+    label: 'Radio',
     size: 'medium',
     variant: 'border',
     ...states,
@@ -57,7 +55,7 @@ export const Border: Story = {
 export const Scale: Story = {
   args: {
     
-    label: 'CheckBox',
+    label: 'Radio',
     size: 'medium',
     variant: 'scale',
     ...states,
@@ -66,7 +64,7 @@ export const Scale: Story = {
 export const Cell: Story = {
   args: {
     
-    label: 'CheckBox',
+    label: 'Radio',
     size: 'medium',
     variant: 'cell',
     ...states,
@@ -75,7 +73,7 @@ export const Cell: Story = {
 export const Select: Story = {
   args: {
     
-    label: 'CheckBox',
+    label: 'Radio',
     size: 'medium',
     variant: 'select',
     ...states,
